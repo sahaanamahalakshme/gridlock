@@ -1,0 +1,36 @@
+=== FINAL TEST SET RESULTS ===
+event_cause  accuracy=0.7201  macro-F1=0.3755
+priority     accuracy=0.6006  macro-F1=0.5982
+
+=== event_cause ===
+                   precision    recall  f1-score   support
+
+         accident       0.90      0.27      0.42        33
+       congestion       1.00      0.62      0.76        21
+     construction       0.62      0.68      0.65        68
+           debris       0.00      0.00      0.00         3
+           others       0.40      0.02      0.04        93
+        pot_holes       0.86      0.47      0.61        53
+       procession       1.00      0.09      0.17        11
+          protest       0.00      0.00      0.00         2
+     public_event       0.75      0.50      0.60        12
+  road_conditions       1.00      0.04      0.08        25
+        tree_fall       0.82      0.42      0.56        33
+vehicle_breakdown       0.72      0.99      0.83       604
+     vip_movement       0.00      0.00      0.00        16
+    water_logging       0.71      0.44      0.54        55
+
+         accuracy                           0.72      1029
+        macro avg       0.63      0.32      0.38      1029
+     weighted avg       0.70      0.72      0.65      1029
+
+
+=== priority ===
+              precision    recall  f1-score   support
+
+        High       0.73      0.55      0.63       634
+         Low       0.49      0.68      0.57       395
+
+    accuracy                           0.60      1029
+   macro avg       0.61      0.62      0.60      1029
+weighted avg       0.64      0.60      0.61      1029
