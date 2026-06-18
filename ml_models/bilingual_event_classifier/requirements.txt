@@ -1,0 +1,17 @@
+# ── Core data / ML ────────────────────────────────────────────────────────────
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+joblib>=1.4
+
+# ── NLP / Embeddings ──────────────────────────────────────────────────────────
+sentence-transformers>=3.0
+
+# ── PyTorch: install the CUDA 12.1 build FIRST for RTX 4060 GPU acceleration:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+# If you only need CPU fallback, uncomment the line below instead:
+# torch>=2.3
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.9
+seaborn>=0.13

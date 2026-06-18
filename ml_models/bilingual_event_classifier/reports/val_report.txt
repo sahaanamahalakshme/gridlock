@@ -1,0 +1,34 @@
+=== CAUSE CLASSIFIER (val set) ===
+Best model: LinearSVC  macro-F1=0.3947
+                   precision    recall  f1-score   support
+
+         accident       1.00      0.23      0.37        35
+       congestion       0.90      0.50      0.64        18
+     construction       0.77      0.67      0.72        72
+           debris       0.00      0.00      0.00         1
+           others       0.62      0.06      0.10        89
+        pot_holes       0.94      0.55      0.69        55
+       procession       1.00      0.20      0.33        10
+          protest       0.00      0.00      0.00         2
+     public_event       0.00      0.00      0.00        11
+  road_conditions       0.00      0.00      0.00        19
+        tree_fall       0.95      0.58      0.72        33
+vehicle_breakdown       0.73      1.00      0.84       595
+     vip_movement       0.00      0.00      0.00         0
+    water_logging       0.91      0.58      0.71        53
+
+         accuracy                           0.75       993
+        macro avg       0.56      0.31      0.37       993
+     weighted avg       0.74      0.75      0.70       993
+
+
+=== PRIORITY CLASSIFIER (val set) ===
+Best model: LogisticRegression(C=16.0)  macro-F1=0.5956
+              precision    recall  f1-score   support
+
+        High       0.73      0.69      0.71       650
+         Low       0.46      0.51      0.48       343
+
+    accuracy                           0.63       993
+   macro avg       0.59      0.60      0.60       993
+weighted avg       0.64      0.63      0.63       993
