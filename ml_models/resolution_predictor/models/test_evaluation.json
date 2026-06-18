@@ -1,0 +1,18 @@
+{
+  "n_rows": 362,
+  "mae_minutes": 42.86,
+  "median_ae_min": 30.15,
+  "r2": 0.1219,
+  "per_cause_mae": {
+    "accident": 22.1,
+    "congestion": 15.2,
+    "construction": 135.1,
+    "others": 90.8,
+    "pot_holes": 60.1,
+    "procession": 41.4,
+    "road_conditions": 117.5,
+    "tree_fall": 105.9,
+    "vehicle_breakdown": 31.2,
+    "water_logging": 76.9
+  }
+}

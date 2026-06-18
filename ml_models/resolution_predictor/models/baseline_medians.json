@@ -1,0 +1,16 @@
+{
+  "medians": {
+    "accident": 40.7043364,
+    "congestion": 81.69610738333334,
+    "construction": 212.49775946666665,
+    "others": 75.05420305,
+    "pot_holes": 19.20661473333333,
+    "procession": 58.20283951666667,
+    "road_conditions": 58.72275493333333,
+    "test_demo": 2.3584172666666663,
+    "tree_fall": 66.3340463,
+    "vehicle_breakdown": 40.9466631,
+    "water_logging": 77.6084918
+  },
+  "global_median": 44.64428544166667
+}

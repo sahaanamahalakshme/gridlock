@@ -1,0 +1,363 @@
+event_cause,corridor,priority,requires_road_closure,police_station,hour_of_day,day_of_week,is_peak_hour,duration_min
+pot_holes,Non-corridor,Low,0,Whitefield,22,3,0,13.0632383
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,3,0,22.17472708333333
+accident,Bellary Road 2,High,0,Yelahanka,14,4,0,59.43833245
+vehicle_breakdown,Old Madras Road,High,0,Shivajinagar,0,0,0,41.53308571666666
+others,Tumkur Road,High,0,Yeshwanthpura,20,3,0,133.52983253333335
+vehicle_breakdown,Airport New South Road,High,0,K.G. Halli,6,2,0,64.49834003333333
+vehicle_breakdown,Varthur Road,High,0,HAL Old Airport,20,0,0,62.645947
+vehicle_breakdown,Non-corridor,Low,0,Thalagattapura,5,6,0,118.13179021666666
+tree_fall,Bellary Road 1,High,0,Sadashivanagar,5,2,0,20.3921804
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,2,2,0,6.290766016666667
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,23,5,0,64.30445040000001
+vehicle_breakdown,Non-corridor,Low,1,Halasuru Gate,2,2,0,109.37136253333333
+vehicle_breakdown,Bannerghata Road,High,0,Wilson Garden,23,4,0,79.09793438333332
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,22,0,0,159.76517208333334
+vehicle_breakdown,Non-corridor,Low,1,K.R. Pura,5,1,0,58.34383913333333
+tree_fall,Non-corridor,Low,1,Malleshwaram,22,4,0,203.1981286666667
+vehicle_breakdown,CBD 1,High,0,Shivajinagar,1,3,0,44.65402225
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,18,0,1,93.07605395
+vehicle_breakdown,Tumkur Road,High,0,Peenya,21,3,0,33.33879541666667
+vehicle_breakdown,Varthur Road,High,0,HAL Old Airport,19,0,1,37.4838463
+vehicle_breakdown,Old Madras Road,High,0,Cubbon Park,22,5,0,78.62757426666667
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,4,3,0,32.815805516666664
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,3,3,0,49.17207883333333
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,7,6,1,57.20298101666666
+vehicle_breakdown,West of Chord Road,High,0,Magadi Road,5,5,0,11.163700416666668
+vehicle_breakdown,Non-corridor,Low,0,Banashankari,0,0,0,57.316075016666666
+others,Non-corridor,Low,0,Sadashivanagar,8,3,1,598.4027556333333
+vehicle_breakdown,ORR North 1,High,0,Banaswadi,21,1,0,43.703668050000005
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,7,5,1,136.78986316666666
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,23,5,0,29.9509581
+others,Magadi Road,High,0,Kamakshipalya,1,5,0,55.317655916666666
+others,West of Chord Road,High,0,Magadi Road,21,0,0,64.12804031666667
+pot_holes,Non-corridor,Low,1,K.R. Pura,0,6,0,365.2268505833334
+vehicle_breakdown,Non-corridor,Low,0,Banashankari,5,1,0,57.44499458333333
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,3,4,0,19.9379241
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,4,4,0,133.28790756666666
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,20,1,0,9.713554783333333
+vehicle_breakdown,Old Airport Road,High,0,Halasur,8,5,1,10.359373833333333
+vehicle_breakdown,Non-corridor,Low,0,Chamarajpet,1,2,0,5.762542216666668
+vehicle_breakdown,Tumkur Road,High,0,Peenya,5,6,0,108.20570536666668
+vehicle_breakdown,Bellary Road 1,High,0,High ground,6,1,0,79.2974488
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,7,5,1,27.512111066666662
+vehicle_breakdown,Mysore Road,High,0,Ashok Nagar,3,6,0,57.2864581
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,0,4,0,20.0987703
+vehicle_breakdown,Hosur Road,High,0,Madiwala,7,0,1,64.53818363333333
+vehicle_breakdown,Non-corridor,Low,1,Bellandur,20,0,0,43.90709898333333
+vehicle_breakdown,CBD 2,High,0,Shivajinagar,4,3,0,32.96513973333334
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,3,3,0,76.91394981666667
+others,Non-corridor,Low,0,Sheshadripuram,21,0,0,49.172535466666666
+vehicle_breakdown,Hosur Road,High,0,Madiwala,6,5,0,96.5241556
+vehicle_breakdown,Bellary Road 1,High,0,Kodigehalli,4,3,0,19.75909175
+vehicle_breakdown,Non-corridor,Low,0,Mahadevapura,18,5,1,15.931807983333334
+vehicle_breakdown,Non-corridor,Low,0,Chikkabanavara,21,4,0,32.548574
+vehicle_breakdown,Mysore Road,High,0,Ashok Nagar,5,5,0,39.93153236666667
+vehicle_breakdown,Mysore Road,Low,1,Banashankari,21,5,0,53.10384338333333
+vehicle_breakdown,Non-corridor,Low,1,Chamarajpet,5,3,0,46.66483641666667
+vehicle_breakdown,Non-corridor,Low,0,Cubbon Park,2,4,0,64.04493938333333
+vehicle_breakdown,Non-corridor,Low,1,Jnanabharathi,3,3,0,153.20900648333333
+vehicle_breakdown,Bellary Road 1,High,0,High ground,9,6,1,105.14612633333331
+vehicle_breakdown,Non-corridor,Low,0,Wilson Garden,19,5,1,6.343955466666667
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,6,1,0,64.27595888333333
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,18,6,1,6.304003066666667
+vehicle_breakdown,Non-corridor,Low,0,Kamakshipalya,0,4,0,73.34186823333333
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,20,2,0,75.1806598
+vehicle_breakdown,Non-corridor,Low,1,Halasuru Gate,23,3,0,20.05264845
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,23,2,0,12.03063225
+vehicle_breakdown,Non-corridor,Low,0,Whitefield,7,4,1,55.859611666666666
+vehicle_breakdown,Old Airport Road,High,1,Jeevanbheemanagar,0,1,0,14.23674055
+vehicle_breakdown,ORR West 1,High,0,Banashankari,2,5,0,6.4347744166666665
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,21,6,0,10.468071333333334
+vehicle_breakdown,Non-corridor,Low,0,Halasur,19,4,1,37.04358068333333
+vehicle_breakdown,ORR North 1,High,0,Hebbala,6,1,0,100.7026763
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,20,4,0,34.02031625
+vehicle_breakdown,Non-corridor,Low,0,Sadashivanagar,19,5,1,10.172995533333332
+vehicle_breakdown,Hosur Road,High,0,Madiwala,5,1,0,96.84268413333332
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,1,6,0,110.94811855
+vehicle_breakdown,Mysore Road,High,0,Ashok Nagar,4,5,0,36.41693461666667
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,1,1,0,18.983907716666668
+vehicle_breakdown,ORR East 2,High,0,Mahadevapura,22,2,0,42.19713446666666
+vehicle_breakdown,Non-corridor,Low,0,Yeshwanthpura,3,4,0,15.0543215
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,21,5,0,114.13534746666666
+vehicle_breakdown,Non-corridor,Low,0,Jnanabharathi,8,2,1,75.99562091666667
+water_logging,Non-corridor,Low,0,R.T. Nagar,21,1,0,230.06940948333332
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,6,1,0,101.3939446
+road_conditions,IRR(Thanisandra road),High,0,Adugodi,19,1,1,226.32391145000005
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,6,4,0,4.514547266666667
+vehicle_breakdown,Mysore Road,High,0,Ashok Nagar,8,4,1,66.13607151666666
+others,Non-corridor,Low,0,Kamakshipalya,9,6,1,43.93024606666667
+others,ORR North 2,High,0,Jalahalli,5,2,0,7.44461345
+vehicle_breakdown,Non-corridor,Low,0,Jalahalli,9,4,1,31.144372966666666
+others,Non-corridor,Low,0,Upparpet,20,3,0,54.73600583333334
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,21,5,0,15.887661683333333
+vehicle_breakdown,Tumkur Road,High,0,Peenya,1,3,0,86.29591815
+accident,Non-corridor,Low,0,Yelahanka,2,5,0,0.8491233333333333
+water_logging,Non-corridor,Low,0,K.R. Pura,11,4,0,81.68219065
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,5,0,8.949905016666666
+vehicle_breakdown,Varthur Road,High,0,Whitefield,18,0,1,9.947234283333334
+water_logging,Non-corridor,Low,0,Sadashivanagar,5,1,0,57.1615183
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,21,3,0,83.42797768333334
+vehicle_breakdown,ORR East 1,High,0,Madiwala,8,1,1,21.37707543333333
+vehicle_breakdown,West of Chord Road,High,0,Vijayanagara,21,1,0,32.680638949999995
+vehicle_breakdown,Non-corridor,Low,0,Pulikeshinagar(F.Town),21,5,0,83.28090113333333
+test_demo,Non-corridor,Low,0,Rajajinagar,7,6,1,1.2892694833333331
+vehicle_breakdown,Non-corridor,Low,0,Wilson Garden,0,3,0,80.1326431
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,7,2,1,24.5433796
+vehicle_breakdown,Bellary Road 2,High,0,Chikkajala,20,2,0,96.70297571666669
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,21,0,0,11.861054683333332
+accident,Hosur Road,High,0,Electronic City,18,3,1,109.13002826666668
+others,Non-corridor,Low,0,Jnanabharathi,6,6,0,101.6763598
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,20,4,0,63.62485048333333
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,0,0,0,34.993629850000005
+vehicle_breakdown,Bellary Road 1,High,0,Kodigehalli,6,2,0,42.97605128333333
+vehicle_breakdown,ORR East 2,High,0,Mahadevapura,18,0,1,31.903825633333334
+vehicle_breakdown,Non-corridor,Low,0,Yelahanka,0,6,0,3.3893408166666665
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,8,5,1,16.6484411
+accident,Old Madras Road,High,0,Jeevanbheemanagar,9,0,1,26.89822893333333
+others,Bellary Road 2,High,0,Chikkajala,20,1,0,241.04827926666667
+vehicle_breakdown,Hosur Road,High,0,Madiwala,9,3,1,40.683018700000005
+vehicle_breakdown,Mysore Road,High,0,Jnanabharathi,2,5,0,19.299157533333336
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,3,6,0,51.0690825
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,19,3,1,33.22631478333333
+vehicle_breakdown,CBD 2,High,0,Cubbon Park,1,6,0,4.8932102
+vehicle_breakdown,Mysore Road,High,0,Ashok Nagar,1,2,0,23.28740005
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,5,2,0,44.67258238333333
+vehicle_breakdown,Non-corridor,Low,0,K.S. Layout,21,3,0,66.1186007
+construction,Bellary Road 2,High,1,Yelahanka,10,6,0,487.25248725
+vehicle_breakdown,Bellary Road 1,High,0,Cubbon Park,6,4,0,65.88227233333333
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,19,0,1,44.00237736666666
+congestion,Non-corridor,Low,1,Jayanagara,22,0,0,42.63612995
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,21,2,0,20.894928466666663
+vehicle_breakdown,ORR East 1,High,0,Bellandur,21,1,0,55.541728516666666
+vehicle_breakdown,Non-corridor,Low,0,Jnanabharathi,4,6,0,42.76717533333333
+vehicle_breakdown,Hosur Road,High,0,Madiwala,6,3,0,65.48031155
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,10,6,0,12.689850833333333
+vehicle_breakdown,Tumkur Road,High,0,Peenya,1,1,0,8.114047366666666
+vehicle_breakdown,Non-corridor,Low,0,Kamakshipalya,8,6,1,44.57036183333333
+vehicle_breakdown,Non-corridor,Low,0,Adugodi,20,0,0,8.523106283333332
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,4,3,0,96.76755278333331
+vehicle_breakdown,ORR East 1,High,0,Bellandur,4,4,0,13.551236183333334
+vehicle_breakdown,Mysore Road,High,1,Chamarajpet,2,1,0,112.05360535
+vehicle_breakdown,Old Madras Road,High,0,Ashok Nagar,5,2,0,65.14124903333332
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,5,0,66.04253946666667
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,3,3,0,28.98592503333333
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,8,1,1,35.98495698333333
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,6,6,0,16.718276533333334
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,9,3,1,24.78094095
+others,Non-corridor,Low,0,Chamarajpet,4,0,0,8.650822833333333
+others,Magadi Road,High,0,Kamakshipalya,19,2,1,48.009267783333335
+vehicle_breakdown,Non-corridor,Low,0,Halasur,7,4,1,85.28976388333334
+vehicle_breakdown,West of Chord Road,High,0,Vijayanagara,0,1,0,26.33293743333333
+others,Non-corridor,Low,0,K.R. Pura,6,2,0,180.91461453333332
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,3,0,25.809777583333336
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,0,0,0,20.2021116
+road_conditions,Bellary Road 1,High,0,Sadashivanagar,20,2,0,31.61310158333333
+vehicle_breakdown,Non-corridor,Low,0,Bellandur,22,3,0,20.2316355
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,13,6,0,27.93791925
+accident,Non-corridor,Low,0,Jnanabharathi,5,1,0,42.8945817
+vehicle_breakdown,Hosur Road,High,0,Adugodi,4,3,0,117.19740893333332
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,0,4,0,29.06766845
+construction,ORR North 1,High,0,Hebbala,12,6,0,325.6833299666667
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,6,3,0,151.79433328333334
+others,Non-corridor,Low,0,Malleshwaram,7,0,1,25.01378635
+vehicle_breakdown,Non-corridor,Low,0,Electronic City,22,0,0,69.4879925
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,7,4,1,101.30639593333332
+pot_holes,Non-corridor,Low,0,Whitefield,22,3,0,15.4770977
+tree_fall,Bannerghata Road,High,1,Jayanagara,22,5,0,30.045177533333334
+vehicle_breakdown,Non-corridor,Low,0,Pulikeshinagar(F.Town),3,0,0,70.5850728
+vehicle_breakdown,Hosur Road,High,0,Electronic City,20,0,0,43.12657125
+vehicle_breakdown,Non-corridor,Low,0,Chamarajpet,20,5,0,36.20208975
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,3,0,173.42698381666665
+others,Non-corridor,Low,1,Hennuru,19,3,1,112.65264815
+vehicle_breakdown,ORR East 1,High,0,HSR Layout,4,1,0,10.37758925
+water_logging,Mysore Road,High,1,Halasuru Gate,6,5,0,1.20292415
+vehicle_breakdown,Bellary Road 1,High,0,High ground,19,6,1,24.24073986666667
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,23,1,0,16.297705333333333
+vehicle_breakdown,Non-corridor,Low,0,Electronic City,23,1,0,56.47194215
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,7,1,1,46.057772066666665
+vehicle_breakdown,Non-corridor,Low,0,V.V.Puram (C.Pet),21,0,0,75.01906000000001
+vehicle_breakdown,Old Madras Road,High,0,Cubbon Park,6,1,0,74.64067675
+water_logging,Non-corridor,Low,0,R.T. Nagar,21,0,0,123.31325763333332
+vehicle_breakdown,Old Madras Road,High,0,Halasur,2,0,0,26.570824366666667
+tree_fall,Non-corridor,Low,1,Jayanagara,8,4,1,96.0607281
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,18,3,1,58.99964246666666
+tree_fall,Non-corridor,Low,0,Electronic City,8,4,1,64.12170315
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,21,5,0,16.706654466666667
+accident,Bellary Road 2,High,0,Yelahanka,20,4,0,32.31531945
+vehicle_breakdown,Non-corridor,Low,0,Kengeri,2,2,0,66.87167588333334
+others,Bellary Road 1,High,0,High ground,21,2,0,72.40414826666667
+others,Hosur Road,High,0,Ashok Nagar,21,2,0,514.82014045
+vehicle_breakdown,Old Airport Road,High,0,Jeevanbheemanagar,7,6,1,122.7237518
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,10,2,0,9.17007925
+congestion,Hennur Main Road,High,0,Hennuru,20,0,0,41.08258143333333
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,5,0,0,12.225998116666666
+vehicle_breakdown,Non-corridor,Low,0,Jayanagara,21,0,0,15.77617945
+vehicle_breakdown,Magadi Road,High,0,Magadi Road,7,0,1,140.95731608333332
+water_logging,Hosur Road,High,0,Madiwala,9,4,1,49.00152443333333
+vehicle_breakdown,Non-corridor,Low,0,Sheshadripuram,1,6,0,8.552649733333334
+accident,ORR North 2,High,0,Jalahalli,3,3,0,9.1037502
+vehicle_breakdown,West of Chord Road,High,0,Byatarayanapura,1,6,0,30.792283566666665
+others,Non-corridor,Low,0,Chamarajpet,6,0,0,41.99649041666667
+congestion,Non-corridor,Low,0,Chamarajpet,1,2,0,55.54801945
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,5,5,0,73.59852533333333
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,18,2,1,78.82542815000001
+vehicle_breakdown,Non-corridor,Low,0,Upparpet,19,1,1,110.95514761666666
+accident,Non-corridor,Low,0,Mahadevapura,21,1,0,216.12666711666668
+accident,Bellary Road 2,High,0,Yelahanka,8,0,1,111.00052843333332
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,21,0,0,81.64968848333334
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,20,2,0,21.039561
+vehicle_breakdown,Non-corridor,Low,0,Sadashivanagar,5,4,0,44.92868061666666
+vehicle_breakdown,Non-corridor,Low,0,Sadashivanagar,7,3,1,46.03317931666666
+vehicle_breakdown,Non-corridor,Low,0,Wilson Garden,9,0,1,16.688940616666667
+vehicle_breakdown,ORR North 1,High,0,Hebbala,6,6,0,16.300484133333335
+vehicle_breakdown,Non-corridor,Low,0,Thalagattapura,0,6,0,13.937764283333332
+vehicle_breakdown,Non-corridor,Low,0,Sheshadripuram,3,4,0,84.26732303333333
+others,Bellary Road 1,High,0,Sadashivanagar,18,0,1,32.5370269
+accident,Mysore Road,High,0,Ashok Nagar,5,1,0,75.20685893333332
+vehicle_breakdown,Bellary Road 1,High,0,Kodigehalli,5,3,0,147.61173708333334
+vehicle_breakdown,Tumkur Road,High,1,Yeshwanthpura,0,1,0,18.1767132
+vehicle_breakdown,Non-corridor,Low,0,Electronic City,21,2,0,98.90068815
+vehicle_breakdown,Bannerghata Road,High,0,Mico Layout,5,1,0,131.96330435
+vehicle_breakdown,Tumkur Road,High,0,Peenya,19,3,1,18.911796083333336
+vehicle_breakdown,Mysore Road,High,0,Halasuru Gate,5,1,0,110.00090083333332
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,8,2,1,32.257464766666665
+vehicle_breakdown,ORR West 1,High,0,J.P. Nagar,2,6,0,25.896753516666667
+vehicle_breakdown,Hosur Road,High,0,Madiwala,2,2,0,11.97852685
+vehicle_breakdown,Non-corridor,Low,0,Banashankari,6,3,0,62.41803623333333
+others,Old Madras Road,High,0,Shivajinagar,5,6,0,66.8745492
+water_logging,Non-corridor,Low,0,R.T. Nagar,6,3,0,188.00503193333333
+water_logging,Non-corridor,Low,0,High ground,21,5,0,100.9754557
+vehicle_breakdown,Non-corridor,Low,0,Electronic City,2,2,0,83.47854003333333
+others,West of Chord Road,High,1,Magadi Road,6,3,0,39.91002743333333
+water_logging,Bellary Road 2,High,0,Yelahanka,5,2,0,251.5299698833333
+vehicle_breakdown,ORR East 2,High,0,K.R. Pura,19,5,1,72.49902041666665
+vehicle_breakdown,Non-corridor,Low,0,Jnanabharathi,3,2,0,7.453080083333333
+others,Old Madras Road,High,0,Ashok Nagar,22,4,0,30.950269216666666
+vehicle_breakdown,Non-corridor,Low,0,Halasuru Gate,23,6,0,4.599644433333333
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,3,2,0,31.054842
+others,Non-corridor,Low,0,Kodigehalli,21,3,0,44.664516866666666
+others,ORR East 2,High,0,Mahadevapura,7,4,1,52.82519771666667
+tree_fall,Non-corridor,Low,0,Jalahalli,21,2,0,1.08053705
+vehicle_breakdown,Old Madras Road,High,0,Shivajinagar,21,0,0,38.2213697
+others,Magadi Road,High,0,Magadi Road,3,2,0,2.269037
+vehicle_breakdown,Magadi Road,High,0,Magadi Road,3,0,0,15.24906015
+vehicle_breakdown,ORR West 1,High,0,Banashankari,21,4,0,75.99775528333333
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,3,6,0,19.97699008333333
+water_logging,Old Madras Road,High,0,Cubbon Park,21,1,0,36.627531100000006
+others,Hosur Road,High,0,Madiwala,13,0,0,286.8181712166667
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,2,6,0,107.86730428333334
+accident,Hosur Road,High,0,Electronic City,18,3,1,115.2570139
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,3,2,0,18.80568968333333
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,1,6,0,11.68523875
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,5,0,0,50.71622881666666
+tree_fall,Non-corridor,Low,0,Yeshwanthpura,7,5,1,64.03180449999999
+vehicle_breakdown,Hosur Road,High,0,Ashok Nagar,5,1,0,86.54174110000001
+construction,Bellary Road 1,High,0,Hebbala,22,3,0,545.3734030166667
+vehicle_breakdown,IRR(Thanisandra road),High,0,Adugodi,0,1,0,91.30090236666666
+vehicle_breakdown,Bellary Road 1,High,0,Sadashivanagar,4,3,0,68.5412746
+vehicle_breakdown,Hosur Road,High,0,Madiwala,19,2,1,2.26340155
+accident,Non-corridor,Low,0,Chamarajpet,19,4,1,78.2774947
+vehicle_breakdown,Hosur Road,High,0,Madiwala,1,6,0,22.957331716666665
+vehicle_breakdown,ORR North 1,High,0,Hebbala,19,4,1,5.132183783333333
+road_conditions,CBD 2,High,0,Cubbon Park,1,1,0,245.91660705
+vehicle_breakdown,ORR North 1,High,0,Banaswadi,6,2,0,22.08807725
+vehicle_breakdown,Bellary Road 1,High,0,Kodigehalli,22,0,0,110.65663531666668
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,7,0,1,21.827275766666663
+water_logging,Non-corridor,Low,1,Peenya,6,3,0,71.25115430000001
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,20,4,0,115.8735414
+vehicle_breakdown,Non-corridor,Low,0,Mahadevapura,1,5,0,11.195320116666666
+accident,Hosur Road,High,0,Adugodi,1,6,0,2.026038183333333
+vehicle_breakdown,Non-corridor,Low,0,Electronic City,23,5,0,73.46585520000001
+vehicle_breakdown,Non-corridor,Low,0,Mahadevapura,18,6,1,26.36466031666667
+vehicle_breakdown,ORR West 1,High,0,J.P. Nagar,6,4,0,27.9779026
+vehicle_breakdown,CBD 2,High,0,Shivajinagar,4,3,0,60.29477873333334
+vehicle_breakdown,ORR East 1,High,0,Bellandur,3,2,0,64.20612750000001
+vehicle_breakdown,Non-corridor,Low,0,Sheshadripuram,6,1,0,45.685754933333335
+others,ORR North 2,High,0,Jalahalli,2,1,0,13.802722683333334
+vehicle_breakdown,Non-corridor,Low,0,Jeevanbheemanagar,8,4,1,2.6516332666666664
+vehicle_breakdown,CBD 2,High,0,Shivajinagar,5,5,0,77.91042241666668
+vehicle_breakdown,Non-corridor,Low,0,Wilson Garden,6,2,0,61.030100583333336
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,19,0,1,44.14427928333334
+vehicle_breakdown,Non-corridor,Low,0,Jnanabharathi,3,3,0,54.46608108333333
+vehicle_breakdown,ORR West 1,High,0,Banashankari,22,3,0,44.5321139
+tree_fall,Bellary Road 1,High,1,Cubbon Park,18,5,1,20.54189726666667
+vehicle_breakdown,Non-corridor,Low,0,High ground,22,3,0,16.580316616666668
+vehicle_breakdown,Non-corridor,Low,0,V.V.Puram (C.Pet),4,5,0,48.53696371666667
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,3,0,0,75.36809358333333
+vehicle_breakdown,Non-corridor,Low,1,Whitefield,21,3,0,4.565127216666666
+vehicle_breakdown,Old Madras Road,High,0,Cubbon Park,19,3,1,75.95687948333332
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,20,1,0,134.86672011666667
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,23,3,0,11.028707233333334
+vehicle_breakdown,Non-corridor,Low,0,Peenya,7,4,1,23.094677766666667
+vehicle_breakdown,Tumkur Road,High,0,Yeshwanthpura,5,6,0,58.34616111666666
+others,Bellary Road 1,High,0,Sadashivanagar,8,6,1,8.213493783333332
+vehicle_breakdown,Non-corridor,Low,0,High ground,0,5,0,13.907694183333332
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,2,0,0,25.03543748333333
+vehicle_breakdown,Bannerghata Road,High,0,Mico Layout,6,1,0,71.91043833333333
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,19,6,1,49.95916433333333
+vehicle_breakdown,Tumkur Road,High,0,Peenya,7,3,1,12.276266133333332
+vehicle_breakdown,ORR North 1,High,0,Banaswadi,18,2,1,35.82966003333333
+vehicle_breakdown,Mysore Road,High,0,Kengeri,3,3,0,7.899234916666667
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,6,3,0,68.16662336666667
+vehicle_breakdown,Non-corridor,Low,0,Mico Layout,6,1,0,33.111599733333335
+vehicle_breakdown,Non-corridor,Low,0,Peenya,2,6,0,37.96253371666667
+tree_fall,Non-corridor,Low,1,Wilson Garden,22,4,0,125.7725866
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,7,2,1,87.93818821666667
+vehicle_breakdown,Non-corridor,Low,0,High ground,20,6,0,23.29224866666667
+vehicle_breakdown,Tumkur Road,High,0,Peenya,21,3,0,39.01760381666666
+vehicle_breakdown,Old Madras Road,High,0,Halasur,0,2,0,34.93423536666667
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,3,2,0,110.08692461666666
+vehicle_breakdown,Non-corridor,Low,0,Mico Layout,8,2,1,14.684621466666666
+vehicle_breakdown,Tumkur Road,High,0,Peenya,1,6,0,104.3606748
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,2,1,0,83.40713503333333
+others,Non-corridor,Low,0,Bellandur,22,4,0,1.09467605
+vehicle_breakdown,Non-corridor,Low,0,Byatarayanapura,22,2,0,86.31497898333333
+vehicle_breakdown,Tumkur Road,High,0,Peenya,21,5,0,22.33721543333333
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,0,0,0,5.181943216666666
+vehicle_breakdown,Tumkur Road,High,0,Peenya,3,0,0,44.69857258333333
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,9,3,1,15.370875883333332
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,7,4,1,10.35619615
+vehicle_breakdown,Bellary Road 1,High,0,High ground,0,5,0,27.87250365
+others,Bellary Road 1,High,0,Sadashivanagar,2,6,0,14.34505785
+tree_fall,Non-corridor,Low,1,Sadashivanagar,17,5,1,107.3134921
+vehicle_breakdown,Airport New South Road,High,0,K.G. Halli,23,2,0,91.12731315
+others,Mysore Road,High,0,Byatarayanapura,6,3,0,152.36606333333333
+vehicle_breakdown,Non-corridor,Low,0,Upparpet,21,2,0,25.40089808333333
+vehicle_breakdown,Non-corridor,Low,0,Shivajinagar,23,6,0,129.19878353333334
+vehicle_breakdown,Non-corridor,Low,0,Jayanagara,1,1,0,117.39218681666668
+vehicle_breakdown,ORR West 1,High,0,J.P. Nagar,21,0,0,20.7539686
+others,Mysore Road,High,0,Jnanabharathi,21,4,0,17.062712316666666
+procession,Non-corridor,Low,1,Whitefield,8,0,1,38.40874121666666
+vehicle_breakdown,Mysore Road,High,0,Chamarajpet,22,3,0,53.3287807
+vehicle_breakdown,ORR North 2,High,0,Jalahalli,14,2,0,25.45243973333333
+vehicle_breakdown,Bellary Road 1,High,0,High ground,19,2,1,23.154083816666667
+vehicle_breakdown,ORR East 2,High,0,Mahadevapura,3,4,0,29.160188716666667
+vehicle_breakdown,Non-corridor,Low,0,Sadashivanagar,3,1,0,10.638148583333331
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,5,6,0,17.657173883333332
+others,Non-corridor,Low,0,Jnanabharathi,6,0,0,6.989937633333333
+construction,ORR North 1,High,0,Banaswadi,12,5,0,418.72792855
+vehicle_breakdown,Non-corridor,Low,0,Sheshadripuram,5,4,0,48.95618971666667
+vehicle_breakdown,Magadi Road,High,0,Kamakshipalya,5,3,0,8.242330166666667
+vehicle_breakdown,Non-corridor,Low,0,Bellandur,22,4,0,105.27233006666668
+accident,Non-corridor,Low,0,Basavanagudi,21,1,0,43.65988791666667
+vehicle_breakdown,West of Chord Road,High,0,Malleshwaram,20,4,0,49.20473728333333
+vehicle_breakdown,ORR West 1,High,0,J.P. Nagar,5,5,0,147.82079903333334
+vehicle_breakdown,Hosur Road,High,0,HSR Layout,21,3,0,99.30421715
+vehicle_breakdown,Non-corridor,Low,0,Adugodi,5,2,0,61.62912321666667
+water_logging,ORR East 1,High,0,Madiwala,6,5,0,2.4512035666666665
+vehicle_breakdown,Bellary Road 2,High,0,Yelahanka,18,1,1,10.638263616666668
+vehicle_breakdown,Magadi Road,High,1,Kamakshipalya,19,0,1,63.96499075
+vehicle_breakdown,Bellary Road 1,High,0,High ground,21,6,0,85.08149098333334
+vehicle_breakdown,Bellary Road 1,High,0,Kodigehalli,4,5,0,32.287891466666665
+tree_fall,Non-corridor,Low,0,Jayanagara,19,3,1,293.3450075
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,5,6,0,27.37180333333333
+vehicle_breakdown,Varthur Road,High,0,Whitefield,2,3,0,7.910359416666666
+vehicle_breakdown,Non-corridor,Low,0,K.R. Pura,4,3,0,3.21337185
+vehicle_breakdown,CBD 2,High,0,Cubbon Park,4,5,0,169.54879098333333
+vehicle_breakdown,Magadi Road,High,0,Magadi Road,21,4,0,104.03651015
+vehicle_breakdown,Mysore Road,High,0,Byatarayanapura,21,3,0,43.98374376666666
+vehicle_breakdown,Non-corridor,Low,0,Upparpet,5,3,0,53.374649950000006
+tree_fall,Non-corridor,Low,0,Mahadevapura,7,2,1,18.83196996666667
+vehicle_breakdown,ORR East 1,High,0,HAL Old Airport,20,3,0,30.901282016666663
+vehicle_breakdown,Old Airport Road,High,0,HAL Old Airport,19,4,1,27.47141106666667
