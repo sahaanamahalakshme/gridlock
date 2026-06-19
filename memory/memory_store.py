@@ -24,9 +24,9 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
-from models import Event
+from memory.models import Event
 
-from confidence import compute_confidence
+from memory.confidence import compute_confidence
 
 
 def _compute_duration_minutes(start, end):

@@ -1,8 +1,8 @@
 import pandas as pd
 
-from db import init_db, SessionLocal
+from memory.db import init_db, SessionLocal
 
-from models import Event
+from memory.models import Event
 
 
 RAW_PATH = "data/raw/astram_events_raw.csv"

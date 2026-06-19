@@ -44,7 +44,7 @@ from sqlalchemy import func
 
 from sqlalchemy.orm import Session
 
-from models import Event
+from memory.models import Event
 
 
 def get_precedent_count(session: Session, police_station: str, event_cause: str) -> int:

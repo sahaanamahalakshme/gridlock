@@ -18,7 +18,7 @@ from sqlalchemy import create_engine
 
 from sqlalchemy.orm import sessionmaker
 
-from models import Base
+from memory.models import Base
 
 
 load_dotenv(dotenv_path=Path(__file__).parent / ".env")

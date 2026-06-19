@@ -1,3 +1,4 @@
+import os
 import joblib
 
 import pandas as pd
@@ -5,9 +6,9 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 
 
-META_PATH = "models/train_meta.csv"
-
-INDEX_PATH = "models/nn_index.joblib"
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+META_PATH = os.path.join(ROOT_DIR, "models", "train_meta.csv")
+INDEX_PATH = os.path.join(ROOT_DIR, "models", "nn_index.joblib")
 
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 
