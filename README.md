@@ -93,3 +93,34 @@ To run full integration tests:
 ```bash
 python test_integration.py
 ```
+# SENTRY - Resolution Intelligence Dashboard
+
+This is the SENTRY Resolution Intelligence frontend application — an internal operational dashboard for Bengaluru traffic police, intended to interact with three ML models:
+- Bilingual Event Classifier
+- Impact Forecaster
+- Resolution Predictor
+
+Currently, this frontend is intentionally backend-independent until teammates' APIs are ready. It simulates backend calls utilizing predefined mock data to showcase and test UI functionality.
+
+## How to Run
+
+To run the application locally, install the dependencies and start the Vite development server:
+
+```bash
+npm install
+npm run dev
+```
+
+The application will typically start at `http://localhost:5173`.
+
+## Moving to Real API Data
+
+Currently, all mock data and simulated endpoints are localized inside `src/mockData.js`. 
+
+To transition from the UI mock state to the production application, edit **`src/mockData.js`** to swap out the mock functions for real `fetch()` calls once the teammate APIs are complete:
+
+- Update `mockPredictEvent` to send `POST` requests with `formData` to the Impact Forecaster/Resolution Predictor endpoints.
+- Update `mockClassify` to send the `text` string to the Bilingual Event Classifier API endpoint.
+- Swap out `HOTSPOT_JUNCTIONS` and `CAUSE_TOTALS` to fetch live historical data instead of static arrays.
+
+*Note: This architecture intentionally decouples the UI layout logic from data retrieval to maintain parallel development streams.*

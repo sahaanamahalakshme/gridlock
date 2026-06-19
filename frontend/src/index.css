@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #F9FAFB;
+  --color-card-bg: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  
+  --color-hover-bg: #F9FAFB;
+  --color-active-bg: #EFF6FF;
+  --color-gray-bg: #F3F4F6;
+  --color-map-bg: #E5E7EB;
+  --color-pulse-light: #F3F4F6;
+  --color-pulse-dark: #E5E7EB;
+}
+
+body.dark {
+  --color-bg: #121212;
+  --color-card-bg: #1E1E1E;
+  --color-border: #333333;
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-tertiary: #6B7280;
+  
+  --color-hover-bg: #374151;
+  --color-active-bg: #1e3a8a;
+  --color-gray-bg: #374151;
+  --color-map-bg: #111827;
+  --color-pulse-light: #374151;
+  --color-pulse-dark: #4B5563;
+}
+
+
+@keyframes sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Accessibility & Interaction Constraints */
+:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
