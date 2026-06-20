@@ -225,7 +225,7 @@ export default function PredictEvent({ initialData }) {
                   </div>
 
                   <div style={{ fontFamily: 'monospace', fontSize: '11px', color: colors.textTertiary, textAlign: 'center', marginTop: '4px', borderTop: `1px solid ${colors.border}`, paddingTop: '10px' }}>
-                    Swap mockPredictEvent() → fetch('/api/predict')
+                    Live prediction from DRISHTI backend
                   </div>
                 </div>
               </div>

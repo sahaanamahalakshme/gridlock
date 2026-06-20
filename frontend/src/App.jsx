@@ -66,6 +66,7 @@ export default function App() {
   const [hoveredNav, setHoveredNav] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [predictFill, setPredictFill] = useState(null);
+  const [predictionData, setPredictionData] = useState(null);
   const searchInputRef = useRef(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -95,9 +96,9 @@ export default function App() {
   const renderContent = () => {
     switch (activeView) {
       case 'hotspot': return <HotspotMap searchQuery={searchQuery} onPredictClick={(data) => { setPredictFill(data); setActiveView('predict'); }} />;
-      case 'predict': return <PredictEvent initialData={predictFill} />;
+      case 'predict': return <PredictEvent initialData={predictFill} onPredictionSuccess={setPredictionData} />;
       case 'classifier': return <Classifier />;
-      case 'resolution': return <ResolutionOutput />;
+      case 'resolution': return <ResolutionOutput predictionData={predictionData} />;
       case 'simulation': return <SimulationPage />;
       default: return <HotspotMap searchQuery={searchQuery} onPredictClick={(data) => { setPredictFill(data); setActiveView('predict'); }} />;
     }
@@ -123,7 +124,7 @@ export default function App() {
         transition: 'background-color 150ms ease'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '13px', fontWeight: '600' }}>SENTRY</span>
+          <span style={{ fontSize: '13px', fontWeight: '600' }}>DRISHTI</span>
           <span style={{ color: colors.border }}>|</span>
           <span style={{ fontSize: '13px', color: colors.textSecondary }}>Resolution Intelligence</span>
         </div>
