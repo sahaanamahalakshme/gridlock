@@ -1,11 +1,22 @@
-  import { useState, useEffect, useRef } from 'react';
-  import { RESOLUTION_OUTPUT_MOCK } from '../mockData';
-  import { colors, typography, cards } from '../styles/globals';
+import { useState, useEffect, useRef } from 'react';
+import { colors, typography, cards } from '../styles/globals';
+
+export default function ResolutionOutput({ predictionData }) {
+  const [showRawOutput, setShowRawOutput] = useState(false);
   
-  export default function ResolutionOutput() {
-    const [showRawOutput, setShowRawOutput] = useState(false);
-    const data = RESOLUTION_OUTPUT_MOCK;
-  
+  const data = predictionData ? {
+    predicted_minutes: predictionData.resolution_estimate?.predicted_minutes || 0,
+    confidence_band: predictionData.resolution_estimate?.confidence_band || 'N/A',
+    manpower_tier: predictionData.resolution_estimate?.manpower_tier || 'N/A',
+    explanation: predictionData.resolution_estimate?.explanation || 'N/A',
+    similar_events: (predictionData.precedent?.matches || []).map(m => ({
+      name: m.description,
+      corridor: m.corridor || 'Unknown',
+      duration: m.duration_minutes || '?'
+    })),
+    raw: predictionData
+  } : null;
+
     const [activeStage, setActiveStage] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const timerRef = useRef(null);
@@ -42,9 +53,23 @@
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      {!data ? (
+        <div style={{ ...cards.base, textAlign: 'center', padding: '40px', color: colors.textSecondary }}>
+          <p>No prediction data available.</p>
+          <p style={{ fontSize: '13px' }}>Please run a prediction in the "Predict Event" tab to view the detailed resolution output here.</p>
+        </div>
+      ) : (
+        <>
       {/* Header */}
       <div>
-        <h1 style={{ ...typography.header, margin: 0, fontSize: '16px' }}>Resolution Output</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <h1 style={{ ...typography.header, margin: 0, fontSize: '16px' }}>Resolution Output</h1>
+          {data.raw?.precedent?.confidence?.low_precedent && (
+            <span style={{ fontSize: '11px', color: '#B45309', backgroundColor: '#FEF3C7', padding: '2px 8px', borderRadius: '4px', fontWeight: 600, border: '1px solid #FDE68A' }}>
+              Low Historical Precedent Warning
+            </span>
+          )}
+        </div>
         <p style={{ ...typography.subtitle, margin: 0, marginTop: '2px' }}>Model output for a classified or planned event</p>
       </div>
 
@@ -167,20 +192,41 @@
               Raw model output {showRawOutput ? '↑' : '↓'}
             </div>
             {showRawOutput && (
-              <pre style={{
-                marginTop: '12px',
-                backgroundColor: 'var(--color-bg)',
-                border: `1px solid ${colors.border}`,
-                borderRadius: '6px',
-                padding: '12px',
-                fontFamily: 'monospace',
-                fontSize: '12px',
-                color: colors.textPrimary,
-                overflowX: 'auto',
-                margin: 0
+              <div style={{ 
+                marginTop: '12px', 
+                backgroundColor: 'var(--color-bg)', 
+                border: `1px solid ${colors.border}`, 
+                borderRadius: '6px', 
+                padding: '16px', 
+                fontSize: '13px', 
+                color: colors.textSecondary 
               }}>
-                {JSON.stringify(data, null, 2)}
-              </pre>
+                <div style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: '12px', lineHeight: '1.5' }}>
+                  <strong style={{ color: colors.textPrimary }}>Model Engine:</strong> 
+                  <span>{data.raw?.method?.toUpperCase() || 'N/A'}</span>
+                  
+                  <strong style={{ color: colors.textPrimary }}>Classification:</strong> 
+                  <div>
+                    Cause: {data.raw?.classification?.event_cause?.replace('_', ' ')} ({(data.raw?.classification?.cause_confidence * 100)?.toFixed(1)}%)<br/>
+                    Severity: {data.raw?.classification?.severity} ({(data.raw?.classification?.severity_confidence * 100)?.toFixed(1)}%)
+                  </div>
+
+                  <strong style={{ color: colors.textPrimary }}>Civic Routing:</strong> 
+                  <span>
+                    {(data.raw?.classification?.routing?.routing_agency || 'N/A').toUpperCase()}
+                    {data.raw?.classification?.routing?.is_ambiguous ? ' (Ambiguous)' : ''}
+                  </span>
+
+                  <strong style={{ color: colors.textPrimary }}>Historical Precedent:</strong> 
+                  <div>
+                    Total matches found: {data.raw?.precedent?.total_matches || 0}<br/>
+                    Confidence Tier: {data.raw?.precedent?.confidence?.confidence_tier?.toUpperCase() || 'N/A'} (Count: {data.raw?.precedent?.confidence?.precedent_count || 0})
+                  </div>
+                  
+                  <strong style={{ color: colors.textPrimary }}>Estimate Bounds:</strong>
+                  <span>{data.raw?.resolution_estimate?.confidence_band} mins</span>
+                </div>
+              </div>
             )}
           </div>
 
@@ -247,7 +293,8 @@
           })}
         </div>
       </div>
-
+      </>
+      )}
     </div>
   );
 }

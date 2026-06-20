@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { mockPredictEvent } from '../mockData';
 import { colors, typography, cards, buttons } from '../styles/globals';
 
-export default function PredictEvent({ initialData }) {
+export default function PredictEvent({ initialData, onPredictionSuccess }) {
   // Form state
   const [eventCause, setEventCause] = useState('public_event');
   const [corridor, setCorridor] = useState('CBD 1');
@@ -27,7 +26,7 @@ export default function PredictEvent({ initialData }) {
   // Scenarios State
   const [savedScenarios, setSavedScenarios] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setUiState('loading');
     setResult(null);
@@ -40,10 +39,48 @@ export default function PredictEvent({ initialData }) {
       description
     };
 
-    mockPredictEvent(formData).then((data) => {
-      setResult({ ...data, _formData: formData });
+    try {
+      const response = await fetch('/api/events/report', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          description: description || 'No description provided.',
+          corridor,
+          police_station: policeStation,
+          latitude: 12.9716, // Dummy value
+          longitude: 77.5946, // Dummy value
+          requires_road_closure: requiresRoadClosure,
+          event_type: 'planned'
+        })
+      });
+
+      if (!response.ok) throw new Error('API failed');
+      const data = await response.json();
+
+      if (onPredictionSuccess) onPredictionSuccess(data);
+
+      const topMatch = data.precedent?.matches?.[0];
+      const confBand = data.resolution_estimate?.confidence_band;
+      const formattedConf = Array.isArray(confBand) ? `${confBand[0]} - ${confBand[1]}` : (confBand || 'Low');
+      const causeText = formData.event_cause.replace('_', ' ');
+      const fallbackExplanation = `Historical data for ${causeText} incidents at ${formData.police_station} indicates a typical clearance time of ${data.resolution_estimate?.predicted_minutes || 0} minutes.`;
+
+      setResult({ 
+        matched_event_id: topMatch?.source_id || data.logged_event_id || 'N/A',
+        matched_description: topMatch?.description || 'No matching precedent found.',
+        predicted_minutes: data.resolution_estimate?.predicted_minutes || 0,
+        confidence_band: formattedConf,
+        manpower_tier: data.resolution_estimate?.manpower_tier || 'Standard',
+        explanation: data.resolution_estimate?.explanation || fallbackExplanation,
+        _formData: formData,
+        precedent_confidence: data.precedent?.confidence?.confidence_tier || 'unknown',
+        low_precedent: data.precedent?.confidence?.low_precedent || false
+      });
       setUiState('result');
-    });
+    } catch (err) {
+      console.error(err);
+      setUiState('default');
+    }
   };
 
   const handleSaveScenario = () => {
@@ -150,10 +187,24 @@ export default function PredictEvent({ initialData }) {
               <div style={cards.base}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontFamily: 'monospace', fontSize: '11px', color: colors.accent, backgroundColor: '#EFF6FF', padding: '2px 6px', borderRadius: '4px', fontWeight: 600, border: `1px solid ${colors.accent}20` }}>
-                      {result.matched_event_id}
-                    </span>
-                    <span style={{ ...typography.subtitle, fontSize: '11px' }}>MATCHED ARCHIVE</span>
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                      <span style={{ fontSize: '11px', textTransform: 'uppercase', color: colors.textTertiary, letterSpacing: '0.05em' }}>
+                        Similar Past Event
+                      </span>
+                      <span style={{ fontSize: '11px', color: colors.accent, fontWeight: 600, backgroundColor: '#EFF6FF', padding: '2px 8px', borderRadius: '4px' }}>
+                        {result.matched_event_id}
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                      {result.low_precedent && (
+                        <span style={{ fontSize: '11px', color: '#DC2626', backgroundColor: '#FEE2E2', padding: '2px 8px', borderRadius: '4px', fontWeight: 600 }}>
+                          LOW PRECEDENT
+                        </span>
+                      )}
+                      <span style={{ fontSize: '11px', textTransform: 'uppercase', color: colors.textTertiary, letterSpacing: '0.05em' }}>
+                        Confidence: {result.precedent_confidence}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 style={{ ...typography.value, fontSize: '14px', margin: 0, fontWeight: 600 }}>
@@ -192,7 +243,7 @@ export default function PredictEvent({ initialData }) {
                   </div>
 
                   <div style={{ fontFamily: 'monospace', fontSize: '11px', color: colors.textTertiary, textAlign: 'center', marginTop: '4px', borderTop: `1px solid ${colors.border}`, paddingTop: '10px' }}>
-                    Swap mockPredictEvent() → fetch('/api/predict')
+                    Live prediction from DRISHTI backend
                   </div>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { mockClassify } from '../mockData';
 import { colors, typography, cards, buttons } from '../styles/globals';
 
 export default function Classifier() {
@@ -9,17 +8,27 @@ export default function Classifier() {
 
   const characterCount = text.length;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!text.trim()) return;
 
     setUiState('loading');
     setResult(null);
 
-    mockClassify(text).then((data) => {
+    try {
+      const response = await fetch('/api/classify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ description: text })
+      });
+      if (!response.ok) throw new Error('API failed');
+      const data = await response.json();
       setResult(data);
       setUiState('result');
-    });
+    } catch (err) {
+      console.error(err);
+      setUiState('default');
+    }
   };
 
   const loadExample = (exampleText) => {
@@ -139,7 +148,7 @@ export default function Classifier() {
 
       {/* Result Card */}
       {uiState === 'result' && result && (() => {
-        const confPct = result.confidence * 100;
+        const confPct = result.cause_confidence * 100;
         let confColor = '#DC2626'; // red
         if (confPct >= 80) confColor = colors.success; // green
         else if (confPct >= 60) confColor = colors.warning; // amber
@@ -148,24 +157,42 @@ export default function Classifier() {
           <div style={{ ...cards.base, animation: 'slideUp 200ms ease-out forwards' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                {/* Left cause indicator */}
-                <span style={{
-                  fontSize: '11px',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  padding: '4px 10px',
-                  borderRadius: '99px',
-                  backgroundColor: `${causeColor}15`,
-                  color: causeColor,
-                  border: `1px solid ${causeColor}30`
-                }}>
-                  {result.event_cause.replace('_', ' ')}
-                </span>
+                {/* Left cause & routing indicator */}
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <span style={{
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    padding: '4px 10px',
+                    borderRadius: '99px',
+                    backgroundColor: `${causeColor}15`,
+                    color: causeColor,
+                    border: `1px solid ${causeColor}30`
+                  }}>
+                    {result.event_cause.replace('_', ' ')}
+                  </span>
+
+                  {result.routing && (
+                    <span style={{
+                      fontSize: '11px',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      padding: '4px 10px',
+                      borderRadius: '99px',
+                      backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                      color: 'rgb(37, 99, 235)',
+                      border: '1px solid rgba(59, 130, 246, 0.3)'
+                    }}>
+                      Routing: {result.routing.routing_agency} {result.routing.is_ambiguous ? '*' : ''}
+                    </span>
+                  )}
+                </div>
 
                 {/* Right confidence score text */}
-                <div style={{ ...typography.subtitle, fontSize: '11px', whiteSpace: 'nowrap' }}>
-                  confidence: {result.confidence}
+                <div style={{ ...typography.subtitle, fontSize: '11px', whiteSpace: 'nowrap', fontWeight: 600 }}>
+                  MATCH CONFIDENCE: {confPct.toFixed(1)}%
                 </div>
               </div>
 
@@ -184,20 +211,36 @@ export default function Classifier() {
                 </div>
               </div>
 
-              {/* Formatted JSON block */}
-              <pre style={{
+              {/* Descriptive Output Block */}
+              <div style={{
                 backgroundColor: 'var(--color-bg)',
                 border: `1px solid ${colors.border}`,
                 borderRadius: '6px',
-                padding: '12px',
-                fontFamily: 'monospace',
-                fontSize: '12px',
+                padding: '16px',
+                fontSize: '13px',
                 color: colors.textPrimary,
-                overflowX: 'auto',
-                margin: 0
+                margin: 0,
+                lineHeight: '1.6'
               }}>
-                {JSON.stringify(result, null, 2)}
-              </pre>
+                The model classified this report as <strong>{result.event_cause.replace('_', ' ')}</strong> with a confidence score of <strong>{(result.cause_confidence * 100).toFixed(1)}%</strong>. 
+                The estimated severity of the incident is <strong>{result.severity}</strong> ({(result.severity_confidence * 100).toFixed(1)}% confidence). 
+                {result.routing && (
+                  <> Based on civic routing rules, this incident should be assigned to the <strong>{result.routing.routing_agency.toUpperCase()}</strong>{result.routing.is_ambiguous ? ' (Warning: Ambiguous routing matched)' : ''}.</>
+                )}
+                
+                {result.top5_causes && result.top5_causes.length > 1 && (
+                  <div style={{ marginTop: '12px', borderTop: `1px solid ${colors.border}`, paddingTop: '12px' }}>
+                    <div style={{ fontSize: '11px', color: colors.textTertiary, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Alternative classifications</div>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {result.top5_causes.slice(1, 4).map((c, i) => (
+                        <span key={i} style={{ fontSize: '11px', backgroundColor: 'var(--color-card-bg)', border: `1px solid ${colors.border}`, padding: '2px 8px', borderRadius: '99px', color: colors.textSecondary }}>
+                          {c.label.replace('_', ' ')} ({(c.confidence * 100).toFixed(1)}%)
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         );
