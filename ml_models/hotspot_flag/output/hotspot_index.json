@@ -1,0 +1,3283 @@
+{
+  "min_events": 10,
+  "tiers": {
+    "critical": 50,
+    "high": 25,
+    "moderate": 10
+  },
+  "junction_index": {
+    "MekhriCircle": {
+      "total_events": 64,
+      "tier": "critical",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 55,
+        "others": 5,
+        "road_conditions": 3
+      },
+      "avg_resolution_min": 78.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (86% of events). Standard traffic dispatch applies.",
+      "lat": 13.014602,
+      "lng": 77.583981
+    },
+    "AyyappaTempleJunc": {
+      "total_events": 49,
+      "tier": "high",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 37,
+        "vehicle_breakdown": 11,
+        "others": 1
+      },
+      "avg_resolution_min": 55.9,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (76% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.923716,
+      "lng": 77.618662
+    },
+    "SatteliteBusStandJunc": {
+      "total_events": 43,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 40,
+        "others": 3
+      },
+      "avg_resolution_min": 33.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (93% of events). Standard traffic dispatch applies.",
+      "lat": 12.954126,
+      "lng": 77.543464
+    },
+    "YeshwanthpuraCircle": {
+      "total_events": 38,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 33,
+        "others": 2,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 46.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (87% of events). Standard traffic dispatch applies.",
+      "lat": 13.017761,
+      "lng": 77.556973
+    },
+    "YelhankaCircle": {
+      "total_events": 34,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 21,
+        "water_logging": 5,
+        "accident": 3
+      },
+      "avg_resolution_min": 70.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 13.094322,
+      "lng": 77.595927
+    },
+    "SilkBoardJunc": {
+      "total_events": 33,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 20,
+        "pot_holes": 5,
+        "construction": 4
+      },
+      "avg_resolution_min": 76.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (61% of events). Standard traffic dispatch applies.",
+      "lat": 12.917013,
+      "lng": 77.622874
+    },
+    "toll gate mysore road": {
+      "total_events": 33,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 26,
+        "others": 6,
+        "accident": 1
+      },
+      "avg_resolution_min": 71.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 12.957494,
+      "lng": 77.551884
+    },
+    "JalahalliCross(SM Circle)": {
+      "total_events": 32,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 29,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 38.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 13.040089,
+      "lng": 77.518302
+    },
+    "Nagavara-ORR Junction": {
+      "total_events": 32,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "others": 8,
+        "construction": 5
+      },
+      "avg_resolution_min": 118.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 13.0396,
+      "lng": 77.62419
+    },
+    "K R Circle": {
+      "total_events": 31,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 17,
+        "others": 6,
+        "water_logging": 4
+      },
+      "avg_resolution_min": 54.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (55% of events). Standard traffic dispatch applies.",
+      "lat": 12.976696,
+      "lng": 77.586048
+    },
+    "KIMCO Junction": {
+      "total_events": 31,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 22,
+        "others": 6,
+        "congestion": 1
+      },
+      "avg_resolution_min": 74.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 12.95114,
+      "lng": 77.538003
+    },
+    "VeerannapalyaJunction(BEL,HO)": {
+      "total_events": 30,
+      "tier": "high",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 13,
+        "vehicle_breakdown": 6,
+        "accident": 5
+      },
+      "avg_resolution_min": null,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (43% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 13.041578,
+      "lng": 77.61366
+    },
+    "TownhallJunction": {
+      "total_events": 30,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 29,
+        "others": 1
+      },
+      "avg_resolution_min": 39.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (97% of events). Standard traffic dispatch applies.",
+      "lat": 12.963982,
+      "lng": 77.584377
+    },
+    "HesaraghattaJunction": {
+      "total_events": 30,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 27,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 35.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 13.045216,
+      "lng": 77.507432
+    },
+    "Devasandra(k r puram)": {
+      "total_events": 30,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 22,
+        "others": 4,
+        "water_logging": 4
+      },
+      "avg_resolution_min": 59.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 13.009463,
+      "lng": 77.696157
+    },
+    "KoramangalaWaterTankJunc": {
+      "total_events": 29,
+      "tier": "high",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 18,
+        "vehicle_breakdown": 6,
+        "road_conditions": 3
+      },
+      "avg_resolution_min": 136.7,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (62% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.92734,
+      "lng": 77.620973
+    },
+    "HebbalFlyoverJunc": {
+      "total_events": 28,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "road_conditions": 6,
+        "construction": 6
+      },
+      "avg_resolution_min": 120.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (46% of events). Standard traffic dispatch applies.",
+      "lat": 13.042259,
+      "lng": 77.590922
+    },
+    "GokuldasImagesJunc": {
+      "total_events": 28,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 27,
+        "accident": 1
+      },
+      "avg_resolution_min": 44.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (96% of events). Standard traffic dispatch applies.",
+      "lat": 13.030656,
+      "lng": 77.536423
+    },
+    "BagalurCrossJunc": {
+      "total_events": 27,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "others": 6,
+        "construction": 2
+      },
+      "avg_resolution_min": 65.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.122026,
+      "lng": 77.610863
+    },
+    "BigBazaarJunction(OldMadrasRd)": {
+      "total_events": 26,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 22,
+        "tree_fall": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (85% of events). Standard traffic dispatch applies.",
+      "lat": 12.991387,
+      "lng": 77.657421
+    },
+    "PoliceCornerJunc": {
+      "total_events": 26,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 24,
+        "construction": 1,
+        "protest": 1
+      },
+      "avg_resolution_min": 29.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 12.968715,
+      "lng": 77.587036
+    },
+    "Bommanahalli": {
+      "total_events": 26,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "pot_holes": 6,
+        "accident": 1
+      },
+      "avg_resolution_min": 19.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.906964,
+      "lng": 77.628165
+    },
+    "SantheCircle": {
+      "total_events": 25,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 17,
+        "construction": 6,
+        "others": 1
+      },
+      "avg_resolution_min": 110.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (68% of events). Standard traffic dispatch applies.",
+      "lat": 13.09747,
+      "lng": 77.598195
+    },
+    "BEL Circle": {
+      "total_events": 25,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "others": 4,
+        "construction": 3
+      },
+      "avg_resolution_min": 84.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.044357,
+      "lng": 77.555854
+    },
+    "KhodaysCircle(DV UrsCircle)": {
+      "total_events": 23,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "others": 4,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 55.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (78% of events). Standard traffic dispatch applies.",
+      "lat": 12.980188,
+      "lng": 77.571559
+    },
+    "RajeshwariJunc": {
+      "total_events": 22,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 19,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 75.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (86% of events). Standard traffic dispatch applies.",
+      "lat": 12.936725,
+      "lng": 77.519071
+    },
+    "LeprosyhospitalJunc": {
+      "total_events": 21,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "procession": 4,
+        "others": 2
+      },
+      "avg_resolution_min": 49.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 12.975538,
+      "lng": 77.56424
+    },
+    "CMP GateJunc": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 8,
+        "vehicle_breakdown": 8,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 165.2,
+      "route_to": "Traffic Police",
+      "route_reason": "pot_holes is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.957914,
+      "lng": 77.605855
+    },
+    "SRS Peenya Junc": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "accident": 3,
+        "others": 2
+      },
+      "avg_resolution_min": 25.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (75% of events). Standard traffic dispatch applies.",
+      "lat": 13.034509,
+      "lng": 77.529849
+    },
+    "GoruguntepalyaJunc": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 19,
+        "accident": 1
+      },
+      "avg_resolution_min": 51.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (95% of events). Standard traffic dispatch applies.",
+      "lat": 13.029652,
+      "lng": 77.540355
+    },
+    "MysoreRd-RingRdJunc(Nayandanahallii)": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "road_conditions": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 67.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (84% of events). Standard traffic dispatch applies.",
+      "lat": 12.944787,
+      "lng": 77.527305
+    },
+    "KrishnaFlourMill": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "construction": 2,
+        "public_event": 1
+      },
+      "avg_resolution_min": 25.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (84% of events). Standard traffic dispatch applies.",
+      "lat": 12.984845,
+      "lng": 77.573051
+    },
+    "BangaloreBodyBuildersJunc": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 17,
+        "others": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 29.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (89% of events). Standard traffic dispatch applies.",
+      "lat": 12.95908,
+      "lng": 77.555492
+    },
+    "YelhankaBypass": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "accident": 3,
+        "construction": 1
+      },
+      "avg_resolution_min": 61.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 13.082246,
+      "lng": 77.593429
+    },
+    "JakkurCrossJunction": {
+      "total_events": 18,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "accident": 5,
+        "construction": 1
+      },
+      "avg_resolution_min": 25.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.073616,
+      "lng": 77.592855
+    },
+    "HennurRoad-ORR Junc": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 70.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (94% of events). Standard traffic dispatch applies.",
+      "lat": 13.029221,
+      "lng": 77.631699
+    },
+    "Sumanhalli": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "others": 2,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 65.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (81% of events). Standard traffic dispatch applies.",
+      "lat": 12.986788,
+      "lng": 77.520432
+    },
+    "IndianExpressJunction": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "road_conditions": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 56.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.984154,
+      "lng": 77.597362
+    },
+    "Shivajinagar(BRV)Junction": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 3,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 53.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.979665,
+      "lng": 77.602709
+    },
+    "MaratahalliBridgeJunc": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "construction": 2,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 68.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.956365,
+      "lng": 77.700618
+    },
+    "HudsonCircle": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "accident": 1,
+        "procession": 1
+      },
+      "avg_resolution_min": 98.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (69% of events). Standard traffic dispatch applies.",
+      "lat": 12.967817,
+      "lng": 77.590309
+    },
+    "ArakereGateJunc": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 4,
+        "vehicle_breakdown": 4,
+        "others": 3
+      },
+      "avg_resolution_min": 95.4,
+      "route_to": "Traffic Police",
+      "route_reason": "pot_holes is the dominant cause (27% of events). Standard traffic dispatch applies.",
+      "lat": 12.89059,
+      "lng": 77.597709
+    },
+    "BloodBankCircle": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "road_conditions": 5,
+        "accident": 1
+      },
+      "avg_resolution_min": 28.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (60% of events). Standard traffic dispatch applies.",
+      "lat": 12.962146,
+      "lng": 77.594476
+    },
+    "ShantalaJunction": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "accident": 4,
+        "others": 2
+      },
+      "avg_resolution_min": 50.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (47% of events). Standard traffic dispatch applies.",
+      "lat": 12.974563,
+      "lng": 77.57028
+    },
+    "Deverabeesanahalli-ORR Junc": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "tree_fall": 1,
+        "construction": 1
+      },
+      "avg_resolution_min": 35.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (87% of events). Standard traffic dispatch applies.",
+      "lat": 12.930818,
+      "lng": 77.685054
+    },
+    "KogilluCrossJunc": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 2,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 83.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.104882,
+      "lng": 77.601116
+    },
+    "UttarahalliJunction": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 5,
+        "road_conditions": 5,
+        "pot_holes": 4
+      },
+      "avg_resolution_min": 74.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (33% of events). Standard traffic dispatch applies.",
+      "lat": 12.905855,
+      "lng": 77.544965
+    },
+    "PoliceTimmaiahCircle(GPO)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 5,
+        "accident": 1
+      },
+      "avg_resolution_min": 70.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (57% of events). Standard traffic dispatch applies.",
+      "lat": 12.982201,
+      "lng": 77.594184
+    },
+    "Batrayanapura(Amrutahalli)Junction": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "accident": 2,
+        "procession": 1
+      },
+      "avg_resolution_min": 89.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.067097,
+      "lng": 77.592892
+    },
+    "Chokasandra (Tumkur road)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 48.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 13.042173,
+      "lng": 77.51471
+    },
+    "BilekahalliJunc": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "pot_holes": 1,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 158.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 12.900502,
+      "lng": 77.60095
+    },
+    "Srigandakaval": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 2,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 87.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 12.988481,
+      "lng": 77.510161
+    },
+    "TumkurRdMarappanapalyaJunc": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 14
+      },
+      "avg_resolution_min": 47.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.018958,
+      "lng": 77.553145
+    },
+    "IbblurJunction'": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "accident",
+      "cause_breakdown": {
+        "accident": 5,
+        "vehicle_breakdown": 4,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 62.0,
+      "route_to": "Traffic Police",
+      "route_reason": "accident is the dominant cause (38% of events). Standard traffic dispatch applies.",
+      "lat": 12.921297,
+      "lng": 77.664643
+    },
+    "BanashankariBusStandJunc": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "public_event": 2,
+        "others": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (69% of events). Standard traffic dispatch applies.",
+      "lat": 12.916915,
+      "lng": 77.572784
+    },
+    "Marigowda-TavarkereRdJunc": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "procession": 2,
+        "public_event": 2
+      },
+      "avg_resolution_min": 74.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (46% of events). Standard traffic dispatch applies.",
+      "lat": 12.935764,
+      "lng": 77.607807
+    },
+    "SadashivnagarJunc": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 154.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (77% of events). Standard traffic dispatch applies.",
+      "lat": 13.015022,
+      "lng": 77.572651
+    },
+    "KatriguppeJunction": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "construction": 3,
+        "others": 1
+      },
+      "avg_resolution_min": 42.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 12.925435,
+      "lng": 77.549923
+    },
+    "TataInstituteCircle": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 3
+      },
+      "avg_resolution_min": 39.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (75% of events). Standard traffic dispatch applies.",
+      "lat": 13.01436,
+      "lng": 77.565585
+    },
+    "PeenyaPoliceStation": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 25.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 13.037161,
+      "lng": 77.522454
+    },
+    "NaganathapuraJunction": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "others": 1
+      },
+      "avg_resolution_min": 59.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 12.87034,
+      "lng": 77.653005
+    },
+    "UlsoorGateJunc": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 1,
+        "construction": 1
+      },
+      "avg_resolution_min": 41.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.966829,
+      "lng": 77.587479
+    },
+    "StateBankofMysoreJunc": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "pot_holes": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 54.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.973675,
+      "lng": 77.58223
+    },
+    "Dr TCM RoyanRd near AmbedkarStatue": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "congestion": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 60.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (58% of events). Standard traffic dispatch applies.",
+      "lat": 12.965155,
+      "lng": 77.568074
+    },
+    "DomlurWaterTank": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 1,
+        "public_event": 1
+      },
+      "avg_resolution_min": 59.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (75% of events). Standard traffic dispatch applies.",
+      "lat": 12.961041,
+      "lng": 77.638875
+    },
+    "ShivandaCircle": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12
+      },
+      "avg_resolution_min": 49.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.987866,
+      "lng": 77.579683
+    },
+    "OldMadrasRd-Indranagar100ftRdJunc": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "pot_holes": 3,
+        "accident": 2
+      },
+      "avg_resolution_min": 29.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (58% of events). Standard traffic dispatch applies.",
+      "lat": 12.984077,
+      "lng": 77.641123
+    },
+    "Kadubeesanahalli-ORR Junc": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 58.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.939467,
+      "lng": 77.696188
+    },
+    "HoramavuJunction": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 5,
+        "vehicle_breakdown": 4,
+        "others": 2
+      },
+      "avg_resolution_min": 206.5,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (42% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 13.01876,
+      "lng": 77.656383
+    },
+    "BucheryJunction": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 4,
+        "vehicle_breakdown": 3,
+        "congestion": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "pot_holes is the dominant cause (36% of events). Standard traffic dispatch applies.",
+      "lat": 12.952048,
+      "lng": 77.621485
+    },
+    "TrinityCircle": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "pot_holes": 4
+      },
+      "avg_resolution_min": 53.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 12.971906,
+      "lng": 77.619343
+    },
+    "Richmond circle jn": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "tree_fall": 1,
+        "protest": 1
+      },
+      "avg_resolution_min": 35.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 12.965108,
+      "lng": 77.596268
+    },
+    "VeerasandraGateJunction": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "accident": 2
+      },
+      "avg_resolution_min": 74.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 12.839785,
+      "lng": 77.677143
+    },
+    "FTI Junction(KanteeravaStudio)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "pot_holes": 3,
+        "public_event": 1
+      },
+      "avg_resolution_min": 80.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.021224,
+      "lng": 77.531433
+    },
+    "KundanahalliGateJunc": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "construction": 2,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 60.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 12.955881,
+      "lng": 77.716814
+    },
+    "SiddalingaiahCircle": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 1,
+        "procession": 1
+      },
+      "avg_resolution_min": 28.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 12.971612,
+      "lng": 77.594458
+    },
+    "MS RamaiahJunc(TollGate)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "pot_holes": 1,
+        "construction": 1
+      },
+      "avg_resolution_min": 40.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.017081,
+      "lng": 77.560761
+    },
+    "MotherTeressaCircle": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "accident": 1,
+        "protest": 1
+      },
+      "avg_resolution_min": 39.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 12.966578,
+      "lng": 77.608974
+    },
+    "KodigehalliCross": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "construction": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.055507,
+      "lng": 77.593845
+    },
+    "UniversityJunc(Janabharti)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "construction": 3
+      },
+      "avg_resolution_min": 18.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 12.935896,
+      "lng": 77.512553
+    },
+    "BMTCJunction-K H Road": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10
+      },
+      "avg_resolution_min": 66.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.956572,
+      "lng": 77.593179
+    },
+    "Arbindo Circle": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "congestion": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 36.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (60% of events). Standard traffic dispatch applies.",
+      "lat": 12.917281,
+      "lng": 77.585654
+    },
+    "HopefarmJunction": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "road_conditions": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 32.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 12.98436,
+      "lng": 77.752453
+    },
+    "SarjapurRd-St JohnsRdJunc": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 7,
+        "vehicle_breakdown": 3
+      },
+      "avg_resolution_min": null,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (70% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.927888,
+      "lng": 77.615948
+    },
+    "N R SquareJunc": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10
+      },
+      "avg_resolution_min": 50.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.965461,
+      "lng": 77.586563
+    }
+  },
+  "address_index": {
+    "Outer Ring Road, Karthik Nagar, Marathahalli, Bengaluru, Karnataka. Pin-560037 (India)": {
+      "total_events": 88,
+      "tier": "critical",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 82,
+        "vehicle_breakdown": 3,
+        "others": 2
+      },
+      "avg_resolution_min": 63.8,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (93% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 12.969439,
+      "lng": 77.700653
+    },
+    "2nd Cross Road, MTB Area, Jayanagar, Bengaluru, Karnataka. Pin-560041 (India)": {
+      "total_events": 44,
+      "tier": "high",
+      "dominant_cause": "accident",
+      "cause_breakdown": {
+        "accident": 44
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "accident is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.918617,
+      "lng": 77.58946
+    },
+    "Sankey Road, RV Layout, Seshadripuram, Bengaluru, Karnataka. Pin-560020 (India)": {
+      "total_events": 36,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 30,
+        "water_logging": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 78.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.997652,
+      "lng": 77.584481
+    },
+    "MBT Road, Block 5 Stage 1, HBR Layout, Bengaluru, Karnataka. Pin-560043 (India)": {
+      "total_events": 35,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "others": 9,
+        "construction": 6
+      },
+      "avg_resolution_min": 43.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (51% of events). Standard traffic dispatch applies.",
+      "lat": 13.037538,
+      "lng": 77.626615
+    },
+    "Sankey Road, MD Nanjundaswamy Circle, Rajamahal Guttahalli, Bengaluru, Karnataka. Pin-560003 (India)": {
+      "total_events": 34,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 27,
+        "pot_holes": 3,
+        "others": 3
+      },
+      "avg_resolution_min": 46.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 12.999626,
+      "lng": 77.584077
+    },
+    "Outer Ring Road, Abdul Patel Syed Layout, Bhoopasandra, RMV Stage 2, Bengaluru, Karnataka. Pin-560094 (India)": {
+      "total_events": 33,
+      "tier": "high",
+      "dominant_cause": "congestion",
+      "cause_breakdown": {
+        "congestion": 26,
+        "construction": 5,
+        "vehicle_breakdown": 2
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "congestion is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 13.044603,
+      "lng": 77.582852
+    },
+    "Bellary Road, Vinayaka Nagar, Hebbal, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 33,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 27,
+        "others": 5,
+        "accident": 1
+      },
+      "avg_resolution_min": 58.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.035323,
+      "lng": 77.588947
+    },
+    "Outer Ring Road, Renaissance Reserva, Muthyala Nagar, Bengaluru, Karnataka. Pin-560054 (India)": {
+      "total_events": 29,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 20,
+        "others": 8,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 55.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (69% of events). Standard traffic dispatch applies.",
+      "lat": 13.041755,
+      "lng": 77.547504
+    },
+    "Old Madras Road, New Binnamangla, Indiranagar, Bengaluru, Karnataka. Pin-560038 (India)": {
+      "total_events": 29,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "pot_holes": 8,
+        "accident": 2
+      },
+      "avg_resolution_min": 32.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.984113,
+      "lng": 77.641029
+    },
+    "Bhashyam Main Road, Sangolli Rayanna Circle, Majestic, Bengaluru, Karnataka. Pin-560023 (India)": {
+      "total_events": 29,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "pot_holes": 5,
+        "water_logging": 3
+      },
+      "avg_resolution_min": 38.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 12.98069,
+      "lng": 77.570669
+    },
+    "Mysore Road, PMM Compound, Old Guddadahalli, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 27,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 21,
+        "others": 3,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 57.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (78% of events). Standard traffic dispatch applies.",
+      "lat": 12.957372,
+      "lng": 77.551799
+    },
+    "Bellary Road, Embassy One, Ganga Nagar, Bengaluru, Karnataka. Pin-560032 (India)": {
+      "total_events": 26,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "others": 5,
+        "tree_fall": 3
+      },
+      "avg_resolution_min": 51.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (58% of events). Standard traffic dispatch applies.",
+      "lat": 13.019614,
+      "lng": 77.584045
+    },
+    "Bellary Road, Concorde Mayfair, KHB Colony, Yelahanka, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 25,
+      "tier": "high",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "construction": 3,
+        "accident": 3
+      },
+      "avg_resolution_min": 98.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.094624,
+      "lng": 77.597296
+    },
+    "Outer Ring Road, CQAE Staff Quarters, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 24,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 22,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 56.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 13.038788,
+      "lng": 77.542882
+    },
+    "Bellary Road, Esteem Mall, Hebbal Kempapura, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 23,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "accident": 3,
+        "others": 3
+      },
+      "avg_resolution_min": 30.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (57% of events). Standard traffic dispatch applies.",
+      "lat": 13.049213,
+      "lng": 77.592595
+    },
+    "1st Cross Road, Koramangala Water Tank Junction, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)": {
+      "total_events": 23,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 12,
+        "vehicle_breakdown": 4,
+        "road_conditions": 3
+      },
+      "avg_resolution_min": 18.8,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (52% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.927577,
+      "lng": 77.621223
+    },
+    "Magadi Main Road, Sunkadakatte, Bengaluru, Karnataka. Pin-560091 (India)": {
+      "total_events": 22,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "others": 3,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 47.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 12.98997,
+      "lng": 77.504953
+    },
+    "Mysore Road, AR Compound, Chamarajpet, Bengaluru, Karnataka. Pin-560018 (India)": {
+      "total_events": 22,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 19,
+        "others": 2,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 36.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (86% of events). Standard traffic dispatch applies.",
+      "lat": 12.959183,
+      "lng": 77.555637
+    },
+    "Bellary Road, Enayathulla Mehkri Circle, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 22,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "congestion": 2,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 99.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.014731,
+      "lng": 77.583837
+    },
+    "Mumbai Bengaluru Highway, Nadaprabhu Kempegowda Circle, Madanaiyakanahalli, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 22,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 14,
+        "accident": 6,
+        "construction": 2
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.060441,
+      "lng": 77.462311
+    },
+    "Mumbai Bengaluru Highway, Ramana Joythi Apartment, Yeshwanthpur Suburb Stage 2, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 21,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 19,
+        "construction": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": 61.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 13.031883,
+      "lng": 77.534825
+    },
+    "Mysore Road, Valmiki Nagar, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 21,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "others": 3
+      },
+      "avg_resolution_min": 44.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (86% of events). Standard traffic dispatch applies.",
+      "lat": 12.958085,
+      "lng": 77.553904
+    },
+    "Mysore Road, Hosaguddadahalli, New Guddadahalli, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 21,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 19,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 34.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 12.955853,
+      "lng": 77.54608
+    },
+    "MBT Road, Devasandra Junction, KR Puram, Bengaluru, Karnataka. Pin-560036 (India)": {
+      "total_events": 21,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "others": 3,
+        "procession": 1
+      },
+      "avg_resolution_min": 56.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (76% of events). Standard traffic dispatch applies.",
+      "lat": 13.008315,
+      "lng": 77.69471
+    },
+    "MBT Road, YSM Layout, KR Puram, Bengaluru, Karnataka. Pin-560036 (India)": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "water_logging",
+      "cause_breakdown": {
+        "water_logging": 9,
+        "vehicle_breakdown": 9,
+        "others": 2
+      },
+      "avg_resolution_min": 109.4,
+      "route_to": "BWSSB",
+      "route_reason": "water_logging is the dominant cause (45% of events). water logging is BWSSB jurisdiction.",
+      "lat": 13.010188,
+      "lng": 77.697617
+    },
+    "Old Madras Road, Big Bazaar Junction, CV Raman Nagar, Bengaluru, Karnataka. Pin-560093 (India)": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 18,
+        "pot_holes": 1,
+        "others": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 12.991046,
+      "lng": 77.656667
+    },
+    "Madiwala Underpass, Madiwala Junction, Madivala, Bengaluru, Karnataka. Pin-560068 (India)": {
+      "total_events": 20,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "pot_holes": 8,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 53.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 12.924944,
+      "lng": 77.617923
+    },
+    "Hosur Road, Krimson Square, Muneshwara Nagar, HSR Layout, Bengaluru, Karnataka. Pin-560102 (India)": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "water_logging": 4
+      },
+      "avg_resolution_min": 46.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 12.912598,
+      "lng": 77.625557
+    },
+    "Old Airport Road, Agaram, Bengaluru, Karnataka. Pin-560007 (India)": {
+      "total_events": 19,
+      "tier": "moderate",
+      "dominant_cause": "water_logging",
+      "cause_breakdown": {
+        "water_logging": 13,
+        "vehicle_breakdown": 6
+      },
+      "avg_resolution_min": 96.1,
+      "route_to": "BWSSB",
+      "route_reason": "water_logging is the dominant cause (68% of events). water logging is BWSSB jurisdiction.",
+      "lat": 12.961682,
+      "lng": 77.631111
+    },
+    "Palace Road, Gandhi Nagar 1, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 18,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "others": 3,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 31.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (72% of events). Standard traffic dispatch applies.",
+      "lat": 12.979198,
+      "lng": 77.585228
+    },
+    "Magadi Main Road, BM Shankarappa Industrial Estate, Sunkadakatte, Bengaluru, Karnataka. Pin-560091 (India)": {
+      "total_events": 18,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "others": 3
+      },
+      "avg_resolution_min": 56.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.988923,
+      "lng": 77.50813
+    },
+    "Mysore Road, Deepanjali Nagar, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 5
+      },
+      "avg_resolution_min": 95.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (71% of events). Standard traffic dispatch applies.",
+      "lat": 12.947767,
+      "lng": 77.534029
+    },
+    "Mumbai Bengaluru Highway, Netaji Nagar, T Dasarahalli, Bengaluru, Karnataka. Pin-560057 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 47.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (88% of events). Standard traffic dispatch applies.",
+      "lat": 13.041099,
+      "lng": 77.51714
+    },
+    "Sri Ramana Maharshi Road, Achaiah Chetty Layout, RMV Extension, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16,
+        "others": 1
+      },
+      "avg_resolution_min": 15.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (94% of events). Standard traffic dispatch applies.",
+      "lat": 13.010702,
+      "lng": 77.583721
+    },
+    "MBT Road, Zero Tolerance Junction, KR Puram, Bengaluru, Karnataka. Pin-560049 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 17
+      },
+      "avg_resolution_min": 49.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.019657,
+      "lng": 77.708866
+    },
+    "Bellary Road, Legacy Cirocco, Jakkuru, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 14,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 27.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.088014,
+      "lng": 77.595607
+    },
+    "Seshadri Road, Ayurvedic Hospital Junction, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "others": 2,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 131.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (76% of events). Standard traffic dispatch applies.",
+      "lat": 12.98032,
+      "lng": 77.572444
+    },
+    "Outer Ring Road, LRDE Employee Housing Colony, Karthik Nagar, Marathahalli, Bengaluru, Karnataka. Pin-560037 (India)": {
+      "total_events": 17,
+      "tier": "moderate",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 17
+      },
+      "avg_resolution_min": 397.9,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (100% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 12.969352,
+      "lng": 77.701066
+    },
+    "Hosur Road, Market Square Value Mall, Block 2, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "pot_holes": 6,
+        "procession": 1
+      },
+      "avg_resolution_min": 60.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 12.921577,
+      "lng": 77.620007
+    },
+    "Nrupatunga Road, Police Corner Junction, Nagartapete, Bengaluru, Karnataka. Pin-560002 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 15,
+        "construction": 1
+      },
+      "avg_resolution_min": 39.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (94% of events). Standard traffic dispatch applies.",
+      "lat": 12.969402,
+      "lng": 77.587359
+    },
+    "Outer Ring Road, Sharadamba Nagar, Jalahalli Village, Jalahalli, Bengaluru, Karnataka. Pin-560013 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 4
+      },
+      "avg_resolution_min": 47.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (75% of events). Standard traffic dispatch applies.",
+      "lat": 13.041156,
+      "lng": 77.545679
+    },
+    "Mumbai Bengaluru Highway, Godrej Tiara, Yeshwanthpur Suburb Stage 2, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 16
+      },
+      "avg_resolution_min": 38.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.029579,
+      "lng": 77.538509
+    },
+    "Sankey Road, Rajamahal Guttahalli, Bengaluru, Karnataka. Pin-560003 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 3,
+        "accident": 1
+      },
+      "avg_resolution_min": 49.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 13.00143,
+      "lng": 77.583974
+    },
+    "NH 275, Halsuru Gate Police Station Junction, Nagartapete, Bengaluru, Karnataka. Pin-560002 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 34.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (81% of events). Standard traffic dispatch applies.",
+      "lat": 12.966666,
+      "lng": 77.587254
+    },
+    "Hosur Road, Police Quarters, B&C Colony, Shanti Nagar, Bengaluru, Karnataka. Pin-560025 (India)": {
+      "total_events": 16,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 7,
+        "vehicle_breakdown": 4,
+        "water_logging": 3
+      },
+      "avg_resolution_min": 47.1,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (44% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.957673,
+      "lng": 77.605934
+    },
+    "Mumbai Bengaluru Highway, Jalahalli Cross Junction, Peenya, Bengaluru, Karnataka. Pin-560058 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 126.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.040071,
+      "lng": 77.518248
+    },
+    "Mumbai Bengaluru Highway, Krishna Gowda Layout, T Dasarahalli, Bengaluru, Karnataka. Pin-560057 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 3,
+        "accident": 1
+      },
+      "avg_resolution_min": 90.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.042247,
+      "lng": 77.514967
+    },
+    "Mumbai Bengaluru Highway, Nagasandra, Bengaluru, Karnataka. Pin-560073 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "water_logging": 2,
+        "construction": 1
+      },
+      "avg_resolution_min": 71.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.048727,
+      "lng": 77.497522
+    },
+    "Mumbai Bengaluru Highway, Madanaiyakanahalli, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 3
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.062682,
+      "lng": 77.458327
+    },
+    "Mumbai Bengaluru Highway, Dasanapura, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "tree_fall": 2
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (87% of events). Standard traffic dispatch applies.",
+      "lat": 13.07455,
+      "lng": 77.437399
+    },
+    "Mysore Road, Satellite Bus Stand Junction, New Timber Yard Layout, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 2,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 46.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 12.953796,
+      "lng": 77.543044
+    },
+    "Mumbai Bengaluru Highway, Rajadhani Layout, Adakamaranahalli, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 2,
+        "water_logging": 2
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.069666,
+      "lng": 77.446274
+    },
+    "Varthur Main Road, Varthur Marattahalli, Bengaluru, Karnataka. Pin-560087 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "congestion",
+      "cause_breakdown": {
+        "congestion": 14,
+        "vehicle_breakdown": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "congestion is the dominant cause (93% of events). Standard traffic dispatch applies.",
+      "lat": 12.93891,
+      "lng": 77.747349
+    },
+    "Varthur Main Road, KSRTC Travel House Junction, Varthur Marattahalli, Bengaluru, Karnataka. Pin-560087 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "pot_holes": 5,
+        "others": 2
+      },
+      "avg_resolution_min": 85.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (47% of events). Standard traffic dispatch applies.",
+      "lat": 12.942869,
+      "lng": 77.747032
+    },
+    "Bellary Road, HGH Layout, Ganga Nagar, Bengaluru, Karnataka. Pin-560032 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 2,
+        "accident": 1
+      },
+      "avg_resolution_min": 27.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.024471,
+      "lng": 77.585114
+    },
+    "Mumbai Bengaluru Highway, Vivekanand Nagar, Peenya, Bengaluru, Karnataka. Pin-560058 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 31.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.039269,
+      "lng": 77.519481
+    },
+    "Mumbai Bengaluru Highway, Hesaragatta Cross Junction, T Dasarahalli, Bengaluru, Karnataka. Pin-560057 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "others": 2
+      },
+      "avg_resolution_min": 26.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (87% of events). Standard traffic dispatch applies.",
+      "lat": 13.045566,
+      "lng": 77.507072
+    },
+    "Sri Ramana Maharshi Road, Mahalakshmi Mandir Circle, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "road_conditions": 3,
+        "pot_holes": 3
+      },
+      "avg_resolution_min": 36.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 13.004306,
+      "lng": 77.583991
+    },
+    "Panathur Main Road, Vandana Tejyesh, Varthur Hobli, Panathur, Bengaluru, Karnataka. Pin-560087 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 8,
+        "others": 5,
+        "procession": 1
+      },
+      "avg_resolution_min": 184.5,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (53% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 12.936149,
+      "lng": 77.705747
+    },
+    "Outer Ring Road, Vajram Onyx, Devara Beesana Halli, Bengaluru, Karnataka. Pin-560103 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 8,
+        "vehicle_breakdown": 4,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 24.5,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (53% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.931542,
+      "lng": 77.687147
+    },
+    "Sarjapur Marathahalli Road, Koramangala Water Tank Junction, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)": {
+      "total_events": 15,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 12,
+        "vehicle_breakdown": 2,
+        "water_logging": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (80% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.927468,
+      "lng": 77.621056
+    },
+    "Hennur Main Road, Geddalahalli, Bengaluru, Karnataka. Pin-560077 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 8,
+        "road_conditions": 2,
+        "vehicle_breakdown": 2
+      },
+      "avg_resolution_min": 224.7,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (57% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 13.048712,
+      "lng": 77.645443
+    },
+    "Seshadri Road, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 49.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 12.977175,
+      "lng": 77.585753
+    },
+    "Old Madras Road, Aveda Meta, Binnamangala, Indiranagar, Bengaluru, Karnataka. Pin-560038 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "accident": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (93% of events). Standard traffic dispatch applies.",
+      "lat": 12.985846,
+      "lng": 77.645065
+    },
+    "Old Madras Road, Byappanahalli Junction, Baiyappanahalli, Bengaluru, Karnataka. Pin-560038 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 13,
+        "accident": 1
+      },
+      "avg_resolution_min": 41.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (93% of events). Standard traffic dispatch applies.",
+      "lat": 12.986952,
+      "lng": 77.648349
+    },
+    "Dr Rajkumar Puniya Bhoomi Road, Block 6, Banashankari Stage 3, Bengaluru, Karnataka. Pin-560085 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "construction": 3,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 47.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 12.92518,
+      "lng": 77.550266
+    },
+    "Sri Ramana Maharshi Road, Enayathulla Mehkri Circle, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 2,
+        "road_conditions": 2
+      },
+      "avg_resolution_min": 90.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.014855,
+      "lng": 77.583969
+    },
+    "Mumbai Bengaluru Highway, Madavara, Bengaluru, Karnataka. Pin-560073 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "accident": 3,
+        "others": 3
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 13.0572,
+      "lng": 77.472651
+    },
+    "Mumbai Bengaluru Highway, Hesarughatta, T Dasarahalli, Bengaluru, Karnataka. Pin-560073 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "congestion": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": 37.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (86% of events). Standard traffic dispatch applies.",
+      "lat": 13.045155,
+      "lng": 77.508064
+    },
+    "Kuvempu Underpass, BEL Circle, Jalahalli, Bengaluru, Karnataka. Pin-560013 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "others": 2,
+        "construction": 1
+      },
+      "avg_resolution_min": 61.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (79% of events). Standard traffic dispatch applies.",
+      "lat": 13.043864,
+      "lng": 77.557015
+    },
+    "Sarjapura Main Road, Dommasandra Anekal Taluka, Bengaluru, Karnataka. Pin-562125 (India)": {
+      "total_events": 14,
+      "tier": "moderate",
+      "dominant_cause": "accident",
+      "cause_breakdown": {
+        "accident": 14
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "accident is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.882574,
+      "lng": 77.754633
+    },
+    "MBT Road, SNN Clermont, Hebbal Kempapura, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "construction": 4,
+        "accident": 2
+      },
+      "avg_resolution_min": 51.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (46% of events). Standard traffic dispatch applies.",
+      "lat": 13.043084,
+      "lng": 77.609193
+    },
+    "Outer Ring Road, Sharadamba Nagar, Muthyala Nagar, Bengaluru, Karnataka. Pin-560054 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 1
+      },
+      "avg_resolution_min": 143.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 13.043757,
+      "lng": 77.553639
+    },
+    "Bellary Road, RMZ Galleria Residences, Yelahanka, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "water_logging": 3,
+        "construction": 1
+      },
+      "avg_resolution_min": 36.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 13.092532,
+      "lng": 77.596517
+    },
+    "MBT Road, Munivenkatappa Layout, Nagavara, Bengaluru, Karnataka. Pin-560045 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "congestion",
+      "cause_breakdown": {
+        "congestion": 8,
+        "others": 3,
+        "vehicle_breakdown": 2
+      },
+      "avg_resolution_min": 99.8,
+      "route_to": "Traffic Police",
+      "route_reason": "congestion is the dominant cause (62% of events). Standard traffic dispatch applies.",
+      "lat": 13.041296,
+      "lng": 77.622289
+    },
+    "Mysore Road, Iyannashetty Layout, New Timber Yard Layout, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "others": 1
+      },
+      "avg_resolution_min": 61.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 12.953165,
+      "lng": 77.541876
+    },
+    "Sankey Road, Mahalakshmi Mandir Circle, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "water_logging": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 41.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (85% of events). Standard traffic dispatch applies.",
+      "lat": 13.003412,
+      "lng": 77.583766
+    },
+    "Muthsandra Main Road, KSRTC Travel House Junction, Varthur Marattahalli, Bengaluru, Karnataka. Pin-560087 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 7,
+        "construction": 3,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 19.0,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (54% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.942486,
+      "lng": 77.747303
+    },
+    "Mumbai Bengaluru Highway, Bagalagunte, Bengaluru, Karnataka. Pin-560073 (India)": {
+      "total_events": 13,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12,
+        "accident": 1
+      },
+      "avg_resolution_min": 65.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 13.049376,
+      "lng": 77.49573
+    },
+    "Richmond Road, Mother Teresa Circle, Nilsandra, Bengaluru, Karnataka. Pin-560025 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 1,
+        "protest": 1
+      },
+      "avg_resolution_min": 44.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.966613,
+      "lng": 77.608823
+    },
+    "Sri Ramana Maharshi Road, Palace Ground, Jayamahal, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 2
+      },
+      "avg_resolution_min": 54.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 13.008026,
+      "lng": 77.58395
+    },
+    "Mysore Road, BWSSB Quarters, Nayandahalli, Bengaluru, Karnataka. Pin-560039 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "others": 1
+      },
+      "avg_resolution_min": 78.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 12.938145,
+      "lng": 77.521529
+    },
+    "Old Airport Road, Thimma Reddy Layout, Murugeshpalya, Bengaluru, Karnataka. Pin-560017 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "construction": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 43.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 12.959323,
+      "lng": 77.654859
+    },
+    "Dr Ambedkar Road, Krishna Rajendra Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "water_logging": 4,
+        "others": 1
+      },
+      "avg_resolution_min": 47.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (58% of events). Standard traffic dispatch applies.",
+      "lat": 12.976026,
+      "lng": 77.587513
+    },
+    "Outer Ring Road, RNS Shriniketan, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12
+      },
+      "avg_resolution_min": 32.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.029594,
+      "lng": 77.540054
+    },
+    "Queens Road, Queens Road Junction, Vasant Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "protest": 1
+      },
+      "avg_resolution_min": 15.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 12.983031,
+      "lng": 77.597053
+    },
+    "MBT Road, KR Puram Extension, Bengaluru, Karnataka. Pin-560036 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 2
+      },
+      "avg_resolution_min": 47.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (83% of events). Standard traffic dispatch applies.",
+      "lat": 13.012895,
+      "lng": 77.699472
+    },
+    "CV Raman Road, SBD Township Sector B, BHEL Township, Malleshwaram West, Bengaluru, Karnataka. Pin-560055 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11,
+        "construction": 1
+      },
+      "avg_resolution_min": 40.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (92% of events). Standard traffic dispatch applies.",
+      "lat": 13.016235,
+      "lng": 77.561946
+    },
+    "Bellary Road, Kogilu Cross Junction, Palanahalli, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "accident": 3,
+        "others": 1
+      },
+      "avg_resolution_min": 60.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 13.103649,
+      "lng": 77.600483
+    },
+    "Outer Ring Road, Jain Heights Revanta, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 12
+      },
+      "avg_resolution_min": 68.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.034441,
+      "lng": 77.541216
+    },
+    "Old Madras Road, Royal Heritage, Pai Layout, Mahadevapura, Bengaluru, Karnataka. Pin-560016 (India)": {
+      "total_events": 12,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "construction": 2,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 65.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (67% of events). Standard traffic dispatch applies.",
+      "lat": 12.995806,
+      "lng": 77.667478
+    },
+    "G Narayana Kumar Road, Soundarya Kamakshi, Karekallu, Kamakshipalya, Bengaluru, Karnataka. Pin-560079 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "pot_holes": 2,
+        "public_event": 2
+      },
+      "avg_resolution_min": 49.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (55% of events). Standard traffic dispatch applies.",
+      "lat": 12.983868,
+      "lng": 77.528926
+    },
+    "Bannerghatta Main Road, Mantri Elite, JP Nagar Phase 4, Bengaluru, Karnataka. Pin-560078 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "water_logging",
+      "cause_breakdown": {
+        "water_logging": 8,
+        "pot_holes": 2,
+        "vehicle_breakdown": 1
+      },
+      "avg_resolution_min": 1.3,
+      "route_to": "BWSSB",
+      "route_reason": "water_logging is the dominant cause (73% of events). water logging is BWSSB jurisdiction.",
+      "lat": 12.905105,
+      "lng": 77.601697
+    },
+    "Mumbai Bengaluru Highway, Sri Vijayamaruthi Circle, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "tree_fall": 1
+      },
+      "avg_resolution_min": 48.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 13.026445,
+      "lng": 77.544066
+    },
+    "Sir CV Raman Road, Enayathulla Mehkri Circle, Sadashiva Nagar, Bengaluru, Karnataka. Pin-560080 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 1,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 44.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.014495,
+      "lng": 77.583478
+    },
+    "Mysore Road, Bengaluru Body Builders Junction, New Timber Yard Layout, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11
+      },
+      "avg_resolution_min": 31.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.954428,
+      "lng": 77.544104
+    },
+    "Mumbai Bengaluru Highway, Alur Village, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 2
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (82% of events). Standard traffic dispatch applies.",
+      "lat": 13.067355,
+      "lng": 77.450398
+    },
+    "Mysore Road, Navami Landmark, Bangalore University, Jnana Bharathi, Bengaluru, Karnataka. Pin-560056 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 18.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 12.935526,
+      "lng": 77.51332
+    },
+    "Magadi Main Road, Hanumantharayan Palya, Sunkadakatte, Bengaluru, Karnataka. Pin-560091 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 4,
+        "procession": 3,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 56.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (36% of events). Standard traffic dispatch applies.",
+      "lat": 12.98951,
+      "lng": 77.501435
+    },
+    "Bellary Road, IAH and VB Quarters, UAS Campus, Hebbal, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 5,
+        "others": 4,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 106.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (45% of events). Standard traffic dispatch applies.",
+      "lat": 13.038898,
+      "lng": 77.589427
+    },
+    "Magadi Main Road, Srigandakavulu Junction, Kamakshipalya, Bengaluru, Karnataka. Pin-560091 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "others": 1
+      },
+      "avg_resolution_min": 49.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 12.987927,
+      "lng": 77.512712
+    },
+    "Hebbal Flyover, Hebbal Junction, Hebbal, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "road_conditions": 3,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.043635,
+      "lng": 77.590589
+    },
+    "Mumbai Bengaluru Highway, Sobha Garrison, Nagasandra, Bengaluru, Karnataka. Pin-560073 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "accident": 1
+      },
+      "avg_resolution_min": 38.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 13.047483,
+      "lng": 77.50062
+    },
+    "MBT Road, AK Colony, Munivenkatappa Layout, Nagavara, Bengaluru, Karnataka. Pin-560045 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "congestion",
+      "cause_breakdown": {
+        "congestion": 6,
+        "vehicle_breakdown": 4,
+        "others": 1
+      },
+      "avg_resolution_min": 105.0,
+      "route_to": "Traffic Police",
+      "route_reason": "congestion is the dominant cause (55% of events). Standard traffic dispatch applies.",
+      "lat": 13.041309,
+      "lng": 77.622752
+    },
+    "Bannerghatta Main Road, Bilekahalli Layout, Bilekahalli, Bengaluru, Karnataka. Pin-560076 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "water_logging",
+      "cause_breakdown": {
+        "water_logging": 4,
+        "vehicle_breakdown": 3,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 228.2,
+      "route_to": "Traffic Police",
+      "route_reason": "water_logging is the dominant cause (36% of events). Standard traffic dispatch applies.",
+      "lat": 12.899531,
+      "lng": 77.600806
+    },
+    "Mumbai Bengaluru Highway, Aparna Elina, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 38.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 13.020633,
+      "lng": 77.552287
+    },
+    "Bellary Road, Vista Pixel, Jakkuru Layout, Jakkuru, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": 51.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 13.07223,
+      "lng": 77.592818
+    },
+    "Mysore Road, Corporation Layout, Kasturba Nagar, Bengaluru, Karnataka. Pin-560026 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11
+      },
+      "avg_resolution_min": 107.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.956669,
+      "lng": 77.548747
+    },
+    "Bellary Road, Dena Bank Colony, Ganga Nagar, Bengaluru, Karnataka. Pin-560032 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 34.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 13.022261,
+      "lng": 77.58454
+    },
+    "Mumbai Bengaluru Highway, Makali, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "water_logging": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": 27.3,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (64% of events). Standard traffic dispatch applies.",
+      "lat": 13.065156,
+      "lng": 77.454047
+    },
+    "Bengaluru Bellary Road, Bharthi Nagar, Hunasamaranahalli, Bengaluru, Karnataka. Pin-562157 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "accident": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 19.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 13.137172,
+      "lng": 77.617328
+    },
+    "Mumbai Bengaluru Highway, Bynapalya, Madanaiyakanahalli, Bengaluru, Karnataka. Pin-562162 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 3
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (73% of events). Standard traffic dispatch applies.",
+      "lat": 13.058925,
+      "lng": 77.466274
+    },
+    "Bannerghatta Main Road, Dawoodi Bohra Colony, Gottigere, Bengaluru, Karnataka. Pin-560083 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "pot_holes",
+      "cause_breakdown": {
+        "pot_holes": 8,
+        "vehicle_breakdown": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 23.1,
+      "route_to": "BBMP",
+      "route_reason": "pot_holes is the dominant cause (73% of events). pothole/road-surface damage is BBMP jurisdiction.",
+      "lat": 12.853775,
+      "lng": 77.588637
+    },
+    "MBT Road, Grace Town, HBR Layout, Bengaluru, Karnataka. Pin-560043 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10,
+        "road_conditions": 1
+      },
+      "avg_resolution_min": 87.8,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (91% of events). Standard traffic dispatch applies.",
+      "lat": 13.028711,
+      "lng": 77.631803
+    },
+    "Old Madras Road, Salarpuria Sattva, Rajanna Colony, CV Raman Nagar, Bengaluru, Karnataka. Pin-560093 (India)": {
+      "total_events": 11,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 11
+      },
+      "avg_resolution_min": null,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.99165,
+      "lng": 77.658223
+    },
+    "Kumar Krupa Road, Make In India Circle, Vasant Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 5,
+        "tree_fall": 4,
+        "others": 1
+      },
+      "avg_resolution_min": 51.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (50% of events). Standard traffic dispatch applies.",
+      "lat": 12.993781,
+      "lng": 77.584525
+    },
+    "1st Main Road, Sri Vijayamaruthi Circle, Yeshwanthpur, Bengaluru, Karnataka. Pin-560022 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "tree_fall": 1
+      },
+      "avg_resolution_min": 73.6,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.026185,
+      "lng": 77.544092
+    },
+    "Outer Ring Road, SM Industrial Estate, HSR Layout, Bengaluru, Karnataka. Pin-560102 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10
+      },
+      "avg_resolution_min": 65.0,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 12.923022,
+      "lng": 77.656891
+    },
+    "Mumbai Bengaluru Highway, Namma Metro Circle, Peenya, Bengaluru, Karnataka. Pin-560058 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 50.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 13.037924,
+      "lng": 77.521999
+    },
+    "24th Main Road, Sarakki Agrahara, JP Nagar Phase 5, Bengaluru, Karnataka. Pin-560078 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 4,
+        "water_logging": 3,
+        "pot_holes": 2
+      },
+      "avg_resolution_min": 53.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.905904,
+      "lng": 77.585673
+    },
+    "Magadi Main Road, ASB Industrial Layout, Sunkadakatte, Bengaluru, Karnataka. Pin-560091 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "water_logging": 2,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 94.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (70% of events). Standard traffic dispatch applies.",
+      "lat": 12.988239,
+      "lng": 77.510095
+    },
+    "Bellary Road, Embassy Business Hub, Yelahanka, Bengaluru, Karnataka. Pin-560064 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 1
+      },
+      "avg_resolution_min": 92.2,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 13.109352,
+      "lng": 77.603562
+    },
+    "Bellary Road, Bagalur Cross Junction, Kattigenahalli, Bengaluru, Karnataka. Pin-560063 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 7,
+        "accident": 1,
+        "others": 1
+      },
+      "avg_resolution_min": 96.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (70% of events). Standard traffic dispatch applies.",
+      "lat": 13.121817,
+      "lng": 77.610734
+    },
+    "Museum Road, Shoolay Circle, Nilsandra, Bengaluru, Karnataka. Pin-560025 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "tree_fall": 1,
+        "accident": 1
+      },
+      "avg_resolution_min": 72.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (60% of events). Standard traffic dispatch applies.",
+      "lat": 12.967434,
+      "lng": 77.606387
+    },
+    "Trinity Church Road, Trinity Circle, Ashok Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "pot_holes": 3,
+        "water_logging": 1
+      },
+      "avg_resolution_min": 47.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (60% of events). Standard traffic dispatch applies.",
+      "lat": 12.971863,
+      "lng": 77.619544
+    },
+    "Cubbon Road, Police Thimmaiah Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 4,
+        "others": 3,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 119.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.981921,
+      "lng": 77.594757
+    },
+    "46th Cross Road, Sri Aurobindo Circle, Jayanagar, Bengaluru, Karnataka. Pin-560041 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "tree_fall": 1,
+        "congestion": 1
+      },
+      "avg_resolution_min": 62.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 12.917012,
+      "lng": 77.585187
+    },
+    "Madiwala Market Street, Market Square Value Mall, Block 2, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 39.5,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 12.921417,
+      "lng": 77.620727
+    },
+    "Sankey Road, Make In India Circle, Vasant Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 8,
+        "others": 1,
+        "pot_holes": 1
+      },
+      "avg_resolution_min": 38.9,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (80% of events). Standard traffic dispatch applies.",
+      "lat": 12.994069,
+      "lng": 77.585005
+    },
+    "Bellary Road, Laxmaiah Block, Ganga Nagar, Bengaluru, Karnataka. Pin-560024 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "accident": 1
+      },
+      "avg_resolution_min": 73.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 13.028349,
+      "lng": 77.586053
+    },
+    "Outer Ring Road, Bahubali Nagar, Jalahalli, Bengaluru, Karnataka. Pin-560013 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 10
+      },
+      "avg_resolution_min": 96.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (100% of events). Standard traffic dispatch applies.",
+      "lat": 13.042987,
+      "lng": 77.551221
+    },
+    "HAL Airport Road, Manjunatha Nagar, Marathahalli, Bengaluru, Karnataka. Pin-560037 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "public_event",
+      "cause_breakdown": {
+        "public_event": 4,
+        "others": 3,
+        "vehicle_breakdown": 2
+      },
+      "avg_resolution_min": 73.9,
+      "route_to": "Traffic Police",
+      "route_reason": "public_event is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.956177,
+      "lng": 77.694032
+    },
+    "Varthur Main Road, Dr BR Ambedkar Circle, Varthur Marattahalli, Bengaluru, Karnataka. Pin-560087 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "congestion",
+      "cause_breakdown": {
+        "congestion": 4,
+        "vehicle_breakdown": 4,
+        "construction": 1
+      },
+      "avg_resolution_min": 65.6,
+      "route_to": "Traffic Police",
+      "route_reason": "congestion is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.938256,
+      "lng": 77.746848
+    },
+    "Nrupatunga Road, Krishna Rajendra Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 6,
+        "water_logging": 2,
+        "others": 1
+      },
+      "avg_resolution_min": 92.1,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (60% of events). Standard traffic dispatch applies.",
+      "lat": 12.9757,
+      "lng": 77.587667
+    },
+    "Field Marshal KM Cariappa Road, Brigade Road Junction, Ashok Nagar, Bengaluru, Karnataka. Pin-560025 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "water_logging",
+      "cause_breakdown": {
+        "water_logging": 4,
+        "vehicle_breakdown": 2,
+        "others": 2
+      },
+      "avg_resolution_min": 73.9,
+      "route_to": "Traffic Police",
+      "route_reason": "water_logging is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.971869,
+      "lng": 77.606854
+    },
+    "Mysore Road, Rajarajeshwari Junction, Nayandahalli, Bengaluru, Karnataka. Pin-560039 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 9,
+        "others": 1
+      },
+      "avg_resolution_min": 40.7,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (90% of events). Standard traffic dispatch applies.",
+      "lat": 12.936543,
+      "lng": 77.518337
+    },
+    "Cubbon Road, Shivaji Nagar Intersection Junction, Shivaji Nagar, Bengaluru, Karnataka. Pin-560001 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "vehicle_breakdown",
+      "cause_breakdown": {
+        "vehicle_breakdown": 4,
+        "others": 3,
+        "water_logging": 2
+      },
+      "avg_resolution_min": 70.4,
+      "route_to": "Traffic Police",
+      "route_reason": "vehicle_breakdown is the dominant cause (40% of events). Standard traffic dispatch applies.",
+      "lat": 12.979227,
+      "lng": 77.602314
+    },
+    "Hennuru Road, Skyline Retreat, Vaddrapalya, Hennuru, Bengaluru, Karnataka. Pin-560043 (India)": {
+      "total_events": 10,
+      "tier": "moderate",
+      "dominant_cause": "construction",
+      "cause_breakdown": {
+        "construction": 9,
+        "others": 1
+      },
+      "avg_resolution_min": null,
+      "route_to": "BBMP",
+      "route_reason": "construction is the dominant cause (90% of events). construction-related disruption - coordinate with BBMP.",
+      "lat": 13.039438,
+      "lng": 77.641661
+    }
+  },
+  "total_junctions": 85,
+  "total_addresses": 138
+}

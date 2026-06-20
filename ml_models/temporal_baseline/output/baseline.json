@@ -1,0 +1,2205 @@
+{
+  "n_days": 152,
+  "thresholds": {
+    "normal": [
+      0.0,
+      1.5
+    ],
+    "elevated": [
+      1.5,
+      3.0
+    ],
+    "spike": [
+      3.0,
+      6.0
+    ],
+    "severe": [
+      6.0,
+      9999
+    ]
+  },
+  "corridors": {
+    "Airport New South Road": {
+      "0": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": true
+      },
+      "2": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      }
+    },
+    "Bannerghata Road": {
+      "0": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "15": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 25,
+        "avg_per_day": 0.1645,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 40,
+        "avg_per_day": 0.2632,
+        "is_peak_hour": true
+      },
+      "23": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      }
+    },
+    "Bellary Road 1": {
+      "0": {
+        "total_events": 25,
+        "avg_per_day": 0.1645,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 37,
+        "avg_per_day": 0.2434,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 37,
+        "avg_per_day": 0.2434,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 29,
+        "avg_per_day": 0.1908,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 52,
+        "avg_per_day": 0.3421,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 48,
+        "avg_per_day": 0.3158,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 44,
+        "avg_per_day": 0.2895,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 29,
+        "avg_per_day": 0.1908,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 21,
+        "avg_per_day": 0.1382,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 27,
+        "avg_per_day": 0.1776,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 49,
+        "avg_per_day": 0.3224,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 51,
+        "avg_per_day": 0.3355,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 45,
+        "avg_per_day": 0.2961,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 31,
+        "avg_per_day": 0.2039,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 32,
+        "avg_per_day": 0.2105,
+        "is_peak_hour": false
+      }
+    },
+    "Bellary Road 2": {
+      "0": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 34,
+        "avg_per_day": 0.2237,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 35,
+        "avg_per_day": 0.2303,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 21,
+        "avg_per_day": 0.1382,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "15": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 32,
+        "avg_per_day": 0.2105,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 42,
+        "avg_per_day": 0.2763,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 21,
+        "avg_per_day": 0.1382,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      }
+    },
+    "CBD 1": {
+      "0": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": true
+      },
+      "2": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      }
+    },
+    "CBD 2": {
+      "0": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": true
+      },
+      "23": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      }
+    },
+    "Hennur Main Road": {
+      "0": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": true
+      },
+      "7": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      }
+    },
+    "Hosur Road": {
+      "0": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 46,
+        "avg_per_day": 0.3026,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 21,
+        "avg_per_day": 0.1382,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 25,
+        "avg_per_day": 0.1645,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      }
+    },
+    "IRR(Thanisandra road)": {
+      "0": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": true
+      }
+    },
+    "Magadi Road": {
+      "0": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 17,
+        "avg_per_day": 0.1118,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 30,
+        "avg_per_day": 0.1974,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 31,
+        "avg_per_day": 0.2039,
+        "is_peak_hour": true
+      },
+      "7": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 27,
+        "avg_per_day": 0.1776,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      }
+    },
+    "Mysore Road": {
+      "0": {
+        "total_events": 39,
+        "avg_per_day": 0.2566,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 39,
+        "avg_per_day": 0.2566,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 39,
+        "avg_per_day": 0.2566,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 40,
+        "avg_per_day": 0.2632,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 60,
+        "avg_per_day": 0.3947,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 49,
+        "avg_per_day": 0.3224,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 74,
+        "avg_per_day": 0.4868,
+        "is_peak_hour": true
+      },
+      "7": {
+        "total_events": 42,
+        "avg_per_day": 0.2763,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 18,
+        "avg_per_day": 0.1184,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 61,
+        "avg_per_day": 0.4013,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 62,
+        "avg_per_day": 0.4079,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 71,
+        "avg_per_day": 0.4671,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 39,
+        "avg_per_day": 0.2566,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 46,
+        "avg_per_day": 0.3026,
+        "is_peak_hour": false
+      }
+    },
+    "Non-corridor": {
+      "0": {
+        "total_events": 146,
+        "avg_per_day": 0.9605,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 140,
+        "avg_per_day": 0.9211,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 131,
+        "avg_per_day": 0.8618,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 143,
+        "avg_per_day": 0.9408,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 191,
+        "avg_per_day": 1.2566,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 220,
+        "avg_per_day": 1.4474,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 298,
+        "avg_per_day": 1.9605,
+        "is_peak_hour": true
+      },
+      "7": {
+        "total_events": 203,
+        "avg_per_day": 1.3355,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 121,
+        "avg_per_day": 0.7961,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 60,
+        "avg_per_day": 0.3947,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 31,
+        "avg_per_day": 0.2039,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 28,
+        "avg_per_day": 0.1842,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 30,
+        "avg_per_day": 0.1974,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "15": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 67,
+        "avg_per_day": 0.4408,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 184,
+        "avg_per_day": 1.2105,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 215,
+        "avg_per_day": 1.4145,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 339,
+        "avg_per_day": 2.2303,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 240,
+        "avg_per_day": 1.5789,
+        "is_peak_hour": true
+      },
+      "23": {
+        "total_events": 239,
+        "avg_per_day": 1.5724,
+        "is_peak_hour": false
+      }
+    },
+    "ORR East 1": {
+      "0": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 20,
+        "avg_per_day": 0.1316,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 23,
+        "avg_per_day": 0.1513,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 26,
+        "avg_per_day": 0.1711,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      }
+    },
+    "ORR East 2": {
+      "0": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 45,
+        "avg_per_day": 0.2961,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 57,
+        "avg_per_day": 0.375,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      }
+    },
+    "ORR North 1": {
+      "0": {
+        "total_events": 18,
+        "avg_per_day": 0.1184,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 26,
+        "avg_per_day": 0.1711,
+        "is_peak_hour": true
+      },
+      "7": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 35,
+        "avg_per_day": 0.2303,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 26,
+        "avg_per_day": 0.1711,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 18,
+        "avg_per_day": 0.1184,
+        "is_peak_hour": false
+      }
+    },
+    "ORR North 2": {
+      "0": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": true
+      },
+      "5": {
+        "total_events": 34,
+        "avg_per_day": 0.2237,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      }
+    },
+    "ORR West 1": {
+      "0": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 18,
+        "avg_per_day": 0.1184,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 14,
+        "avg_per_day": 0.0921,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "15": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 31,
+        "avg_per_day": 0.2039,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      }
+    },
+    "Old Airport Road": {
+      "0": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "13": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": true
+      },
+      "19": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      }
+    },
+    "Old Madras Road": {
+      "0": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 18,
+        "avg_per_day": 0.1184,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 25,
+        "avg_per_day": 0.1645,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 20,
+        "avg_per_day": 0.1316,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": true
+      },
+      "23": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      }
+    },
+    "Tumkur Road": {
+      "0": {
+        "total_events": 29,
+        "avg_per_day": 0.1908,
+        "is_peak_hour": false
+      },
+      "1": {
+        "total_events": 26,
+        "avg_per_day": 0.1711,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 33,
+        "avg_per_day": 0.2171,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 35,
+        "avg_per_day": 0.2303,
+        "is_peak_hour": true
+      },
+      "4": {
+        "total_events": 24,
+        "avg_per_day": 0.1579,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 33,
+        "avg_per_day": 0.2171,
+        "is_peak_hour": false
+      },
+      "6": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 22,
+        "avg_per_day": 0.1447,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 19,
+        "avg_per_day": 0.125,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 10,
+        "avg_per_day": 0.0658,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "12": {
+        "total_events": 5,
+        "avg_per_day": 0.0329,
+        "is_peak_hour": false
+      },
+      "14": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "17": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 20,
+        "avg_per_day": 0.1316,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 29,
+        "avg_per_day": 0.1908,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 38,
+        "avg_per_day": 0.25,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 44,
+        "avg_per_day": 0.2895,
+        "is_peak_hour": true
+      },
+      "22": {
+        "total_events": 27,
+        "avg_per_day": 0.1776,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 27,
+        "avg_per_day": 0.1776,
+        "is_peak_hour": false
+      }
+    },
+    "Varthur Road": {
+      "0": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "10": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "11": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "15": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 8,
+        "avg_per_day": 0.0526,
+        "is_peak_hour": true
+      },
+      "20": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": true
+      },
+      "21": {
+        "total_events": 7,
+        "avg_per_day": 0.0461,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      },
+      "23": {
+        "total_events": 2,
+        "avg_per_day": 0.0132,
+        "is_peak_hour": false
+      }
+    },
+    "West of Chord Road": {
+      "0": {
+        "total_events": 20,
+        "avg_per_day": 0.1316,
+        "is_peak_hour": true
+      },
+      "1": {
+        "total_events": 6,
+        "avg_per_day": 0.0395,
+        "is_peak_hour": false
+      },
+      "2": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "3": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "4": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "5": {
+        "total_events": 21,
+        "avg_per_day": 0.1382,
+        "is_peak_hour": true
+      },
+      "6": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      },
+      "7": {
+        "total_events": 13,
+        "avg_per_day": 0.0855,
+        "is_peak_hour": false
+      },
+      "8": {
+        "total_events": 12,
+        "avg_per_day": 0.0789,
+        "is_peak_hour": false
+      },
+      "9": {
+        "total_events": 4,
+        "avg_per_day": 0.0263,
+        "is_peak_hour": false
+      },
+      "16": {
+        "total_events": 1,
+        "avg_per_day": 0.0066,
+        "is_peak_hour": false
+      },
+      "18": {
+        "total_events": 3,
+        "avg_per_day": 0.0197,
+        "is_peak_hour": false
+      },
+      "19": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "20": {
+        "total_events": 11,
+        "avg_per_day": 0.0724,
+        "is_peak_hour": false
+      },
+      "21": {
+        "total_events": 15,
+        "avg_per_day": 0.0987,
+        "is_peak_hour": false
+      },
+      "22": {
+        "total_events": 16,
+        "avg_per_day": 0.1053,
+        "is_peak_hour": true
+      },
+      "23": {
+        "total_events": 9,
+        "avg_per_day": 0.0592,
+        "is_peak_hour": false
+      }
+    }
+  },
+  "system": {
+    "0": {
+      "total_events": 418,
+      "avg_per_day": 2.75
+    },
+    "1": {
+      "total_events": 380,
+      "avg_per_day": 2.5
+    },
+    "2": {
+      "total_events": 387,
+      "avg_per_day": 2.5461
+    },
+    "3": {
+      "total_events": 372,
+      "avg_per_day": 2.4474
+    },
+    "4": {
+      "total_events": 557,
+      "avg_per_day": 3.6645
+    },
+    "5": {
+      "total_events": 660,
+      "avg_per_day": 4.3421
+    },
+    "6": {
+      "total_events": 660,
+      "avg_per_day": 4.3421
+    },
+    "7": {
+      "total_events": 475,
+      "avg_per_day": 3.125
+    },
+    "8": {
+      "total_events": 321,
+      "avg_per_day": 2.1118
+    },
+    "9": {
+      "total_events": 160,
+      "avg_per_day": 1.0526
+    },
+    "10": {
+      "total_events": 68,
+      "avg_per_day": 0.4474
+    },
+    "11": {
+      "total_events": 68,
+      "avg_per_day": 0.4474
+    },
+    "12": {
+      "total_events": 63,
+      "avg_per_day": 0.4145
+    },
+    "13": {
+      "total_events": 33,
+      "avg_per_day": 0.2171
+    },
+    "14": {
+      "total_events": 13,
+      "avg_per_day": 0.0855
+    },
+    "15": {
+      "total_events": 9,
+      "avg_per_day": 0.0592
+    },
+    "16": {
+      "total_events": 9,
+      "avg_per_day": 0.0592
+    },
+    "17": {
+      "total_events": 34,
+      "avg_per_day": 0.2237
+    },
+    "18": {
+      "total_events": 228,
+      "avg_per_day": 1.5
+    },
+    "19": {
+      "total_events": 578,
+      "avg_per_day": 3.8026
+    },
+    "20": {
+      "total_events": 679,
+      "avg_per_day": 4.4671
+    },
+    "21": {
+      "total_events": 809,
+      "avg_per_day": 5.3224
+    },
+    "22": {
+      "total_events": 563,
+      "avg_per_day": 3.7039
+    },
+    "23": {
+      "total_events": 493,
+      "avg_per_day": 3.2434
+    }
+  }
+}
