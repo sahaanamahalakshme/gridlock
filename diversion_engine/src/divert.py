@@ -1,35 +1,12 @@
-"""
-divert.py
----------
-Place at: gridlock/diversion_engine/src/divert.py
-
-Takes an affected corridor + event context and returns ranked alternate
-corridors using historical event density from the memory store.
-
-Scoring logic (lower score = better diversion candidate):
-  base_score        = n_historical_events on that corridor (from corridors.json)
-  active_penalty    = +9999 if any active incident on that corridor right now
-  time_slot_bonus   = uses hour-of-day event density from memory store
-                      (corridors busy at this hour get penalised more)
-  severity_weight   = High severity events get a stricter radius — excludes
-                      corridors closer than 300m to the incident point
-
-This is fully honest: every number in the output traces to either the
-historical event count in corridors.json or a live query to the memory
-store. No invented traffic density.
-"""
-
 import json
 import math
 from pathlib import Path
 from typing import Optional
-
 from diversion_engine.src.route_lookup import (
     _CORRIDORS,
     _haversine_m,
     get_corridor_centroid,
 )
-
 
 _ACTIVE_PENALTY = 9999
 _MIN_DIVERSION_DIST_M = 200
@@ -37,10 +14,6 @@ _TOP_K = 3
 
 
 def _get_active_corridors(session) -> set[str]:
-    """
-    Query the memory store for corridors with currently active incidents.
-    Returns a set of corridor names that should be penalised.
-    """
     try:
         from memory.models import Event
 
@@ -55,11 +28,6 @@ def _get_active_corridors(session) -> set[str]:
 
 
 def _hour_density(session, corridor_name: str, hour: int) -> int:
-    """
-    Count historical events on this corridor at this hour-of-day from the
-    memory store. Used to avoid recommending a diversion onto a corridor
-    that's historically busy at the same time of day.
-    """
     try:
         from memory.models import Event
         from sqlalchemy import extract, func
@@ -71,7 +39,8 @@ def _hour_density(session, corridor_name: str, hour: int) -> int:
                 extract("hour", Event.start_datetime) == hour,
             )
             .scalar()
-        ) or 0
+            or 0
+        )
         return int(count)
     except Exception:
         return 0
@@ -86,61 +55,26 @@ def score_corridors(
     session,
     exclude_corridors: Optional[list[str]] = None,
 ) -> list[dict]:
-    """
-    Score all corridors and return the top 3 diversion candidates.
-
-    Args:
-        affected_corridor:  The corridor where the event/incident is happening.
-                            Always excluded from results.
-        incident_lat/lng:   Location of the incident or event start point.
-        hour:               Current hour of day (0-23, IST).
-        severity:           "High" or "Low" — affects minimum distance filter.
-        session:            SQLAlchemy session for memory store queries.
-        exclude_corridors:  Optional extra corridors to exclude (e.g. event
-                            end-point corridor for processions).
-
-    Returns:
-        List of up to 3 dicts, best first:
-        {
-            "corridor": str,
-            "centroid": [lat, lng],
-            "score": float,            # Lower = better
-            "n_historical_events": int,
-            "hour_density": int,       # Events on this corridor at this hour
-            "distance_from_incident_m": float,
-            "reason": str,             # Human-readable explanation
-        }
-    """
     excluded = {affected_corridor, "Non-corridor"}
     if exclude_corridors:
         excluded.update(exclude_corridors)
-
     active_corridors = _get_active_corridors(session)
-
     min_dist_m = 400 if severity == "High" else _MIN_DIVERSION_DIST_M
-
     candidates = []
-
     for name, data in _CORRIDORS.items():
         if name in excluded:
             continue
-
         centroid = data.get("centroid")
         if not centroid:
             continue
-
-        c_lat, c_lng = centroid[0], centroid[1]
+        c_lat, c_lng = (centroid[0], centroid[1])
         dist_m = _haversine_m(incident_lat, incident_lng, c_lat, c_lng)
-
         if dist_m < min_dist_m:
             continue
-
         n_events = data.get("n_historical_events", 0)
         h_density = _hour_density(session, name, hour)
         active_penalty = _ACTIVE_PENALTY if name in active_corridors else 0
-
-        score = n_events + (h_density * 3) + active_penalty
-
+        score = n_events + h_density * 3 + active_penalty
         candidates.append(
             {
                 "corridor": name,
@@ -152,11 +86,8 @@ def score_corridors(
                 "active_incident": name in active_corridors,
             }
         )
-
     candidates.sort(key=lambda x: (x["score"], -x["distance_from_incident_m"]))
-
     top = candidates[:_TOP_K]
-
     for c in top:
         reasons = []
         if c["n_historical_events"] < 50:
@@ -171,13 +102,12 @@ def score_corridors(
             )
         if c["distance_from_incident_m"] > 1000:
             reasons.append(
-                f"{round(c['distance_from_incident_m']/1000, 1)}km from incident"
+                f"{round(c['distance_from_incident_m'] / 1000, 1)}km from incident"
             )
         if not reasons:
             reasons.append("best available alternate corridor")
         c["reason"] = "; ".join(reasons)
         del c["active_incident"]
-
     return top
 
 
@@ -191,24 +121,6 @@ def get_diversion_plan(
     session,
     end_corridor: str | None = None,
 ) -> dict:
-    """
-    Top-level function called by the FastAPI endpoint.
-    Returns everything the simulation page map needs to render.
-
-    For unplanned events: affected_corridor may be None if the click
-    point didn't match any corridor — system still attempts diversion
-    based on spatial position.
-
-    Returns:
-        {
-            "affected_corridor": str | None,
-            "impact_radius_m": int,         # For the orange circle on the map
-            "barricade_point": [lat, lng],  # Where to place the barricade icon
-            "diversions": [...],            # Top 3 from score_corridors()
-            "summary": str,                 # One-sentence summary for the card
-        }
-    """
-
     high_impact_causes = {
         "accident",
         "water_logging",
@@ -222,9 +134,7 @@ def get_diversion_plan(
         radius_m = 600
     else:
         radius_m = 300
-
     exclude = [end_corridor] if end_corridor else []
-
     diversions = score_corridors(
         affected_corridor=affected_corridor or "__none__",
         incident_lat=incident_lat,
@@ -234,20 +144,11 @@ def get_diversion_plan(
         session=session,
         exclude_corridors=exclude,
     )
-
     if diversions:
         best = diversions[0]
-        summary = (
-            f"Incident on {affected_corridor or 'unidentified corridor'} "
-            f"({cause}, {severity} severity). "
-            f"Recommended diversion: {best['corridor']} — {best['reason']}."
-        )
+        summary = f"Incident on {affected_corridor or 'unidentified corridor'} ({cause}, {severity} severity). Recommended diversion: {best['corridor']} — {best['reason']}."
     else:
-        summary = (
-            f"Incident on {affected_corridor or 'unidentified corridor'}. "
-            f"No clear diversion corridor found near this location."
-        )
-
+        summary = f"Incident on {affected_corridor or 'unidentified corridor'}. No clear diversion corridor found near this location."
     return {
         "affected_corridor": affected_corridor,
         "impact_radius_m": radius_m,
@@ -260,6 +161,7 @@ def get_diversion_plan(
 if __name__ == "__main__":
 
     class _FakeSession:
+
         def query(self, *a, **kw):
             return self
 
@@ -290,7 +192,6 @@ if __name__ == "__main__":
         print(
             f"    {d['corridor']}: score={d['score']}, dist={d['distance_from_incident_m']}m — {d['reason']}"
         )
-
     print()
     print("Diversion plan — planned procession CBD 2 → CBD 1:")
     plan2 = get_diversion_plan(

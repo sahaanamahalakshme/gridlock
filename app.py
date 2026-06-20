@@ -100,6 +100,21 @@ class ReportEventRequest(BaseModel):
     address: Optional[str] = None
 
 
+class SaveScenarioRequest(BaseModel):
+
+    event_cause: str
+
+    corridor: Optional[str] = None
+
+    police_station: str
+
+    predicted_minutes: Optional[float] = None
+
+    explanation: Optional[str] = None
+
+    manpower_tier: Optional[str] = None
+
+
 class ResolveEventRequest(BaseModel):
 
     closed_datetime: Optional[datetime] = None
@@ -121,6 +136,32 @@ def health():
 def classify_endpoint(body: ClassifyRequest):
 
     return classify(body.description)
+
+
+@app.post("/events/scenario")
+def save_scenario(body: SaveScenarioRequest, session: Session = Depends(get_session)):
+
+    event = Event(
+        event_type="planned",
+        event_cause=body.event_cause,
+        status="scenario",
+        source="user_scenario",
+        police_station=body.police_station,
+        corridor=body.corridor,
+        latitude=0.0,
+        longitude=0.0,
+        start_datetime=datetime.now(timezone.utc),
+        is_scenario=True,
+        duration_minutes=body.predicted_minutes,
+        explanation=body.explanation,
+        manpower_tier=body.manpower_tier,
+    )
+
+    session.add(event)
+
+    session.commit()
+
+    return {"status": "success", "id": event.id}
 
 
 @app.post("/events/report")
@@ -215,7 +256,7 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
         hotspot_result=hotspot_result,
     )
 
-    return {
+    response = {
         "classification": classification,
         "resolution_estimate": resolution,
         "precedent": {
@@ -232,6 +273,21 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
             "hotspot": hotspot_result,
         },
     }
+
+    saved_scenario_row = (
+        session.query(Event)
+        .filter(Event.is_scenario == True, Event.event_cause == event_cause)
+        .first()
+    )
+    if saved_scenario_row:
+        response["saved_scenario"] = {
+            "explanation": saved_scenario_row.explanation,
+            "manpower_tier": saved_scenario_row.manpower_tier,
+            "duration_minutes": saved_scenario_row.duration_minutes,
+            "corridor": saved_scenario_row.corridor,
+        }
+
+    return response
 
 
 @app.get("/events/similar")

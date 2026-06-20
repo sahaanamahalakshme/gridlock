@@ -3,7 +3,7 @@ import { colors, typography, cards, buttons } from "../styles/globals";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
-export default function PredictEvent({ initialData }) {
+export default function PredictEvent({ initialData, onPredictionSuccess }) {
   const [eventCause, setEventCause] = useState("public_event");
   const [corridor, setCorridor] = useState("CBD 1");
   const [policeStation, setPoliceStation] = useState("Cubbon Park");
@@ -22,6 +22,9 @@ export default function PredictEvent({ initialData }) {
   const [result, setResult] = useState(null);
 
   const [savedScenarios, setSavedScenarios] = useState([]);
+  const [showEditScenario, setShowEditScenario] = useState(false);
+  const [editExplanation, setEditExplanation] = useState("");
+  const [editManpower, setEditManpower] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,6 +56,10 @@ export default function PredictEvent({ initialData }) {
         }),
       });
       const data = await res.json();
+      
+      if (onPredictionSuccess) {
+        onPredictionSuccess(data);
+      }
 
       const resEst = data.resolution_estimate || {};
       const bestMatch =
@@ -75,8 +82,12 @@ export default function PredictEvent({ initialData }) {
         explanation: resEst.explanation || "No explanation available",
         temporal: data.context?.temporal,
         hotspot: data.context?.hotspot,
+        saved_scenario: data.saved_scenario || null,
         _formData: formData,
       });
+      setEditExplanation(resEst.explanation || "No explanation available");
+      setEditManpower(resEst.manpower_tier || "N/A");
+      setShowEditScenario(false);
       setUiState("result");
     } catch (err) {
       console.error(err);
@@ -87,6 +98,37 @@ export default function PredictEvent({ initialData }) {
   const handleSaveScenario = () => {
     if (result && savedScenarios.length < 3) {
       setSavedScenarios([...savedScenarios, result]);
+    }
+  };
+
+  const handleSaveToMemory = async () => {
+    try {
+      const res = await fetch(`${API_BASE}/events/scenario`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event_cause: result._formData.event_cause,
+          corridor: result._formData.corridor,
+          police_station: result._formData.police_station,
+          predicted_minutes: result.predicted_minutes,
+          explanation: editExplanation,
+          manpower_tier: editManpower,
+        }),
+      });
+      if (res.ok) {
+        setResult({
+          ...result,
+          saved_scenario: {
+            explanation: editExplanation,
+            manpower_tier: editManpower,
+            duration_minutes: result.predicted_minutes,
+            corridor: result._formData.corridor,
+          }
+        });
+        setShowEditScenario(false);
+      }
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -429,291 +471,142 @@ export default function PredictEvent({ initialData }) {
             </div>
           )}
 
-          {uiState === "result" && result && (
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "12px" }}
-            >
-              <div style={cards.base}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "14px",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "8px",
-                        alignItems: "center",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontSize: "11px",
-                          textTransform: "uppercase",
-                          color: colors.textTertiary,
-                          letterSpacing: "0.05em",
-                        }}
-                      >
-                        Similar Past Event
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "11px",
-                          color: colors.accent,
-                          fontWeight: 600,
-                          backgroundColor: "#EFF6FF",
-                          padding: "2px 8px",
-                          borderRadius: "4px",
-                        }}
-                      >
-                        {result.matched_event_id}
-                      </span>
+            {uiState === "result" && result && (
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <div
+                style={{
+                  display: result.saved_scenario ? "grid" : "block",
+                  gridTemplateColumns: result.saved_scenario ? "1fr 1fr" : "1fr",
+                  gap: "16px",
+                  alignItems: "stretch"
+                }}
+              >
+                <div style={{ ...cards.base, display: "flex", flexDirection: "column", gap: "12px", height: "100%" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid ${colors.border}`, paddingBottom: "8px" }}>
+                    <span style={{ fontSize: "12px", fontWeight: 600, color: colors.textSecondary }}>Live Pipeline Prediction</span>
+                    <span style={{ fontSize: "10px", backgroundColor: "#F3F4F6", padding: "2px 6px", borderRadius: "4px", color: colors.textTertiary }}>DRISHTI</span>
+                  </div>
+                  
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                      <span style={{ fontSize: "11px", textTransform: "uppercase", color: colors.textTertiary, letterSpacing: "0.05em" }}>Similar Past Event</span>
+                      <span style={{ fontSize: "11px", color: colors.accent, fontWeight: 600, backgroundColor: "#EFF6FF", padding: "2px 8px", borderRadius: "4px" }}>{result.matched_event_id}</span>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "8px",
-                        alignItems: "center",
-                      }}
-                    >
-                      {result.low_precedent && (
-                        <span
-                          style={{
-                            fontSize: "11px",
-                            color: "#DC2626",
-                            backgroundColor: "#FEE2E2",
-                            padding: "2px 8px",
-                            borderRadius: "4px",
-                            fontWeight: 600,
-                          }}
-                        >
-                          LOW PRECEDENT
-                        </span>
-                      )}
-                      <span
-                        style={{
-                          fontSize: "11px",
-                          textTransform: "uppercase",
-                          color: colors.textTertiary,
-                          letterSpacing: "0.05em",
-                        }}
-                      >
-                        Confidence: {result.precedent_confidence}
-                      </span>
+                    <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                      {result.low_precedent && <span style={{ fontSize: "11px", color: "#DC2626", backgroundColor: "#FEE2E2", padding: "2px 8px", borderRadius: "4px", fontWeight: 600 }}>LOW PRECEDENT</span>}
+                      <span style={{ fontSize: "11px", textTransform: "uppercase", color: colors.textTertiary, letterSpacing: "0.05em" }}>Conf: {result.precedent_confidence}</span>
                     </div>
                   </div>
 
-                  {(result.temporal?.is_spike ||
-                    result.hotspot?.is_hotspot) && (
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "8px",
-                        flexWrap: "wrap",
-                        marginTop: "-6px",
-                      }}
-                    >
-                      {result.temporal?.is_spike && (
-                        <span
-                          style={{
-                            fontSize: "11px",
-                            backgroundColor: "#FEF2F2",
-                            color: "#DC2626",
-                            border: "1px solid #FECACA",
-                            padding: "2px 8px",
-                            borderRadius: "4px",
-                            fontWeight: 600,
-                          }}
-                        >
-                          🔴 SPIKE: {result.temporal.spike_ratio}× normal
-                        </span>
-                      )}
-                      {result.hotspot?.is_hotspot && (
-                        <span
-                          style={{
-                            fontSize: "11px",
-                            backgroundColor: "#FFFBEB",
-                            color: "#D97706",
-                            border: "1px solid #FEF3C7",
-                            padding: "2px 8px",
-                            borderRadius: "4px",
-                            fontWeight: 600,
-                          }}
-                        >
-                          🏷️ CHRONIC HOTSPOT:{" "}
-                          {result.hotspot.hotspot_tier?.toUpperCase() || "HIGH"}
-                        </span>
-                      )}
+                  {(result.temporal?.is_spike || result.hotspot?.is_hotspot) && (
+                    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "-6px" }}>
+                      {result.temporal?.is_spike && <span style={{ fontSize: "11px", backgroundColor: "#FEF2F2", color: "#DC2626", border: "1px solid #FECACA", padding: "2px 8px", borderRadius: "4px", fontWeight: 600 }}>🔴 SPIKE: {result.temporal.spike_ratio}× normal</span>}
+                      {result.hotspot?.is_hotspot && <span style={{ fontSize: "11px", backgroundColor: "#FFFBEB", color: "#D97706", border: "1px solid #FEF3C7", padding: "2px 8px", borderRadius: "4px", fontWeight: 600 }}>🏷️ CHRONIC HOTSPOT: {result.hotspot.hotspot_tier?.toUpperCase() || "HIGH"}</span>}
                     </div>
                   )}
 
-                  <h3
-                    style={{
-                      ...typography.value,
-                      fontSize: "14px",
-                      margin: 0,
-                      fontWeight: 600,
-                    }}
-                  >
-                    {result.matched_description}
-                  </h3>
+                  <h3 style={{ ...typography.value, fontSize: "14px", margin: 0, fontWeight: 600 }}>{result.matched_description}</h3>
 
-                  {result.hotspot?.is_hotspot &&
-                    result.hotspot.route_to !== "Traffic Police" && (
-                      <div
-                        style={{
-                          backgroundColor: "#EFF6FF",
-                          border: "1px solid #BFDBFE",
-                          padding: "8px 12px",
-                          borderRadius: "6px",
-                          fontSize: "12px",
-                          color: "#1E3A8A",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                      >
-                        <span style={{ fontSize: "14px" }}>ℹ️</span>
-                        <div>
-                          <strong
-                            style={{ display: "block", marginBottom: "2px" }}
-                          >
-                            Civic Routing Recommended
-                          </strong>
-                          Based on chronic issue history, route this to{" "}
-                          <strong>{result.hotspot.route_to}</strong>.{" "}
-                          {result.hotspot.route_reason}
-                        </div>
-                      </div>
-                    )}
-
-                  {result.hotspot?.is_hotspot && (
-                    <div
-                      style={{
-                        fontSize: "12px",
-                        color: colors.textSecondary,
-                        fontStyle: "italic",
-                        marginTop: "-4px",
-                      }}
-                    >
-                      This is a chronic location —{" "}
-                      {result.hotspot.historical_count} prior incidents, mostly{" "}
-                      {result.hotspot.dominant_cause?.replace("_", " ")}.
+                  {result.hotspot?.is_hotspot && result.hotspot.route_to !== "Traffic Police" && (
+                    <div style={{ backgroundColor: "#EFF6FF", border: "1px solid #BFDBFE", padding: "8px 12px", borderRadius: "6px", fontSize: "12px", color: "#1E3A8A", display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ fontSize: "14px" }}>ℹ️</span>
+                      <div><strong style={{ display: "block", marginBottom: "2px" }}>Civic Routing Recommended</strong>Based on chronic issue history, route this to <strong>{result.hotspot.route_to}</strong>. {result.hotspot.route_reason}</div>
                     </div>
                   )}
 
-                  <div
-                    style={{ height: "1px", backgroundColor: colors.border }}
-                  />
+                  <div style={{ height: "1px", backgroundColor: colors.border }} />
 
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(3, 1fr)",
-                      gap: "12px",
-                    }}
-                  >
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
                     <div>
                       <div style={typography.label}>Clearance Time</div>
-                      <div
-                        style={{
-                          ...typography.value,
-                          fontSize: "15px",
-                          color: colors.textPrimary,
-                          marginTop: "4px",
-                        }}
-                      >
-                        {result.predicted_minutes} min
-                      </div>
+                      <div style={{ ...typography.value, fontSize: "15px", color: colors.textPrimary, marginTop: "4px" }}>{result.predicted_minutes} min</div>
                     </div>
                     <div>
                       <div style={typography.label}>Confidence</div>
-                      <div
-                        style={{
-                          ...typography.value,
-                          fontSize: "15px",
-                          color: colors.success,
-                          marginTop: "4px",
-                        }}
-                      >
-                        {result.confidence_band}
-                      </div>
+                      <div style={{ ...typography.value, fontSize: "15px", color: colors.success, marginTop: "4px" }}>{result.confidence_band}</div>
                     </div>
                     <div>
                       <div style={typography.label}>Manpower</div>
-                      <div
-                        style={{
-                          ...typography.value,
-                          fontSize: "15px",
-                          color: colors.warning,
-                          marginTop: "4px",
-                        }}
-                      >
-                        {result.manpower_tier}
-                      </div>
+                      <div style={{ ...typography.value, fontSize: "15px", color: colors.warning, marginTop: "4px" }}>{result.manpower_tier}</div>
                     </div>
                   </div>
 
-                  <div
-                    style={{ height: "1px", backgroundColor: colors.border }}
-                  />
+                  <div style={{ height: "1px", backgroundColor: colors.border }} />
 
-                  <div
-                    style={{
-                      borderLeft: `3px solid ${colors.accent}`,
-                      backgroundColor: "var(--color-bg)",
-                      padding: "12px",
-                      borderRadius: "0 6px 6px 0",
-                    }}
-                  >
-                    <p
-                      style={{
-                        ...typography.body,
-                        fontSize: "13px",
-                        margin: 0,
-                      }}
-                    >
-                      {result.explanation}
-                    </p>
-                  </div>
-
-                  <div
-                    style={{
-                      fontFamily: "monospace",
-                      fontSize: "11px",
-                      color: colors.textTertiary,
-                      textAlign: "center",
-                      marginTop: "4px",
-                      borderTop: `1px solid ${colors.border}`,
-                      paddingTop: "10px",
-                    }}
-                  >
-                    Live prediction from DRISHTI backend
+                  <div style={{ borderLeft: `3px solid ${colors.accent}`, backgroundColor: "var(--color-bg)", padding: "12px", borderRadius: "0 6px 6px 0", flexGrow: 1 }}>
+                    <p style={{ ...typography.body, fontSize: "13px", margin: 0 }}>{result.explanation}</p>
                   </div>
                 </div>
+
+                {result.saved_scenario && (
+                  <div style={{ ...cards.base, display: "flex", flexDirection: "column", gap: "12px", height: "100%", border: `1px solid ${colors.accent}`, backgroundColor: "#F8FAFC" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid #BFDBFE`, paddingBottom: "8px" }}>
+                      <span style={{ fontSize: "12px", fontWeight: 600, color: colors.accent }}>Past Memory Stored Response</span>
+                      <span style={{ fontSize: "10px", backgroundColor: "#DBEAFE", padding: "2px 6px", borderRadius: "4px", color: colors.accent }}>DATABASE</span>
+                    </div>
+                    
+                    <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginTop: "4px" }}>
+                      <span style={{ fontSize: "11px", color: colors.textSecondary }}>Curated scenario for:</span>
+                      <span style={{ fontSize: "13px", fontWeight: 500 }}>{result._formData.event_cause.replace("_", " ")}</span>
+                    </div>
+
+                    <div style={{ height: "1px", backgroundColor: "#BFDBFE", margin: "4px 0" }} />
+
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+                      <div>
+                        <div style={{...typography.label, color: colors.accent}}>Clearance Time</div>
+                        <div style={{ ...typography.value, fontSize: "15px", color: colors.textPrimary, marginTop: "4px" }}>{result.saved_scenario.duration_minutes} min</div>
+                      </div>
+                      <div>
+                        <div style={{...typography.label, color: colors.accent}}>Manpower</div>
+                        <div style={{ ...typography.value, fontSize: "15px", color: colors.warning, marginTop: "4px" }}>{result.saved_scenario.manpower_tier}</div>
+                      </div>
+                    </div>
+
+                    <div style={{ height: "1px", backgroundColor: "#BFDBFE", margin: "4px 0" }} />
+
+                    <div style={{ borderLeft: `3px solid ${colors.accent}`, backgroundColor: "white", padding: "12px", borderRadius: "0 6px 6px 0", flexGrow: 1 }}>
+                      <p style={{ ...typography.body, fontSize: "13px", margin: 0 }}>{result.saved_scenario.explanation}</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              {savedScenarios.length < 3 && (
-                <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                  <button
-                    onClick={handleSaveScenario}
-                    style={{
-                      ...buttons.secondary,
-                      fontSize: "12px",
-                      padding: "6px 12px",
-                    }}
-                  >
-                    Save scenario
-                  </button>
+              {!result.saved_scenario && (
+                <div style={{ ...cards.base, backgroundColor: "#F9FAFB", border: `1px dashed ${colors.border}` }}>
+                  {!showEditScenario ? (
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div style={{ fontSize: "13px", color: colors.textSecondary }}>
+                        No past memory stored response for this event. Want to add this?
+                      </div>
+                      <button onClick={() => setShowEditScenario(true)} style={{ ...buttons.secondary, fontSize: "12px", padding: "6px 12px" }}>Yes, add to memory</button>
+                    </div>
+                  ) : (
+                    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                      <h4 style={{ margin: 0, fontSize: "13px", color: colors.accent }}>Save Scenario to Memory</h4>
+                      <div>
+                        <label style={typography.label}>Edit Explanation</label>
+                        <textarea 
+                          value={editExplanation} 
+                          onChange={e => setEditExplanation(e.target.value)} 
+                          rows={3} 
+                          style={{ width: "100%", marginTop: "4px", padding: "8px", borderRadius: "4px", border: `1px solid ${colors.border}`, fontSize: "13px", fontFamily: typography.fontFamily, resize: "vertical" }}
+                        />
+                      </div>
+                      <div>
+                        <label style={typography.label}>Edit Manpower Tier</label>
+                        <input 
+                          value={editManpower} 
+                          onChange={e => setEditManpower(e.target.value)} 
+                          style={{ width: "100%", marginTop: "4px", padding: "8px", borderRadius: "4px", border: `1px solid ${colors.border}`, fontSize: "13px", fontFamily: typography.fontFamily }}
+                        />
+                      </div>
+                      <div style={{ display: "flex", justifyContent: "flex-end", gap: "8px", marginTop: "4px" }}>
+                        <button onClick={() => setShowEditScenario(false)} style={{ ...buttons.secondary, fontSize: "12px", padding: "6px 12px", backgroundColor: "white" }}>Cancel</button>
+                        <button onClick={handleSaveToMemory} style={{ ...buttons.primary, fontSize: "12px", padding: "6px 12px" }}>Save to Database</button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

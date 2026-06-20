@@ -7,7 +7,7 @@ import pandas as pd
 from memory.db import init_db, SessionLocal
 from memory.models import Event
 
-RAW_PATH = "data/raw/astram_events_raw.csv"
+RAW_PATH = str(Path(__file__).parent / "data/raw/astram_events_raw.csv")
 
 KEEP_COLS = [
     "id",

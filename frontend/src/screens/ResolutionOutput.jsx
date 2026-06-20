@@ -3,7 +3,7 @@ import { colors, typography, cards } from "../styles/globals";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
-export default function ResolutionOutput() {
+export default function ResolutionOutput({ predictionData }) {
   const [showRawOutput, setShowRawOutput] = useState(false);
   const [data, setData] = useState(null);
 
@@ -12,44 +12,29 @@ export default function ResolutionOutput() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    fetch(`${API_BASE}/events/report`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        description:
-          "Accident near Outer Ring Road, Marathahalli, Bengaluru causing massive traffic jam",
-        corridor: "ORR East 1",
-        police_station: "Marathahalli",
-        requires_road_closure: true,
-        latitude: 12.9716,
-        longitude: 77.5946,
-        event_type: "unplanned",
-        address: "Outer Ring Road, Marathahalli, Bengaluru",
-      }),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        setData({
-          predicted_minutes: json.resolution_estimate?.predicted_minutes || 0,
-          confidence_band: json.resolution_estimate?.confidence_band || "N/A",
-          manpower_tier: json.resolution_estimate?.manpower_tier || "N/A",
-          explanation:
-            json.resolution_estimate?.explanation || "No explanation",
-          similar_events: (json.precedent?.matches || [])
-            .slice(0, 3)
-            .map((m) => ({
-              name: m.description,
-              corridor: m.corridor,
-              duration: m.duration_minutes,
-            })),
-          total_matches: json.precedent?.total_matches || 0,
-          temporal: json.context?.temporal,
-          hotspot: json.context?.hotspot,
-          raw_json: json,
-        });
-      })
-      .catch(console.error);
-  }, []);
+    if (predictionData) {
+      setData({
+        predicted_minutes: predictionData.resolution_estimate?.predicted_minutes || 0,
+        confidence_band: predictionData.resolution_estimate?.confidence_band || "N/A",
+        manpower_tier: predictionData.resolution_estimate?.manpower_tier || "N/A",
+        explanation:
+          predictionData.resolution_estimate?.explanation || "No explanation",
+        similar_events: (predictionData.precedent?.matches || [])
+          .slice(0, 3)
+          .map((m) => ({
+            name: m.description,
+            corridor: m.corridor,
+            duration: m.duration_minutes,
+          })),
+        total_matches: predictionData.precedent?.total_matches || 0,
+        temporal: predictionData.context?.temporal,
+        hotspot: predictionData.context?.hotspot,
+        raw_json: predictionData,
+      });
+    } else {
+      setData(null);
+    }
+  }, [predictionData]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -84,12 +69,23 @@ export default function ResolutionOutput() {
     return (
       <div
         style={{
-          padding: "40px",
+          padding: "80px 40px",
           textAlign: "center",
           color: "var(--color-text-secondary)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "16px",
         }}
       >
-        Loading resolution data...
+        <span style={{ fontSize: "32px" }}>⏱️</span>
+        <div style={{ ...typography.header, fontSize: "18px" }}>
+          No event predicted yet
+        </div>
+        <div style={{ ...typography.body, maxWidth: "340px", lineHeight: "1.5" }}>
+          Predict an event to see its estimated resolution timeline, manpower
+          requirements, and historical precedent.
+        </div>
       </div>
     );
   }

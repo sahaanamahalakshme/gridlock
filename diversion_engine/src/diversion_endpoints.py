@@ -3,7 +3,6 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone
 from typing import Optional
-
 from memory.db import get_session
 from diversion_engine.src.route_lookup import (
     find_corridor,
@@ -13,7 +12,6 @@ from diversion_engine.src.route_lookup import (
 from diversion_engine.src.divert import get_diversion_plan
 from ml_models.bilingual_event_classifier.predict import classify
 from ml_models.resolution_predictor.src.predict import predict as predict_resolution
-
 from diversion_engine.src.directional_divert import get_directional_diversion_plan
 
 diversion_router = APIRouter(prefix="/diversion", tags=["Diversion Simulation"])
@@ -38,22 +36,16 @@ class PlannedDiversionRequest(BaseModel):
 
 @diversion_router.post("/unplanned")
 def simulate_unplanned(
-    body: UnplannedDiversionRequest,
-    session: Session = Depends(get_session),
+    body: UnplannedDiversionRequest, session: Session = Depends(get_session)
 ):
-
     classification = classify(body.description)
     cause = classification["event_cause"]
     severity = classification["severity"]
-
     affected = find_corridor(body.incident_lat, body.incident_lng)
-
     hour = body.hour
     if hour is None:
-
         utc_now = datetime.now(timezone.utc)
         hour = (utc_now.hour + 5) % 24
-
     plan = get_diversion_plan(
         affected_corridor=affected,
         incident_lat=body.incident_lat,
@@ -63,7 +55,6 @@ def simulate_unplanned(
         severity=severity,
         session=session,
     )
-
     try:
         import app as _app
 
@@ -83,7 +74,6 @@ def simulate_unplanned(
             "confidence_band": [None, None],
             "method": "unavailable",
         }
-
     return {
         "classification": classification,
         "affected_corridor": affected,
@@ -97,21 +87,18 @@ def simulate_unplanned(
 
 @diversion_router.post("/planned")
 def simulate_planned(
-    body: PlannedDiversionRequest,
-    session: Session = Depends(get_session),
+    body: PlannedDiversionRequest, session: Session = Depends(get_session)
 ):
     hour = body.hour
     if hour is None:
         utc_now = datetime.now(timezone.utc)
         hour = (utc_now.hour + 5) % 24
-
     start_corridor, end_corridor = find_route_corridors(
         body.start_lat,
         body.start_lng,
         body.end_lat or body.start_lat,
         body.end_lng or body.start_lng,
     )
-
     if body.description and body.description.strip():
         classification = classify(body.description)
         cause = classification["event_cause"]
@@ -126,7 +113,6 @@ def simulate_planned(
             "severity_confidence": 1.0,
             "top3_causes": [{"label": cause, "confidence": 1.0}],
         }
-
     plan = get_diversion_plan(
         affected_corridor=start_corridor,
         incident_lat=body.start_lat,
@@ -140,7 +126,6 @@ def simulate_planned(
     event_path = [[body.start_lat, body.start_lng]]
     if body.end_lat and body.end_lng:
         event_path.append([body.end_lat, body.end_lng])
-
     return {
         "classification": classification,
         "start_corridor": start_corridor,
@@ -171,8 +156,7 @@ class DirectionalDiversionRequest(BaseModel):
 
 @diversion_router.post("/directional")
 def simulate_directional(
-    body: DirectionalDiversionRequest,
-    session: Session = Depends(get_session),
+    body: DirectionalDiversionRequest, session: Session = Depends(get_session)
 ):
     from diversion_engine.src.directional_divert import get_directional_diversion_plan
     from ml_models.bilingual_event_classifier.predict import classify
@@ -191,7 +175,6 @@ def simulate_directional(
             "severity_confidence": 1.0,
             "top3_causes": [],
         }
-
     plan = get_directional_diversion_plan(
         incident_lat=body.incident_lat,
         incident_lng=body.incident_lng,
@@ -201,5 +184,4 @@ def simulate_directional(
         session=session,
         affected_corridor=body.affected_corridor,
     )
-
     return {**plan, "classification": classification}

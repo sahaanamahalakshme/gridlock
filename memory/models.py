@@ -66,6 +66,12 @@ class Event(Base):
 
     duration_minutes = Column(Float, nullable=True)
 
+    is_scenario = Column(Boolean, nullable=False, default=False)
+
+    explanation = Column(Text, nullable=True)
+
+    manpower_tier = Column(String, nullable=True)
+
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
 
     spike_ratio = Column(Float, nullable=True)

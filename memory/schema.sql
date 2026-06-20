@@ -25,6 +25,10 @@ CREATE TABLE events (
     resolved_datetime TEXT,               
     duration_minutes  REAL,               
 
+    is_scenario     BOOLEAN NOT NULL DEFAULT 0,
+    explanation     TEXT,
+    manpower_tier   TEXT,
+
     created_at      TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
