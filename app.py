@@ -41,6 +41,9 @@ app.add_middleware(
     CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"]
 )
 
+from diversion_engine.src.diversion_endpoints import diversion_router
+app.include_router(diversion_router)
+
 _resolution_artifacts = None
 
 
@@ -256,40 +259,62 @@ def resolve_event(
 
 @app.get("/events/hotspot")
 def hotspot_data(session: Session = Depends(get_session)):
-
-    junction_counts = (
+    # Group by junction and cause
+    junc_cause_counts = (
         session.query(
             Event.junction,
             Event.latitude,
             Event.longitude,
+            Event.event_cause,
             func.count(Event.id).label("count"),
         )
         .filter(Event.junction.isnot(None))
-        .group_by(Event.junction, Event.latitude, Event.longitude)
-        .order_by(func.count(Event.id).desc())
-        .limit(100)
+        .group_by(Event.junction, Event.latitude, Event.longitude, Event.event_cause)
         .all()
     )
+
+    # Aggregate to find dominant cause and total count per junction
+    junc_dict = {}
+    for r in junc_cause_counts:
+        name = r.junction
+        if name not in junc_dict:
+            junc_dict[name] = {"lat": r.latitude, "lng": r.longitude, "count": 0, "causes": {}}
+        junc_dict[name]["count"] += r.count
+        junc_dict[name]["causes"][r.event_cause] = r.count
+
+    junctions_out = []
+    for name, data in junc_dict.items():
+        # Find cause with max count
+        dominant_cause = max(data["causes"].items(), key=lambda x: x[1])[0] if data["causes"] else "others"
+        junctions_out.append({
+            "name": name,
+            "lat": data["lat"],
+            "lng": data["lng"],
+            "count": data["count"],
+            "dominant_cause": dominant_cause
+        })
+    junctions_out.sort(key=lambda x: x["count"], reverse=True)
 
     corridor_counts = (
         session.query(Event.corridor, func.count(Event.id).label("count"))
         .filter(Event.corridor.isnot(None), Event.corridor != "Non-corridor")
         .group_by(Event.corridor)
         .order_by(func.count(Event.id).desc())
+        .limit(10)
+        .all()
+    )
+
+    cause_counts = (
+        session.query(Event.event_cause, func.count(Event.id).label("count"))
+        .filter(Event.event_cause.isnot(None))
+        .group_by(Event.event_cause)
         .all()
     )
 
     return {
-        "junctions": [
-            {
-                "name": r.junction,
-                "lat": r.latitude,
-                "lng": r.longitude,
-                "count": r.count,
-            }
-            for r in junction_counts
-        ],
+        "junctions": junctions_out[:100],
         "corridors": [{"name": r.corridor, "count": r.count} for r in corridor_counts],
+        "causes": {r.event_cause: r.count for r in cause_counts}
     }
 
 

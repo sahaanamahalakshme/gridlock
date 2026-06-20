@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import { HOTSPOT_JUNCTIONS, CAUSE_TOTALS, TOP_JUNCTIONS } from '../mockData';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { colors, typography, cards, buttons } from '../styles/globals';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
 // Helper to generate fake hourly distribution
 const getHourlyData = (count) => {
@@ -15,12 +16,6 @@ const getHourlyData = (count) => {
   }
   return dist;
 };
-
-// Add hourly data to junctions
-const junctionsWithHourly = HOTSPOT_JUNCTIONS.map(j => ({
-  ...j,
-  hourly: getHourlyData(j.count)
-}));
 
 // Helper to create a circle polygon for fill-extrusion
 const createCircleGeometry = (lng, lat, radius) => {
@@ -39,6 +34,23 @@ const createCircleGeometry = (lng, lat, radius) => {
 };
 
 export default function HotspotMap({ searchQuery, onPredictClick }) {
+  const [apiData, setApiData] = useState(null);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/events/hotspot`)
+      .then(res => res.json())
+      .then(setApiData)
+      .catch(console.error);
+  }, []);
+
+  if (!apiData) {
+    return <div style={{ padding: '40px', textAlign: 'center', color: 'var(--color-text-secondary)' }}>Loading hotspot data...</div>;
+  }
+
+  return <HotspotMapInner searchQuery={searchQuery} onPredictClick={onPredictClick} apiData={apiData} />;
+}
+
+function HotspotMapInner({ searchQuery, onPredictClick, apiData }) {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
   const [hoveredRow, setHoveredRow] = useState(null);
@@ -52,17 +64,23 @@ export default function HotspotMap({ searchQuery, onPredictClick }) {
   // Playback timer ref
   const timerRef = useRef(null);
 
+  const junctionsWithHourly = useMemo(() => {
+    return apiData.junctions.map(j => ({
+      ...j,
+      hourly: getHourlyData(j.count)
+    }));
+  }, [apiData]);
+
   // Compute stats
-  const totalJunctions = HOTSPOT_JUNCTIONS.length;
-  const peakJunc = [...HOTSPOT_JUNCTIONS].sort((a, b) => b.count - a.count)[0];
+  const CAUSE_TOTALS = apiData.causes || {};
+  const TOP_JUNCTIONS = apiData.junctions.slice(0, 5);
+
+  const totalJunctions = apiData.junctions.length;
+  const peakJunc = apiData.junctions[0];
   const peakJuncText = peakJunc ? `${peakJunc.name.replace(' Junction', '')} (${peakJunc.count})` : 'N/A';
-  const causeCounts = {};
-  HOTSPOT_JUNCTIONS.forEach(j => {
-    causeCounts[j.dominant_cause] = (causeCounts[j.dominant_cause] || 0) + j.count;
-  });
-  const mostCommonCause = Object.entries(causeCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'others';
-  const totalEvents = HOTSPOT_JUNCTIONS.reduce((sum, j) => sum + j.count, 0);
-  const avgEvents = Math.round(totalEvents / totalJunctions);
+  const mostCommonCause = Object.entries(CAUSE_TOTALS).sort((a, b) => b[1] - a[1])[0]?.[0] || 'others';
+  const totalEvents = apiData.junctions.reduce((sum, j) => sum + j.count, 0);
+  const avgEvents = totalJunctions > 0 ? Math.round(totalEvents / totalJunctions) : 0;
 
   // Initialize MapLibre
   useEffect(() => {
@@ -132,12 +150,7 @@ export default function HotspotMap({ searchQuery, onPredictClick }) {
           'fill-extrusion-color': ['get', 'color'],
           'fill-extrusion-height': ['get', 'currentHeight'],
           'fill-extrusion-base': 0,
-          'fill-extrusion-opacity': [
-            'case',
-            ['boolean', ['feature-state', 'hover'], false], 1,
-            ['boolean', ['feature-state', 'selected'], false], 1,
-            0.8
-          ]
+          'fill-extrusion-opacity': 0.8
         }
       });
 
@@ -269,12 +282,7 @@ export default function HotspotMap({ searchQuery, onPredictClick }) {
     const q = searchQuery.toLowerCase().trim();
 
     if (!q) {
-      map.setPaintProperty('hotspots-extrusion', 'fill-extrusion-opacity', [
-        'case',
-        ['boolean', ['feature-state', 'hover'], false], 1,
-        ['boolean', ['feature-state', 'selected'], false], 1,
-        0.8
-      ]);
+      map.setPaintProperty('hotspots-extrusion', 'fill-extrusion-color', ['get', 'color']);
       junctionsWithHourly.forEach((_, i) => {
         const el = document.getElementById(`marker-${i}`);
         if (el) el.style.opacity = '1';
@@ -282,11 +290,11 @@ export default function HotspotMap({ searchQuery, onPredictClick }) {
       return;
     }
 
-    map.setPaintProperty('hotspots-extrusion', 'fill-extrusion-opacity', [
+    map.setPaintProperty('hotspots-extrusion', 'fill-extrusion-color', [
       'case',
-      ['!=', ['index-of', q, ['downcase', ['to-string', ['get', 'name']]]], -1], 0.9,
-      ['!=', ['index-of', q, ['downcase', ['to-string', ['get', 'dominant_cause']]]], -1], 0.9,
-      0.2 // dim others
+      ['!=', ['index-of', q, ['downcase', ['to-string', ['get', 'name']]]], -1], ['get', 'color'],
+      ['!=', ['index-of', q, ['downcase', ['to-string', ['get', 'dominant_cause']]]], -1], ['get', 'color'],
+      '#888888' // gray out others instead of using opacity
     ]);
 
     junctionsWithHourly.forEach((j, i) => {

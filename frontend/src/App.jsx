@@ -5,6 +5,7 @@ import HotspotMap from './screens/HotspotMap';
 import PredictEvent from './screens/PredictEvent';
 import Classifier from './screens/Classifier';
 import ResolutionOutput from './screens/ResolutionOutput';
+import SimulationPage from './screens/SimulationPage';
 
 // SVG Icons (Feather-like, 16x16, stroke-width 1.5)
 const SunIcon = () => (
@@ -45,11 +46,19 @@ const ClockIcon = () => (
   </svg>
 );
 
+const MapPinIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+);
+
 const NAV_ITEMS = [
   { id: 'hotspot', label: 'Hotspot Map', icon: <TargetIcon /> },
   { id: 'predict', label: 'Predict Event', icon: <ZapIcon /> },
   { id: 'classifier', label: 'Classifier', icon: <MessageSquareIcon /> },
-  { id: 'resolution', label: 'Resolution Output', icon: <ClockIcon /> }
+  { id: 'resolution', label: 'Resolution Output', icon: <ClockIcon /> },
+  { id: 'simulation', label: 'Simulate', icon: <MapPinIcon /> }
 ];
 
 export default function App() {
@@ -89,6 +98,7 @@ export default function App() {
       case 'predict': return <PredictEvent initialData={predictFill} />;
       case 'classifier': return <Classifier />;
       case 'resolution': return <ResolutionOutput />;
+      case 'simulation': return <SimulationPage />;
       default: return <HotspotMap searchQuery={searchQuery} onPredictClick={(data) => { setPredictFill(data); setActiveView('predict'); }} />;
     }
   };
