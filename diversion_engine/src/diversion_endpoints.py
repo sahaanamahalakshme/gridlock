@@ -10,7 +10,7 @@ from diversion_engine.src.route_lookup import (
     get_all_corridors,
 )
 from diversion_engine.src.divert import get_diversion_plan
-from ml_models.bilingual_event_classifier.predict import classify
+from classifier_client import classify
 from ml_models.resolution_predictor.src.predict import predict as predict_resolution
 from diversion_engine.src.directional_divert import get_directional_diversion_plan
 
