@@ -68,6 +68,16 @@ class Event(Base):
 
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
 
+    spike_ratio = Column(Float, nullable=True)
+
+    spike_label = Column(String, nullable=True)
+
+    is_hotspot = Column(Boolean, nullable=True)
+
+    hotspot_tier = Column(String, nullable=True)
+
+    route_to = Column(String, nullable=True)
+
     __table_args__ = (
         Index("idx_events_station_cause", "police_station", "event_cause"),
         Index("idx_events_corridor_cause", "corridor", "event_cause"),
@@ -76,3 +86,4 @@ class Event(Base):
     def to_dict(self):
 
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
