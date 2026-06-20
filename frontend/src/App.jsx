@@ -146,7 +146,62 @@ export default function App() {
   const [predictionData, setPredictionData] = useState(null);
   const searchInputRef = useRef(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(true);
 
+  useEffect(() => {
+    const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+    fetch(`${API_BASE}/health`)
+      .then(() => setIsConnecting(false))
+      .catch((err) => {
+        console.error("Health check failed:", err);
+        setTimeout(() => setIsConnecting(false), 3000);
+      });
+  }, []);
+
+  if (isConnecting) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: colors.bg,
+          fontFamily: typography.fontFamily,
+          color: colors.textPrimary,
+        }}
+      >
+        <div
+          style={{
+            marginBottom: "20px",
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            border: `3px solid ${colors.border}`,
+            borderTopColor: colors.accent,
+            animation: "spin 1s linear infinite",
+          }}
+        ></div>
+        <h2 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "8px" }}>
+          Connecting to DRISHTI...
+        </h2>
+        <p
+          style={{
+            fontSize: "14px",
+            color: colors.textSecondary,
+            maxWidth: "300px",
+            textAlign: "center",
+          }}
+        >
+          Waking up backend services. This may take 30-60 seconds on a cold start.
+        </p>
+        <style>
+          {`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}
+        </style>
+      </div>
+    );
+  }
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark");

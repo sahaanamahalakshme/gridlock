@@ -28,7 +28,7 @@ from memory.models import Event
 
 from serialization import clean_numpy
 
-from ml_models.bilingual_event_classifier.predict import classify
+from classifier_client import classify
 
 from memory.confidence import enrich_with_confidence
 
@@ -72,6 +72,9 @@ def startup():
     print("[startup] All artifacts loaded.")
 
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "message": "DRISHTI is awake"}
 class ClassifyRequest(BaseModel):
 
     description: str = Field(..., example="ಬಿಎಂಟಿಸಿ ಬಸ್ ಕೆಟ್ಟು ನಿಂತಿದೆ ಸರ್")
