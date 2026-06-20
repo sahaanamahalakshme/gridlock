@@ -1,5 +1,10 @@
 """FastAPI entry point orchestrating ML models and memory store."""
+from datetime import datetime, timezone
 
+from ml_models.temporal_baseline.src.score import load_baseline, score_spike
+from ml_models.hotspot_flag.src.flag import load_hotspot_index, flag_hotspot
+ 
+ 
 from fastapi import FastAPI, Depends, HTTPException
 
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,7 +15,7 @@ from sqlalchemy.orm import Session
 
 from sqlalchemy import func, text
 
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 from typing import Optional
 
@@ -47,16 +52,20 @@ from diversion_engine.src.diversion_endpoints import diversion_router
 app.include_router(diversion_router)
 
 _resolution_artifacts = None
+_baseline = None
+_hotspot_index = None
 
 
 @app.on_event("startup")
 def startup():
 
-    global _resolution_artifacts
+    global _resolution_artifacts, _baseline, _hotspot_index
 
     init_db()
 
     _resolution_artifacts = load_resolution()
+    _baseline = load_baseline()
+    _hotspot_index = load_hotspot_index()
 
     print("[startup] All artifacts loaded.")
 
@@ -159,6 +168,29 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
         },
     )
 
+    one_hour_ago = datetime.now(timezone.utc) - timedelta(hours=1)
+    live_count = (
+        session.query(Event)
+        .filter(
+            Event.corridor == (body.corridor or "Non-corridor"),
+            Event.start_datetime >= one_hour_ago,
+        )
+        .count()
+    )
+
+    spike_result = score_spike(
+        _baseline,
+        corridor=body.corridor or "Non-corridor",
+        current_hour=datetime.now(timezone.utc).hour,
+        live_count=live_count,
+    )
+
+    hotspot_result = flag_hotspot(
+        _hotspot_index,
+        junction=body.junction,
+        address=body.address,
+    )
+
     written = write_event(
         session,
         {
@@ -177,6 +209,8 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
             "description": body.description,
             "start_datetime": datetime.now(timezone.utc),
         },
+        spike_result=spike_result,
+        hotspot_result=hotspot_result,
     )
 
     return {
@@ -191,6 +225,10 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
         "text_similar_reports": text_matches,
         "logged_event_id": written["id"],
         "logged_event_source": written["source"],
+        "context": {
+            "temporal": spike_result,
+            "hotspot": hotspot_result,
+        },
     }
 
 
@@ -295,12 +333,21 @@ def hotspot_data(session: Session = Depends(get_session)):
     for name, data in junc_dict.items():
         # Find cause with max count
         dominant_cause = max(data["causes"].items(), key=lambda x: x[1])[0] if data["causes"] else "others"
+        hf = flag_hotspot(
+            _hotspot_index,
+            junction=name,
+            address=None,
+        )
         junctions_out.append({
             "name": name,
             "lat": data["lat"],
             "lng": data["lng"],
             "count": data["count"],
-            "dominant_cause": dominant_cause
+            "dominant_cause": dominant_cause,
+            "is_hotspot": hf.get("is_hotspot", False),
+            "hotspot_tier": hf.get("hotspot_tier"),
+            "historical_count": hf.get("historical_count"),
+            "route_to": hf.get("route_to"),
         })
     junctions_out.sort(key=lambda x: x["count"], reverse=True)
 
