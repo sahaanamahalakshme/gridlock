@@ -37,7 +37,7 @@ from ml_models.resolution_predictor.src.predict import (
     predict as predict_resolution,
 )
 
-from ml_models.impact_forecaster.src.retrieve import retrieve_similar_event
+from retriever_client import retrieve_similar_event
 
 app = FastAPI(
     title="SENTRY",
@@ -71,13 +71,9 @@ def startup():
 
     print("[startup] All artifacts loaded.")
 
-
-@app.get("/health")
-def health_check():
-    return {"status": "ok", "message": "DRISHTI is awake"}
 class ClassifyRequest(BaseModel):
-
-    description: str = Field(..., example="ಬಿಎಂಟಿಸಿ ಬಸ್ ಕೆಟ್ಟು ನಿಂತಿದೆ ಸರ್")
+            description: str = Field(..., example="ಬಿಎಂಟಿಸಿ ಬಸ್ ಕೆಟ್ಟು ನಿಂತಿದೆ ಸರ್")
+            police_station: Optional[str] = Field(default="", example="HSR Layout")
 
 
 class ReportEventRequest(BaseModel):
@@ -137,8 +133,7 @@ def health():
 
 @app.post("/classify")
 def classify_endpoint(body: ClassifyRequest):
-
-    return classify(body.description)
+    return classify(body.description, body.police_station or "")
 
 
 @app.post("/events/scenario")
@@ -170,7 +165,7 @@ def save_scenario(body: SaveScenarioRequest, session: Session = Depends(get_sess
 @app.post("/events/report")
 def report_event(body: ReportEventRequest, session: Session = Depends(get_session)):
 
-    classification = classify(body.description)
+    classification = classify(body.description, body.police_station or "")
 
     event_cause = classification["event_cause"]
 
