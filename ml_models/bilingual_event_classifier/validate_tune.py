@@ -23,7 +23,7 @@ from sklearn.metrics import (
 )
 
 from sentence_transformers import SentenceTransformer
-from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
+from imblearn.over_sampling import RandomOverSampler
 
 
 ROOT = Path(__file__).resolve().parent
@@ -38,13 +38,6 @@ REPORTS = ROOT / "reports"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
-# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
-# 81% confidence) showed it wasn't separating short domain-specific phrases
-# well. mpnet is the same sentence-transformers library/API, just a larger
-# backbone with stronger semantic separation -- no code changes needed
-# beyond this string, only a slower first download (~1GB vs ~120MB) and
-# slightly slower encode time.
 EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 RANDOM_SEED = 42
@@ -102,7 +95,9 @@ def oversample(X, y, label):
     imbalanced data the original sweep used."""
     ros = RandomOverSampler(random_state=RANDOM_SEED)
     X_resampled, y_resampled = ros.fit_resample(X, y)
-    print(f"[validate] Oversampled '{label}' for tuning: {len(y):,} -> {len(y_resampled):,} rows")
+    print(
+        f"[validate] Oversampled '{label}' for tuning: {len(y):,} -> {len(y_resampled):,} rows"
+    )
     return X_resampled, y_resampled
 
 
@@ -210,7 +205,7 @@ def main():
 
     X_train = load_train_embeddings()
 
-    X_val = embed_val(build_augmented_text(val_df))  # FIX 4: station-prefixed text
+    X_val = embed_val(build_augmented_text(val_df))
 
     train_df = pd.read_csv(ROOT / "data" / "splits" / "train.csv")
 
@@ -234,7 +229,9 @@ def main():
 
     print(f"\n[validate] Default model (C=4.0) val macro-F1: {default_score :.4f}")
 
-    X_train_cause_os, y_cause_train_os = oversample(X_train, y_cause_train, "event_cause")
+    X_train_cause_os, y_cause_train_os = oversample(
+        X_train, y_cause_train, "event_cause"
+    )
 
     best_c_cause, best_lr_score_cause, best_lr_cause = sweep_lr(
         X_train_cause_os, y_cause_train_os, X_val, y_cause_val, "event_cause"
@@ -299,7 +296,9 @@ def main():
 
     print(f"\n[validate] Default model (C=4.0) val macro-F1: {default_prio_score :.4f}")
 
-    X_train_prio_os, y_priority_train_os = oversample(X_train, y_priority_train, "priority")
+    X_train_prio_os, y_priority_train_os = oversample(
+        X_train, y_priority_train, "priority"
+    )
 
     best_c_prio, best_lr_score_prio, best_lr_prio = sweep_lr(
         X_train_prio_os, y_priority_train_os, X_val, y_priority_val, "priority"

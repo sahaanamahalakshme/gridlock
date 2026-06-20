@@ -3,7 +3,7 @@ from routing_map import route_event
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-RAW_PATH = SCRIPT_DIR / "../../memory/data/raw/astram_events_raw.csv" 
+RAW_PATH = SCRIPT_DIR / "../../memory/data/raw/astram_events_raw.csv"
 EXPECTED_CIVIC_COUNT = 1645
 
 
@@ -22,7 +22,9 @@ def run():
     for agency, count in breakdown.items():
         print(f"  {agency:<10} {count:>5}  ({count/len(df):.1%})")
     print()
-    print(f"civic (bbmp+bwssb) events: {civic_count}  (reference: {EXPECTED_CIVIC_COUNT})")
+    print(
+        f"civic (bbmp+bwssb) events: {civic_count}  (reference: {EXPECTED_CIVIC_COUNT})"
+    )
     print(f"ambiguous (flagged, defaulted to police): {ambiguous_count}")
     print()
     print("ambiguous causes seen:")

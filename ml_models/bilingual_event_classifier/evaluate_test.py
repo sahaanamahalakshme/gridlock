@@ -36,13 +36,6 @@ REPORTS = ROOT / "reports"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
-# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
-# 81% confidence) showed it wasn't separating short domain-specific phrases
-# well. mpnet is the same sentence-transformers library/API, just a larger
-# backbone with stronger semantic separation -- no code changes needed
-# beyond this string, only a slower first download (~1GB vs ~120MB) and
-# slightly slower encode time.
 EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
@@ -151,7 +144,7 @@ def main():
 
     y_priority = priority_le.transform(test_df["priority"].tolist())
 
-    X_test = embed_test(build_augmented_text(test_df))  # FIX 4: station-prefixed text
+    X_test = embed_test(build_augmented_text(test_df))
 
     cause_clf = joblib.load(MODELS_DIR / "cause_classifier.joblib")
 

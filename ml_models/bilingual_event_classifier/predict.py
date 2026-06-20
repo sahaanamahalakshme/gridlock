@@ -4,24 +4,22 @@ import torch
 
 import numpy as np
 
+import sys
 from pathlib import Path
-
 from sentence_transformers import SentenceTransformer
 
-from .routing_map import route_event
-
 ROOT = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+try:
+    from .routing_map import route_event
+except ImportError:
+    from routing_map import route_event
 
 MODELS_DIR = ROOT / "models"
 
 
-# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
-# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
-# 81% confidence) showed it wasn't separating short domain-specific phrases
-# well. mpnet is the same sentence-transformers library/API, just a larger
-# backbone with stronger semantic separation -- no code changes needed
-# beyond this string, only a slower first download (~1GB vs ~120MB) and
-# slightly slower encode time.
 EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
@@ -102,7 +100,9 @@ def classify(description: str, police_station: str = "") -> dict:
     m = _load_models()
 
     station = (police_station or "").strip()
-    text_for_model = f"{station}: {description.strip()}" if station else description.strip()
+    text_for_model = (
+        f"{station}: {description.strip()}" if station else description.strip()
+    )
 
     embedding = m["encoder"].encode(
         [text_for_model],

@@ -40,8 +40,13 @@ def _compute_duration_minutes(start, end):
     return delta if delta >= 0 else None
 
 
-def write_event(session: Session, event_data: dict, spike_result: dict = None, hotspot_result: dict = None) -> dict:
-    
+def write_event(
+    session: Session,
+    event_data: dict,
+    spike_result: dict = None,
+    hotspot_result: dict = None,
+) -> dict:
+
     end_for_duration = (
         event_data.get("resolved_datetime")
         or event_data.get("closed_datetime")
@@ -105,7 +110,6 @@ def read_similar_events(
     corridor: str = None,
     limit: int = 5,
 ) -> dict:
-    
 
     base_query = session.query(Event).filter(
         Event.police_station == police_station, Event.event_cause == event_cause

@@ -21,19 +21,19 @@ import json
 import math
 from pathlib import Path
 
-# Load once at import time — not per call
+
 _DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "corridors.json"
+
 
 def _load_corridors() -> dict:
     with open(_DATA_PATH, encoding="utf-8") as f:
         return json.load(f)
 
+
 _CORRIDORS: dict = _load_corridors()
 
-# 500m in degrees latitude (approximate — good enough for Bengaluru's lat ~13°)
-# 1 degree lat ≈ 111,139m → 500m ≈ 0.004496 degrees
-# 1 degree lng at lat 13° ≈ 108,195m → 500m ≈ 0.004621 degrees
-_MAX_DIST_DEGREES = 0.0045   # conservative single threshold in degrees
+
+_MAX_DIST_DEGREES = 0.0045
 
 
 def _haversine_m(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
@@ -41,18 +41,24 @@ def _haversine_m(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
     Distance in metres between two lat/lng points.
     Using haversine — accurate enough for sub-km distances.
     """
-    R = 6_371_000  # Earth radius in metres
+    R = 6_371_000
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
     dphi = math.radians(lat2 - lat1)
     dlam = math.radians(lng2 - lng1)
-    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    a = (
+        math.sin(dphi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    )
     return R * 2 * math.asin(math.sqrt(a))
 
 
 def _point_to_segment_dist(
-    px: float, py: float,
-    ax: float, ay: float,
-    bx: float, by: float,
+    px: float,
+    py: float,
+    ax: float,
+    ay: float,
+    bx: float,
+    by: float,
 ) -> tuple[float, float, float]:
     """
     Nearest point on segment AB to point P, returned as (dist_m, nearest_lat, nearest_lng).
@@ -60,7 +66,7 @@ def _point_to_segment_dist(
     """
     dx, dy = bx - ax, by - ay
     if dx == 0 and dy == 0:
-        # Degenerate segment (both endpoints same)
+
         return _haversine_m(px, py, ax, ay), ax, ay
 
     t = ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)
@@ -84,9 +90,12 @@ def _nearest_on_polyline(lat: float, lng: float, points: list[list[float]]) -> f
     for i in range(len(points) - 1):
         a, b = points[i], points[i + 1]
         dist, _, _ = _point_to_segment_dist(
-            lat, lng,
-            a[0], a[1],
-            b[0], b[1],
+            lat,
+            lng,
+            a[0],
+            a[1],
+            b[0],
+            b[1],
         )
         if dist < best:
             best = dist
@@ -115,7 +124,7 @@ def find_corridor(lat: float, lng: float, max_dist_m: float = 500.0) -> str | No
 
     for name, data in _CORRIDORS.items():
         if name == "Non-corridor":
-            continue   # Never return Non-corridor as a diversion target
+            continue
         points = data.get("points", [])
         if not points:
             continue
@@ -130,8 +139,10 @@ def find_corridor(lat: float, lng: float, max_dist_m: float = 500.0) -> str | No
 
 
 def find_route_corridors(
-    start_lat: float, start_lng: float,
-    end_lat: float, end_lng: float,
+    start_lat: float,
+    start_lng: float,
+    end_lat: float,
+    end_lng: float,
     max_dist_m: float = 500.0,
 ) -> tuple[str | None, str | None]:
     """
@@ -183,7 +194,6 @@ def get_all_corridors() -> list[dict]:
     ]
 
 
-# ── Smoke test ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     tests = [
         (12.9081, 77.6476, "near Silk Board / ORR East 1"),

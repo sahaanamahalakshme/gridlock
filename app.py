@@ -1,10 +1,11 @@
 """FastAPI entry point orchestrating ML models and memory store."""
+
 from datetime import datetime, timezone
 
 from ml_models.temporal_baseline.src.score import load_baseline, score_spike
 from ml_models.hotspot_flag.src.flag import load_hotspot_index, flag_hotspot
- 
- 
+
+
 from fastapi import FastAPI, Depends, HTTPException
 
 from fastapi.middleware.cors import CORSMiddleware
@@ -49,6 +50,7 @@ app.add_middleware(
 )
 
 from diversion_engine.src.diversion_endpoints import diversion_router
+
 app.include_router(diversion_router)
 
 _resolution_artifacts = None
@@ -306,7 +308,7 @@ def resolve_event(
 
 @app.get("/events/hotspot")
 def hotspot_data(session: Session = Depends(get_session)):
-    # Group by junction and cause
+
     junc_cause_counts = (
         session.query(
             Event.junction,
@@ -320,35 +322,45 @@ def hotspot_data(session: Session = Depends(get_session)):
         .all()
     )
 
-    # Aggregate to find dominant cause and total count per junction
     junc_dict = {}
     for r in junc_cause_counts:
         name = r.junction
         if name not in junc_dict:
-            junc_dict[name] = {"lat": r.latitude, "lng": r.longitude, "count": 0, "causes": {}}
+            junc_dict[name] = {
+                "lat": r.latitude,
+                "lng": r.longitude,
+                "count": 0,
+                "causes": {},
+            }
         junc_dict[name]["count"] += r.count
         junc_dict[name]["causes"][r.event_cause] = r.count
 
     junctions_out = []
     for name, data in junc_dict.items():
-        # Find cause with max count
-        dominant_cause = max(data["causes"].items(), key=lambda x: x[1])[0] if data["causes"] else "others"
+
+        dominant_cause = (
+            max(data["causes"].items(), key=lambda x: x[1])[0]
+            if data["causes"]
+            else "others"
+        )
         hf = flag_hotspot(
             _hotspot_index,
             junction=name,
             address=None,
         )
-        junctions_out.append({
-            "name": name,
-            "lat": data["lat"],
-            "lng": data["lng"],
-            "count": data["count"],
-            "dominant_cause": dominant_cause,
-            "is_hotspot": hf.get("is_hotspot", False),
-            "hotspot_tier": hf.get("hotspot_tier"),
-            "historical_count": hf.get("historical_count"),
-            "route_to": hf.get("route_to"),
-        })
+        junctions_out.append(
+            {
+                "name": name,
+                "lat": data["lat"],
+                "lng": data["lng"],
+                "count": data["count"],
+                "dominant_cause": dominant_cause,
+                "is_hotspot": hf.get("is_hotspot", False),
+                "hotspot_tier": hf.get("hotspot_tier"),
+                "historical_count": hf.get("historical_count"),
+                "route_to": hf.get("route_to"),
+            }
+        )
     junctions_out.sort(key=lambda x: x["count"], reverse=True)
 
     corridor_counts = (
@@ -370,7 +382,7 @@ def hotspot_data(session: Session = Depends(get_session)):
     return {
         "junctions": junctions_out[:100],
         "corridors": [{"name": r.corridor, "count": r.count} for r in corridor_counts],
-        "causes": {r.event_cause: r.count for r in cause_counts}
+        "causes": {r.event_cause: r.count for r in cause_counts},
     }
 
 

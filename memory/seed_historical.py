@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+
 sys.path.append(str(Path(__file__).parent.parent))
 
 import pandas as pd
@@ -9,10 +10,25 @@ from memory.models import Event
 RAW_PATH = "data/raw/astram_events_raw.csv"
 
 KEEP_COLS = [
-    "id", "event_type", "event_cause", "status", "police_station", "corridor",
-    "zone", "junction", "address", "latitude", "longitude", "priority",
-    "requires_road_closure", "description", "start_datetime", "end_datetime",
-    "closed_datetime", "resolved_datetime", "created_date",
+    "id",
+    "event_type",
+    "event_cause",
+    "status",
+    "police_station",
+    "corridor",
+    "zone",
+    "junction",
+    "address",
+    "latitude",
+    "longitude",
+    "priority",
+    "requires_road_closure",
+    "description",
+    "start_datetime",
+    "end_datetime",
+    "closed_datetime",
+    "resolved_datetime",
+    "created_date",
 ]
 
 
@@ -30,9 +46,14 @@ def seed():
 
     df = df.dropna(subset=["police_station", "latitude", "longitude"])
 
-    for col in ["start_datetime", "end_datetime", "closed_datetime", "resolved_datetime", "created_date"]:
+    for col in [
+        "start_datetime",
+        "end_datetime",
+        "closed_datetime",
+        "resolved_datetime",
+        "created_date",
+    ]:
         df[col] = pd.to_datetime(df[col], errors="coerce")
-
 
     df["start_datetime"] = df["start_datetime"].fillna(df["created_date"])
     before = len(df)
@@ -63,8 +84,12 @@ def seed():
             description=row["description"] if pd.notna(row["description"]) else None,
             start_datetime=row["start_datetime"],
             end_datetime=row["end_datetime"] if pd.notna(row["end_datetime"]) else None,
-            closed_datetime=row["closed_datetime"] if pd.notna(row["closed_datetime"]) else None,
-            resolved_datetime=row["resolved_datetime"] if pd.notna(row["resolved_datetime"]) else None,
+            closed_datetime=(
+                row["closed_datetime"] if pd.notna(row["closed_datetime"]) else None
+            ),
+            resolved_datetime=(
+                row["resolved_datetime"] if pd.notna(row["resolved_datetime"]) else None
+            ),
             duration_minutes=duration,
         )
         session.add(event)

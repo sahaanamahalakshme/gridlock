@@ -67,17 +67,17 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT        = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_RAW = ROOT.parent / "data" / "raw" / "astram_events_raw.csv"
 OUTPUT_JSON = ROOT / "data" / "corridors.json"
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-OVERPASS_URL  = "https://overpass-api.de/api/interpreter"
+OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 
-# Required by Nominatim/Overpass usage policy — identify yourself honestly.
+
 HEADERS = {"User-Agent": "gridlock-hackathon-corridor-cache/1.0 (educational project)"}
 
-REQUEST_DELAY_SEC = 1.1   # Nominatim/Overpass both throttle ~1 req/sec — respect it
+REQUEST_DELAY_SEC = 1.1
 
 
 def http_get_json(url: str, params: dict) -> list | dict:
@@ -94,7 +94,7 @@ def nominatim_search(query: str) -> dict | None:
         "format": "json",
         "limit": 1,
         "countrycodes": "in",
-        "viewbox": "77.40,13.18,77.85,12.75",  # rough Bengaluru bounding box
+        "viewbox": "77.40,13.18,77.85,12.75",
         "bounded": 1,
     }
     results = http_get_json(NOMINATIM_URL, params)
@@ -175,12 +175,13 @@ def main():
 
     df = pd.read_csv(raw_csv, low_memory=False)
 
-    # ── Step 1: extract the real corridor list from the data ──────────────────
     corridor_counts = df["corridor"].value_counts()
     corridor_counts = corridor_counts.drop("Non-corridor", errors="ignore")
     corridor_names = corridor_counts.index.tolist()
 
-    print(f"\n[corridor_cache] Found {len(corridor_names)} real corridor names in the dataset:")
+    print(
+        f"\n[corridor_cache] Found {len(corridor_names)} real corridor names in the dataset:"
+    )
     for name in corridor_names:
         print(f"  {name:25s}  ({corridor_counts[name]:,} historical events)")
 
@@ -201,9 +202,11 @@ def main():
         points, centroid, matched, note = [], None, False, None
 
         if osm_match:
-            osm_type = osm_match.get("osm_type")  # "way" or "relation"
-            osm_id   = osm_match.get("osm_id")
-            print(f"    OSM match: {osm_type} {osm_id} — '{osm_match.get('display_name', '')[:70]}'")
+            osm_type = osm_match.get("osm_type")
+            osm_id = osm_match.get("osm_id")
+            print(
+                f"    OSM match: {osm_type} {osm_id} — '{osm_match.get('display_name', '')[:70]}'"
+            )
             points = overpass_way_geometry(osm_type, osm_id)
             time.sleep(REQUEST_DELAY_SEC)
 
@@ -224,7 +227,9 @@ def main():
             points = fallback["points"]
             centroid = fallback["centroid"]
             if points:
-                print(f"    Fallback: {len(points)} points from your own dataset's lat/lng for this corridor.")
+                print(
+                    f"    Fallback: {len(points)} points from your own dataset's lat/lng for this corridor."
+                )
 
         result[name] = {
             "osm_query": query,
@@ -235,7 +240,6 @@ def main():
             "note": note,
         }
 
-    # ── Save ─────────────────────────────────────────────────────────────────
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
@@ -245,7 +249,9 @@ def main():
     print(f"  OSM-matched corridors : {matched_count} / {len(result)}")
     print(f"  Data-fallback corridors: {len(result) - matched_count} / {len(result)}")
     print(f"\n[corridor_cache] Saved -> {OUTPUT_JSON}")
-    print("[corridor_cache] Commit this file to the repo. route_lookup.py reads it, doesn't fetch live.")
+    print(
+        "[corridor_cache] Commit this file to the repo. route_lookup.py reads it, doesn't fetch live."
+    )
 
 
 if __name__ == "__main__":

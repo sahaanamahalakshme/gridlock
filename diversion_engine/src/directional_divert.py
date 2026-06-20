@@ -26,21 +26,24 @@ import json
 
 _DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "corridors.json"
 
+
 def _load_corridors():
     with open(_DATA_PATH, encoding="utf-8") as f:
         return json.load(f)
 
+
 _CORRIDORS = _load_corridors()
 
-
-# ── Geometry helpers ──────────────────────────────────────────────────────────
 
 def _haversine_m(lat1, lng1, lat2, lng2):
     R = 6_371_000
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
     dphi = math.radians(lat2 - lat1)
     dlam = math.radians(lng2 - lng1)
-    a = math.sin(dphi/2)**2 + math.cos(phi1)*math.cos(phi2)*math.sin(dlam/2)**2
+    a = (
+        math.sin(dphi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    )
     return R * 2 * math.asin(math.sqrt(a))
 
 
@@ -69,20 +72,19 @@ def _approach_quadrant(corridor_bearing_from_incident, rally_bearing):
         'cross_left'    — traffic crossing rally's path from the left
         'cross_right'   — traffic crossing rally's path from the right
     """
-    # Bearing FROM the corridor TO the incident (approaching direction)
+
     approach_bearing = (corridor_bearing_from_incident + 180) % 360
 
-    # How different is this approach from the rally's travel direction?
     diff = _angular_diff(rally_bearing, approach_bearing)
 
     if abs(diff) <= 45:
-        return 'tail_on'          # coming from behind, same direction as rally
+        return "tail_on"
     elif abs(diff) >= 135:
-        return 'head_on'          # coming head-on into rally
+        return "head_on"
     elif diff > 0:
-        return 'cross_right'      # crossing from right
+        return "cross_right"
     else:
-        return 'cross_left'       # crossing from left
+        return "cross_left"
 
 
 def _safe_side_bearing(quadrant, rally_bearing):
@@ -95,42 +97,40 @@ def _safe_side_bearing(quadrant, rally_bearing):
     cross_left  → divert BEFORE the crossing point, back left
     cross_right → divert BEFORE the crossing point, back right
     """
-    if quadrant == 'head_on':
-        # Best diversion: either side, pick corridor closest to perpendicular-right
+    if quadrant == "head_on":
+
         return (rally_bearing + 90) % 360
-    elif quadrant == 'tail_on':
-        # Detour: send left or right well before the rally's tail
+    elif quadrant == "tail_on":
+
         return (rally_bearing + 90) % 360
-    elif quadrant == 'cross_left':
-        # Send back left (away from crossing)
+    elif quadrant == "cross_left":
+
         return (rally_bearing - 90) % 360
-    elif quadrant == 'cross_right':
-        # Send back right (away from crossing)
+    elif quadrant == "cross_right":
+
         return (rally_bearing + 90) % 360
     return rally_bearing
 
 
 QUADRANT_LABELS = {
-    'head_on':    'Head-on (approaching rally directly)',
-    'tail_on':    'Tail-on (behind the rally)',
-    'cross_left': 'Crossing from left',
-    'cross_right': 'Crossing from right',
+    "head_on": "Head-on (approaching rally directly)",
+    "tail_on": "Tail-on (behind the rally)",
+    "cross_left": "Crossing from left",
+    "cross_right": "Crossing from right",
 }
 
 QUADRANT_INSTRUCTION = {
-    'head_on':    'STOP — rally approaching. Divert immediately.',
-    'tail_on':    'Do not follow rally. Take diversion before next junction.',
-    'cross_left': 'Rally crossing ahead. Divert before the crossing point.',
-    'cross_right': 'Rally crossing ahead. Divert before the crossing point.',
+    "head_on": "STOP — rally approaching. Divert immediately.",
+    "tail_on": "Do not follow rally. Take diversion before next junction.",
+    "cross_left": "Rally crossing ahead. Divert before the crossing point.",
+    "cross_right": "Rally crossing ahead. Divert before the crossing point.",
 }
 
-
-# ── Main function ─────────────────────────────────────────────────────────────
 
 def get_directional_diversion_plan(
     incident_lat: float,
     incident_lng: float,
-    rally_bearing: float,          # degrees, 0=N, 90=E, 180=S, 270=W
+    rally_bearing: float,
     cause: str,
     severity: str,
     session,
@@ -167,10 +167,9 @@ def get_directional_diversion_plan(
             "summary": str,
         }
     """
-    # Get active corridors from memory store
+
     active_corridors = _get_active_corridors(session)
 
-    # Build per-corridor metadata: bearing from incident, quadrant, distance
     corridor_info = {}
     for name, data in _CORRIDORS.items():
         if name in ("Non-corridor", affected_corridor):
@@ -181,14 +180,12 @@ def get_directional_diversion_plan(
         c_lat, c_lng = centroid[0], centroid[1]
         dist_m = _haversine_m(incident_lat, incident_lng, c_lat, c_lng)
         if dist_m < 200:
-            continue  # Too close to incident to be a usable diversion
+            continue
 
         brg = _bearing(incident_lat, incident_lng, c_lat, c_lng)
         quadrant = _approach_quadrant(brg, rally_bearing)
         safe_dir = _safe_side_bearing(quadrant, rally_bearing)
 
-        # Score: lower is better diversion
-        # Prefer corridors that are on the correct safe side + low event density
         safe_angle_diff = abs(_angular_diff(brg, (safe_dir + 180) % 360))
         n_events = data.get("n_historical_events", 0)
         active_pen = 5000 if name in active_corridors else 0
@@ -205,8 +202,7 @@ def get_directional_diversion_plan(
             "active_incident": name in active_corridors,
         }
 
-    # Group corridors by quadrant and find best diversion per quadrant
-    groups = {q: [] for q in ['head_on', 'tail_on', 'cross_left', 'cross_right']}
+    groups = {q: [] for q in ["head_on", "tail_on", "cross_left", "cross_right"]}
     for name, info in corridor_info.items():
         groups[info["quadrant"]].append(info)
 
@@ -216,36 +212,46 @@ def get_directional_diversion_plan(
         best = corridors_sorted[0] if corridors_sorted else None
 
         if best:
-            # Build human reason string
+
             reasons = []
             if best["n_historical_events"] < 50:
-                reasons.append(f"low congestion history ({best['n_historical_events']} events)")
+                reasons.append(
+                    f"low congestion history ({best['n_historical_events']} events)"
+                )
             if not best["active_incident"]:
                 reasons.append("no active incident")
             if best["distance_from_incident_m"] > 800:
-                reasons.append(f"{round(best['distance_from_incident_m']/1000, 1)}km from rally")
-            best["reason"] = "; ".join(reasons) if reasons else "best available alternate"
+                reasons.append(
+                    f"{round(best['distance_from_incident_m']/1000, 1)}km from rally"
+                )
+            best["reason"] = (
+                "; ".join(reasons) if reasons else "best available alternate"
+            )
 
-        # Which corridors approach from this direction
         approach_names = [c["corridor"] for c in corridors_sorted]
 
         result_groups[quadrant] = {
             "label": QUADRANT_LABELS[quadrant],
             "instruction": QUADRANT_INSTRUCTION[quadrant],
-            "approach_corridors": approach_names[:3],  # Top 3 approach corridors
+            "approach_corridors": approach_names[:3],
             "diversion": best,
         }
 
-    # Rally direction label
-    dirs = ['North', 'North-East', 'East', 'South-East',
-            'South', 'South-West', 'West', 'North-West']
+    dirs = [
+        "North",
+        "North-East",
+        "East",
+        "South-East",
+        "South",
+        "South-West",
+        "West",
+        "North-West",
+    ]
     direction_label = dirs[round(rally_bearing / 45) % 8]
 
-    # Impact radius
     high_impact = {"accident", "public_event", "procession", "vip_movement", "protest"}
     radius_m = 700 if severity == "High" or cause in high_impact else 400
 
-    # One-sentence summary
     head_on_diversion = result_groups["head_on"]["diversion"]
     summary = (
         f"Rally moving {direction_label}. "
@@ -266,6 +272,7 @@ def get_directional_diversion_plan(
 def _get_active_corridors(session) -> set:
     try:
         from memory.models import Event
+
         rows = (
             session.query(Event.corridor)
             .filter(Event.status == "active", Event.corridor.isnot(None))
@@ -276,18 +283,25 @@ def _get_active_corridors(session) -> set:
         return set()
 
 
-# ── Smoke test ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+
     class _FakeSession:
-        def query(self, *a): return self
-        def filter(self, *a): return self
-        def all(self): return []
+        def query(self, *a):
+            return self
+
+        def filter(self, *a):
+            return self
+
+        def all(self):
+            return []
 
     print("Rally moving NORTH from Cubbon Park area:")
     plan = get_directional_diversion_plan(
-        incident_lat=12.9793, incident_lng=77.5996,
-        rally_bearing=0,  # North
-        cause="protest", severity="High",
+        incident_lat=12.9793,
+        incident_lng=77.5996,
+        rally_bearing=0,
+        cause="protest",
+        severity="High",
         session=_FakeSession(),
         affected_corridor="CBD 2",
     )

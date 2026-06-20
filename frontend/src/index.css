@@ -1,37 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #F9FAFB;
-  --color-card-bg: #FFFFFF;
-  --color-border: #E5E7EB;
+  --color-bg: #f9fafb;
+  --color-card-bg: #ffffff;
+  --color-border: #e5e7eb;
   --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
-  --color-text-tertiary: #9CA3AF;
-  
-  --color-hover-bg: #F9FAFB;
-  --color-active-bg: #EFF6FF;
-  --color-gray-bg: #F3F4F6;
-  --color-map-bg: #E5E7EB;
-  --color-pulse-light: #F3F4F6;
-  --color-pulse-dark: #E5E7EB;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+
+  --color-hover-bg: #f9fafb;
+  --color-active-bg: #eff6ff;
+  --color-gray-bg: #f3f4f6;
+  --color-map-bg: #e5e7eb;
+  --color-pulse-light: #f3f4f6;
+  --color-pulse-dark: #e5e7eb;
 }
 
 body.dark {
   --color-bg: #121212;
-  --color-card-bg: #1E1E1E;
+  --color-card-bg: #1e1e1e;
   --color-border: #333333;
-  --color-text-primary: #F9FAFB;
-  --color-text-secondary: #9CA3AF;
-  --color-text-tertiary: #6B7280;
-  
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-text-tertiary: #6b7280;
+
   --color-hover-bg: #374151;
   --color-active-bg: #1e3a8a;
   --color-gray-bg: #374151;
   --color-map-bg: #111827;
   --color-pulse-light: #374151;
-  --color-pulse-dark: #4B5563;
+  --color-pulse-dark: #4b5563;
 }
-
 
 @keyframes sweep {
   0% {
@@ -55,7 +54,7 @@ body.dark {
 
 /* Accessibility & Interaction Constraints */
 :focus-visible {
-  outline: 2px solid #2563EB;
+  outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
 

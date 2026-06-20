@@ -63,7 +63,9 @@ import pandas as pd
 from datetime import datetime, timezone
 
 
-MODEL_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models")
+MODEL_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models"
+)
 
 
 CAT_FEATURES = ["event_cause", "corridor", "priority", "police_station"]

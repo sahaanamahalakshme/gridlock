@@ -24,13 +24,16 @@ import math
 from pathlib import Path
 from typing import Optional
 
-from diversion_engine.src.route_lookup import _CORRIDORS, _haversine_m, get_corridor_centroid
+from diversion_engine.src.route_lookup import (
+    _CORRIDORS,
+    _haversine_m,
+    get_corridor_centroid,
+)
 
-# ── Constants ────────────────────────────────────────────────────────────────
 
-_ACTIVE_PENALTY = 9999      # Effectively excludes a corridor from diversion
-_MIN_DIVERSION_DIST_M = 200  # Don't suggest a corridor centroid closer than this to the incident
-_TOP_K = 3                   # Return top 3 diversion options
+_ACTIVE_PENALTY = 9999
+_MIN_DIVERSION_DIST_M = 200
+_TOP_K = 3
 
 
 def _get_active_corridors(session) -> set[str]:
@@ -40,6 +43,7 @@ def _get_active_corridors(session) -> set[str]:
     """
     try:
         from memory.models import Event
+
         active_rows = (
             session.query(Event.corridor)
             .filter(Event.status == "active", Event.corridor.isnot(None))
@@ -47,7 +51,7 @@ def _get_active_corridors(session) -> set[str]:
         )
         return {row.corridor for row in active_rows if row.corridor}
     except Exception:
-        return set()   # Fail safe — don't crash diversion if DB is unreachable
+        return set()
 
 
 def _hour_density(session, corridor_name: str, hour: int) -> int:
@@ -59,6 +63,7 @@ def _hour_density(session, corridor_name: str, hour: int) -> int:
     try:
         from memory.models import Event
         from sqlalchemy import extract, func
+
         count = (
             session.query(func.count(Event.id))
             .filter(
@@ -112,7 +117,6 @@ def score_corridors(
 
     active_corridors = _get_active_corridors(session)
 
-    # Minimum diversion distance: further for High severity events
     min_dist_m = 400 if severity == "High" else _MIN_DIVERSION_DIST_M
 
     candidates = []
@@ -128,7 +132,6 @@ def score_corridors(
         c_lat, c_lng = centroid[0], centroid[1]
         dist_m = _haversine_m(incident_lat, incident_lng, c_lat, c_lng)
 
-        # Skip corridors too close to the incident — they're in the impact zone
         if dist_m < min_dist_m:
             continue
 
@@ -136,41 +139,44 @@ def score_corridors(
         h_density = _hour_density(session, name, hour)
         active_penalty = _ACTIVE_PENALTY if name in active_corridors else 0
 
-        # Score: base from total historical events + same-hour density * 3
-        # Lower is better — quieter corridors score lower
         score = n_events + (h_density * 3) + active_penalty
 
-        candidates.append({
-            "corridor": name,
-            "centroid": [c_lat, c_lng],
-            "score": score,
-            "n_historical_events": n_events,
-            "hour_density": h_density,
-            "distance_from_incident_m": round(dist_m, 1),
-            "active_incident": name in active_corridors,
-        })
+        candidates.append(
+            {
+                "corridor": name,
+                "centroid": [c_lat, c_lng],
+                "score": score,
+                "n_historical_events": n_events,
+                "hour_density": h_density,
+                "distance_from_incident_m": round(dist_m, 1),
+                "active_incident": name in active_corridors,
+            }
+        )
 
-    # Sort by score ascending (quietest first), break ties by distance descending
-    # (further from incident = more separation = safer diversion)
     candidates.sort(key=lambda x: (x["score"], -x["distance_from_incident_m"]))
 
     top = candidates[:_TOP_K]
 
-    # Add human-readable reason to each
     for c in top:
         reasons = []
         if c["n_historical_events"] < 50:
-            reasons.append(f"low historical incident density ({c['n_historical_events']} past events)")
+            reasons.append(
+                f"low historical incident density ({c['n_historical_events']} past events)"
+            )
         if c["hour_density"] == 0:
             reasons.append("no recorded incidents at this hour")
         elif c["hour_density"] <= 2:
-            reasons.append(f"quiet at this hour ({c['hour_density']} incidents historically)")
+            reasons.append(
+                f"quiet at this hour ({c['hour_density']} incidents historically)"
+            )
         if c["distance_from_incident_m"] > 1000:
-            reasons.append(f"{round(c['distance_from_incident_m']/1000, 1)}km from incident")
+            reasons.append(
+                f"{round(c['distance_from_incident_m']/1000, 1)}km from incident"
+            )
         if not reasons:
             reasons.append("best available alternate corridor")
         c["reason"] = "; ".join(reasons)
-        del c["active_incident"]   # Already implicit — don't surface raw bool to frontend
+        del c["active_incident"]
 
     return top
 
@@ -202,9 +208,16 @@ def get_diversion_plan(
             "summary": str,                 # One-sentence summary for the card
         }
     """
-    # Impact radius: bigger for High severity and road-closure-type causes
-    high_impact_causes = {"accident", "water_logging", "tree_fall", "vip_movement",
-                          "public_event", "procession", "construction"}
+
+    high_impact_causes = {
+        "accident",
+        "water_logging",
+        "tree_fall",
+        "vip_movement",
+        "public_event",
+        "procession",
+        "construction",
+    }
     if severity == "High" or cause in high_impact_causes:
         radius_m = 600
     else:
@@ -222,7 +235,6 @@ def get_diversion_plan(
         exclude_corridors=exclude,
     )
 
-    # Build summary sentence
     if diversions:
         best = diversions[0]
         summary = (
@@ -245,15 +257,18 @@ def get_diversion_plan(
     }
 
 
-# ── Smoke test (no DB — uses empty session stub) ──────────────────────────────
 if __name__ == "__main__":
+
     class _FakeSession:
         def query(self, *a, **kw):
             return self
+
         def filter(self, *a, **kw):
             return self
+
         def all(self):
             return []
+
         def scalar(self):
             return 0
 
@@ -272,7 +287,9 @@ if __name__ == "__main__":
     print(f"  Summary: {plan['summary']}")
     print(f"  Top diversions:")
     for d in plan["diversions"]:
-        print(f"    {d['corridor']}: score={d['score']}, dist={d['distance_from_incident_m']}m — {d['reason']}")
+        print(
+            f"    {d['corridor']}: score={d['score']}, dist={d['distance_from_incident_m']}m — {d['reason']}"
+        )
 
     print()
     print("Diversion plan — planned procession CBD 2 → CBD 1:")

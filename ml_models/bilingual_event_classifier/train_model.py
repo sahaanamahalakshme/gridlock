@@ -15,8 +15,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 
 from sklearn.metrics import classification_report, accuracy_score
-from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
-from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
+from imblearn.over_sampling import RandomOverSampler
+from imblearn.over_sampling import RandomOverSampler
 
 from sentence_transformers import SentenceTransformer
 
@@ -31,13 +31,6 @@ MODELS_DIR = ROOT / "models"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
-# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
-# 81% confidence) showed it wasn't separating short domain-specific phrases
-# well. mpnet is the same sentence-transformers library/API, just a larger
-# backbone with stronger semantic separation -- no code changes needed
-# beyond this string, only a slower first download (~1GB vs ~120MB) and
-# slightly slower encode time.
 EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
@@ -86,8 +79,12 @@ def oversample(X, y, label):
     X_resampled, y_resampled = ros.fit_resample(X, y)
     after_counts = pd.Series(y_resampled).value_counts().to_dict()
     print(f"\n[train] Oversampling '{label}': {len(y):,} -> {len(y_resampled):,} rows")
-    print(f"  Before (min/max class count): {min(before_counts.values())} / {max(before_counts.values())}")
-    print(f"  After  (min/max class count): {min(after_counts.values())} / {max(after_counts.values())}")
+    print(
+        f"  Before (min/max class count): {min(before_counts.values())} / {max(before_counts.values())}"
+    )
+    print(
+        f"  After  (min/max class count): {min(after_counts.values())} / {max(after_counts.values())}"
+    )
     return X_resampled, y_resampled
 
 
@@ -156,7 +153,7 @@ def main():
 
     print(f"[train] Loaded {len (df ):,} training rows")
 
-    texts = build_augmented_text(df)  # FIX 4: station-prefixed text
+    texts = build_augmented_text(df)
 
     cause_labels = df["event_cause"].tolist()
 
@@ -165,7 +162,7 @@ def main():
     print(f"\n[train] Loading sentence-transformer: {EMBEDDING_MODEL }")
 
     print(
-        f"  Device : {DEVICE }  ({'RTX 4060 active 🚀'if DEVICE =='cuda'else 'CPU — no CUDA detected'})"
+        f"  Device : {DEVICE }  ({'RTX 4060 active 'if DEVICE =='cuda'else 'CPU — no CUDA detected'})"
     )
 
     print("  (First run downloads ~120 MB — subsequent runs use cache)")
