@@ -40,7 +40,7 @@ def _compute_duration_minutes(start, end):
     return delta if delta >= 0 else None
 
 
-def write_event(session: Session, event_data: dict) -> dict:
+def write_event(session: Session, event_data: dict, spike_result: dict = None, hotspot_result: dict = None) -> dict:
     
     end_for_duration = (
         event_data.get("resolved_datetime")
@@ -51,6 +51,9 @@ def write_event(session: Session, event_data: dict) -> dict:
     duration_minutes = _compute_duration_minutes(
         event_data.get("start_datetime"), end_for_duration
     )
+
+    spike_result = spike_result or {}
+    hotspot_result = hotspot_result or {}
 
     event = Event(
         source_id=None,
@@ -73,6 +76,11 @@ def write_event(session: Session, event_data: dict) -> dict:
         closed_datetime=event_data.get("closed_datetime"),
         resolved_datetime=event_data.get("resolved_datetime"),
         duration_minutes=duration_minutes,
+        spike_ratio=spike_result.get("spike_ratio"),
+        spike_label=spike_result.get("spike_label"),
+        is_hotspot=hotspot_result.get("is_hotspot"),
+        hotspot_tier=hotspot_result.get("hotspot_tier"),
+        route_to=hotspot_result.get("route_to"),
     )
 
     session.add(event)
