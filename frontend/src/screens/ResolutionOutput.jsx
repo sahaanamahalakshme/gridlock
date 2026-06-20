@@ -1,22 +1,57 @@
-  import { useState, useEffect, useRef } from 'react';
-  import { RESOLUTION_OUTPUT_MOCK } from '../mockData';
-  import { colors, typography, cards } from '../styles/globals';
-  
-  export default function ResolutionOutput() {
-    const [showRawOutput, setShowRawOutput] = useState(false);
-    const data = RESOLUTION_OUTPUT_MOCK;
-  
-    const [activeStage, setActiveStage] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const timerRef = useRef(null);
-  
-    useEffect(() => {
-      if (isPlaying) {
-        if (activeStage >= 5) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect
-          setIsPlaying(false);
-          return;
-        }
+import { useState, useEffect, useRef } from 'react';
+import { colors, typography, cards } from '../styles/globals';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+
+export default function ResolutionOutput() {
+  const [showRawOutput, setShowRawOutput] = useState(false);
+  const [data, setData] = useState(null);
+
+  const [activeStage, setActiveStage] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    // Fetch a sample resolution to demonstrate the UI
+    fetch(`${API_BASE}/events/report`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        description: 'Sample accident with heavy congestion',
+        corridor: 'CBD 1',
+        police_station: 'Cubbon Park',
+        requires_road_closure: true,
+        latitude: 12.9716,
+        longitude: 77.5946,
+        event_type: 'unplanned'
+      })
+    })
+      .then(res => res.json())
+      .then(json => {
+        // Map backend shape to expected shape for this UI
+        setData({
+          predicted_minutes: json.resolution_estimate?.predicted_minutes || 0,
+          confidence_band: json.resolution_estimate?.confidence_band || 'N/A',
+          manpower_tier: json.resolution_estimate?.manpower_tier || 'N/A',
+          explanation: json.resolution_estimate?.explanation || 'No explanation',
+          similar_events: (json.precedent?.matches || []).slice(0, 3).map(m => ({
+            name: m.description,
+            corridor: m.corridor,
+            duration: m.duration_minutes
+          })),
+          total_matches: json.precedent?.total_matches || 0,
+          raw_json: json
+        });
+      })
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    if (isPlaying) {
+      if (activeStage >= 5) {
+        setIsPlaying(false);
+        return;
+      }
       timerRef.current = setInterval(() => {
         setActiveStage(s => {
           if (s >= 4) {
@@ -40,6 +75,12 @@
     { label: 'Road cleared', pct: 1.0 }
   ];
 
+  if (!data) {
+    return <div style={{ padding: '40px', textAlign: 'center', color: 'var(--color-text-secondary)' }}>Loading resolution data...</div>;
+  }
+
+  const hoursFromStart = Math.round((data.predicted_minutes / 60) * 10) / 10;
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {/* Header */}
@@ -62,7 +103,7 @@
               {data.predicted_minutes} min
             </div>
             <div style={{ ...typography.subtitle, marginTop: '2px', marginBottom: '12px' }}>
-              ≈ 4 hours from event start
+              ≈ {hoursFromStart} hours from event start
             </div>
             {/* Progress bar */}
             <div style={{ height: '4px', backgroundColor: 'var(--color-border)', borderRadius: '99px', width: '100%', overflow: 'hidden' }}>
@@ -77,7 +118,7 @@
               {data.confidence_band}
             </div>
             <div style={{ ...typography.subtitle, marginTop: '4px' }}>
-              Based on 47 similar historical events
+              Based on {data.total_matches} similar historical events
             </div>
           </div>
 
@@ -88,7 +129,7 @@
               {data.manpower_tier}
             </div>
             <div style={{ ...typography.subtitle, marginTop: '4px' }}>
-              Deploy 8–12 officers + 1 tow unit
+              Resource deployment recommended
             </div>
           </div>
 
@@ -115,21 +156,25 @@
           {/* Similar Historical Events Section */}
           <div>
             <div style={{ ...typography.label, marginBottom: '8px' }}>Similar Historical Events</div>
-            <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '8px' }}>
-              <tbody>
-                {data.similar_events.map((evt, idx) => (
-                  <tr key={idx} style={{ borderBottom: `1px solid ${colors.border}`, transition: 'background-color 150ms ease' }}
-                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#F9FAFB'}
-                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                    <td style={{ ...typography.body, padding: '8px 4px', fontWeight: '500' }}>{evt.name}</td>
-                    <td style={{ ...typography.body, padding: '8px 4px', color: colors.textSecondary }}>{evt.corridor}</td>
-                    <td style={{ ...typography.body, padding: '8px 4px', textAlign: 'right' }}>{evt.duration} min</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            {data.similar_events.length > 0 ? (
+              <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '8px' }}>
+                <tbody>
+                  {data.similar_events.map((evt, idx) => (
+                    <tr key={idx} style={{ borderBottom: `1px solid ${colors.border}`, transition: 'background-color 150ms ease' }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#F9FAFB'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                      <td style={{ ...typography.body, padding: '8px 4px', fontWeight: '500' }}>{evt.name || 'Event'}</td>
+                      <td style={{ ...typography.body, padding: '8px 4px', color: colors.textSecondary }}>{evt.corridor}</td>
+                      <td style={{ ...typography.body, padding: '8px 4px', textAlign: 'right' }}>{evt.duration} min</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <div style={{ ...typography.body, color: colors.textSecondary, marginBottom: '8px' }}>No similar events found.</div>
+            )}
             <div style={{ fontSize: '11px', color: colors.textTertiary, fontFamily: typography.fontFamily }}>
-              Retrieved from ASTRAM memory store · 2,524 validated records
+              Retrieved from ASTRAM memory store
             </div>
           </div>
 
@@ -141,19 +186,13 @@
                 fontSize: '11px', fontWeight: '600', padding: '4px 10px', borderRadius: '99px',
                 backgroundColor: '#FEF2F2', color: '#DC2626', border: '1px solid #FECACA'
               }}>
-                High priority
-              </span>
-              <span style={{
-                fontSize: '11px', fontWeight: '600', padding: '4px 10px', borderRadius: '99px',
-                backgroundColor: '#F0FDF4', color: '#059669', border: '1px solid #DCFCE7'
-              }}>
-                Road closure: No
+                Priority Event
               </span>
               <span style={{
                 fontSize: '11px', fontWeight: '600', padding: '4px 10px', borderRadius: '99px',
                 backgroundColor: '#FFFBEB', color: '#D97706', border: '1px solid #FEF3C7'
               }}>
-                Unplanned event
+                Dynamic classification
               </span>
             </div>
           </div>
@@ -179,7 +218,7 @@
                 overflowX: 'auto',
                 margin: 0
               }}>
-                {JSON.stringify(data, null, 2)}
+                {JSON.stringify(data.raw_json, null, 2)}
               </pre>
             )}
           </div>

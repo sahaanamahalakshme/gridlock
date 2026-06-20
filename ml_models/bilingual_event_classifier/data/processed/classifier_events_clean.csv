@@ -106,14 +106,14 @@ FKID000141,opened drain grate at  Chandrika junction towards lrde junction.,othe
 FKID000142,panathur towards doddakannelli road bad condition  consider bbmp informed,water_logging,High,HAL Old Airport,ORR East 1
 FKID000143,bmtc bus breck down startig agatilla sir,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID000144,tree fall,tree_fall,High,Chamarajpet,Mysore Road
-FKID000145,Trafic slow,road_conditions,High,K.S. Layout,ORR West 1
-FKID000147,BWSsB working progress,road_conditions,High,Banashankari,ORR West 1
-FKID000148,Traffic Slow,road_conditions,High,Banashankari,ORR West 1
+FKID000145,Trafic slow,pot_holes,High,K.S. Layout,ORR West 1
+FKID000147,BWSsB working progress,pot_holes,High,Banashankari,ORR West 1
+FKID000148,Traffic Slow,pot_holes,High,Banashankari,ORR West 1
 FKID000150,Traffic no problem,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID000151,ಮರ ಬಿದ್ದು ರೋಡ್ ಕ್ಲೋಸ್ ಆಗಿದೆ sir,tree_fall,Low,Jayanagara,Non-corridor
 FKID000152,Lgv pickup vehicle Axel ಕಟ್ಟಾಗಿರುತ್ತದೆ ಸಂಚಾರಕ್ಕೆ ಸ್ವಲ್ಪ ದಟ್ಟಣೆ ಇರುತ್ತದೆ ಅರ್ದ ಗಂಟೆಯಲ್ಲಿ ಆಕ್ಸೆಲ್ ತಂದು ಹಾಕುತ್ತೇವೆ ಎಂದು ತಿಳಿಸಿರುತ್ತಾರೆ ಸರ್,vehicle_breakdown,High,HAL Old Airport,ORR East 1
-FKID000153,[LOCATION] working,road_conditions,High,Banashankari,ORR West 1
-FKID000154,BWSSB work in progress,road_conditions,High,Banashankari,ORR West 1
+FKID000153,[LOCATION] working,pot_holes,High,Banashankari,ORR West 1
+FKID000154,BWSSB work in progress,pot_holes,High,Banashankari,ORR West 1
 FKID000155,ವೀಲ್ ಜಾಮ್ ಆಗಿರುತ್ತದೆ ಸರ್,vehicle_breakdown,Low,Halasur,Non-corridor
 FKID000156,Vehicle Back Side Wheel Puncher. [PERSON] Smoothly No Problem,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID000157,ಹೊಸ ರೋಡ್ ಸಿಗ್ನಲ್ ಸರ್ ಟೂ ವರ್ಡ್ಸ್ ಹೊಸೂರ ಸ್ಟಾರ್ಟೆರ್ ಪ್ರಾಬ್ಲಮ್ ವೀಲ್ ಜಾಮ್ ಸರ್,vehicle_breakdown,High,Electronic City,Hosur Road
@@ -148,15 +148,15 @@ FKID000187,traffic slow,vehicle_breakdown,Low,R.T. Nagar,Non-corridor
 FKID000188,Private Bus Cluch fail ..vehicle stopped in side Road  ..traffic moving side road,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID000191,Palahalli gate onflyover to wards airport BBMP lary tyer bust sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID000192,k ride work,construction,Low,Chikkabanavara,Non-corridor
-FKID000193,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.",road_conditions,High,Shivajinagar,CBD 2
+FKID000193,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.",pot_holes,High,Shivajinagar,CBD 2
 FKID000194,[PERSON],vehicle_breakdown,High,Magadi Road,West of Chord Road
-FKID000195,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.",road_conditions,High,Shivajinagar,CBD 2
+FKID000195,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.",pot_holes,High,Shivajinagar,CBD 2
 FKID000196,"Peenya flyover near widia upper ramp incoming lgv off road due to wheel jam sir, vehicles one side moving.",vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID000197,Wheel Puncher..,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID000198,Air filter black...,vehicle_breakdown,Low,Mico Layout,Non-corridor
 FKID000199,Road work,construction,High,Chikkajala,Bellary Road 2
 FKID000200,Sensor problem off road sir,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
-FKID000201,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.""",road_conditions,High,Cubbon Park,CBD 2
+FKID000201,"The manhole cover has collapsed at [LOCATION], and sewage water is overflowing onto the road.""",pot_holes,High,Cubbon Park,CBD 2
 FKID000202,BMTS bus offload in gottigere bus stop.starting problam,others,High,Hulimavu,Bannerghata Road
 FKID000203,Vaccum problem,vehicle_breakdown,Low,Wilson Garden,Non-corridor
 FKID000204,[LOCATION] circle on flyover towards city lgv off road due to starting problem sir traffic one side moving sir,vehicle_breakdown,High,Peenya,Tumkur Road
@@ -211,7 +211,7 @@ FKID000260,ಸದರಿ ವಹಿಕಲ್ ರಸ್ತೆಯಲ್ಲಿ ಬಿ
 FKID000261,ಮರ ಬಿದ್ದಿ ರುತ್ತದೆ sir,tree_fall,Low,Jayanagara,Non-corridor
 FKID000262,[LOCATION] towards nagavar,vehicle_breakdown,High,Hennuru,ORR North 1
 FKID000263,Starting problem sir,vehicle_breakdown,Low,Electronic City,Non-corridor
-FKID000264,Immadihalli junction,road_conditions,Low,Whitefield,Non-corridor
+FKID000264,Immadihalli junction,pot_holes,Low,Whitefield,Non-corridor
 FKID000265,Gunjur Govt school Road work traffic slow movement sir,others,Low,Whitefield,Non-corridor
 FKID000266,Traffic normal,vehicle_breakdown,High,Cubbon Park,Mysore Road
 FKID000268,Call me [PHONE]. Bellandur flyover towards [LOCATION].,vehicle_breakdown,High,Bellandur,ORR East 1
@@ -308,7 +308,7 @@ FKID000374,break down,vehicle_breakdown,High,Rajajinagar,West of Chord Road
 FKID000375,Work in progress by NHAI sir,construction,High,Hebbala,Bellary Road 1
 FKID000376,ನಮಸ್ತೆ ಸರ್ 33 rd ಮೇನ್ 2 nd ಫೇಸ್ ಜೆಪಿ ನಗರ ಕಡೆ ಇಂದ ಪುಟ್ಟೇನಹಳ್ಳಿ [LOCATION] ಪಾಸ್ ಲಿ ಮಳೆ ನೀರು ಬಂದು ಅಪಘಾತವಾಗುವ ರೀತಿಯಲ್ಲಿ ವಾಟರ್ logging ಆಗಿರುವುದನ್ನು ಬೇಗ ದುರಸ್ತಿ ಮಾಡಬೇಕಾಗಿ ವಿನಂತಿ ಸರ್,water_logging,High,J.P. Nagar,ORR West 1
 FKID000377,Bus Off road @Haines junction sir,vehicle_breakdown,Low,Pulikeshinagar(F.Town),Non-corridor
-FKID000378,ಸೌಂಡು ಮಗು ಡೆತ್ ಆಗಿರೋದ್ರಿಂದ ಪಬ್ಲಿಕ್ ರೋಡ್ ಬ್ಲಾಕ್ [PERSON] ಮಾಡ್ತಾ ಇದ್ದಾರೆ ಸರ್,protest,Low,Hennuru,Non-corridor
+FKID000378,ಸೌಂಡು ಮಗು ಡೆತ್ ಆಗಿರೋದ್ರಿಂದ ಪಬ್ಲಿಕ್ ರೋಡ್ ಬ್ಲಾಕ್ [PERSON] ಮಾಡ್ತಾ ಇದ್ದಾರೆ ಸರ್,vip_movement,Low,Hennuru,Non-corridor
 FKID000379,Tyer blast,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID000380,Slow moving traffic towards Belathur,vehicle_breakdown,Low,Mahadevapura,Non-corridor
 FKID000381,"ಟೈರ್ ಪಂಚರ್ ಆಗಿ ನಿಂತಿರುತ್ತದೆ,  ರಸ್ತೆಯ ಒಂದು ಬದಿ ಸಂಚಾರ ಇರುತ್ತದೆ,",vehicle_breakdown,Low,Wilson Garden,Non-corridor
@@ -320,7 +320,7 @@ FKID000388,18th cross,tree_fall,Low,Malleshwaram,Non-corridor
 FKID000389,Accident,accident,High,Mahadevapura,ORR East 2
 FKID000391,shahi garments towards bpl,others,High,J.P. Nagar,Bannerghata Road
 FKID000393,[PERSON] garment towards bpl,others,High,Hulimavu,Bannerghata Road
-FKID000394,[LOCATION] road,road_conditions,Low,K.R. Pura,Non-corridor
+FKID000394,[LOCATION] road,pot_holes,Low,K.R. Pura,Non-corridor
 FKID000395,One side moving sir near Cmti signel [LOCATION],vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID000396,Crane pump damage,vehicle_breakdown,High,Sadashivanagar,Tumkur Road
 FKID000397,Kogilu towards sante circle electrical pool damge sir traffic slow moment sir,others,High,Yelahanka,Bellary Road 2
@@ -431,7 +431,7 @@ FKID000518,[LOCATION] work [LOCATION] trafice moment slow sir,construction,High,
 FKID000519,near 7th cross 7th main.,tree_fall,Low,Mico Layout,Non-corridor
 FKID000520,Vehicle offload due to bolt cut at veterinary college towards city,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID000521,Potholes sir,pot_holes,Low,Yelahanka,
-FKID000522,Road Asphalting on hebbal flyover towards airport main track,road_conditions,High,Kodigehalli,Bellary Road 1
+FKID000522,Road Asphalting on hebbal flyover towards airport main track,pot_holes,High,Kodigehalli,Bellary Road 1
 FKID000523,ನಂದಿನಿ ಹಾಲಿನ ಟ್ಯಾಂಕರ್ ಹಿಂದಿನ ವೀಲ್ ಪಂಚರ್ ಆಗಿದ್ದು ರಸ್ತೆಯ ಎಡ ಭಾಗದಲ್ಲಿ ಹಾಕಿರುತ್ತೇನೆ ಸಂಚಾರಕ್ಕೆ ತೊಂದರೆ ಇರುವುದಿಲ್ಲ ಸರ್ 🙏,vehicle_breakdown,Low,Wilson Garden,Non-corridor
 FKID000524,vehicle puncher at [LOCATION] on flyover towards outgoing traffic no problem in lay by sir,others,High,Chikkabanavara,Tumkur Road
 FKID000525,canara jn towards syndicate jn one side traffic moving sir,tree_fall,Low,Jayanagara,Non-corridor
@@ -470,7 +470,7 @@ FKID000564,water logging traffic normal.... [PERSON] flyover wrk niyar sriniwagi
 FKID000565,Water leak in infantry road near commissioner of police residence near,water_logging,High,Cubbon Park,CBD 2
 FKID000567,puncture at ತರಳಬಾಳು junction incoming side,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID000568,ಭದ್ರಪ್ಪ towards nagashettihalli,vehicle_breakdown,High,Kodigehalli,ORR North 2
-FKID000569,In [LOCATION] junction signal light bescom work in progress so traffic moving slowly from roobi to hsbc junction sir,road_conditions,High,Mico Layout,Bannerghata Road
+FKID000569,In [LOCATION] junction signal light bescom work in progress so traffic moving slowly from roobi to hsbc junction sir,pot_holes,High,Mico Layout,Bannerghata Road
 FKID000570,[PERSON],vehicle_breakdown,High,Cubbon Park,CBD 2
 FKID000571,ಈ ಬಸ್ಸು ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ಬಿಗ್ ಬಜಾರ್ ಇಂದ ಎಂಜಿಎಫ್ ಮಧ್ಯದಲ್ಲಿ ಕೆಟ್ಟ ನಿಂತಿದೆ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೂಮೆಂಟ ಇದೆ ಸರ್,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID000572,ನಮಸ್ತೆ ಸರ್ ಶ್ರೀರಾಮಪುರ ರೈಲ್ವೆ ಬ್ರಿಡ್ಜ್ ಅತ್ತಿರ ಬಿಬಿಎಂಪಿ ವೆಹಿಕಲ್ ಗೇರ್ ಬಾಕ್ಸ್ ಹೋಗಿರುವ ಕಾರಣ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮಂಟ್ ಇದೆ ಸರ್,vehicle_breakdown,Low,Hennuru,Non-corridor
@@ -484,7 +484,7 @@ FKID000579,Vehicle breakdown due to battery problem,vehicle_breakdown,High,HAL O
 FKID000580,Layland yoda mini truck offroaded on ec flyover inbetween gb palya and bommanahalli due to tire burst traffic movement slow ide sir,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID000581,"ಸೆಂಟರ್ ರೋಡಲ್ಲಿ ಹೈವೇನಲ್ಲಿ ಕಡಕ್ಮಾರಳ್ಳಿ ನೀರು ಸ್ಟಾಪ್ ಆಗಿದೆ, ಗಾಡಿ ಆಕ್ಸಿಡೆಂಟ್ ಆಗಿದೆ [PERSON] ಏನು ಆಗಿಲ್ಲ  ಸ್ಲೋ ಮೂವಿಂಗ್ towords city near ಆಂಜನೇಯ್ಯ್ ಟೆಂಪಲ್",accident,Low,No Police Station,Non-corridor
 FKID000582,100 ft road towards [LOCATION] bus off road traffic one side movement,vehicle_breakdown,High,Peenya,Tumkur Road
-FKID000583,Bapuji Nagar junction attira road [PERSON] biddiruttade sir,road_conditions,High,Byatarayanapura,Mysore Road
+FKID000583,Bapuji Nagar junction attira road [PERSON] biddiruttade sir,pot_holes,High,Byatarayanapura,Mysore Road
 FKID000584,tree fall near commando hospital bus stop,tree_fall,Low,Ashok Nagar,Non-corridor
 FKID000585,traffic slow moment... [LOCATION] to geddalhalli bus stop....,vehicle_breakdown,Low,Hennuru,Non-corridor
 FKID000586,Accident @ BSF towards city sir,accident,High,Yelahanka,Bellary Road 2
@@ -533,12 +533,12 @@ FKID000638,Chamber plate damaged placed a barricade,others,High,Cubbon Park,CBD 
 FKID000640,[LOCATION] working,water_logging,High,Cubbon Park,CBD 2
 FKID000641,Vehicle battery problem,others,High,Chamarajpet,Mysore Road
 FKID000642,[LOCATION] village towords Bhoganhalli junction Drainage water flowing. Slow movement at [LOCATION] junction towords [LOCATION].,water_logging,Low,HAL Old Airport,Non-corridor
-FKID000643,Near Bilekahalli bwssb work in progress so traffic moving slowly from [PERSON] to gd mara junction sir,road_conditions,High,J.P. Nagar,Bannerghata Road
+FKID000643,Near Bilekahalli bwssb work in progress so traffic moving slowly from [PERSON] to gd mara junction sir,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID000644,School bus off road,vehicle_breakdown,Low,Mahadevapura,Non-corridor
 FKID000645,HGV breakdown at near [LOCATION] gate towards airport due to starting problem sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID000646,[LOCATION] flyover cleaning work progress on near [LOCATION] on flyover towards city traffic normal moving sir,others,Low,Peenya,Non-corridor
 FKID000647,Potholes at kogilu junction sir,pot_holes,High,Yelahanka,Bellary Road 2
-FKID000651,ಈ ಪಾರ್ಟ್ ಹೋಲ್ ನಿಂದ ಟ್ರಾಫಿಕ್ ಗೆ [PERSON] ಆಗುತ್ತಿದೆ ಸರ್. ದ್ವಿಚಕ್ರ ವಾಹನಗಳು ಈ ಗುಂಡಿಗೆ ಬಿದ್ದು ನಿಯಂತ್ರಣ ತಪ್ಪಿ ಆಕ್ಸಿಡೆಂಟ್ಗಳು ಸಂಭವಿಸುತ್ತಿವೆ  ಸರ್,road_conditions,Low,Upparpet,Non-corridor
+FKID000651,ಈ ಪಾರ್ಟ್ ಹೋಲ್ ನಿಂದ ಟ್ರಾಫಿಕ್ ಗೆ [PERSON] ಆಗುತ್ತಿದೆ ಸರ್. ದ್ವಿಚಕ್ರ ವಾಹನಗಳು ಈ ಗುಂಡಿಗೆ ಬಿದ್ದು ನಿಯಂತ್ರಣ ತಪ್ಪಿ ಆಕ್ಸಿಡೆಂಟ್ಗಳು ಸಂಭವಿಸುತ್ತಿವೆ  ಸರ್,pot_holes,Low,Upparpet,Non-corridor
 FKID000652,Infrontof royalok bmtc bus off road due to tyre got puncher have left side no problem to traffic from hsbc to [LOCATION] junction sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID000653,[LOCATION] water pipe leakage slow moving traffic kadugodi towards Village,pot_holes,Low,Mahadevapura,Non-corridor
 FKID000654,Starting problem near [LOCATION] towards [LOCATION] circle traffic one side moving sir,vehicle_breakdown,High,Jalahalli,ORR North 2
@@ -627,14 +627,14 @@ FKID000741,"ಬಸವನಪುರ ಮುಖ್ಯರಸ್ತೆಯಲ್ಲಿ�
 FKID000743,Ato gas is very required for all ato and indian oil petrol bunk is not precautionary measures sir,others,Low,K.S. Layout,Non-corridor
 FKID000744,self not working...,vehicle_breakdown,High,Vijayanagara,West of Chord Road
 FKID000746,[PHONE],pot_holes,Low,Electronic City,Non-corridor
-FKID000747,Near Bilekahalli junction bwssb work in progress so traffic moving slowly from [PERSON] to gd mara junction sir,road_conditions,High,J.P. Nagar,Bannerghata Road
+FKID000747,Near Bilekahalli junction bwssb work in progress so traffic moving slowly from [PERSON] to gd mara junction sir,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID000748,ಬಿಎಂಟಿಸಿ ಬಸ್ ಪಂಚರ್ ಆಗಿ ಆಫ್ ರೋಡ್ ಆಗಿದೆ ಸರ್,vehicle_breakdown,High,HAL Old Airport,Varthur Road
 FKID000749,Passenger auto line for LPG gas sir,others,High,Yeshwanthpura,Tumkur Road
 FKID000750,Drainage broke,pot_holes,High,Banashankari,ORR West 1
 FKID000751,medahalli towards city  battarahalli near A2B hotel,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID000752,Due to gear problem,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID000753,ವೆಹಿಕಲ್ ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿದೆ  ಸರ್,vehicle_breakdown,High,Banaswadi,ORR North 1
-FKID000754,white tapping work going on sir,road_conditions,Low,Hennuru,Non-corridor
+FKID000754,white tapping work going on sir,pot_holes,Low,Hennuru,Non-corridor
 FKID000755,starting problem,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID000756,Battery problem,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID000757,BMTC bus off road due to clutch problem 5 th  twords 14 th main near 14 main up ramp,vehicle_breakdown,High,HSR Layout,ORR East 1
@@ -715,7 +715,7 @@ FKID000842,Ramjan festival grocerry distribution. Advocate ismathpasha Associati
 FKID000843,due to clutch plate problem,vehicle_breakdown,High,Bellandur,ORR East 1
 FKID000844,starting problem,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID000845,BMTC bus vehicle breakdown at 5th Main Chamrajpet junction,vehicle_breakdown,Low,V.V.Puram (C.Pet),Non-corridor
-FKID000846,[PERSON] sir R v trds ig circle bad road condition sir,road_conditions,Low,J.P. Nagar,Non-corridor
+FKID000846,[PERSON] sir R v trds ig circle bad road condition sir,pot_holes,Low,J.P. Nagar,Non-corridor
 FKID000847,Hgv vehicle off road towerds Horamavu orr,vehicle_breakdown,High,Banaswadi,ORR North 1
 FKID000848,ನಮಸ್ತೆ ಸರ್ ನಾಗವಾರ ಟುವರ್ಡ್ ತಣಿಸಂದ್ರ ಕಡೆ ಹೋಗುವ ಮಾರ್ಗದಲ್ಲಿ ರಸ್ತೆಯ ಮೇಲೆ ಚರಂಡಿಯ ನೀರು ಹರಿದು ಬರುತ್ತಿದ್ದು ರಸ್ತೆಯ ತುಂಬಿ ಹೋಗಿದೆ ವಾಹನ ಸಂಚಾರಕ್ಕೆ ತೊಂದರೆ ಉಂಟಾಗುತ್ತದೆ ನಮಸ್ತೆ ಸರ್ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,water_logging,High,Hennuru,Hennur Main Road
 FKID000849,ಸರ್ ನಮಸ್ತೆ ವಾಟರ್ ಲಾಗಿಂಗ್ ಕೊಡೆ [LOCATION] ಪಾಸ್ ಸರ್,congestion,Low,Sheshadripuram,Non-corridor
@@ -762,26 +762,26 @@ FKID000901,LGV offroad@ raitar Sante on flyover towards city sir,vehicle_breakdo
 FKID000903,puncher,vehicle_breakdown,Low,Halasuru Gate,Non-corridor
 FKID000904,venkatala on flyover towards city only vehicle damge sir,accident,High,Yelahanka,Bellary Road 2
 FKID000905,KPTCL Cable work progressing at panattur railway bridge in fornt of  vandana tejas appartment both side traffic slow movement it causing traffic connection sir,construction,Low,HAL Old Airport,Non-corridor
-FKID000906,ನಮಸ್ತೆ ಸರ್ . ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್ ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ  ಹತ್ತಿರ ಜೆಲ್ಲಿ ಮರಳು ಹಾಕಿರುತ್ತಾರೆ [PERSON] ಸಾರ್ವಜನಕರು  ಜಾರಿಕೊಂಡು ಅಪಘಾತ ಒಳಗಾಗಿ ಬಿದ್ದಿರುತ್ತಾರೆ,road_conditions,Low,Rajajinagar,Non-corridor
+FKID000906,ನಮಸ್ತೆ ಸರ್ . ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್ ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ  ಹತ್ತಿರ ಜೆಲ್ಲಿ ಮರಳು ಹಾಕಿರುತ್ತಾರೆ [PERSON] ಸಾರ್ವಜನಕರು  ಜಾರಿಕೊಂಡು ಅಪಘಾತ ಒಳಗಾಗಿ ಬಿದ್ದಿರುತ್ತಾರೆ,pot_holes,Low,Rajajinagar,Non-corridor
 FKID000907,bus [PERSON] bididdu  traffic slow moment ide sir,others,High,Byatarayanapura,Mysore Road
 FKID000908,BMTC bus ofroad @srs signel on flyover,others,High,Peenya,Tumkur Road
 FKID000909,[LOCATION] sir rv teacher college junction nalli chember  neeru thumbi road ge hariyuthide sir.,water_logging,Low,Basavanagudi,Non-corridor
-FKID000910,ನಮಸ್ತೆ ಸರ್ . ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್ ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ  ಹತ್ತಿರ ಜೆಲ್ಲಿ ಮರಳು ಹಾಕಿರುತ್ತಾರೆ [PERSON] ಸಾರ್ವಜನಕರು  ಜಾರಿಕೊಂಡು ಅಪಘಾತ ಒಳಗಾಗಿ ಬಿದ್ದಿರುತ್ತಾರೆ,road_conditions,Low,Rajajinagar,Non-corridor
+FKID000910,ನಮಸ್ತೆ ಸರ್ . ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್ ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ  ಹತ್ತಿರ ಜೆಲ್ಲಿ ಮರಳು ಹಾಕಿರುತ್ತಾರೆ [PERSON] ಸಾರ್ವಜನಕರು  ಜಾರಿಕೊಂಡು ಅಪಘಾತ ಒಳಗಾಗಿ ಬಿದ್ದಿರುತ್ತಾರೆ,pot_holes,Low,Rajajinagar,Non-corridor
 FKID000911,[PERSON] to SBI junction goods auto off-road due to wheel puncher,vehicle_breakdown,High,Cubbon Park,Mysore Road
 FKID000912,BWSS work [PERSON] road one way only incoming traffic sir,others,Low,R.T. Nagar,Non-corridor
 FKID000914,vechile off-road near [LOCATION] main road due to rear wheel puncture sir,vehicle_breakdown,High,Hulimavu,Hosur Road
 FKID000917,ಪೊಲೀಸ್ ತಿಮ್ಮಿಯ್ಯಾ ಜುಂಕ್ಷನ್ ಪುಟ್ಟಪತ್ ಚೇಂಬರ್ ಓಪನ್ ಆಗಿ ವಾಟರ್ loging ಆಗಿದೆ ಸರ್,others,High,Cubbon Park,CBD 2
 FKID000919,near Fortis hospital lgv vehicle off road due to steering rod got broken have left side no problem to traffic from hsbc to [LOCATION] junction sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
-FKID000920,passenger Ato gas,protest,Low,R.T. Nagar,Non-corridor
+FKID000920,passenger Ato gas,vip_movement,Low,R.T. Nagar,Non-corridor
 FKID000924,starting problem,vehicle_breakdown,Low,Kamakshipalya,Non-corridor
 FKID000925,"Paper roll fell down from load lorry, no problem for traffic. from [PERSON] bridge towards Hoskote",others,Low,K.R. Pura,Non-corridor
 FKID000926,ashraya junction magadi main road ಟವರ್ಸ್ sunkadakatte city outgoing side sir,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID000927,break down aagide starting [PERSON] sir,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID000929,Tyre brust,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID000930,[LOCATION] on flyover towards city lgv off road due to tyre puncher sir traffic one side moving sir,vehicle_breakdown,Low,Peenya,Non-corridor
-FKID000931,ನಮಸ್ತೆ ಸರ್ . ಮೈನಹಳ್ಳಿ ಹತ್ತಿರ ಮೋರೆ ನೀರಿನ ಪೈಪ್ ಡ್ಯಾಮೇಜ್ ಆಗಿದ್ದು ವಾಹನಗಳ ಸಂಚಾರಕ್ಕೆ ಅರ್ಚನೆ ಉಂಟಾಗಿದ್ದು ವಾಹನಗಳ ಸಂಚಾರವು ನಿಧಾನಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತಿರುತ್ತದೆ,road_conditions,Low,Chikkajala,Non-corridor
+FKID000931,ನಮಸ್ತೆ ಸರ್ . ಮೈನಹಳ್ಳಿ ಹತ್ತಿರ ಮೋರೆ ನೀರಿನ ಪೈಪ್ ಡ್ಯಾಮೇಜ್ ಆಗಿದ್ದು ವಾಹನಗಳ ಸಂಚಾರಕ್ಕೆ ಅರ್ಚನೆ ಉಂಟಾಗಿದ್ದು ವಾಹನಗಳ ಸಂಚಾರವು ನಿಧಾನಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತಿರುತ್ತದೆ,pot_holes,Low,Chikkajala,Non-corridor
 FKID000932,bmtc electric bus offload agar to ibbluru traffic slow moving,vehicle_breakdown,High,Bellandur,ORR East 1
-FKID000933,ದೊಡ್ಡಬಳ್ಳಾಪುರ ಮುಖ್ಯ ರಸ್ತೆ ಪುಟ್ಟೇನಹಳ್ಳಿ ಡಿಪೋ ಮುಂಭಾಗ ಬಿಡಬ್ಲ್ಯೂಎಸ್ಎಸ್ಬಿ ಕಾಮಗಾರಿ ಮಾಡುತ್ತಿದ್ದು ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,road_conditions,Low,Yelahanka,Non-corridor
+FKID000933,ದೊಡ್ಡಬಳ್ಳಾಪುರ ಮುಖ್ಯ ರಸ್ತೆ ಪುಟ್ಟೇನಹಳ್ಳಿ ಡಿಪೋ ಮುಂಭಾಗ ಬಿಡಬ್ಲ್ಯೂಎಸ್ಎಸ್ಬಿ ಕಾಮಗಾರಿ ಮಾಡುತ್ತಿದ್ದು ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,pot_holes,Low,Yelahanka,Non-corridor
 FKID000934,[LOCATION] to Kadabeesanahalli. Infront of [PERSON] apprtment [PERSON] work in progress. slow moving traffic,construction,Low,HAL Old Airport,Non-corridor
 FKID000935,innova car offroaded on ec flyover inbetween gb palya towords Hongsandra metro staion sir due to gear problem traffic movement slow ide sir,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID000937,BMTC bus off-road because of issue air pike broken……within 20 min it will clear,vehicle_breakdown,Low,V.V.Puram (C.Pet),Non-corridor
@@ -845,7 +845,7 @@ FKID000997,cable repair works on [LOCATION],construction,Low,Chikkabanavara,Non-
 FKID000998,Notification done for flyover closure.,construction,High,Yeshwanthpura,Tumkur Road
 FKID000999,Engine  problem sir,vehicle_breakdown,High,Peenya,Tumkur Road
 FKID001000,Accel cut,vehicle_breakdown,High,Yelahanka,Bellary Road 2
-FKID001001,[PERSON] work  in  FROGREC traffic is slow movement,road_conditions,High,HAL Old Airport,ORR East 2
+FKID001001,[PERSON] work  in  FROGREC traffic is slow movement,pot_holes,High,HAL Old Airport,ORR East 2
 FKID001002,[LOCATION] work,construction,High,HAL Old Airport,ORR East 2
 FKID001003,ರೇನ್ಬೋ ಜಂಕ್ಷನ್ ನಿಂದ ಕಾರ್ತಿಕ್ ನಗರ ಕಡೆಗೆ ಚರಂಡಿ ನೀರು ರಸ್ತೆಗೆ ಬರುತ್ತಿರುವುದರಿಂದ  ಸೇಲಂ ಬ್ರಿಡ್ಜ್ ಬಳಿ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮುಮೆಂಟ್ ಇದೆ ಮೇಡಂ,others,High,Mahadevapura,ORR East 2
 FKID001004,"lorry off road due to whell jam, one side movement",vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
@@ -908,7 +908,7 @@ FKID001074,ಮಳೆ. [LOCATION] ನಿತ್ತ ಮಣ್ಣನ್ನು ಉಳ
 FKID001075,clutch problem,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID001076,[PERSON] on flyover LCV vehicle off-road towards city traffic one side movement,vehicle_breakdown,High,Chikkabanavara,Tumkur Road
 FKID001077,starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
-FKID001078,ಮಣ್ಣು ತಗಿತಾ ಇದಾರೆ ಸರ್,debris,Low,Cubbon Park,Non-corridor
+FKID001078,ಮಣ್ಣು ತಗಿತಾ ಇದಾರೆ ಸರ್,tree_fall,Low,Cubbon Park,Non-corridor
 FKID001079,near [LOCATION] sir city outgoing,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID001081,agar flyover ibbluru to 19th main traffic slow moving sir,vehicle_breakdown,High,Bellandur,ORR East 1
 FKID001082,ನಮಸ್ತೆ ಸರ್ ತಣಿಸಂದ್ರ ಮುಖ್ಯರಸ್ತೆ ಟುವಾರ್ಡ್ಸ್ ನಾಗವಾರ ಕಡೆ ಒಂದು ಲಾರಿ ಆಫ್ ರೋಡ ಆಗಿದ್ದು ಸೈಡಲ್ಲಿ ಹಾಕಿಸಿದ್ದೇವೆ ಸರ್ ಯಾವುದೇ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಮೆಕಾನಿಕ್ ಬಂದು ಚೆಕ್ ಮಾಡುತ್ತಿದ್ದಾರೆ ಸ್ಟಾರ್ಟಿಂಗ್ ಪ್ರಾಬ್ಲಮ್ ಎಂದು ತಿಳಿಸಿರುತ್ತಾರೆ ಸರ್,vehicle_breakdown,High,Hennuru,Hennur Main Road
@@ -980,7 +980,7 @@ FKID001170,post office road towards [LOCATION] circle,vehicle_breakdown,Low,Hala
 FKID001172,bmtc bus puncture at medahalli service road towards hosakote,others,Low,K.R. Pura,Non-corridor
 FKID001173,BMTC bus off road due to breakjam from [LOCATION] to [LOCATION] service road,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID001174,near kote cross junction service road towards chikkajala,vehicle_breakdown,High,Chikkajala,Bellary Road 2
-FKID001176,[PERSON] [LOCATION] sir,road_conditions,High,HSR Layout,Hosur Road
+FKID001176,[PERSON] [LOCATION] sir,pot_holes,High,HSR Layout,Hosur Road
 FKID001178,ಸರ್ ನಮಸ್ತೆ ಹೆಣ್ಣೂರು ಬಾಗಲೂರು ಮುಖ್ಯ ರಸ್ತೆಯಲ್ಲಿ ವೈಟ್ ಟಾಪಿಂಗ್ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿರುವರಿಂದ ಗೆದ್ದಲಳ್ಳಿ ಬಸ್ ಸ್ಟಾಪ್ ಹತ್ತಿರ ವಾಹನಗಳ ಸಂಚಾರವು ನಿಧಾನಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತಿದೆ ಸರ್,construction,Low,Hennuru,Non-corridor
 FKID001179,ನಮಸ್ಕಾರ ಮೇಡಂ ದೇವರಭೀಚನಲಿ ಜಂಕ್ಷನ್ ಇಂದ ಕಾಡುಬಿಸಳಿ ಕಡೆಗೆ [PERSON] ಡೌನ್ ವಾಗಿದೆ ಮೇಡಂ ಟ್ರಾಫಿಕ್ ಯಾವುದೇ ಸಮಸ್ತ ಇರುವುದಿಲ್ಲ ಮೇಡಂ,vehicle_breakdown,High,HAL Old Airport,ORR East 1
 FKID001180,private car offroaded ec down ramp towords [LOCATION] staion due radiater problem machine is the way traffic movement slow ide sir,vehicle_breakdown,High,HSR Layout,Hosur Road
@@ -999,14 +999,14 @@ FKID001193,bagalur Cross towards air port sir traffic movement normal sir,vehicl
 FKID001195,BWSSB chamber problem sir,pot_holes,Low,Chikkabanavara,Non-corridor
 FKID001196,dodda ballapura main road puttenahalli bmtc bus depo opp ಡ್ರೈನೆಜ್ ಪ್ರಾಬ್ಲಮ್ sir,water_logging,Low,Yelahanka,Non-corridor
 FKID001197,good morning sir bbmp vehicl  ofload near [LOCATION] bus stop sir,vehicle_breakdown,Low,Hennuru,Non-corridor
-FKID001198,bwssb,protest,Low,K.G. Halli,Non-corridor
+FKID001198,bwssb,vip_movement,Low,K.G. Halli,Non-corridor
 FKID001199,bad road condition pat holes,pot_holes,Low,Hulimavu,Non-corridor
 FKID001200,incoming side opposite Bharat petroleum bunk starting problem Sir,vehicle_breakdown,High,Magadi Road,Mysore Road
-FKID001201,bad road condition sanitary leaked,road_conditions,Low,Hulimavu,Non-corridor
+FKID001201,bad road condition sanitary leaked,pot_holes,Low,Hulimavu,Non-corridor
 FKID001203,Bmtc bus upload near gd mara towards incoming sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID001204,karthiknagara towards [PERSON] and [PERSON] towards [LOCATION] traffic movement will be slow due to [LOCATION] station piller work,construction,High,HAL Old Airport,ORR East 2
 FKID001205,water tanker off road due desile,vehicle_breakdown,Low,HAL Old Airport,Non-corridor
-FKID001206,bmtc bus off road at basavanagar [PERSON],road_conditions,High,HAL Old Airport,Old Airport Road
+FKID001206,bmtc bus off road at basavanagar [PERSON],pot_holes,High,HAL Old Airport,Old Airport Road
 FKID001207,BESCOM work under progress so traffic movement  till tomorrow,construction,Low,K.S. Layout,Non-corridor
 FKID001208,due to battery problem,vehicle_breakdown,High,HAL Old Airport,ORR East 2
 FKID001209,potholes at centre of the road,pot_holes,Low,Basavanagudi,Non-corridor
@@ -1098,8 +1098,8 @@ FKID001306,[LOCATION] sir 35 th main road Ayodhya ram road trds ig BWSSB work co
 FKID001307,ಪೈಪ್ ಲೈನ್ ನಲ್ಲಿ ನೀರಿನ ಸಮಸ್ಯೆ ಇಂದಾಗಿ ಗುಂಡಿ ಬಿದ್ದಿದ್ದು  ಸಂಚಾರ ಸ್ವಲ್ಪ ನಿಧಾನಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತದೆ,pot_holes,High,Ashok Nagar,Hosur Road
 FKID001308,ಈ ಪಾತ ಹೋಲ್ ಸಮಸ್ಯೆಯಿಂದಾಗಿ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಆಗಿ ಮೂವ್ ಆಗುತ್ತದೆ,pot_holes,High,Ashok Nagar,Hosur Road
 FKID001309,bmtc bus offload sir [PERSON],vehicle_breakdown,High,Chamarajpet,Mysore Road
-FKID001310,bwssb work progress traffic slow movement sir,road_conditions,Low,Hennuru,Non-corridor
-FKID001311,bwssb work progress traffic slow movement sir,road_conditions,Low,Hennuru,Non-corridor
+FKID001310,bwssb work progress traffic slow movement sir,pot_holes,Low,Hennuru,Non-corridor
+FKID001311,bwssb work progress traffic slow movement sir,pot_holes,Low,Hennuru,Non-corridor
 FKID001313,traffic no problem sir slow movement,others,High,Kengeri,Mysore Road
 FKID001314,axcell wheel cutting,others,Low,Yelahanka,Non-corridor
 FKID001315,vechicle breakdown,vehicle_breakdown,High,Vijayanagara,West of Chord Road
@@ -1140,7 +1140,7 @@ FKID001354,strairng locked,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID001355,tree fallen at near [LOCATION] sir,tree_fall,Low,V.V.Puram (C.Pet),Non-corridor
 FKID001356,[PERSON] towards [LOCATION] and mahadevapura towards [PERSON] metro working in progress between traffic slowly moment,construction,High,HAL Old Airport,ORR East 2
 FKID001357,City towards Hoskote on budigere bridge,vehicle_breakdown,Low,K.R. Pura,Non-corridor
-FKID001358,bad road condition at kottigepalya bus stop obstruction to buses and passengers,road_conditions,High,Kamakshipalya,Magadi Road
+FKID001358,bad road condition at kottigepalya bus stop obstruction to buses and passengers,pot_holes,High,Kamakshipalya,Magadi Road
 FKID001359,bad road condition traffic slow moment,pot_holes,High,Malleshwaram,West of Chord Road
 FKID001360,pothole open between arkere and HSBC junction,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID001361,starting problem,vehicle_breakdown,High,Jnanabharathi,Mysore Road
@@ -1153,7 +1153,7 @@ FKID001370,[PERSON] towards 80feet,vehicle_breakdown,High,Jeevanbheemanagar,Old 
 FKID001372,Private bus offroad sir [PERSON] palya towards MEI Due to diesel filter pipe cut agide traffic no problem,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID001373,[PERSON] db [PERSON] service road traffic slow moving sir,vehicle_breakdown,High,Bellandur,ORR East 1
 FKID001374,Tree fall on the main road not necessary for road close,tree_fall,Low,V.V.Puram (C.Pet),Non-corridor
-FKID001375,BBMP work ing sir slow movements,road_conditions,High,Banashankari,ORR West 1
+FKID001375,BBMP work ing sir slow movements,pot_holes,High,Banashankari,ORR West 1
 FKID001376,ittamadu to katriguppe traffic moment slow,vehicle_breakdown,High,Banashankari,ORR West 1
 FKID001378,service road closse,congestion,High,Banaswadi,ORR North 1
 FKID001379,echer LGV offroad [LOCATION] road junction sir..,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
@@ -1177,7 +1177,7 @@ FKID001396,car breakdown due to battery problem,vehicle_breakdown,High,HSR Layou
 FKID001397,[VEHICLE] number hgv vehicle grar box damege no moving sir,others,Low,Peenya,Non-corridor
 FKID001398,the vechles pancher on main road amc forest to ward Hebbal ring road.,others,High,Hennuru,ORR North 1
 FKID001399,air pipe cut,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
-FKID001400,for test,road_conditions,Low,Banashankari,Non-corridor
+FKID001400,for test,pot_holes,Low,Banashankari,Non-corridor
 FKID001401,jss junction,pot_holes,Low,Jayanagara,Non-corridor
 FKID001402,jss junction,pot_holes,Low,Jayanagara,Non-corridor
 FKID001403,the vechles pancher on main road amc forest to ward Hebbal ring road sir.,others,High,K.G. Halli,ORR North 1
@@ -1200,7 +1200,7 @@ FKID001427,vacim down,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID001429,ready to 30 minutes,vehicle_breakdown,High,Whitefield,Varthur Road
 FKID001430,"front wheel punctured, driver changing the wheel",vehicle_breakdown,Low,Pulikeshinagar(F.Town),Non-corridor
 FKID001431,traffic one side moment sir,vehicle_breakdown,High,Jalahalli,ORR North 2
-FKID001433,path whole in the WOC road sir.,road_conditions,High,Magadi Road,West of Chord Road
+FKID001433,path whole in the WOC road sir.,pot_holes,High,Magadi Road,West of Chord Road
 FKID001434,slow traffic movement sanjainagar traffic ps limits,construction,High,Kodigehalli,ORR North 2
 FKID001435,"pathhole infront of mahaveer hardware, service road, modhi bridge, [LOCATION], [LOCATION]",pot_holes,High,Vijayanagara,West of Chord Road
 FKID001437,car break down due to wheel jam incoming side Windsor maner towards [LOCATION] [PERSON] opposite.,vehicle_breakdown,High,High ground,Bellary Road 1
@@ -1273,7 +1273,7 @@ FKID001518,drainage covered metal was broken,construction,High,Shivajinagar,Old 
 FKID001519,car weel puncture,others,High,Sadashivanagar,Bellary Road 1
 FKID001520,tree fall,tree_fall,Low,Jalahalli,Non-corridor
 FKID001521,starting problem sir traffic no problem sir,vehicle_breakdown,High,Jalahalli,ORR North 2
-FKID001522,hug traffic problem continue 6 month,road_conditions,Low,K.R. Pura,Non-corridor
+FKID001522,hug traffic problem continue 6 month,pot_holes,Low,K.R. Pura,Non-corridor
 FKID001523,karthiknagara towards [LOCATION] and karthiknagara towards marathhalli traffic movement will be slow due to [LOCATION] station piller work,construction,High,HAL Old Airport,ORR East 2
 FKID001524,Normal traffic movement,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
 FKID001525,traffic slow moment sir,pot_holes,High,Malleshwaram,West of Chord Road
@@ -1343,13 +1343,13 @@ FKID001605,BMTC Bus technical problem sir,vehicle_breakdown,High,Adugodi,Hosur R
 FKID001606,[PERSON] traffic ps limits at [LOCATION],construction,High,Kodigehalli,ORR North 2
 FKID001607,"ತಾವರೆಕೆರೆ ಟುವರ್ಡಸ ಚೆಕ್ ಪೋಸ್ಟ್ ಗಾಡಿ ಆಫ್ ರೋಡಾಗಿದ್ದು , ರಸ್ತೆಯ ಬದಿಯಲ್ಲಿ ರುವುದರಿಂದ ಸಂಚಾರವು ನಿಧಾನ ಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತಿದೆ.",vehicle_breakdown,High,Madiwala,Hosur Road
 FKID001608,car off road venkatam cafe near towards veerannapalya traffic normally moving sir,vehicle_breakdown,High,Hebbala,ORR North 1
-FKID001609,jocky showroom near sunkdakatte at magadi main road towards [LOCATION] outgoing side main road potholes here,road_conditions,High,Kamakshipalya,Magadi Road
+FKID001609,jocky showroom near sunkdakatte at magadi main road towards [LOCATION] outgoing side main road potholes here,pot_holes,High,Kamakshipalya,Magadi Road
 FKID001610,Peenya tr ps H cross signal bus off road sir,vehicle_breakdown,High,Chikkabanavara,Tumkur Road
 FKID001611,stock 10 towerds stock 9 near stock 10 one vehicle starting froblem off-road  traffic movement no problem,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID001612,ಈ ವಾಹನವು hqtc ಬಸ್ ಸ್ಟಾಪ್ ನಿಂದ ತರಳಬಾಳು ಜಂಕ್ಷನ್ ಕಡೆ   ಕೆಟ್ಟು ನಿಂತಿರುತ್ತದೆ ಸರ್ ಸಂಚಾರಕ್ಕೆ ಯಾವುದೇ ತೊಂದರೆ ಇರುವುದಿಲ್ಲ ಸರ್,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
 FKID001614,start problem,vehicle_breakdown,Low,Malleshwaram,Non-corridor
 FKID001615,Vehicle Breakdown,vehicle_breakdown,Low,Electronic City,Non-corridor
-FKID001616,traffic problem,road_conditions,Low,K.R. Pura,Non-corridor
+FKID001616,traffic problem,pot_holes,Low,K.R. Pura,Non-corridor
 FKID001618,stating prablm,vehicle_breakdown,High,Hennuru,ORR North 1
 FKID001619,[PERSON] work progress in opp [PERSON] appartment. [LOCATION] bridge to Kadubeesanahalli  slow moving traffic sir,construction,Low,HAL Old Airport,Non-corridor
 FKID001621,bus gyare not working sir shivanna circle towards controment,vehicle_breakdown,Low,R.T. Nagar,Non-corridor
@@ -1463,7 +1463,7 @@ FKID001737,vehicl off road at sarakki incoming side slow movement..off road befo
 FKID001739,left wheel puncher agiddu traffic slow moment ide sir,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
 FKID001740,vehicle stucked,vehicle_breakdown,High,Magadi Road,Mysore Road
 FKID001742,[PERSON] cut,vehicle_breakdown,High,Yelahanka,Bellary Road 2
-FKID001743,due to road obstruction slow movement of vehicles towards GD mara Jun bannerugatta road from [PERSON] road .,road_conditions,High,Mico Layout,Bannerghata Road
+FKID001743,due to road obstruction slow movement of vehicles towards GD mara Jun bannerugatta road from [PERSON] road .,pot_holes,High,Mico Layout,Bannerghata Road
 FKID001744,"lorry offroad due vehicle gear box not working, traffic no problem",others,High,Byatarayanapura,ORR West 1
 FKID001745,gear box broken,vehicle_breakdown,High,Byatarayanapura,ORR West 1
 FKID001746,vehicle stucked,vehicle_breakdown,High,Magadi Road,Mysore Road
@@ -1482,7 +1482,7 @@ FKID001760,B02 ಯು ಟರ್ನ್ ಹತ್ತಿರ. ಒಂದು ಕಾರ
 FKID001761,[PERSON] work progress in S cross Panthuru sir. slow moving traffic from PRB to Kadubeesanahalli.,construction,Low,HAL Old Airport,Non-corridor
 FKID001763,Private bus offroad at near [LOCATION] Sir Traffic slow moving sir,vehicle_breakdown,Low,Magadi Road,Non-corridor
 FKID001764,due to vehicle break down near [PERSON]riders from stock 10 to old high ground go slowly,vehicle_breakdown,High,High ground,Bellary Road 1
-FKID001766,kptcl works in progress,road_conditions,Low,Whitefield,Non-corridor
+FKID001766,kptcl works in progress,pot_holes,Low,Whitefield,Non-corridor
 FKID001767,starting problem,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID001768,break down,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID001769,break down,accident,High,Jalahalli,ORR North 2
@@ -1531,7 +1531,7 @@ FKID001823,hgv vehicle off road due to engine problem in front of [PERSON] towar
 FKID001824,vehicle breakdown sir. one side traffic movement agtide present traffic no problem sir,accident,High,Banaswadi,Old Madras Road
 FKID001826,gear failure of [LOCATION] bus,others,Low,Banaswadi,Non-corridor
 FKID001827,water leakage,pot_holes,High,Pulikeshinagar(F.Town),Airport New South Road
-FKID001828,[PERSON] near petta siddappa circle BESCOM wire damage,road_conditions,Low,Yelahanka,Non-corridor
+FKID001828,[PERSON] near petta siddappa circle BESCOM wire damage,pot_holes,Low,Yelahanka,Non-corridor
 FKID001829,karthiknagara towards [PERSON] and [PERSON] towards [LOCATION] traffic movement will be slow due to [LOCATION] station piller work,construction,High,HAL Old Airport,ORR East 2
 FKID001830,wheel jaam,vehicle_breakdown,Low,HAL Old Airport,Non-corridor
 FKID001832,starting problem to bus. Nothing problem to Traffic,vehicle_breakdown,High,Vijayanagara,West of Chord Road
@@ -1602,7 +1602,7 @@ FKID001909,vehicle break down,vehicle_breakdown,High,Jalahalli,ORR North 2
 FKID001910,ಕೆ ಆರ್ ರೋಡ್ ಕಬ್ಬನ್ ರೋಡ್ ಜಂಕ್ಷನ್ ಟು ಮಣಿಪಾಲ್ ಸೆಂಟರ್ ಮದ್ಯದಲ್ಲಿ ಈ ವಾಹನವು ಅಪ್ಲೋಡ್ ಆಗಿರುತ್ತದೆ ಸಂಚಾರಕ್ಕೆ ಯಾವುದೇ ತೊಂದರೆ ಇರುವುದಿಲ್ಲ ಸರ್,vehicle_breakdown,High,Cubbon Park,Old Madras Road
 FKID001911,hosa road [LOCATION] towards [LOCATION] sir,vehicle_breakdown,High,Electronic City,Hosur Road
 FKID001912,Manyata tech Park towards KB Tower KR [LOCATION] slow movement sir [PERSON] limit metro work running sir,others,High,Hennuru,Hennur Main Road
-FKID001913,Due to starting problem a car off-road near [LOCATION] traffic flowing normal,road_conditions,High,Magadi Road,Magadi Road
+FKID001913,Due to starting problem a car off-road near [LOCATION] traffic flowing normal,pot_holes,High,Magadi Road,Magadi Road
 FKID001914,duble road towards anjaneya,vehicle_breakdown,High,Jeevanbheemanagar,Old Madras Road
 FKID001915,will take 40 minutes to remove bus sir [PERSON] is on tha way sir,vehicle_breakdown,Low,Banashankari,Non-corridor
 FKID001916,double gear not moving sir,vehicle_breakdown,High,Chamarajpet,Mysore Road
@@ -1678,11 +1678,11 @@ FKID002001,breakdown sir,vehicle_breakdown,High,Banaswadi,Airport New South Road
 FKID002002,function to public sunkadakatte towards bh cross sir out going sir,others,High,Kamakshipalya,Magadi Road
 FKID002003,ಪ್ಲೆಟ್ ಪ್ರಾಬ್ಲಮ್,others,High,Hebbala,Bellary Road 1
 FKID002004,ಕ್ಲಚ್ ಪ್ಲೇಟ್ ಪ್ರಾಬ್ಲಮ್,others,High,Hebbala,Bellary Road 1
-FKID002005,demo,protest,High,Yeshwanthpura,Tumkur Road
+FKID002005,demo,vip_movement,High,Yeshwanthpura,Tumkur Road
 FKID002006,grt jc water loging traffic slow momet aagtide sir,water_logging,Low,K.R. Pura,Non-corridor
 FKID002007,[PERSON] on fly over sir,vehicle_breakdown,High,Kodigehalli,Bellary Road 2
 FKID002008,Road Restriction for PM Visit,vip_movement,High,Kengeri,Mysore Road
-FKID002009,traffic slow moment peak hours heavy traffic congestion,road_conditions,High,Malleshwaram,West of Chord Road
+FKID002009,traffic slow moment peak hours heavy traffic congestion,pot_holes,High,Malleshwaram,West of Chord Road
 FKID002010,HGV breakdown due to starting problem at near coffee day towards airport sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID002011,bus off load due self starting problem,vehicle_breakdown,High,Kengeri,Mysore Road
 FKID002013,[LOCATION] circle on flyover towards city hgv vehicle off road due to starting problem sir traffic one side moving sir,vehicle_breakdown,High,Peenya,Tumkur Road
@@ -1780,7 +1780,7 @@ FKID002120,towing vehicle off road in deepa complex sir,vehicle_breakdown,Low,Jn
 FKID002123,Tata ace off road near [LOCATION] aerodrome towards city on flyover sir.,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID002125,[LOCATION] road towards airport track,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID002126,Normal traffic movement,vehicle_breakdown,High,Byatarayanapura,Mysore Road
-FKID002127,BWSSB Work going on near [LOCATION] hotel [PERSON] Sir,road_conditions,High,Kamakshipalya,Magadi Road
+FKID002127,BWSSB Work going on near [LOCATION] hotel [PERSON] Sir,pot_holes,High,Kamakshipalya,Magadi Road
 FKID002129,Muragesh palya signal to manipal haspital junction old airport road,vehicle_breakdown,High,Jeevanbheemanagar,Old Airport Road
 FKID002132,drinege cap broken...sir,others,High,Ashok Nagar,IRR(Thanisandra road)
 FKID002133,tyre burts incoming side next to RR Arch signal,vehicle_breakdown,High,Byatarayanapura,Mysore Road
@@ -1834,7 +1834,7 @@ FKID002192,snj traffic ps limits,construction,High,Kodigehalli,ORR North 2
 FKID002193,"ಸಿಮೆಂಟ್ ಬಲ್ಕರ್ ವಾಹನವನ್ನು ಡ್ರೈವರ್ ನಿರ್ಲಕ್ಷ್ಯದಿಂದ ರಸ್ತೆಯಲ್ಲಿ ನಿಲ್ಲಿಸಿ ಹೋಗಿರುತ್ತಾನೆ, ಟ್ರಾಫಿಕ್ ಗೆ [PERSON] ಉಂಟಾಗುತ್ತಿದೆ.",vehicle_breakdown,Low,Jnanabharathi,Non-corridor
 FKID002195,traffic slow movement,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID002196,yeshwantpur Circle,water_logging,High,Yeshwanthpura,Tumkur Road
-FKID002199,debth 2feet width 3 feet,road_conditions,Low,Pulikeshinagar(F.Town),Non-corridor
+FKID002199,debth 2feet width 3 feet,pot_holes,Low,Pulikeshinagar(F.Town),Non-corridor
 FKID002200,accident at kogilu cross on flyover towards city due road accident only vehicle damge sir,accident,High,Yelahanka,Bellary Road 2
 FKID002202,this car wheel jam here vehicle moment slow here,others,Low,Rajajinagar,Non-corridor
 FKID002203,vehicle front wheel puncture,vehicle_breakdown,High,Kamakshipalya,Magadi Road
@@ -1887,7 +1887,7 @@ FKID002253,ಲೂಲು ಮಾಲ್ ಟು PF ಕಡೆಗೆ ರೇಷ್ಮ�
 FKID002254,[PERSON],procession,Low,K.R. Pura,Non-corridor
 FKID002255,Test Demo,others,High,Shivajinagar,CBD 2
 FKID002256,petrol tank vihical break down towards k r pura,vehicle_breakdown,Low,Banaswadi,Non-corridor
-FKID002257,near 100 miters road graval road kogilu main road towards kogilu signal road traffic slow moving movement irutte sir please note sir,road_conditions,High,Yelahanka,Bellary Road 2
+FKID002257,near 100 miters road graval road kogilu main road towards kogilu signal road traffic slow moving movement irutte sir please note sir,pot_holes,High,Yelahanka,Bellary Road 2
 FKID002258,[PERSON] to kalamandir kadege main roadnalli e vehicle upload aagide sir,others,High,HAL Old Airport,ORR East 2
 FKID002260,engine breakdown,vehicle_breakdown,High,Rajajinagar,West of Chord Road
 FKID002261,bmtc bus uploaded Kadubeesanahalli towards [LOCATION] main road traffic slow moment sir,vehicle_breakdown,High,HAL Old Airport,ORR East 1
@@ -1960,7 +1960,7 @@ FKID002341,"Vehicle off,-road",vehicle_breakdown,Low,Jnanabharathi,Non-corridor
 FKID002342,towards KEB junction slow movement due to [LOCATION] work,congestion,High,Hennuru,Hennur Main Road
 FKID002343,traffic slow moment,others,High,Vijayanagara,West of Chord Road
 FKID002344,slow moving traffic from [LOCATION] circle towards Siddalingiah due to [LOCATION] bus off-road near [LOCATION].,vehicle_breakdown,High,Cubbon Park,Old Madras Road
-FKID002345,[PERSON] [LOCATION],road_conditions,Low,K.R. Pura,Non-corridor
+FKID002345,[PERSON] [LOCATION],pot_holes,Low,K.R. Pura,Non-corridor
 FKID002347,near coffee board junction,pot_holes,High,Cubbon Park,CBD 2
 FKID002348,coffee board junction,pot_holes,High,Cubbon Park,CBD 2
 FKID002352,venkatala on flyover towards airport due to starting problem sir traffic no problem sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
@@ -2101,15 +2101,15 @@ FKID002518,KRIDE WORK AT [LOCATION] to bhadrapp layout sir traffic slow moving s
 FKID002519,bbmp vehicle self accident,accident,High,Banaswadi,ORR North 1
 FKID002520,yogeshwara nagar cross towards veeranapalya car,accident,High,Hebbala,ORR North 1
 FKID002522,water pipe,construction,High,Byatarayanapura,Mysore Road
-FKID002524,ರಸ್ತೆ ಕುಸಿದಿರುತ್ತದೆ ಅಪಾಯಕಾರಿಯಾಗಿರುತ್ತದೆ,road_conditions,Low,Kamakshipalya,Non-corridor
+FKID002524,ರಸ್ತೆ ಕುಸಿದಿರುತ್ತದೆ ಅಪಾಯಕಾರಿಯಾಗಿರುತ್ತದೆ,pot_holes,Low,Kamakshipalya,Non-corridor
 FKID002526,water logging,water_logging,High,Kamakshipalya,Magadi Road
 FKID002527,wheel locked due to lack of air pressure,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID002529,diesel kaali aagide sir,vehicle_breakdown,High,Jalahalli,ORR North 2
 FKID002530,sadarmangal road,pot_holes,Low,Mahadevapura,Non-corridor
 FKID002531,Vehicle break down due to Gare box Jion break,vehicle_breakdown,Low,Jnanabharathi,Non-corridor
 FKID002533,bbmp wrk sir,construction,Low,Ashok Nagar,Non-corridor
-FKID002534,sadarmangal road,road_conditions,Low,K.R. Pura,Non-corridor
-FKID002535,sadarmangal road,road_conditions,Low,K.R. Pura,Non-corridor
+FKID002534,sadarmangal road,pot_holes,Low,K.R. Pura,Non-corridor
+FKID002535,sadarmangal road,pot_holes,Low,K.R. Pura,Non-corridor
 FKID002536,BMTC bus side ide traffic movement normal sir,others,Low,Sheshadripuram,Non-corridor
 FKID002537,starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID002538,HGV offload due to starting problem in H cross on flyover towards city traffic one side movement sir.,vehicle_breakdown,High,Chikkabanavara,Tumkur Road
@@ -2117,7 +2117,7 @@ FKID002540,vehicle break doun,vehicle_breakdown,High,Banaswadi,ORR North 1
 FKID002542,stating prablm,vehicle_breakdown,Low,K.G. Halli,Non-corridor
 FKID002543,[LOCATION] station on flyover chain accident traffic one side movement,accident,Low,Peenya,Non-corridor
 FKID002544,bmtc bus off road starting [PERSON] sir,vehicle_breakdown,Low,Halasuru Gate,Non-corridor
-FKID002545,[PERSON],road_conditions,Low,K.R. Pura,Non-corridor
+FKID002545,[PERSON],pot_holes,Low,K.R. Pura,Non-corridor
 FKID002546,starting problem sir,vehicle_breakdown,High,Mahadevapura,ORR North 1
 FKID002547,Traffic slow,vehicle_breakdown,Low,K.S. Layout,Non-corridor
 FKID002548,Coffee day yalahanka railway underpass towards airport sir,water_logging,High,Yelahanka,Bellary Road 2
@@ -2181,7 +2181,7 @@ FKID002615,nice road close,others,Low,Kamakshipalya,Non-corridor
 FKID002616,vechile breakdown,vehicle_breakdown,Low,Basavanagudi,Non-corridor
 FKID002617,vehicle breakdown sir,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID002618,peenya flyover outgoing [LOCATION] station on flyover water logging vehicles slow moving towards nelamangala side.,water_logging,High,Peenya,Tumkur Road
-FKID002619,"[LOCATION] road,Baldvin Girls School ಮುಂಭಾಗ BWSSB ರವರಿಂದ sanitary pipeline work ನಡೆಯುತ್ತಿದೆ.ರಿಚ್ಮಂಡ್ ರಸ್ತೆಯ ಸಂಚಾರ ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಲಿದೆ ಸರ್",road_conditions,High,Ashok Nagar,Mysore Road
+FKID002619,"[LOCATION] road,Baldvin Girls School ಮುಂಭಾಗ BWSSB ರವರಿಂದ sanitary pipeline work ನಡೆಯುತ್ತಿದೆ.ರಿಚ್ಮಂಡ್ ರಸ್ತೆಯ ಸಂಚಾರ ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಲಿದೆ ಸರ್",pot_holes,High,Ashok Nagar,Mysore Road
 FKID002620,vehicle breakdown,vehicle_breakdown,High,Electronic City,Hosur Road
 FKID002621,front wheel puncher [LOCATION] towards [LOCATION] circle,vehicle_breakdown,High,Hebbala,ORR North 1
 FKID002623,starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
@@ -2196,7 +2196,7 @@ FKID002634,vvr juntion traffic slow moving,vehicle_breakdown,Low,Bellandur,Non-c
 FKID002635,collage bus breakdown due to starting problem towards city main track in anchepalya toll traffic normal sir,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID002636,towwords apmc,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID002637,power down [LOCATION] to agar traffic slow moving,vehicle_breakdown,High,Bellandur,ORR East 1
-FKID002639,test,protest,Low,K.R. Pura,Non-corridor
+FKID002639,test,vip_movement,Low,K.R. Pura,Non-corridor
 FKID002640,KRIDE WORK AT [LOCATION] to bhadrapp layout sir traffic slow moving sir,congestion,High,Kodigehalli,ORR North 2
 FKID002641,Towards jakkuru signal,vehicle_breakdown,High,Kodigehalli,Bellary Road 2
 FKID002642,"[LOCATION] medam,
@@ -2225,10 +2225,10 @@ FKID002659,karthiknagara towards [LOCATION] and karthiknagara towards marathhall
 FKID002660,vehicle break down,vehicle_breakdown,Low,Malleshwaram,Non-corridor
 FKID002661,peenya flyover NHAI cleaning work going on H CROSS TOWARDS CMTI,others,High,Peenya,Tumkur Road
 FKID002662,Tin factory towerds kasturinager,vehicle_breakdown,High,Mahadevapura,ORR North 1
-FKID002663,a driver has fallen and got injured in hand because of this rocks please take preventive measures near toyota,debris,High,Chikkajala,Bellary Road 2
-FKID002664,ವೈಟ್ ಟೈಪಿಂಗ್ ಮಾಡ್ತಾ ಇರ್ತಾರೆ,road_conditions,High,Chamarajpet,Mysore Road
+FKID002663,a driver has fallen and got injured in hand because of this rocks please take preventive measures near toyota,tree_fall,High,Chikkajala,Bellary Road 2
+FKID002664,ವೈಟ್ ಟೈಪಿಂಗ್ ಮಾಡ್ತಾ ಇರ್ತಾರೆ,pot_holes,High,Chamarajpet,Mysore Road
 FKID002665,bridge Work and CC road work under progress,construction,Low,Mico Layout,Non-corridor
-FKID002666,bad road,road_conditions,High,Kamakshipalya,Magadi Road
+FKID002666,bad road,pot_holes,High,Kamakshipalya,Magadi Road
 FKID002668,coffe day junction towords benglore club bwssb working sir,others,Low,Cubbon Park,Non-corridor
 FKID002669,KRIDE WORK AT [LOCATION] to bhadrapp layout sir traffic slow moving sir,congestion,High,Kodigehalli,ORR North 2
 FKID002670,battery problem,vehicle_breakdown,High,Yelahanka,Bellary Road 2
@@ -2296,7 +2296,7 @@ FKID002742,traffic slow movement Sir,water_logging,Low,Wilson Garden,Non-corrido
 FKID002743,wattar logging,water_logging,Low,Banaswadi,Non-corridor
 FKID002746,water laggin havy rain bannerghatta main road near [LOCATION],water_logging,High,Jayanagara,Bannerghata Road
 FKID002747,water loging,water_logging,Low,Ashok Nagar,Non-corridor
-FKID002750,due to fall of cutout infront of Prasanna theatre vehicles are diverted from [PERSON] to GT Mall on magadi [LOCATION],debris,High,Magadi Road,West of Chord Road
+FKID002750,due to fall of cutout infront of Prasanna theatre vehicles are diverted from [PERSON] to GT Mall on magadi [LOCATION],tree_fall,High,Magadi Road,West of Chord Road
 FKID002751,malagala towards sumanahalli bmtc off regarding engine problem,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID002753,water laging,water_logging,Low,Mahadevapura,Non-corridor
 FKID002754,[PERSON] shaneshwr [LOCATION],tree_fall,Low,Mico Layout,Non-corridor
@@ -2309,7 +2309,7 @@ FKID002761,Traffic slow both sides near [LOCATION] bhavan due to the departure o
 FKID002764,Due to shaneshwara [PERSON] traffic moment slower than usual,others,Low,K.S. Layout,Non-corridor
 FKID002765,[PERSON] sir... BBMP road cleaning vehicle off-road in chord road near modhi bridge... slow moving traffic sir...,vehicle_breakdown,High,Vijayanagara,West of Chord Road
 FKID002766,[PERSON] traffic no problem sir,tree_fall,Low,R.T. Nagar,Non-corridor
-FKID002767,Due to Bad Road Condition traffic slow movement sir,road_conditions,High,Kamakshipalya,Magadi Road
+FKID002767,Due to Bad Road Condition traffic slow movement sir,pot_holes,High,Kamakshipalya,Magadi Road
 FKID002768,vehicle breakdown,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID002769,[LOCATION] no vehicle moment sir,water_logging,High,Halasuru Gate,Mysore Road
 FKID002770,silk bord towereds 29th main near silk board signal water logging traffic slow moment sir,water_logging,High,Madiwala,ORR East 1
@@ -2396,7 +2396,7 @@ FKID002874,weekly vegitable market @varthur traffic slow moving varthur to gunju
 FKID002875,water login,water_logging,Low,Sadashivanagar,Non-corridor
 FKID002876,Tree fall no traffic promblam,tree_fall,High,Peenya,Tumkur Road
 FKID002877,signal not working,others,High,Peenya,Tumkur Road
-FKID002879,ಬಿನ್ನಿ ಮಿಲ್ ಜಂಕ್ಷನ್ ಕಡೆಯಿಂದ ಸಿರ್ಸಿ ಕಡೆಗೆ ರಸ್ತೆಯ ಮೇಲೆ ಗೋಡೆ ಕುಸಿದಿದ್ದು,road_conditions,Low,Magadi Road,Non-corridor
+FKID002879,ಬಿನ್ನಿ ಮಿಲ್ ಜಂಕ್ಷನ್ ಕಡೆಯಿಂದ ಸಿರ್ಸಿ ಕಡೆಗೆ ರಸ್ತೆಯ ಮೇಲೆ ಗೋಡೆ ಕುಸಿದಿದ್ದು,pot_holes,Low,Magadi Road,Non-corridor
 FKID002880,car break down,vehicle_breakdown,Low,Cubbon Park,Non-corridor
 FKID002881,water loging,water_logging,Low,Halasur,Non-corridor
 FKID002882,water loging,water_logging,Low,Halasur,Non-corridor
@@ -2408,7 +2408,7 @@ FKID002889,water loging sir,others,High,Chamarajpet,Mysore Road
 FKID002890,[PERSON] agide sir,others,High,Byatarayanapura,Mysore Road
 FKID002892,ಕಲ್ಪನಾ ಜಂಕ್ಷನ್ ಅಲ್ಲಿ ಸ್ಟ್ರೀಟ್ ಲೈಟ್ ಕಂಬ ಬಿದ್ದಿದೆ ಕೇಬಲ್ ಮೇಲೆ ಬಿದ್ದಿದೆ ಮೇಡಂ,others,High,High ground,Bellary Road 1
 FKID002893,starting problem,vehicle_breakdown,High,Shivajinagar,Old Madras Road
-FKID002894,[PERSON] towards sirsi compound breakdown,road_conditions,Low,Chamarajpet,Non-corridor
+FKID002894,[PERSON] towards sirsi compound breakdown,pot_holes,Low,Chamarajpet,Non-corridor
 FKID002896,water logging  jayadeva u turn towards east end junction,water_logging,High,Jayanagara,Bannerghata Road
 FKID002897,madaavan park towards  [LOCATION] club Road close sir,tree_fall,Low,Jayanagara,Non-corridor
 FKID002898,water login 9th main towards 5th main HSR vehicle movement slow  mori water comes to road,water_logging,High,HSR Layout,ORR East 1
@@ -2463,7 +2463,7 @@ FKID002954,breakdown,vehicle_breakdown,Low,Magadi Road,Non-corridor
 FKID002956,BMTC battery's blast,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID002957,break down,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID002958,[PERSON] [PHONE],congestion,Low,K.R. Pura,Non-corridor
-FKID002959,iti bus stop sir,road_conditions,Low,K.R. Pura,Non-corridor
+FKID002959,iti bus stop sir,pot_holes,Low,K.R. Pura,Non-corridor
 FKID002960,lorry undarpass water loging contact no [PHONE],water_logging,High,Mahadevapura,ORR East 2
 FKID002961,lorry undarpass woter logging contact no [PHONE],water_logging,High,K.R. Pura,ORR East 2
 FKID002962,vehicles starting issue,vehicle_breakdown,Low,K.R. Pura,Non-corridor
@@ -2477,7 +2477,7 @@ FKID002971,school buss offroad near [LOCATION].,vehicle_breakdown,Low,Sadashivan
 FKID002972,starting problem,others,High,Mahadevapura,ORR East 2
 FKID002973,gear probleum,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID002974,"ನಮಸ್ತೆ ಸರ್. ಓಲ್ಡ್ ಜೆಡಿಎಸ್ ಜಂಕ್ಷನ್ ನಿಂದ ರೇಸ್ ವಿವ್ ಜಂಕ್ಷನ್ ಗಳ ಮದ್ಯದಲ್ಲಿ ವೈಟ್ ಟಾಪಿಂಗ್ [PERSON] ನಡೆದಿದ್ದು, ಪೈಪ್ ಅಳವಡಿಕೆಗಾಗಿ ತೆಗೆದಿರುವ ತಗ್ಗು ಪ್ರದೇಶದಿಂದಾಗಿ ಅರ್ಧ ರಸ್ತೆಯು ಮಾತ್ರ ಸಂಚಾರಕ್ಕೆ ದೊರೆತಿರುವ ಕಾರಣ ವಾಹನಗಳ ಸಂಚಾರವು ನಿಧಾನಗತಿಯಲ್ಲಿ ಇರುತ್ತದೆ ಸರ್. ಗೆಟಿಂಗ್ ಮೂಲಕ ವಾಹನ [LOCATION] ನಿರ್ವಹಿಸಲಾಗುತ್ತಿದೆ. ತಮ್ಮ [PERSON].
-HC 8940 ಜಾಕಿ ರೇಸ್ ವಿವ್ ಜಂಕ್ಷನ್.",road_conditions,Low,High ground,Non-corridor
+HC 8940 ಜಾಕಿ ರೇಸ್ ವಿವ್ ಜಂಕ್ಷನ್.",pot_holes,Low,High ground,Non-corridor
 FKID002975,HGV is off road due to gear box repair,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID002976,snj traffic limits,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID002977,Marenahalli,vehicle_breakdown,High,Vijayanagara,West of Chord Road
@@ -2529,7 +2529,7 @@ FKID003035,sumnahalli sir,tree_fall,High,Kamakshipalya,Magadi Road
 FKID003039,tree fall,tree_fall,Low,Malleshwaram,Non-corridor
 FKID003040,water login,water_logging,High,Yelahanka,Bellary Road 2
 FKID003041,tree fall,tree_fall,Low,Rajajinagar,Non-corridor
-FKID003042,due to rain,road_conditions,High,Yelahanka,Bellary Road 2
+FKID003042,due to rain,pot_holes,High,Yelahanka,Bellary Road 2
 FKID003043,Puttenahalli depo opposite towards  [LOCATION] traffic movement is slow sir.,water_logging,Low,Yelahanka,Non-corridor
 FKID003044,fly over downramp,water_logging,Low,Jalahalli,Non-corridor
 FKID003045,outer ring road traffic movement slowed ecospace towards ibbalur junction due to water logging Sir,water_logging,High,Bellandur,ORR East 1
@@ -2546,10 +2546,10 @@ FKID003056,KRIDE WORK AT [LOCATION] to bhadrapp layout sir traffic slow moving s
 FKID003057,LGV vehicle brokedown traffic no problem [PERSON] towards medahalli sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID003058,ಅತಿಯಾದ ಮಳೆಯಿಂದ ಈ ಪಾರ್ಟ್ ಹೋಲ್ ಓಪನ್ ಆಗಿದ್ದು ದಯವಿಟ್ಟು ಬಂದು [PERSON] ವಿನಂತಿ,pot_holes,High,Shivajinagar,CBD 1
 FKID003059,heavy rain,water_logging,Low,Whitefield,Non-corridor
-FKID003060,ಸ್ಕೂಲ್ ಬಸ್ ಅಪ್ಲೋಡ್ ಆಗಿದೆ ಸರ್,road_conditions,High,Hennuru,Hennur Main Road
+FKID003060,ಸ್ಕೂಲ್ ಬಸ್ ಅಪ್ಲೋಡ್ ಆಗಿದೆ ಸರ್,pot_holes,High,Hennuru,Hennur Main Road
 FKID003062,water logging,water_logging,Low,Whitefield,Non-corridor
 FKID003063,vehicle starting problem at sunkadakatte bus stop out going side sir,vehicle_breakdown,High,Kamakshipalya,Magadi Road
-FKID003064,Due to starting problem BMTC Bus off-road near WOC service road traffic flowing normal sir,road_conditions,High,Magadi Road,West of Chord Road
+FKID003064,Due to starting problem BMTC Bus off-road near WOC service road traffic flowing normal sir,pot_holes,High,Magadi Road,West of Chord Road
 FKID003065,"ನಮಸ್ತೆ ಸರ್, ಮಾನ್ಯತಾ ಗೇಟ್ ನಂಬರ್ ಟು ಇನ್ಸೈಡ್ ವಾಟರ್ ಲಾಗಿನ್ ಆಗಿರುತ್ತದೆ ವೆಹಿಕಲ್ ಮೊಮೆಂಟ್ ಸ್ಲೋ ಇರುತ್ತದೆ ಸರ್",water_logging,Low,Hennuru,Non-corridor
 FKID003066,bmtc bus offroad due to air pipe leak,others,High,Banashankari,ORR West 1
 FKID003067,[PERSON] near dargha towerds silk bord private bus off road sir traffic no problem sir,vehicle_breakdown,High,Madiwala,Hosur Road
@@ -2628,7 +2628,7 @@ FKID003159,lgv puncture near muttyalamm junction traffic no problem,vehicle_brea
 FKID003160,it causes to vehicle slow movement... please take necessary action,pot_holes,Low,Hulimavu,Non-corridor
 FKID003161,Tire problem,others,Low,Rajajinagar,Non-corridor
 FKID003162,ಎಲೆಕ್ಟ್ರಿಕಲ್ ಕಾರ್ ವೀಲ್ ಜಾಮ್ ಆಗಿದ್ದು ರಸ್ತೆಯ ಪಕ್ಕಕ್ಕೆ ಹಾಕಿಸಲು ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ ಸರ್ ಸಂಚಾರ ಸ್ವಲ್ಪ ನಿಧಾನ ಗತಿಯಲ್ಲಿ ಇರುತ್ತದೆ ಸರ್,vehicle_breakdown,Low,Wilson Garden,Non-corridor
-FKID003163,ಎಳನಹಳ್ಳಿ ಮುಖ್ಯ ರಸ್ತೆ ಸರ್ಕಾರಿ ಶಾಲೆ ಮುಂಬಾಗ ಬೆಸ್ಕಾಂ ವಿದ್ಯುತ್ ಕಂಬವು ಮುಖ್ಯ ರಸ್ತೆಯಲ್ಲಿ ಇದ್ದು ಸಂಚಾರಕ್ಕೆ ಹಾಗೂ ಅಪಘಾತವಾಗುವ ಸಾಧ್ಯತೆ ಇದ್ದು ಅದನ್ನು ತೆರವಗೊಳಿಸಬೇಕು ಸರ್,road_conditions,Low,Hulimavu,Non-corridor
+FKID003163,ಎಳನಹಳ್ಳಿ ಮುಖ್ಯ ರಸ್ತೆ ಸರ್ಕಾರಿ ಶಾಲೆ ಮುಂಬಾಗ ಬೆಸ್ಕಾಂ ವಿದ್ಯುತ್ ಕಂಬವು ಮುಖ್ಯ ರಸ್ತೆಯಲ್ಲಿ ಇದ್ದು ಸಂಚಾರಕ್ಕೆ ಹಾಗೂ ಅಪಘಾತವಾಗುವ ಸಾಧ್ಯತೆ ಇದ್ದು ಅದನ್ನು ತೆರವಗೊಳಿಸಬೇಕು ಸರ್,pot_holes,Low,Hulimavu,Non-corridor
 FKID003164,traffic no problem,vehicle_breakdown,High,Jalahalli,ORR North 2
 FKID003165,KRIDE WORK AT [LOCATION] to bhadrapp layout sir traffic slow moving sir,congestion,High,Kodigehalli,ORR North 2
 FKID003166,ಮಡಿವಾಳ ಮಾರ್ಕೆಟ್ ರೋಡ್ [LOCATION] ಬಿಎಂಟಿಸಿ ಬಸ್ ವೀಲ್ ಜಾಮ್ ಆಗಿ ಅಪ್ಲೋಡ್ ಆಗಿರುತ್ತದೆ ಸರ್,vehicle_breakdown,High,Madiwala,Hosur Road
@@ -2650,7 +2650,7 @@ FKID003184,[PHONE],accident,Low,No Police Station,Non-corridor
 FKID003186,[PERSON] blost,vehicle_breakdown,High,Ashok Nagar,Old Madras Road
 FKID003187,"ಗುಡ್ ಮಾರ್ನಿಂಗ್ ಸರ್/ಮೇಡಂ, ಎಸ್ ಸಿ ರಸ್ತೆ ಕಪಾಲಿ ಥಿಯೇಟರ್ ಮುಂದುಗಡೆ ಇರುವಂತ ಮರ ರೋಡಿಗೆ ಬಿದ್ದಿದ್ದು ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟಿಗೆ ಯಾವುದೇ [PERSON] ಇರುವುದಿಲ್ಲ ಸರ್ ಮರ ಬಿದ್ದ ಕೆಳಗಡೆ ಒಂದು ಆಟೋ ಮತ್ತು ಟೂ ವೀಲರ್ ಜಕ್ಕಮ್ಮ ಗೊಂಡಿರುತ್ತವೆ ಸರ್ ಸಾರ್ವಜನಿಕರಿಗೆ ಯಾವುದೇ ರೀತಿಯ ತೊಂದರೆ ಆಗಿರುವುದಿಲ್ಲ ಮತ್ತು ಟ್ರಾಫಿಕ್ ಮೂವ್ಮೆಂಟ್ ಸರಾಗವಾಗಿ ಹೋಗುತ್ತಿರುತ್ತದೆ ಸರ್ ನಮಸ್ತೆ",tree_fall,Low,Upparpet,Non-corridor
 FKID003188,ಈ ಮರ ಬಿದ್ದ ಕಾರಣ ಇಲ್ಲಿ ರಸ್ತೆ ಸಂಪೂರ್ಣವಾಗಿ ಕ್ಲೋಸ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಟ್ರೀ ಕಟಿಂಗ್ ಮಾಡೋರಿಗೆ ಮಾಹಿತಿ ಕೊಟ್ಟಿದ್ದೇವೆ ಅಷ್ಟು ಬೇಗ ಕಟಿಂಗ್ ಮಾಡಿ ರೋಡ್ ಓಪನ್ ಮಾಡುವ ಪ್ರಯತ್ನ ಮಾಡುತ್ತೇವೆ..,tree_fall,Low,Jayanagara,Non-corridor
-FKID003189,BBMP drynez works  kogilu towords  vidyashilpa sarvice road,road_conditions,High,Yelahanka,Bellary Road 2
+FKID003189,BBMP drynez works  kogilu towords  vidyashilpa sarvice road,pot_holes,High,Yelahanka,Bellary Road 2
 FKID003190,[LOCATION] vehicle off road sir,vehicle_breakdown,High,HAL Old Airport,ORR East 1
 FKID003191,[PERSON] toward kalpali,vehicle_breakdown,High,Jeevanbheemanagar,Old Madras Road
 FKID003192,sanjainagar traffic ps limits,vehicle_breakdown,High,Hebbala,Bellary Road 1
@@ -2731,8 +2731,8 @@ FKID003300,Water logging is happened due to yesterday's heavy rain. No problem f
 FKID003301,Bmtc bus joint cut agi off road agide sir traffic one side movement [LOCATION] ide sir,vehicle_breakdown,Low,City Market,Non-corridor
 FKID003302,[LOCATION] construction,construction,High,HAL Old Airport,ORR East 2
 FKID003303,[LOCATION] construction sir,construction,High,HAL Old Airport,ORR East 2
-FKID003304,road collapse due to rain,road_conditions,High,Halasuru Gate,Mysore Road
-FKID003305,man hole open traffic slow movement,road_conditions,High,High ground,Bellary Road 1
+FKID003304,road collapse due to rain,pot_holes,High,Halasuru Gate,Mysore Road
+FKID003305,man hole open traffic slow movement,pot_holes,High,High ground,Bellary Road 1
 FKID003306,one side traffic moving,vehicle_breakdown,Low,Cubbon Park,Non-corridor
 FKID003307,water logging on road side,water_logging,High,Cubbon Park,CBD 2
 FKID003308,Mysore road nice road exit toll front of kempamma temple sensor problem vehicle not starting sir,vehicle_breakdown,High,Kengeri,Mysore Road
@@ -2743,11 +2743,11 @@ FKID003312,karthiknagara towards [LOCATION] and karthiknagara towards marathhall
 FKID003313,towards khody [PERSON] traffic moving slow ide,pot_holes,Low,Sheshadripuram,Non-corridor
 FKID003316,"vehicle battery burst,vehicle offroad. in sp road juction traffic slow movement sir",vehicle_breakdown,High,Madiwala,Hosur Road
 FKID003318,ಸ್ಟಾರ್ಟಿಂಗ್ ಪ್ರಾಬ್ಲಮ್ ಇಂದ ಅಪ್ ಲೋಡ್ ಆಗಿರುತ್ತೆ.....,others,High,Halasuru Gate,Mysore Road
-FKID003320,regarding yesterday night [PERSON] gas work digged middle road one side traffic slow movement ide,road_conditions,High,J.P. Nagar,Bannerghata Road
-FKID003321,yesterday night gail gas digged work in [LOCATION] vehicles slow movement ide sir,road_conditions,High,J.P. Nagar,Bannerghata Road
-FKID003322,yesterday night gail gas work digged middle in [LOCATION] vehicles slow movement ide sir,road_conditions,High,J.P. Nagar,Bannerghata Road
+FKID003320,regarding yesterday night [PERSON] gas work digged middle road one side traffic slow movement ide,pot_holes,High,J.P. Nagar,Bannerghata Road
+FKID003321,yesterday night gail gas digged work in [LOCATION] vehicles slow movement ide sir,pot_holes,High,J.P. Nagar,Bannerghata Road
+FKID003322,yesterday night gail gas work digged middle in [LOCATION] vehicles slow movement ide sir,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID003323,KMF vehicle park in  mainroad no driver traffic movement slow in bg road near [LOCATION] sir 🙏,others,Low,Adugodi,Non-corridor
-FKID003324,yesterday night gail gas work is digged middle road near [LOCATION] vehicles slow movement ide sir at,road_conditions,High,J.P. Nagar,Bannerghata Road
+FKID003324,yesterday night gail gas work is digged middle road near [LOCATION] vehicles slow movement ide sir at,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID003327,Due to Potholes two wheeler Rider's falling sir,pot_holes,High,Kamakshipalya,Magadi Road
 FKID003331,vehicle puncher..,vehicle_breakdown,Low,Banashankari,Non-corridor
 FKID003332,one side traffic movement,vehicle_breakdown,Low,High ground,Non-corridor
@@ -2941,7 +2941,7 @@ FKID003565,kundalahalli towards city,vehicle_breakdown,High,HAL Old Airport,Vart
 FKID003566,eco space towards iblur  private bus off road,vehicle_breakdown,High,Bellandur,ORR East 1
 FKID003568,car offroad due to wheel broken. opposite to hosmat hospital [LOCATION] towards [LOCATION] pura,vehicle_breakdown,High,Hennuru,Airport New South Road
 FKID003570,off raod at mmt down ramp technical problem sir,vehicle_breakdown,High,Mahadevapura,ORR North 1
-FKID003571,bad road condition rubi jn towords gd [PERSON] traffic moving slow sir,road_conditions,High,J.P. Nagar,Bannerghata Road
+FKID003571,bad road condition rubi jn towords gd [PERSON] traffic moving slow sir,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID003572,gear problem vehicle not moving toward ashraya [LOCATION],vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID003574,vehicle gear problem,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID003575,nes to wards yalahanka circle ksrtc bus ಗೇರ್ ಪ್ರಾಬ್ಲಮ್ ಸರ್,vehicle_breakdown,Low,Yelahanka,Non-corridor
@@ -3053,7 +3053,7 @@ FKID003712,off-road at [LOCATION] main road towards airport due to tyre burst si
 FKID003713,battery problem,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID003714,ನಮಸ್ಕಾರ ಸರ್ ಜೆಪಿ ಮಾರ್ಗ ಜಂಕ್ಷನ್ ನಿಂದ ದೇವರ ಬಿಸ್ನಳ್ಳಿ ಕಡೆಗೆ ಬರುವ ರಸ್ತೆಯಲ್ಲಿ ವಜ್ರ ಎದುರುಗಡೆ ರಸ್ತೆಗೊಂಡೆಗಳು ಬಿದ್ದಿರುತ್ತದೆ ಸರ್,pot_holes,High,HAL Old Airport,ORR East 1
 FKID003716,[PERSON] to agar traffic slow moving sir,vehicle_breakdown,High,Bellandur,ORR East 1
-FKID003717,ಕಸದ ರಾಶಿ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತೆಗೆದಿರುವುದಿಲ್ಲ,debris,High,Banashankari,ORR West 1
+FKID003717,ಕಸದ ರಾಶಿ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತೆಗೆದಿರುವುದಿಲ್ಲ,tree_fall,High,Banashankari,ORR West 1
 FKID003719,jp morgan service road towards [LOCATION] service road potholes sir traffic slow moment sir,pot_holes,High,HAL Old Airport,ORR East 1
 FKID003720,ಬೇರಿಂಗ್ ಕಟ್ ಟ್ರಾಫಿಕ್ ಗೆ ಯಾವದೇ ಸಮಸ್ಯೆ ಇಲ್ಲ,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID003721,road potholes,pot_holes,High,Magadi Road,Magadi Road
@@ -3065,11 +3065,11 @@ FKID003727,[PERSON] to wards avalahalli bmtc bus joint wheel cut sir,vehicle_bre
 FKID003728,[PERSON] to wards avalahalli [LOCATION] bus joint wheel cut hagide sir,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID003729,school bus off road near [LOCATION] towards airport sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID003731,demo,procession,Low,Whitefield,Non-corridor
-FKID003732,10 ft length and 1 ft Width,road_conditions,Low,Thalagattapura,Non-corridor
+FKID003732,10 ft length and 1 ft Width,pot_holes,Low,Thalagattapura,Non-corridor
 FKID003733,bmtc bus puncher,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID003734,amc service road,pot_holes,High,Hennuru,ORR North 1
 FKID003735,sir nagawar service road on path hole near  [LOCATION] ground toward hebbal service road,pot_holes,High,K.G. Halli,ORR North 1
-FKID003736,potholes,road_conditions,High,HAL Old Airport,ORR East 1
+FKID003736,potholes,pot_holes,High,HAL Old Airport,ORR East 1
 FKID003737,amc service road,pot_holes,High,Hennuru,ORR North 1
 FKID003738,tree bending to the road,tree_fall,Low,Basavanagudi,Non-corridor
 FKID003739,ನಮಸ್ತೆ ಸರ್ ವಿದ್ಯಾನಗರ ಕ್ರಾಸ್ ಫ್ಲೇವರ್ ಮೇಲೆ ಟುವಾರ್ಡ್ ಸಿಟಿ ಕಡೆ ಚೈನ ಆಕ್ಸಿಡೆಂಟ್ ಆಗಿರುತ್ತದೆ ಸಂಚಾರ ನಿಧನ ಗತಿ ಆಗಿರುತ್ತದೆ,accident,High,Chikkajala,Bellary Road 2
@@ -3196,7 +3196,7 @@ FKID003892,HQTC back gate to ashwathnagra junction traffic no problem sir,others
 FKID003893,traffic slow movement,vehicle_breakdown,Low,V.V.Puram (C.Pet),Non-corridor
 FKID003894,vehicle breakdown,vehicle_breakdown,High,Ashok Nagar,Mysore Road
 FKID003895,"[LOCATION] jn ಬಳಿ ಈ ವಾಹನವು Starting problem ಆಗಿ ನಿಂತಿದ್ದು,ವಾಹನದಿಂದ [LOCATION] ತೊಂದರೆಯಾಗದಂತೆ ಸಿಗ್ನಲ್ ಬಳಿಗೆ ತಳ್ಳಿ ಹಾಕಿಸಲಾಗಿದೆ.ಸಂಚಾರಕ್ಕೆ ಈಗ ತೊಂದರೆಯಿಲ್ಲ.ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ನನ್ನ ನಂ [PHONE] sir",vehicle_breakdown,High,Cubbon Park,Mysore Road
-FKID003897,Drainage waste put bedside road,debris,Low,V.V.Puram (C.Pet),Non-corridor
+FKID003897,Drainage waste put bedside road,tree_fall,Low,V.V.Puram (C.Pet),Non-corridor
 FKID003899,drainage likege sir,water_logging,Low,Jalahalli,Non-corridor
 FKID003900,starting problem sir 5 minute sir,others,High,Kamakshipalya,Magadi Road
 FKID003901,no traffic problem,others,Low,Byatarayanapura,Non-corridor
@@ -3297,17 +3297,17 @@ FKID004017,"HGV VAHICLE WHEEL JAM, NO PROBLEM TO TRAFFIC. [PERSON] PURAM, OM ROA
 FKID004018,From [LOCATION] kodi TW KR PURAM at Katamnallur bridge,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004019,BWSSB work progress K R road towards D M junction traffic slow moment,construction,Low,Basavanagudi,Non-corridor
 FKID004020,gear problem sir,vehicle_breakdown,High,Halasuru Gate,Mysore Road
-FKID004021,"jss signal, 36 towards [LOCATION] road",road_conditions,Low,Jayanagara,Non-corridor
+FKID004021,"jss signal, 36 towards [LOCATION] road",pot_holes,Low,Jayanagara,Non-corridor
 FKID004022,side allide traffic ge enu samasye illa sir,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
 FKID004023,ಅಶೋಕ್ ನಗರ ಟ್ರಾಫಿಕ್ ಸಿಗ್ನಲ್ ಲೈಟ್ ಸೂಲೆ ಸರ್ಕಲ್ ಹತ್ತಿರಾ ಒಂದು ದೊಡ್ಡದಾದ ಮರ ಬಿದಿದ್ದು ಅದನ್ನು ತೆರವು ಗೊಳಿಸಲು ಕ್ರೇನ್ ರಸ್ತೆಯಲ್ಲಿ ಇದ್ದು ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದು... ಸಂಚಾರ ನಿದಾನ ಇರುತ್ತದೆ ಸರ್,tree_fall,High,Ashok Nagar,Mysore Road
-FKID004024,"jss signal, 36cross towards [LOCATION] road",road_conditions,Low,Jayanagara,Non-corridor
+FKID004024,"jss signal, 36cross towards [LOCATION] road",pot_holes,Low,Jayanagara,Non-corridor
 FKID004026,ksit signal near [LOCATION] jewellers [PERSON] [LOCATION] out going traffic slow movements,vehicle_breakdown,Low,Thalagattapura,Non-corridor
 FKID004028,start problem,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID004030,starting problem sir,others,High,Kengeri,Mysore Road
 FKID004031,[LOCATION] center median work is going on at [LOCATION] station so that traffic movement will be slow from karthiknagara towards marathhalli and from karthiknagara towards [LOCATION],construction,High,HAL Old Airport,ORR East 2
 FKID004032,traffic slow moment,vehicle_breakdown,High,Cubbon Park,CBD 2
 FKID004034,veerasandra service road near bmtc depo,vehicle_breakdown,Low,Electronic City,Non-corridor
-FKID004035,36 ಕ್ರಾಸ್ ಜಯನಗರ ಕಡೆಯಿಂದ ಜೆ ಎಸ್ ಎಸ್ ಕಡೆ ಬರುವ ಜೆ ಎಸ್ ಎಸ್ ಸಿಗ್ನಲ್ ನಲ್ಲಿ ಮಳೆಯಿಂದ ರಸ್ತೆ ಗುಂಡಿ ಬಿದ್ದಿರುತ್ತದೆ ವಾಹನ ಸವಾರರಿಗೆ [PERSON] ಉಂಟಾಗುತ್ತಿದ್ದು ಅಪಘಾತವಾಗುವ ಸಾಧ್ಯತೆ ಇರುತ್ತದೆ ಸರ್,road_conditions,Low,Banashankari,Non-corridor
+FKID004035,36 ಕ್ರಾಸ್ ಜಯನಗರ ಕಡೆಯಿಂದ ಜೆ ಎಸ್ ಎಸ್ ಕಡೆ ಬರುವ ಜೆ ಎಸ್ ಎಸ್ ಸಿಗ್ನಲ್ ನಲ್ಲಿ ಮಳೆಯಿಂದ ರಸ್ತೆ ಗುಂಡಿ ಬಿದ್ದಿರುತ್ತದೆ ವಾಹನ ಸವಾರರಿಗೆ [PERSON] ಉಂಟಾಗುತ್ತಿದ್ದು ಅಪಘಾತವಾಗುವ ಸಾಧ್ಯತೆ ಇರುತ್ತದೆ ಸರ್,pot_holes,Low,Banashankari,Non-corridor
 FKID004036,bajar street 4th main [PERSON],vehicle_breakdown,Low,Chamarajpet,Non-corridor
 FKID004037,joint cut,vehicle_breakdown,Low,Electronic City,Non-corridor
 FKID004038,srs junction on flyover towards city eicher vehicle off road due to starting problem sir traffic one side moving sir,vehicle_breakdown,High,Peenya,Tumkur Road
@@ -3416,10 +3416,10 @@ FKID004156,[PHONE],pot_holes,Low,Electronic City,Non-corridor
 FKID004157,[PHONE],pot_holes,Low,Electronic City,Non-corridor
 FKID004158,86@8390708,pot_holes,Low,Electronic City,Non-corridor
 FKID004160,[PERSON] jam sir,vehicle_breakdown,High,Kodigehalli,Bellary Road 2
-FKID004161,Protest,protest,Low,No Police Station,Non-corridor
+FKID004161,Protest,vip_movement,Low,No Police Station,Non-corridor
 FKID004162,[PERSON] starring end,vehicle_breakdown,Low,Kengeri,Non-corridor
 FKID004163,Breakdown,vehicle_breakdown,Low,Kengeri,Non-corridor
-FKID004165,Protest,protest,Low,No Police Station,Non-corridor
+FKID004165,Protest,vip_movement,Low,No Police Station,Non-corridor
 FKID004166,DEMO,accident,Low,Halasuru Gate,Non-corridor
 FKID004167,Tree fall traffic slow moment,tree_fall,Low,Bellandur,Non-corridor
 FKID004169,tyre puncture,others,Low,No Police Station,Non-corridor
@@ -3434,7 +3434,7 @@ FKID004181,Airport road towards city HGV vehicle engine break down... Traffic no
 FKID004183,ಐ ಟಿ ಐ ಜಂಕ್ಷನ್ ನಿಂದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ ಜಂಕ್ಷನ್ ಕಡೆಗೆ ವೆಹಿಕಲ್ ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ನಿಂತಿದೆ ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ಸ್ಲೋ ಇದೆ ಸರ್,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004184,[LOCATION] hatra procession,procession,Low,Whitefield,Non-corridor
 FKID004185,[LOCATION] onflyover to wards airport cab tyer bust sir traffic normal mument sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
-FKID004186,[PERSON] sir,road_conditions,Low,Mahadevapura,Non-corridor
+FKID004186,[PERSON] sir,pot_holes,Low,Mahadevapura,Non-corridor
 FKID004187,Near hunasamaranahalli airport main road towards city ksrtc bus tyre blast sir traffic no problem,vehicle_breakdown,High,Chikkajala,Bellary Road 2
 FKID004188,Major unnikrishnan road towards [LOCATION] palya near betterhalli Mahesh PU College,vehicle_breakdown,Low,Yelahanka,Non-corridor
 FKID004189,ನಮಸ್ತೆ ಸರ್ ನಿಯರ್ ಸ್ಟರ್ಲಿಂಗ್ [LOCATION]  ಕಾಡಯರಪ್ಪನಹಳ್ಳಿ ಹತ್ತಿರ ಸ್ವಯಂ ಅಪಘಾತವಾಗಿದ್ದು ಓನ್ಲಿ ವೆಹಿಕಲ್ ಡ್ಯಾಮೇಜ್ ಸಂಚಾರಕ್ಕೆ ಅಡಚಣೆ ಇರುವುದಿಲ್ಲ ವಾಹನವನ್ನು ಠಾಣೆಗೆ ಕಳುಹಿಸಿ ಕೊಡುತ್ತೇನೆ,accident,Low,Chikkajala,Non-corridor
@@ -3442,7 +3442,7 @@ FKID004190,Break down,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004192,Clach plate probkam ph no [PHONE],vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004193,Chikkabanavar traffic police station,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004194,ನಮಸ್ತೆ ಸರ್ ಬೇಗೂರು ಗಾಳಮ್ಮ ಸರ್ಕಲ್ ನಿಂದ ಚಿಕ್ಕನಹಳ್ಳಿಯ ವರೆಗೆ ಬಿ ಎಂ ಆರ್ ಸಿ ಎಲ್ [PERSON] ಅಳವಡಿಕೆ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿದ್ದು  ಸಂಚಾರವು ನಿಧಾನಗತಿಯಲ್ಲಿ ಸಾಗುತ್ತಿರುತ್ತದೆ ಸರ್,construction,Low,Chikkajala,Non-corridor
-FKID004195,Footpath wark,road_conditions,High,Sadashivanagar,Bellary Road 1
+FKID004195,Footpath wark,pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID004198,ಈ ಬಸ್ ತಾಂತ್ರಿಕ [PERSON] ಇಂದ ಕಾಟಮ್ ನಲ್ಲೂರ್ ಬ್ರಿಡ್ಜ್ ಅತ್ತಿರ ಕೆಟ್ಟು ನಿಂತಿರುತ್ತದೆ ಸರ್ ಟ್ರಾಫಿಕ್ slow ಮೂವ್ಮೆಂಟ್ sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004199,Avlahalli upper ramp towards [LOCATION] electric problem,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004200,HGV 's Vehicle oil pipe damage sir,vehicle_breakdown,Low,Devanahalli Airport,Non-corridor
@@ -3510,7 +3510,7 @@ FKID004281,Insufficient fuel,vehicle_breakdown,High,Hebbala,ORR North 1
 FKID004282,Stating prablm,vehicle_breakdown,High,Hennuru,ORR North 1
 FKID004284,"Break jam sir, inform 12th depo mechanic",vehicle_breakdown,High,Kengeri,Mysore Road
 FKID004285,Road work start [LOCATION] towards city sir,construction,Low,No Police Station,Non-corridor
-FKID004286,Road bad condition,road_conditions,Low,Hennuru,Non-corridor
+FKID004286,Road bad condition,pot_holes,Low,Hennuru,Non-corridor
 FKID004287,"[LOCATION] main road, towards munsingh junction",vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID004288,Off-road in [LOCATION] towards airport in service road,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID004289,Vehical brekdown near,vehicle_breakdown,High,Kamakshipalya,Magadi Road
@@ -3554,8 +3554,8 @@ FKID004332,Testing,accident,High,Cubbon Park,CBD 2
 FKID004333,[LOCATION] village main track goods vehicle off-road towards [LOCATION] traffic one side movement,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004334,No problem,pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID004335,K-ride suberbun train construction work progress sir,construction,Low,Yeshwanthpura,Non-corridor
-FKID004336,[PERSON] moment sir,road_conditions,Low,Whitefield,Non-corridor
-FKID004337,[LOCATION] working sir,road_conditions,Low,Hennuru,Non-corridor
+FKID004336,[PERSON] moment sir,pot_holes,Low,Whitefield,Non-corridor
+FKID004337,[LOCATION] working sir,pot_holes,Low,Hennuru,Non-corridor
 FKID004338,Break oil leakage,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID004340,Only Vehicles accident dommasandra towards [LOCATION],accident,Low,No Police Station,Non-corridor
 FKID004341,Only Vehicles accident dommasandra towards [LOCATION],accident,Low,No Police Station,Non-corridor
@@ -3589,7 +3589,7 @@ FKID004377,"Out of state vehicle by mistakenly come challaghatta metro service r
 FKID004378,Technical problem,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004380,ಬ್ಯಾಟರಿ ಬೌನ್ ಆಗಿದೆ ಸಾರ್,others,High,Kodigehalli,Bellary Road 1
 FKID004381,Construction,construction,Low,No Police Station,Non-corridor
-FKID004382,[PERSON] to words gee cross slow moving traffic,road_conditions,Low,Whitefield,Non-corridor
+FKID004382,[PERSON] to words gee cross slow moving traffic,pot_holes,Low,Whitefield,Non-corridor
 FKID004383,Private cab offroaded on ec flyover inbetween gb palya towords bommanahalli due to engine heat,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID004385,ನಮಸ್ತೆ ಸರ್ ತಣಿಸಂದ್ರ ಜಂಕ್ಷನ್ ಟುವಾರ್ಡ್ಸ್ ಹೆಗಡೆ ನಗರ ಕಡೆ ಹೋಗುವ ಮಾರ್ಗದಲ್ಲಿ ಮಿಕ್ಚರ್ ಲಾರಿ ಅಪ್ರೋಡ್ ಆಗಿದ್ದು ಸೈಡಲ್ಲಿ ಹಾಕಿರುತ್ತದೆ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,vehicle_breakdown,High,Hennuru,Hennur Main Road
 FKID004386,ಶ್ರೀ ಗೋಪಾಲಯ್ಯನವರು ಎಂಎಲ್ಎ ಕಾಮಾಕ್ಷಿಪಾಳ್ಯ ರವರಿಂದ ಹಿಂದೂ ಸಮಾಜೋತ್ಸವ ಸುಮಾರು ಸಾವಿರ ಜನ ಕಾರ್ಯಕರ್ತರು ಕಾಮಾಕ್ಷಿಪಾಳ್ಯ ಕೆರೆ ಮೈದಾನ ದಲ್ಲಿ ಸೇರಿರುತ್ತಾರೆ,public_event,High,Kamakshipalya,Magadi Road
@@ -3603,7 +3603,7 @@ FKID004394,Bus off road out going side in front of dananjaya palace vehicle are 
 FKID004395,Diesel emty,vehicle_breakdown,Low,Jalahalli,Non-corridor
 FKID004397,Traffic congestion.slow movement of traffic,congestion,High,Hebbala,Bellary Road 1
 FKID004399,Due to breakdown,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
-FKID004401,Drain water coming to road varthur [PERSON] circle  more potholes traffic slow moving varthur ps towards Varthur varthur kodi. Nd varthur clg towards varthur ps sir,road_conditions,Low,Whitefield,Non-corridor
+FKID004401,Drain water coming to road varthur [PERSON] circle  more potholes traffic slow moving varthur ps towards Varthur varthur kodi. Nd varthur clg towards varthur ps sir,pot_holes,Low,Whitefield,Non-corridor
 FKID004402,Near [LOCATION] vehicle break down,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004403,Towards [LOCATION] sidewall grill work is going on traffic normal moving,construction,Low,No Police Station,Non-corridor
 FKID004404,[PERSON] fly over city towards airport [LOCATION] bus offroad [LOCATION] sir traffic movement slow agide sir,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
@@ -3640,7 +3640,7 @@ FKID004439,Off road due to tyre puncture Towards tumkur chikkabidrakallu under p
 FKID004441,Peenya flyover outgoing [PERSON] turn on flyover new vehicle off road vehicles one side moving towards nelamangala.,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID004442,Car and bus accident on ec flyover towards [LOCATION] sir,vehicle_breakdown,Low,Electronic City,Non-corridor
 FKID004443,Tiear puncher,vehicle_breakdown,Low,Kamakshipalya,Non-corridor
-FKID004444,Drain water coming to road varthur [PERSON] circle both side traffic slow moving nd potholes,road_conditions,Low,Whitefield,Non-corridor
+FKID004444,Drain water coming to road varthur [PERSON] circle both side traffic slow moving nd potholes,pot_holes,Low,Whitefield,Non-corridor
 FKID004445,On fly over,vehicle_breakdown,High,Electronic City,Hosur Road
 FKID004446,LGV vehicle off Road Battarahalli towards hosakote sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004447,ಸ್ಪೇಯ್ಸ್ ಗಾರ್ಡನ್ ಕಡೆಯಿಂದ ಮಾರತಹಳ್ಳಿ ಹೋಗುವ ರಸ್ತೆಯಲ್ಲಿ ಸದರಿ ವಾಹನವು ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ನಿಂತಿರುತ್ತದೆ ಸರ್.,vehicle_breakdown,High,HAL Old Airport,Varthur Road
@@ -3650,11 +3650,11 @@ FKID004450,Tyre blast near [LOCATION],vehicle_breakdown,High,Chikkajala,Bellary 
 FKID004451,ಮೇಡಳ್ಳಿ ಜಂಕ್ಷನ್ ನಿಂದ ಭಟ್ಟರಹಳ್ಳಿ ಜಂಕ್ಷನ್ ಬರುವ ಕಡೆ ವೆಹಿಕಲ್ ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ನಿಂತಿದೆ ಸಾರ್,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004452,Local Festival maddhuramma fair going on. Huge crowd gathering here,others,Low,Bellandur,Non-corridor
 FKID004453,College bus off road starting problem CBI service road traffic no problem,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
-FKID004454,ರಸ್ತೆ ಮೇಲೆ ಆಯಿಲ್ ಸುಮಾರು 300-400 ಉದ್ದಕ್ಕೆ ಚೆಲ್ಲಿದ್ದು ಮಣ್ಣು ಹಾಕಲಾಗಿದ್ದು ಬ್ಯಾರಿಕೇಟ್ ಹಾಕಿ  ಕಾಶನ್ ಟೇಪ್ ಕಟ್ಟಲಾಗಿದೆ,road_conditions,Low,Jnanabharathi,Non-corridor
+FKID004454,ರಸ್ತೆ ಮೇಲೆ ಆಯಿಲ್ ಸುಮಾರು 300-400 ಉದ್ದಕ್ಕೆ ಚೆಲ್ಲಿದ್ದು ಮಣ್ಣು ಹಾಕಲಾಗಿದ್ದು ಬ್ಯಾರಿಕೇಟ್ ಹಾಕಿ  ಕಾಶನ್ ಟೇಪ್ ಕಟ್ಟಲಾಗಿದೆ,pot_holes,Low,Jnanabharathi,Non-corridor
 FKID004455,Vehicle sidge idhe traffic one side movement aagidhe,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
 FKID004456,Diesel empty,others,High,Jalahalli,ORR North 2
 FKID004457,Puncher hagirutthade,vehicle_breakdown,Low,Rajajinagar,Non-corridor
-FKID004458,Near 4th main outgoing side.,road_conditions,High,Sadashivanagar,Bellary Road 1
+FKID004458,Near 4th main outgoing side.,pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID004460,Accident lorry V/s 2 cars only vehicle damage,accident,Low,Kengeri,Non-corridor
 FKID004461,Weekly vegitable market varthur traffic slow moving varthur to gunjur nd gunjur to varthur [PERSON] sir,congestion,Low,Whitefield,Non-corridor
 FKID004462,Accident lorry V/s 2 cars only vehicle damage,accident,Low,Kengeri,Non-corridor
@@ -3680,7 +3680,7 @@ FKID004486,[PERSON] at [PERSON].,public_event,High,High ground,Bellary Road 1
 FKID004487,ನಮಸ್ತೆ ಸರ್ ಹೆಣ್ಣೂರ್ ಬಾಗಲೂರು ಮೇನ್ ರೋಡ್ ವೈಟ್ ಟೈಪಿಂಗ್ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿರುವುದರಿಂದ ಹೆಣ್ಣೂರು ಬಾಗಲೂರು ಮುಖ್ಯ ರಸ್ತೆ ಕೆ ನಾರಾಯಣಪುರದಿಂದ ಗೆದ್ದಲಳ್ಳಿ ಮುಖ್ಯರಸ್ತೆವರೆಗೆ ವೈಟ್ ಟ್ಯಾಪಿಂಗ್ ಕಾಮಗಾರಿ ಸರ್,construction,Low,Hennuru,Non-corridor
 FKID004488,"ನಮಸ್ತೆ ಸರ್ ಥಣಿಸಂದ್ರ ಮೇನ್ ರೋಡ್ , ನಾಗವಾರ ಟುವರ್ಡ್ ತಂಸಂದ್ರ ಅಪೋಸಿತ ಟು ನಾಗವಾರ ಅಪೋಸಿಟ್ ರೋಡ್ ಪ್ರೊಸಿಜರ್ ಹೋಗ್ತಾ ಇದೆ ಒಂದು ಹಿಂದೂ ಮಹಾ ಸಮಾವೇ ತನಿಸಂದ್ರ ಟು ಹವರ್ಸ್ ನಾಗವಾರ ರೋಡ್ ಕ್ಲೋಸ್ ಶದು",procession,High,Hennuru,Hennur Main Road
 FKID004489,ಈ ವಾಹನ ಸಪ್ತಗಿರಿ ಕಲ್ಯಾಣ ಮಂಟಪ ಇಂದ ಬೂದಿಗೆರೆ ಕ್ರಾಸ್ ಹೋಗುವ ಸರ್ವಿಸ್ ರಸ್ತೆಯಲ್ಲಿ ತಾಂತ್ರಿಕ ದೋಷದಿಂದ ಕೆಟ್ಟು ನಿಂತಿರುತ್ತದೆ ಸಂಚಾರಕ್ಕೆ [PERSON] ಇಲ್ಲ ಮೆಕಾನಿಕ್ ಬರುತ್ತಿದ್ದಾರೆ ಇನ್ನೂ ಒಂದು ಗಂಟೆಯಲ್ಲಿ remove [PERSON] sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
-FKID004490,ರಸ್ತೆ ಯಲ್ಲಿ ಕೆಸರು ನೀರು [LOCATION] ಹೆಣ್ಣೂರು ಜಂಕ್ಷನ್ ಗೆ ಹೋಗುವ ವಾಹನಗಳು ಮಂದಗತಿಯಲ್ಲಿ ಇರುತ್ತವೆ.. 🙏,road_conditions,High,Hennuru,Airport New South Road
+FKID004490,ರಸ್ತೆ ಯಲ್ಲಿ ಕೆಸರು ನೀರು [LOCATION] ಹೆಣ್ಣೂರು ಜಂಕ್ಷನ್ ಗೆ ಹೋಗುವ ವಾಹನಗಳು ಮಂದಗತಿಯಲ್ಲಿ ಇರುತ್ತವೆ.. 🙏,pot_holes,High,Hennuru,Airport New South Road
 FKID004492,1feet length 1/2 feet width,pot_holes,Low,Banaswadi,Non-corridor
 FKID004493,Car puncture left side parking,vehicle_breakdown,Low,Devanahalli Airport,Non-corridor
 FKID004494,APSRTC ಬ್ರೇಕ್  ಜಾಮ್ ಆಗಿದ್ದು ಸೈಡ್ ಗೆ ಹಾಕ್ಸಿದ್ದು  ಟ್ರಾಫಿಕ್  ಸ್ಲೋ  ಮೂಮೆಂಟ್ ಇರುತ್ತದೆ  ಇರುತ್ತದೆ,vehicle_breakdown,High,Mahadevapura,ORR North 1
@@ -3699,7 +3699,7 @@ FKID004513,Water tanker breakdown at [LOCATION],vehicle_breakdown,High,Whitefiel
 FKID004514,Vehicle breakdown,vehicle_breakdown,Low,Kodigehalli,Non-corridor
 FKID004515,Weekly vegitable market @varthur traffic slow moving gunjur to varthur [PERSON] nd varthur kodi to gunjur,congestion,Low,Whitefield,Non-corridor
 FKID004517,Slow moving traffic Hopefarm towards Belathur,vehicle_breakdown,Low,Mahadevapura,Non-corridor
-FKID004519,Towards tin factory traffic slove moment,road_conditions,Low,K.R. Pura,Non-corridor
+FKID004519,Towards tin factory traffic slove moment,pot_holes,Low,K.R. Pura,Non-corridor
 FKID004520,Towards in coming TCI on flyover due to diesel [LOCATION],vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004521,Diesel pipe filter damage aagi bus off road agide at sunkadakatte bus stop incoming side sir,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID004523,Ayyappa swami temple [PERSON] pipeline road close sir diversion sub road only cross road sir,others,High,Kamakshipalya,Magadi Road
@@ -3712,13 +3712,13 @@ FKID004530,Accilater cable cut,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID004531,ನಮಸ್ತೆ ಸರ್ ವೈಟ್ ಟ್ಯಾಪಿಂಗ್ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿರುವುದರಿಂದ ಹೆಣ್ಣೂರು ಬಾಗಲೂರು ಮೇನ್ ರೋಡ್ ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟು ಸೋರುತ್ತದೆ,construction,Low,Hennuru,Non-corridor
 FKID004533,Traffic slow movement sir,vehicle_breakdown,Low,Byatarayanapura,Non-corridor
 FKID004534,BMTC bus puncture,vehicle_breakdown,High,Banaswadi,ORR North 1
-FKID004535,Airport taxi drivers protest begur galamma circle to towards airport so trffic slow moment,protest,Low,Chikkajala,Non-corridor
+FKID004535,Airport taxi drivers protest begur galamma circle to towards airport so trffic slow moment,vip_movement,Low,Chikkajala,Non-corridor
 FKID004536,Magadi main road opp samruddi hotel towards bh cross herohalli sunkdakatte sir,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID004537,[LOCATION] towards marathhalli and karthiknagara towards mahadevpura traffic movement will be slow due to metrostation work,construction,High,HAL Old Airport,ORR East 2
 FKID004538,KSRTC,vehicle_breakdown,Low,No Police Station,Non-corridor
 FKID004539,Electric BMTC Bus battery low prablem,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID004540,[PERSON] to palace cross incomeing side,others,High,Sadashivanagar,Bellary Road 1
-FKID004541,Asphalting work in undertaking on hebbal flyover towards airport. Commuters are requested to take service road at  sanjay nagar cross,road_conditions,High,Hebbala,Bellary Road 1
+FKID004541,Asphalting work in undertaking on hebbal flyover towards airport. Commuters are requested to take service road at  sanjay nagar cross,pot_holes,High,Hebbala,Bellary Road 1
 FKID004543,Good evening sir one [LOCATION] cocreate break down hagide traffic slow movement idhe sir,vehicle_breakdown,High,Hennuru,Airport New South Road
 FKID004544,Diesel empty,others,High,Jalahalli,ORR North 2
 FKID004545,ನಮಸ್ತೆ ಸರ್ ನಿಯರ್ ಸಿಂಗರಹಳ್ಳಿ ಗೇಟ್ ಗೇಲ್ ಗ್ಯಾಸ್ ಹತ್ತಿರ ಹುಂಡೈ ಕ್ರೆಟಾ ಮತ್ತು ಇನ್ನೋವ ಕಾರ್ ನಡುವೆ ಅಪಘಾತವಾಗಿದ್ದು ಓನ್ಲಿ ವೆಹಿಕಲ್ ಡ್ಯಾಮೇಜ್ [VEHICLE] vsKA02MF1305,accident,Low,Chikkajala,Non-corridor
@@ -3726,7 +3726,7 @@ FKID004546,Vehicle off-road,vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID004548,[PERSON] ring road towards nagarabavi sir,vehicle_breakdown,Low,Byatarayanapura,Non-corridor
 FKID004549,[LOCATION] road towards [LOCATION] junction,vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID004550,"Hello Sir, this vehicle is parked in front of Adishwar due to a straightening problem, Sir.",vehicle_breakdown,High,HAL Old Airport,ORR East 1
-FKID004551,Vadarpally junction sir,road_conditions,High,Hennuru,Airport New South Road
+FKID004551,Vadarpally junction sir,pot_holes,High,Hennuru,Airport New South Road
 FKID004552,Self accident front wheel cut,accident,High,Bellandur,ORR East 1
 FKID004553,Vehicle break down.,vehicle_breakdown,Low,Jalahalli,Non-corridor
 FKID004554,BMTC bus off road sir,vehicle_breakdown,Low,Mahadevapura,Non-corridor
@@ -3860,7 +3860,7 @@ FKID004700,"Towards rajakumar road, 19th main right 1st block junction sri krish
 FKID004701,Near A23 to wards city eicher vehicle starting problem sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID004702,Brek down,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID004703,ದೇವರ ಉತ್ಸಾಹ,procession,High,Kamakshipalya,Magadi Road
-FKID004704,Towards gottigere from [PERSON],road_conditions,High,Hulimavu,Bannerghata Road
+FKID004704,Towards gottigere from [PERSON],pot_holes,High,Hulimavu,Bannerghata Road
 FKID004706,BWSSB work at [LOCATION] hebbal circle to bhadrapp layout,construction,High,Kodigehalli,ORR North 2
 FKID004707,Anjineya swamy ಬ್ರಹ್ಮರಥೋತ್ಸವ,public_event,Low,Kamakshipalya,Non-corridor
 FKID004708,Vehicle break down agidhe sir,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
@@ -3928,9 +3928,9 @@ FKID004783,"ಗುಡ್ ಮಾರ್ನಿಂಗ್ ಸರ್, ಈ ವಾಹನ
 FKID004784,[LOCATION] towards marathhalli and karthiknagara towards mahadevpura traffic movement will be slow due to metrostation piller work,construction,High,HAL Old Airport,ORR East 2
 FKID004785,Vehicle offroad,vehicle_breakdown,High,Banaswadi,ORR North 1
 FKID004786,Starting problem,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
-FKID004788,Heavy traffic jam this road,road_conditions,Low,K.R. Pura,Non-corridor
+FKID004788,Heavy traffic jam this road,pot_holes,Low,K.R. Pura,Non-corridor
 FKID004789,Air lock,vehicle_breakdown,High,Banaswadi,ORR North 1
-FKID004790,Vehicle sikki hakondidde sir,road_conditions,High,K.G. Halli,ORR North 1
+FKID004790,Vehicle sikki hakondidde sir,pot_holes,High,K.G. Halli,ORR North 1
 FKID004791,Well jam,vehicle_breakdown,High,Hennuru,ORR North 1
 FKID004792,Benniganahalli o.m.road,public_event,High,Banaswadi,ORR North 1
 FKID004793,Near wedia upper ramp towards city hgv vehicle off road due to starting problem sir traffic one side moving sir,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
@@ -3963,7 +3963,7 @@ FKID004825,[PERSON] towards hebbal orr near [LOCATION] truck off road sir,vehicl
 FKID004826,Footpath work going on ballory road near mekhri circle. Traffic slow moment,others,High,Sadashivanagar,Bellary Road 1
 FKID004827,ಸೀಗೆಹಳ್ಳಿ ಮುಖ್ಯರಸ್ತೆ ಯಲ್ಲಿ ಲಾರಿಯ ಹಿಂಬದಿ ಗಾಲಿ ಹುದುಗಿದೆ ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ಸ್ಲೋ ಇದೆ ಸರ್,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID004828,"Cab car accident, left the car, went off, no one is there, traffic moving slow etc...",accident,Low,Electronic City,Non-corridor
-FKID004829,Road bad condition,road_conditions,Low,Rajajinagar,Non-corridor
+FKID004829,Road bad condition,pot_holes,Low,Rajajinagar,Non-corridor
 FKID004830,ಕೃಪಾ ನಿಧಿ ಟುವರ್ಡ್ಸ್ ಎಂಪಿಎಸ್ ಮಾರ್ಕೆಟ್ ರೋಡಲ್ಲಿ [PERSON] ಬಸ್ ನಟ್ ಬೋಲ್ಟ್ ಕಟ್ಟಾಗಿ ಆಪ್ ರೋಡ್ ಆಗಿದ್ದು ಸೈಡಿಗೆ ಹಾಕಿಸಲಾಗಿದ್ದು ಟ್ರಾಫಿಕ್ ಯಾವುದೇ [PERSON] ಇರುವುದಿಲ್ಲ ಸರ್,vehicle_breakdown,High,Madiwala,Hosur Road
 FKID004831,Towards k r pura railway station,vehicle_breakdown,High,Banaswadi,ORR East 2
 FKID004832,[LOCATION] work water papie leakage sir slow moving traffic Hopefarm towards Belathur sir,water_logging,Low,Mahadevapura,Non-corridor
@@ -3972,7 +3972,7 @@ FKID004834,[PERSON] towards devannanapalya tanker vehicle off-road traffic one s
 FKID004835,Towards bel muthyalanagar sir,others,High,Jalahalli,ORR North 2
 FKID004837,[LOCATION] station Main track LCV vehicle off-road towards city traffic one side movement,vehicle_breakdown,Low,Peenya,Non-corridor
 FKID004838,Potholes,pot_holes,Low,Hennuru,
-FKID004839,Bad Road Condition,road_conditions,Low,Pulikeshinagar(F.Town),Non-corridor
+FKID004839,Bad Road Condition,pot_holes,Low,Pulikeshinagar(F.Town),Non-corridor
 FKID004840,BMTC bus break fileur sir,vehicle_breakdown,High,Hennuru,Hennur Main Road
 FKID004841,Yelahanka bypass on flyover towards airport due to tirebrust traffic no problem sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID004842,Due to battery issue,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
@@ -4020,7 +4020,7 @@ FKID004895,Mini lorry got off road due to technical problem at vbb bakery  to wa
 FKID004896,Water logging at CBI upper ramp t w airport.traffic moving little bit slow.it Will Be cleared soon,water_logging,High,Kodigehalli,Bellary Road 1
 FKID004897,ವಿನ್ಸರ್ ಮ್ಯಾನರ್ ಹೋಟೆಲ್ ಜಂಕ್ಷನ್ ದಿಂದ್ ಪಿಜಿ ಹಳ್ಳಿ ಜಂಕ್ಷನ್ ಟ್ರಾಫಿಕ್ ನಿದಾನಗತಿಯಲಿದೆ,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID004898,Starting problem due to cable cut,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
-FKID004899,ರಸ್ತೆ ಮೇಲೆ ಆಯಿಲ್ ಬಿದ್ದಿರುತ್ತದೆ,road_conditions,Low,Jnanabharathi,Non-corridor
+FKID004899,ರಸ್ತೆ ಮೇಲೆ ಆಯಿಲ್ ಬಿದ್ದಿರುತ್ತದೆ,pot_holes,Low,Jnanabharathi,Non-corridor
 FKID004900,6th main outgoing side.,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID004901,[LOCATION] hospital to kogilu amun road [PERSON] sir traffic mument slow sir,procession,Low,Hennuru,Non-corridor
 FKID004902,Kogilu main road to kogilu village vehicle mument slow [PERSON],procession,Low,Yelahanka,Non-corridor
@@ -4047,7 +4047,7 @@ FKID004924,Statng Trouble,others,High,Kodigehalli,Bellary Road 1
 FKID004925,[LOCATION] towards marathhalli and karthiknagara towards mahadevpura traffic movement will be slow due to metrostation piller work,construction,High,HAL Old Airport,ORR East 2
 FKID004926,Water login one side traffic moving sir,water_logging,High,R.T. Nagar,Bellary Road 1
 FKID004927,ವಾಹನ starting problem,vehicle_breakdown,Low,Jnanabharathi,Non-corridor
-FKID004928,Bad road condition due to rain and BBMP garbage vehicle waste products turns into oil leakage from anand nagar under pass to coffee day,road_conditions,High,Kodigehalli,Bellary Road 1
+FKID004928,Bad road condition due to rain and BBMP garbage vehicle waste products turns into oil leakage from anand nagar under pass to coffee day,pot_holes,High,Kodigehalli,Bellary Road 1
 FKID004929,Varthur kodi towards siddapura montion abouve vehical breakdown,vehicle_breakdown,High,Whitefield,Varthur Road
 FKID004930,ಮೂವಿಂಗ್ ಆಗ್ತಾ illa,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID004931,[PERSON],tree_fall,Low,No Police Station,Non-corridor
@@ -4074,7 +4074,7 @@ FKID004958,"BMTC Bus Off-road near Deepa complex due to gear problem, Depot No. 
 FKID004959,[LOCATION] water wall be leaked waterflow onroad thats why traffic slow moving towards kadubeesanahalli,water_logging,High,HAL Old Airport,ORR East 1
 FKID004960,water logging,water_logging,High,Kodigehalli,ORR North 2
 FKID004961,Due to festival purchase  heavy crowd in magadi Main road Sunkadakatte,congestion,High,Kamakshipalya,Magadi Road
-FKID004962,Heavy traffic jam this road,road_conditions,Low,K.R. Pura,Non-corridor
+FKID004962,Heavy traffic jam this road,pot_holes,Low,K.R. Pura,Non-corridor
 FKID004963,Traffic no problem sir,vehicle_breakdown,Low,Jnanabharathi,Non-corridor
 FKID004964,BDA DOWN RAMP TOWARDS B02 JUNCTION SIR,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID004965,Due to diesel problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
@@ -4115,7 +4115,7 @@ FKID005008,BMTC bus upload wheel jam,vehicle_breakdown,Low,Yelahanka,Non-corrido
 FKID005009,[LOCATION] road [LOCATION] towards hebbal on flyover watar logging sir slow moving traffic sir,water_logging,High,Kodigehalli,Bellary Road 1
 FKID005010,"ದೊಡ್ಡಬಳ್ಳಾಪುರ ಮುಖ್ಯ ರಸ್ತೆ , ಪುಟ್ಟೇನಹಳ್ಳಿ ಕೆರೆ ಹತ್ತಿರ ವಾಟರ್ ಲಾಗಿನ್ ಆಗಿದ್ದು ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್",water_logging,Low,Yelahanka,Non-corridor
 FKID005011,ಮರ ಬಿದ್ದಿರುತ್ತದೆ.,tree_fall,Low,Banaswadi,Non-corridor
-FKID005012,Man hole opened in center road near [LOCATION] opp to sigma mall. Traffic movement normal,road_conditions,High,Whitefield,Varthur Road
+FKID005012,Man hole opened in center road near [LOCATION] opp to sigma mall. Traffic movement normal,pot_holes,High,Whitefield,Varthur Road
 FKID005013,Water logging opposite [LOCATION] appartment towards outgoing side vehicle slow moving sir,water_logging,Low,Peenya,Non-corridor
 FKID005014,Vehicle off road near [LOCATION]. Traffic movement very slow,vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID005015,ಗೇರ್ ಬಾಕ್ಸ್ [PERSON] ಆಗಿದೆ,vehicle_breakdown,Low,K.R. Pura,Non-corridor
@@ -4150,7 +4150,7 @@ FKID005046,[LOCATION] towards [LOCATION] and karthiknagara towards marathhalli t
 FKID005047,BWSSB AND KRIDE WORK AT [LOCATION] HEBBAL CIRCLE TO BHADRAPP LAYOUT SIR TRAFFIC MOMENTS SLOW MOVING SIR,construction,High,Kodigehalli,ORR North 2
 FKID005048,Starting problem sir,vehicle_breakdown,Low,K.G. Halli,Non-corridor
 FKID005052,Cement mixer vehicle Right side weel puncher sir,vehicle_breakdown,High,High ground,Bellary Road 1
-FKID005054,PC=19132,road_conditions,High,K.R. Pura,ORR East 2
+FKID005054,PC=19132,pot_holes,High,K.R. Pura,ORR East 2
 FKID005055,bad road,pot_holes,Low,K.S. Layout,Non-corridor
 FKID005056,bad road,pot_holes,Low,K.S. Layout,Non-corridor
 FKID005057,bad road,pot_holes,Low,K.S. Layout,Non-corridor
@@ -4174,7 +4174,7 @@ FKID005077,[PHONE],pot_holes,Low,Electronic City,Non-corridor
 FKID005078,"Lenth-4 ft,width-2ft,depth-.6ft",pot_holes,Low,Madiwala,Non-corridor
 FKID005080,"Lenth-4 ft,depth-0.6ft,width-4ft",pot_holes,Low,Madiwala,Non-corridor
 FKID005081,.... heavy [PERSON] offload varthur bridge towards varthur [PERSON] sir,vehicle_breakdown,Low,Whitefield,Non-corridor
-FKID005082,White tapping,road_conditions,Low,Hennuru,Non-corridor
+FKID005082,White tapping,pot_holes,Low,Hennuru,Non-corridor
 FKID005083,Hgv vehicle breakdown traffic normal moving sir,vehicle_breakdown,High,Banaswadi,ORR North 1
 FKID005085,This vehicle battery problem at IKEA opposite on flyover towards city traffic movement normal sir,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID005086,Path construction at [LOCATION] sir [PERSON] bagalur road,construction,High,Hennuru,Airport New South Road
@@ -4268,7 +4268,7 @@ FKID005191,[LOCATION] towards varthur kodi near varthur [PERSON],pot_holes,High,
 FKID005192,[PERSON] towards medahalli upper ramp traffic no problem sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID005193,Starting problem,others,Low,Mahadevapura,Non-corridor
 FKID005194,Chamber repair sir,pot_holes,Low,Kodigehalli,Non-corridor
-FKID005195,ನಮಸ್ತೆ ಸರ್ ರೈಲ್ವೆ [LOCATION] ಪಾಸ್ ಟುವರ್ಡ್ ಹೆಗಡೆ ನಗರ ಟುವರ್ಡ್ ಜಕ್ಕೂರು ರಸ್ತೆ ರೈಲ್ವೆ ಕಂಬಿಗಳು ಅವುಗಳನ್ನು ವೆಲ್ಡಿಂಗ್ ಮಾಡುವುದರ ಮೂಲಕ ಸರಿ ಮಾಡಲು ಎರಡು ಗಂಟೆಗಳ ಕಾಲ ಕೆಲಸ ನಡೆಯುತ್ತದೆ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಓಪನ್ ಮಾಡುತ್ತೇವೆ ಸರ್ ಯಾವುದೇ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಸಾರ್ ನಮಸ್ತೆ,road_conditions,Low,Hennuru,Non-corridor
+FKID005195,ನಮಸ್ತೆ ಸರ್ ರೈಲ್ವೆ [LOCATION] ಪಾಸ್ ಟುವರ್ಡ್ ಹೆಗಡೆ ನಗರ ಟುವರ್ಡ್ ಜಕ್ಕೂರು ರಸ್ತೆ ರೈಲ್ವೆ ಕಂಬಿಗಳು ಅವುಗಳನ್ನು ವೆಲ್ಡಿಂಗ್ ಮಾಡುವುದರ ಮೂಲಕ ಸರಿ ಮಾಡಲು ಎರಡು ಗಂಟೆಗಳ ಕಾಲ ಕೆಲಸ ನಡೆಯುತ್ತದೆ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಓಪನ್ ಮಾಡುತ್ತೇವೆ ಸರ್ ಯಾವುದೇ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಸಾರ್ ನಮಸ್ತೆ,pot_holes,Low,Hennuru,Non-corridor
 FKID005196,Behind himalaya company back side  makali fire,others,Low,No Police Station,Non-corridor
 FKID005197,Traffic movement is noraml,water_logging,Low,Jayanagara,Non-corridor
 FKID005198,Vehicle breakdown due to starting problem,vehicle_breakdown,High,Hebbala,ORR North 1
@@ -4342,7 +4342,7 @@ FKID005271,[LOCATION] appartment to ETA apartment sir,procession,Low,Magadi Road
 FKID005272,ಸರ್ ನಮಸ್ತೆ ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ ಫ್ಲೈ ಓವರ್ ಟುವರ್ಡ್ ಸಿಟಿ ಒಂದು ಪ್ರೈವೇಟ್ ಸ್ಲೀಪರ್ ಕೋಚ್ ಬಸ್ ವೀಲ್ ಜಾಯಿನ್ ರಾಡ್ ಆಗಿದ್ದು ರಿಪೇರಿ ಮಾಡಲು ಒನ್ ಹವರ್ ಬೇಕಾಗಿದ್ದು ಸಂಚಾರವು ಒಂದು ಸೈಡ್ ಅಲ್ಲಿ ಮೂವ್ ಆಗುತ್ತಿದೆ ಯಾವುದೇ ಅಡಚಣೆ ಇಲ್ಲದೆ ಮೂವಾಗುತ್ತಿದೆ ಪ್ಲೀಸ್ ನೋಟ್ ಸರ್ ಸ್ಥಳ ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ ಫ್ಲೈ ಓವರ್ ಹೊಂಗಸಂದ್ರ ಮೆಟ್ರೋ ಸ್ಟೇಷನ್ ಹತ್ತಿರ ಇದು ಮಡಿವಾಳ ಸಂಚಾರ ಠಾಣೆಗೆ ಬರುತ್ತದೆ,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID005273,ಹಿಂದೂ ಸಮಾಜ್ಯೋತ್ಸವ ಎಂ ಎಲ್ ಎ ಶ್ರೀ ಗೋಪಾಲಯ್ಯ ರವರಿಂದಸುಮಾರು 1000 ಜನ ಕಾರ್ಯಕರ್ತರು ಸೇರಿರುತ್ತಾರೆ 🙏,public_event,High,Kamakshipalya,Magadi Road
 FKID005274,Towards incoming   traffic no problem sir,others,High,Kengeri,Mysore Road
-FKID005276,Cuavery junction to mekhri circle slow vehicle due to bad road condition,road_conditions,High,Sadashivanagar,Bellary Road 1
+FKID005276,Cuavery junction to mekhri circle slow vehicle due to bad road condition,pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID005277,Vehicle starting problem,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID005278,ನಮಸ್ತೆ ಸರ್ lgv ಎಲ್ ಜಿ ವಿ ವೆಹಿಕಲ್ಸ್ ಆರ್ ಡಾನ್ ಬಾಸ್ಕೋ ಸ್ಕೂಲ್ ಕೆ ನಾರಾಯಣಪುರ ಮೇನ್ ರೋಡ್ ಟುವೆರ್ಸ್ ಗುಬ್ಬಿ ಕ್ರಾಸ್ ಕಡೆ ಸರ್ ಸ್ಟೀಲ್ ಕಬ್ಬಿಣದ್ದು ರವಿ ಟ್ವಿಂಕಲ್ ಸರ್ ಲ್‌ಜಿಬಿ ವೆಹಿಕಲ್ ಈ ಕಡೆ ಹೋಗೋದು ಸರ್ ಅದು ಎರಡು ಬ್ಯಾಕ್ಗ್ರೌಂಡ್ ಪಂಚರ್ ಆಗಿ ನಿಂತಿದೆ ಟ್ರಾಫಿಕ್ ಏನ್ ಸಮಸ್ಯೆ ಇಲ್ಲ ಸರ್,vehicle_breakdown,Low,Hennuru,Non-corridor
 FKID005281,[PERSON] cross to ashwathnagra junction traffic slow moment sir only pik Hour sir,construction,Low,Kodigehalli,Non-corridor
@@ -4361,7 +4361,7 @@ FKID005294,ITI Govt Hospital Road Towards Hoskote Road Vechile breekdown Slow Mo
 FKID005295,Good morning sir/madam [PERSON] nagar Bus stop. [LOCATION] cross towards [LOCATION]. Vehicle movement is slow sir.,pot_holes,Low,Yelahanka,Non-corridor
 FKID005296,Vehicle disiel not supple starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID005297,Vehicle breakdown,vehicle_breakdown,High,Banaswadi,ORR East 2
-FKID005317,Good morning sir road is a damaged nearest [LOCATION] layout club towards [LOCATION] layout bus stop to [PERSON] abbakka  ground kade,road_conditions,Low,Rajajinagar,Non-corridor
+FKID005317,Good morning sir road is a damaged nearest [LOCATION] layout club towards [LOCATION] layout bus stop to [PERSON] abbakka  ground kade,pot_holes,Low,Rajajinagar,Non-corridor
 FKID005323,Water leaking in middle of the road at [LOCATION],water_logging,Low,Mahadevapura,Non-corridor
 FKID005324,Potholes,pot_holes,Low,Hulimavu,Non-corridor
 FKID005325,Potholes,pot_holes,Low,Hulimavu,Non-corridor
@@ -4453,7 +4453,7 @@ FKID005432,Due to road repair putting Thar,construction,High,Kamakshipalya,Magad
 FKID005433,Clutch plate problem,vehicle_breakdown,High,Mahadevapura,ORR East 2
 FKID005434,"Good morning sir..
 Near nagenahalli junction from krishtu [PERSON] rods fell on road sir.. Road completely closed from krishtu [PERSON] towards [LOCATION].. 🙏",others,Low,Hennuru,Non-corridor
-FKID005435,[PERSON] nagar bus stop ಹತ್ತಿರ ಗುಂಡಿ ಇರುವುದರಿಂದ ಬಾಗಲೂರು ಕ್ರಾಸ್ ಕಡೆಯಿಂದ ಬಾಗಲೂರು ವಿಲೇಜ್ ಕಡೆಗೆ vehicle moment slow ಇರುತ್ತದೆ ಸರ್,road_conditions,Low,Yelahanka,Non-corridor
+FKID005435,[PERSON] nagar bus stop ಹತ್ತಿರ ಗುಂಡಿ ಇರುವುದರಿಂದ ಬಾಗಲೂರು ಕ್ರಾಸ್ ಕಡೆಯಿಂದ ಬಾಗಲೂರು ವಿಲೇಜ್ ಕಡೆಗೆ vehicle moment slow ಇರುತ್ತದೆ ಸರ್,pot_holes,Low,Yelahanka,Non-corridor
 FKID005436,[LOCATION] towards marathhalli and karthiknagara towards marathhalli traffic movement will be slow due to metrostation work,construction,High,HAL Old Airport,ORR East 2
 FKID005437,Silkboard down ramp towords rupena agrahara busstop bmtc bus offroad traffic normal moving,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID005438,Silkboard dowramp towords rupena agrahara busstop bmtc of road starting promlem traffic normal moving sir,vehicle_breakdown,High,HSR Layout,Hosur Road
@@ -4493,7 +4493,7 @@ FKID005476,Clutch plate cut,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID005477,Chokkasandra on flyover LCV vehicle off-road towards parle toll traffic one side movement,vehicle_breakdown,Low,Chikkabanavara,Non-corridor
 FKID005478,Palahalli gate onflyover to wards airport BBMP lary starting problem sir traffic normal mument sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID005479,[LOCATION] towards hebbal circle car off road,vehicle_breakdown,High,Hebbala,ORR North 1
-FKID005480,Sanitary work or bwwsb late night road diginig and not close total entire chikkasandra to uttarahalli circle worst worst working concerned person is so neglect sir computers and daily police work is so hard take action sir,road_conditions,Low,K.S. Layout,Non-corridor
+FKID005480,Sanitary work or bwwsb late night road diginig and not close total entire chikkasandra to uttarahalli circle worst worst working concerned person is so neglect sir computers and daily police work is so hard take action sir,pot_holes,Low,K.S. Layout,Non-corridor
 FKID005481,Breakdown,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID005482,Breakdown,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID005483,ಸಾಗರಮಂಗಲ ರೋಡ್ನಲ್ಲಿ ಬಿಎಂಟಿಸಿ ಬಸ್ ಬೆಸ್ಕಾಂ ಕಂಬಕ್ಕೆ ಡಿಕ್ಕಿ ಮಾಡಿರುತ್ತದೆ ಸರ್ ಟ್ರಾಫಿಕ್ ಏ ಕೃಷ್ಣಪ್ಪ ಕಡೆಗೆ ಹೆಚ್ಚಿನ ವಾಹನಗಳು ಸಂಚಾರ ಇರುತ್ತದೆ ಸರ್,accident,Low,K.R. Pura,Non-corridor
@@ -4579,7 +4579,7 @@ FKID005580,CBI on flyover towards airport,vehicle_breakdown,High,Kodigehalli,Bel
 FKID005581,Auto back wheel puncture sir,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID005583,Good evening sir Near [LOCATION] Police station opposite towards [PERSON] From side HGV off load Mechanical problem traffic movement normal ede sir r,vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID005584,Milk lorry off-road at om [LOCATION] towards Pai layout,vehicle_breakdown,High,Mahadevapura,ORR North 1
-FKID005585,Debris is not collected since 1 week.,debris,Low,Basavanagudi,Non-corridor
+FKID005585,Debris is not collected since 1 week.,tree_fall,Low,Basavanagudi,Non-corridor
 FKID005586,Normal traffic movement,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID005587,"sir, BWSSB work is in progress sir.",construction,High,Hennuru,Airport New South Road
 FKID005588,BMTC breakdown at tubarahalli jn,vehicle_breakdown,High,Whitefield,Varthur Road
@@ -4597,7 +4597,7 @@ FKID005601,Vedio down ramp towards parle toll traffic one side movement,vehicle_
 FKID005602,Vichel break down,vehicle_breakdown,High,K.S. Layout,ORR West 1
 FKID005603,Diesel pipe broken,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID005604,Now Works is closed sir... [PERSON]'s movement is slow,construction,Low,Thalagattapura,Non-corridor
-FKID005605,Near BIPS school Road construction 🚧,road_conditions,Low,K.S. Layout,Non-corridor
+FKID005605,Near BIPS school Road construction 🚧,pot_holes,Low,K.S. Layout,Non-corridor
 FKID005606,Starting problem,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID005607,Towards city sanjay nagar cross main track,vehicle_breakdown,High,R.T. Nagar,Bellary Road 1
 FKID005608,ನಮಸ್ತೆ ಸರ್..ವಡ್ಡರಪಾಳ್ಯ ಜಂಕ್ಷನ್ ನಲ್ಲಿ BWSSB ವತಿಯಿಂದ ಪೈಪ್ಲ್ಯೆನ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿದೆ..,construction,High,Hennuru,Airport New South Road
@@ -4620,12 +4620,12 @@ FKID005627,ಸಿಮೆಂಟ ರೋಡ ಇರುವದರಿಂದ ಛಡಿಗ
 FKID005628,Depo 34,vehicle_breakdown,Low,J.P. Nagar,Non-corridor
 FKID005629,BWSSB water leakage problem at MSR sir,others,Low,Yeshwanthpura,Non-corridor
 FKID005630,Pathole and water leaking in [LOCATION] mahadevapura,water_logging,Low,Mahadevapura,Non-corridor
-FKID005631,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],debris,High,K.S. Layout,ORR West 1
+FKID005631,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],tree_fall,High,K.S. Layout,ORR West 1
 FKID005632,A23 service road to wrads bagaluru cross BWSSB work sir traffic normal mument sir,others,High,Yelahanka,Bellary Road 2
 FKID005633,Traffic moment slow,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID005634,Test report for testing,public_event,High,Kengeri,Mysore Road
 FKID005635,"Vehicle damaged and tittle injury yo Driver. Vehicles movment is slow,[LOCATION] office towards [LOCATION] toll",accident,Low,Thalagattapura,Non-corridor
-FKID005636,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],debris,High,K.S. Layout,ORR West 1
+FKID005636,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],tree_fall,High,K.S. Layout,ORR West 1
 FKID005637,[LOCATION] towards marathhalli and karthiknagara towards mahadevpura traffic movement will be slow due to metrostation work,construction,High,HAL Old Airport,ORR East 2
 FKID005638,This vehicle breakdown at [LOCATION] road [LOCATION],vehicle_breakdown,Low,Whitefield,Non-corridor
 FKID005639,Roopena agrahar to bommanalli [LOCATION] main road sir...,vehicle_breakdown,High,HSR Layout,Hosur Road
@@ -4642,7 +4642,7 @@ FKID005649,ಪಂಚರ್ ಆಗಿದೆ 10 ಮಿನಿಟ್ ಕ್ಲಿಯ
 FKID005650,Off road,vehicle_breakdown,High,Jalahalli,ORR North 2
 FKID005652,ಬಿಬಿಎಂಪಿ ವತಿಯಿಂದ white tapping ಕಾಮಗಾರಿ ಪ್ರಗತಿಯಲ್ಲಿದೆ..,construction,Low,Hennuru,Non-corridor
 FKID005653,[LOCATION] onflyover to wards airport tempo vehicle tyer bust sir traffic normal mument sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
-FKID005654,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],debris,High,K.S. Layout,ORR West 1
+FKID005654,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],tree_fall,High,K.S. Layout,ORR West 1
 FKID005655,"ಸದರಿ ಟೋಯಿಂಗ್ ವಾಹನ ಗೇರ್ ಸಮಸೆಯಿಂದ ನಿಂತುಕೊಂಡಿದ್ದು ಹೈಗ್ರೌಂಡ್ ಮೂಲಕ ವಿಂಡಸರ್ ಮ್ಯಾನರ್ ಕಡೆಗೆ ಸಾಗುವ ಮಾರ್ಗ ಮದ್ಯ ನಿಂತಿದ್ದು, ವಾಹನ ಸಂಚಾರ ನಿಧಾನಗತಿಯಲ್ಲಿ ಇರುತ್ತದೆ ಸರ್.",vehicle_breakdown,High,High ground,Bellary Road 1
 FKID005656,ವಡ್ಡರಪಾಳ್ಯ ಜಂಕ್ಷನ್ ನಲ್ಲಿ ಲಾರಿ ಪಂಚರಾಗಿರುತ್ತದೆ ಸರ್. ಟ್ರಾಫಿಕ್ ನಿಧಾನ ಗತಿಯಲ್ಲಿರುತ್ತದೆ ಸರ್,construction,High,Hennuru,Airport New South Road
 FKID005657,Vehicle shifted to service road traffic normal moving,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
@@ -4726,7 +4726,7 @@ FKID005794,[LOCATION] church cross road towards Ganesh satkar road sir,pot_holes
 FKID005795,Infront of [PERSON] pot hole got open very dangers to two wheeler vehicles sir,pot_holes,High,Mico Layout,Bannerghata Road
 FKID005800,"One goods vehicle off road from [LOCATION] towards Roopen agrahar sir, due to wheel nutbolt cut sir, vehicle is left side parking, traffic normal movement sir, we will remove soon sir,",vehicle_breakdown,High,Madiwala,Hosur Road
 FKID005801,ರಿಪೇರಿ ಮಾಡಿಸಿಕೊಂಡು ಹೋಗುತ್ತೇವೆ ಎಂದು ತಿಳಿಸಿರುತ್ತಾರೆ sir,vehicle_breakdown,High,Ashok Nagar,Mysore Road
-FKID005802,Full gundi,road_conditions,High,Adugodi,IRR(Thanisandra road)
+FKID005802,Full gundi,pot_holes,High,Adugodi,IRR(Thanisandra road)
 FKID005803,Infront of fashion factory bmtc bus ofroad due to air pipe got broken have left side no problem to traffic from roobi junction to [LOCATION] junction sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID005804,Laxmi hospital opp near royal [LOCATION] incoming side drainage water flow to main road at magadi main road traffic no problem,water_logging,High,Kamakshipalya,Magadi Road
 FKID005805,[PERSON] Ammanavara Brahma Rathotsava,public_event,Low,Jayanagara,Non-corridor
@@ -4866,10 +4866,10 @@ FKID005961,ಬಸ್ ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ವೆಹಿಕ�
 FKID005963,ನಮಸ್ತೆ ಸರ್ ನಾಗವಾರ ಅಕ್ಬರ್ ರಾಮ್ ಟುವರ್ಡ್ ಕೆಇಬಿ ಕಡೆ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,others,High,Hennuru,Hennur Main Road
 FKID005964,Off road,vehicle_breakdown,Low,Rajajinagar,Non-corridor
 FKID005965,[LOCATION] onflyover to wards city tata ace tyer bust sir traffic normal mument sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
-FKID005966,ರಸ್ತೆ ಗುಂಡಿ,road_conditions,Low,Ashok Nagar,Non-corridor
-FKID005967,ರಸ್ತೆ ಗುಂಡಿ,road_conditions,Low,Halasuru Gate,Non-corridor
-FKID005968,ರಸ್ತೆ ಗುಂಡಿ,road_conditions,Low,Halasuru Gate,Non-corridor
-FKID005969,ರಸ್ತೆ ಗುಂಡಿ,road_conditions,Low,Halasuru Gate,Non-corridor
+FKID005966,ರಸ್ತೆ ಗುಂಡಿ,pot_holes,Low,Ashok Nagar,Non-corridor
+FKID005967,ರಸ್ತೆ ಗುಂಡಿ,pot_holes,Low,Halasuru Gate,Non-corridor
+FKID005968,ರಸ್ತೆ ಗುಂಡಿ,pot_holes,Low,Halasuru Gate,Non-corridor
+FKID005969,ರಸ್ತೆ ಗುಂಡಿ,pot_holes,Low,Halasuru Gate,Non-corridor
 FKID005970,Starting problem,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID005972,Ring road both sides closed vehicles moving on  service road due to metro work going on,congestion,High,Banaswadi,ORR North 1
 FKID005974,Starting problem sir near [LOCATION] towards CMTI junction traffic no problem sir,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
@@ -4968,13 +4968,13 @@ FKID006085,Hosur main road nea silk board uppar ramp [LOCATION] working sir.... 
 FKID006086,Near grt tc palya towards city gear box problem,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID006087,Off road near [LOCATION] market towards city starting problem,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID006088,Traffic movement normal,vehicle_breakdown,High,Jeevanbheemanagar,Old Madras Road
-FKID006089,ಸಿಲ್ಕ್ ಬೋರ್ಡ್ ಜಂಕ್ಷನ್ ನಲ್ಲಿ ಮೆಟ್ರೋ ವರ್ಕ್ ನಡೆಯುತ್ತಿರುವುದರಿಂದ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತೆ ಸರ್,road_conditions,High,HSR Layout,ORR East 1
+FKID006089,ಸಿಲ್ಕ್ ಬೋರ್ಡ್ ಜಂಕ್ಷನ್ ನಲ್ಲಿ ಮೆಟ್ರೋ ವರ್ಕ್ ನಡೆಯುತ್ತಿರುವುದರಿಂದ ಟ್ರಾಫಿಕ್ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತೆ ಸರ್,pot_holes,High,HSR Layout,ORR East 1
 FKID006090,Lgv tire puncher sir vehicle mooving normal sir,others,High,HSR Layout,Hosur Road
 FKID006091,ಮೆಟ್ರೋ ವರ್ಕ್ ಸ್ಲೋ ಮೂವ್ಮೆಂಟ್ sir,construction,High,Hennuru,Hennur Main Road
 FKID006092,ವೆಹಿಕಲ್ ಮೂವಿಂಗ್ ಸ್ಲೋ,others,High,Hennuru,ORR North 1
 FKID006093,"Due to engine problem bus break down near deepanjalinagara, [LOCATION] traffic ps limits, it will taken3 mnts to remove from here",vehicle_breakdown,High,Byatarayanapura,West of Chord Road
 FKID006094,Vehicle is side traffic no problem,vehicle_breakdown,High,Byatarayanapura,Mysore Road
-FKID006095,Bad road condition in [LOCATION] bus stop due to pot hole got open so traffic moving slowly from hsbc to [LOCATION] junction sir,road_conditions,High,Mico Layout,Bannerghata Road
+FKID006095,Bad road condition in [LOCATION] bus stop due to pot hole got open so traffic moving slowly from hsbc to [LOCATION] junction sir,pot_holes,High,Mico Layout,Bannerghata Road
 FKID006096,Starting problem near Airforce gate CMTI junction towards goraguntepalya traffic no problem sir,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID006097,[PERSON] sir vehicle slowly moving 15 th cross signal trds R V Dental junction Due to car off road,vehicle_breakdown,High,J.P. Nagar,ORR West 1
 FKID006100,Vehicle  off road due to battery problem,vehicle_breakdown,High,Hennuru,Hennur Main Road
@@ -5089,7 +5089,7 @@ FKID006229,Due to diesel leakage vehicle breakdown,vehicle_breakdown,Low,K.S. La
 FKID006230,Technical problem,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID006231,LGV Breakdown at [LOCATION],vehicle_breakdown,Low,Yelahanka,Non-corridor
 FKID006232,Off road,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
-FKID006233,ರಸ್ತೆಯ ಒಂದು ಬದಿಯಲ್ಲಿ ವಾಹನ ಗಳು ಸಂಚಾರವಾಗುತ್ತಿದ್ದು 4 ಗಂಟೆ ಸಮಯ ಬೇಕಾಗಿರುತ್ತದೆ,road_conditions,High,Sadashivanagar,Bellary Road 1
+FKID006233,ರಸ್ತೆಯ ಒಂದು ಬದಿಯಲ್ಲಿ ವಾಹನ ಗಳು ಸಂಚಾರವಾಗುತ್ತಿದ್ದು 4 ಗಂಟೆ ಸಮಯ ಬೇಕಾಗಿರುತ್ತದೆ,pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID006234,Bus vacuum hogide sir,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID006235,Off road guddadahalli to toll near zudio shop  traffic no problem sir,vehicle_breakdown,High,Magadi Road,Mysore Road
 FKID006236,Off road near zudio show room guddadahalli to toll,vehicle_breakdown,High,Magadi Road,Mysore Road
@@ -5126,7 +5126,7 @@ FKID006269,Peenya flyover outgoing [LOCATION] station on flyover car off road ve
 FKID006270,NHAI WORK @KODIGEHALLI DOWN RAMP TOWARD [LOCATION] SIR,construction,High,Kodigehalli,Bellary Road 1
 FKID006271,ಅಗರ ದಿಂದ 19ನೇ ಮುಖ್ಯರಸ್ತೆಯ ಕಡೆ ಹೋಗುವ  ಸರ್ವಿಸ್ ರಸ್ತೆಯಲ್ಲಿ ವಿದ್ಯುತ್ ಕಂಬ ಬಿದ್ದಿರುವುದರಿಂದ ಸರ್ವಿಸ್ ರಸ್ತೆ ಬಂದ್ ಮಾಡಿರುತ್ತದೆ ಸರ್ 🙏🙏,others,High,HSR Layout,ORR East 1
 FKID006272,ನಮಸ್ತೆ ಸರ್ ವೀರಣ್ಣ ಪಾಳ್ಯ ಡೌನ್ ಟುವಾರ್ಡ್ ನಾಗವಾರ ಕಡೆ ಆಗಿದ್ದು ಯಾವುದೇ ಟ್ರಾಫಿಕ್ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ ಸರ್ ಇರುವುದಿಲ್ಲ,vehicle_breakdown,High,Hennuru,ORR North 1
-FKID006273,Oil leak,road_conditions,High,Cubbon Park,CBD 2
+FKID006273,Oil leak,pot_holes,High,Cubbon Park,CBD 2
 FKID006275,ಪಂಚರ್ ಆಗಿದೆ ಸರ್,others,Low,Halasuru Gate,Non-corridor
 FKID006276,Small accident at queen's junction,accident,High,Cubbon Park,Old Madras Road
 FKID006277,One petrol tanker off road near [LOCATION] office hoodi towords hoodi junction traffic one line moving,vehicle_breakdown,Low,Mahadevapura,Non-corridor
@@ -5173,11 +5173,11 @@ FKID006322,"Vehicle off road near gate number 2, incoming traffic side, [LOCATIO
 FKID006323,Milk truck offroaded on silkboard flyover towords roopen agrahar traffic movement normal sir side ide sir,vehicle_breakdown,High,HSR Layout,ORR East 1
 FKID006325,An autorickshaw got a puncture at Kode Junction and has been pulled over. There will be no traffic problem.,vehicle_breakdown,Low,Chamarajpet,Non-corridor
 FKID006326,KSRTC bus wakum problem,others,High,Yeshwanthpura,Tumkur Road
-FKID006327,Path hole and water leakage,road_conditions,Low,Mahadevapura,Non-corridor
+FKID006327,Path hole and water leakage,pot_holes,Low,Mahadevapura,Non-corridor
 FKID006328,Tyre blast,vehicle_breakdown,High,Sadashivanagar,Tumkur Road
 FKID006329,"Crane offroad near [LOCATION] due to cable problem outgoing side, no problem for vehicle movement.",vehicle_breakdown,Low,Sadashivanagar,Non-corridor
 FKID006330,Drainage hole,others,Low,Mahadevapura,Non-corridor
-FKID006331,"Grill damage at stock 15 underpass [LOCATION] , outgoing side , work in progress and within 1 hour it will be done",road_conditions,High,Sadashivanagar,Bellary Road 1
+FKID006331,"Grill damage at stock 15 underpass [LOCATION] , outgoing side , work in progress and within 1 hour it will be done",pot_holes,High,Sadashivanagar,Bellary Road 1
 FKID006332,ಗೇರ್ ವಕ್೯ ಆಗುತ್ತಿಲ್ಲ.,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID006333,Traffic slow movement ide sir,vehicle_breakdown,Low,Byatarayanapura,Non-corridor
 FKID006334,Wheel lock,vehicle_breakdown,High,Cubbon Park,CBD 2
@@ -5263,7 +5263,7 @@ FKID006422,Car off road on ps onflyover towards parle toll traffic one side move
 FKID006423,Shaft cut aagide,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID006424,bmtc bus break down sir informed to concern buss dipo sir Driver name is [PERSON] no 11 mobile no is [PHONE],vehicle_breakdown,High,City Market,Mysore Road
 FKID006425,Vehicle breakdown sir no problem to traffic movement sir,vehicle_breakdown,High,Halasur,Old Madras Road
-FKID006426,Road work progress  sir,road_conditions,High,Kodigehalli,Bellary Road 1
+FKID006426,Road work progress  sir,pot_holes,High,Kodigehalli,Bellary Road 1
 FKID006427,Tata ace off road infront of LIC building Townhall towards NR,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID006428,Starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 2
 FKID006430,Water leakage with small,water_logging,High,Malleshwaram,West of Chord Road
@@ -5293,7 +5293,7 @@ FKID006457,"Truck offroaded on silkboard flyover towords mps due airlock traffic
 FKID006458,Thar work,pot_holes,High,Kodigehalli,Bellary Road 1
 FKID006459,Horamavu under pass road close [LOCATION] work progress,construction,High,Hennuru,ORR North 1
 FKID006460,Engine problem,vehicle_breakdown,High,Sadashivanagar,Tumkur Road
-FKID006462,ಗ್ಯಾಸ್ ಪೈಪ್ ಲೈನ್ [LOCATION]  ಬ್ಯಾರಿಕೇಡ್ ಹಾಕಿದಿವಿ ಸರ್,road_conditions,High,Byatarayanapura,ORR West 1
+FKID006462,ಗ್ಯಾಸ್ ಪೈಪ್ ಲೈನ್ [LOCATION]  ಬ್ಯಾರಿಕೇಡ್ ಹಾಕಿದಿವಿ ಸರ್,pot_holes,High,Byatarayanapura,ORR West 1
 FKID006463,Traffic normal sir,vehicle_breakdown,High,Magadi Road,Magadi Road
 FKID006464,vehicle offload reg:joint cut,vehicle_breakdown,Low,Jayanagara,Non-corridor
 FKID006465,MPS junction to Ayyappa or sp road junction kadege private bus  tire puncher aagide sir traffic slow moment ide sir,vehicle_breakdown,High,Madiwala,Hosur Road
@@ -5328,8 +5328,8 @@ FKID006502,bmtc bus self accident sir only vehicle damage sir  traffic normally 
 FKID006503,ಸಿಲ್ಕ್ ಬೋರ್ಡ್ ಟುವರ್ಡ್ಸ್ ಎಂಪಿಎಸ್ ಬಸ್ ಸ್ಟಾಪ್ ಹತ್ತಿರ ತಮಿಳುನಾಡು ಗವರ್ನಮೆಂಟ್ ಬಸ್ ಕ್ಲಚ್ ಪ್ಲೆಟ್ ಲಾಕ್ ಆಗಿ ಆಫ್ ರೋಡ್ ಆಗಿದ್ದು ಸೈಡಿಗೆ ಹಾಕಿಸಿರಿತ್ತೇವೆ ಟ್ರಾಪಿಕ್ ಸ್ವಲ್ಪ ಸ್ಲೋ ಮ್ಯೂಮೆಂಟ್ ಇದೆ ಸರ್,vehicle_breakdown,High,Madiwala,Hosur Road
 FKID006504,Bus gare not working sir,vehicle_breakdown,High,Magadi Road,Magadi Road
 FKID006505,Vahical breakdown near govt hospital k r purma to iti sir,vehicle_breakdown,Low,K.R. Pura,Non-corridor
-FKID006506,[LOCATION] working progress going on,road_conditions,High,Hebbala,Bellary Road 1
-FKID006507,Road working progress,road_conditions,High,Hebbala,Bellary Road 1
+FKID006506,[LOCATION] working progress going on,pot_holes,High,Hebbala,Bellary Road 1
+FKID006507,Road working progress,pot_holes,High,Hebbala,Bellary Road 1
 FKID006508,Electric BMTC Bus battery low prablem,vehicle_breakdown,Low,High ground,Mysore Road
 FKID006509,ರಸ್ತೆಯಲ್ಲಿ ಆಯಲ್ ಚಲ್ಲಿದೆ ಸರ್,others,High,Magadi Road,Mysore Road
 FKID006510,Cab offload in old airport road near murugesh palya bus stop towards city,vehicle_breakdown,High,Jeevanbheemanagar,Old Airport Road
@@ -5348,7 +5348,7 @@ FKID006526,Starting prabalm break down,vehicle_breakdown,Low,Halasuru Gate,Non-c
 FKID006527,[VEHICLE] tata lgv vehicle offroad near [LOCATION]. back side axel cut. there is no traffic issue,others,High,Magadi Road,Magadi Road
 FKID006528,[VEHICLE] Tata lgv vehicle offroad near [LOCATION]. reason of back side axel cut. there is no traffic issue,others,High,Magadi Road,Magadi Road
 FKID006530,[LOCATION] road near [LOCATION] offroad due to liner problem sir For more Pls contact me [PHONE] sir,vehicle_breakdown,High,Ashok Nagar,Mysore Road
-FKID006532,[LOCATION] circle to gangnam circle Bad road condition so traffic moving slowly,road_conditions,High,Jalahalli,ORR North 2
+FKID006532,[LOCATION] circle to gangnam circle Bad road condition so traffic moving slowly,pot_holes,High,Jalahalli,ORR North 2
 FKID006533,ವ್ಯಾಕ್ಯೂಮ್ ಖಾಲಿಯಾಗಿದೆ ಸರ್🙏,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID006534,Town hall towrads NR,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID006535,Vehicle starting air problem,vehicle_breakdown,High,Kamakshipalya,Magadi Road
@@ -5411,11 +5411,11 @@ FKID006597,[PERSON] incoming towards city,others,High,Kengeri,Mysore Road
 FKID006599,Due to Joint cut,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID006600,"[PERSON] signal primary phol working and main phol not working,due to Cable damazed by third party",others,High,Adugodi,IRR(Thanisandra road)
 FKID006601,Gear problem srigandakavalu towards sunkadakatte,vehicle_breakdown,High,Kamakshipalya,Magadi Road
-FKID006602,Near veerannapalya [LOCATION],road_conditions,High,K.G. Halli,ORR North 1
+FKID006602,Near veerannapalya [LOCATION],pot_holes,High,K.G. Halli,ORR North 1
 FKID006603,Crane off road horamavu towerds [PERSON] nager vehicle slow moving sir,vehicle_breakdown,High,Banaswadi,ORR North 1
 FKID006604,Hmt toworda stack 15 bmtc bus off load break down,vehicle_breakdown,High,Sadashivanagar,Bellary Road 1
 FKID006606,Town hall towrads market fllyvacar,vehicle_breakdown,High,Halasuru Gate,Mysore Road
-FKID006607,Worst,debris,High,Banashankari,ORR West 1
+FKID006607,Worst,tree_fall,High,Banashankari,ORR West 1
 FKID006609,Clutch plate problem,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID006610,Shivashankar towords Medical College junction One side vehicle moving traffic no problem sir att,vehicle_breakdown,Low,V.V.Puram (C.Pet),Non-corridor
 FKID006611,ಕೆಆರ್ ರಸ್ತೆಯ ಶಿವಶಂಕರ್ ಮತ್ತು ಮೆಡಿಕಲ್ ಕಾಲೇಜ್ ಜಂಕ್ಷನ್  ಮಧ್ಯದ ರಸ್ತೆಯಲ್ಲಿ ರಸ್ತೆದ್ವೀಪದ ಕಂಬವು ಬಿದ್ದಿರುತ್ತದೆ  ಸರ್ ಸಂಚಾರಕ್ಕೆ ತೊಂದರೆಯಾಗುತ್ತಿದೆ ಸರ್,others,Low,V.V.Puram (C.Pet),Non-corridor
@@ -5556,7 +5556,7 @@ FKID006767,Pvt buss off road at [LOCATION] yalahank due to wheel jaam sir,vehicl
 FKID006769,BBMP Garbage removing vehicle movement slow sir,others,Low,Banashankari,Non-corridor
 FKID006771,Fuel drain,vehicle_breakdown,High,Hebbala,Bellary Road 1
 FKID006772,Due to fan belt cut,vehicle_breakdown,High,Magadi Road,Mysore Road
-FKID006773,Old [PERSON] juction ಹತ್ತಿರ ರಸ್ತೆ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿದ್ದು ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ನಿಧಾನ ಗತಿಯಲ್ಲಿರುತ್ತದೆ,road_conditions,Low,High ground,Non-corridor
+FKID006773,Old [PERSON] juction ಹತ್ತಿರ ರಸ್ತೆ ಕಾಮಗಾರಿ ನಡೆಯುತ್ತಿದ್ದು ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ನಿಧಾನ ಗತಿಯಲ್ಲಿರುತ್ತದೆ,pot_holes,Low,High ground,Non-corridor
 FKID006775,Tree fall,tree_fall,Low,Adugodi,Non-corridor
 FKID006776,9th cross twrds Sirsi cricle... traffic slow moment ide sir,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID006778,"[LOCATION] road ನಲ್ಲಿ ಒಂದು LGV ವಾಹನ upset ಆಗಿದ್ದು ಯಾವುದೇ ಪ್ರಾಣಹಾನಿ ಆಗಿರುವುದಿಲ್ಲ.ಸಂಚಾರ ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಿದ್ದು, crane ನಲ್ಲಿ ಪಕ್ಕಕ್ಕೇ ಹಾಕಿಸಲಾಗುವುದು ಸರ್",vehicle_breakdown,High,Ashok Nagar,Mysore Road
@@ -5582,7 +5582,7 @@ FKID006803,Traffic moment slow,others,Low,Byatarayanapura,Non-corridor
 FKID006804,Singal light off,others,High,Hulimavu,Bannerghata Road
 FKID006805,The car Wheel remove body ypr down ramp towards [LOCATION],vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID006806,test,public_event,Low,Halasuru Gate,Non-corridor
-FKID006807,[PERSON],protest,High,Halasuru Gate,Mysore Road
+FKID006807,[PERSON],vip_movement,High,Halasuru Gate,Mysore Road
 FKID006808,demo,vehicle_breakdown,High,Cubbon Park,Mysore Road
 FKID006809,BMTC [VEHICLE] off road sir [PERSON] towards brv link breakdown traffic slow moment sir,vehicle_breakdown,High,Cubbon Park,Old Madras Road
 FKID006810,Wheel problem,others,High,Malleshwaram,West of Chord Road
@@ -5593,7 +5593,7 @@ FKID006814,demo,vehicle_breakdown,High,Halasuru Gate,Mysore Road
 FKID006815,Break down,construction,High,Bellandur,ORR East 1
 FKID006816,Traffic no problem sir.,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID006817,"Vacuum pipe cut ಆಗಿದ್ದು, traffic movement ge yavude ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ.",vehicle_breakdown,High,Halasuru Gate,Mysore Road
-FKID006818,Hoodi circle BWSSB Wark sir,road_conditions,Low,Mahadevapura,Non-corridor
+FKID006818,Hoodi circle BWSSB Wark sir,pot_holes,Low,Mahadevapura,Non-corridor
 FKID006820,Bus offload in old [LOCATION] road near Big bazar juction towards city,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID006821,Bus offload in old [LOCATION] road near Big bazar juction towards city,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID006822,"ಡೀಸೆಲ್ [LOCATION], [PERSON]",others,High,Chamarajpet,Mysore Road
@@ -5618,7 +5618,7 @@ FKID006843,Private bus off road,vehicle_breakdown,High,Rajajinagar,West of Chord
 FKID006846,Potholes,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID006851,bad road,pot_holes,Low,K.S. Layout,Non-corridor
 FKID006852,bad road,pot_holes,Low,K.S. Layout,Non-corridor
-FKID006853,bad road,road_conditions,Low,K.S. Layout,Non-corridor
+FKID006853,bad road,pot_holes,Low,K.S. Layout,Non-corridor
 FKID006854,bad ರೋಡ್,pot_holes,Low,K.S. Layout,Non-corridor
 FKID006855,Potholes,pot_holes,High,Hulimavu,Bannerghata Road
 FKID006856,bad road,pot_holes,Low,K.S. Layout,Non-corridor
@@ -5690,7 +5690,7 @@ FKID006944,Traffic slow moment,vehicle_breakdown,High,Rajajinagar,West of Chord 
 FKID006945,Traffic slow moment,vehicle_breakdown,High,Rajajinagar,West of Chord Road
 FKID006946,KEB work patholes filling work progress sir,pot_holes,High,Yeshwanthpura,Tumkur Road
 FKID006947,Self accident at Jalahalli cross on flyover towards GG palya traffic one side moving sir,accident,High,Chikkabanavara,Tumkur Road
-FKID006948,ಈಜಿಪುರ ಮುಖ್ಯರಸ್ತೆಯಲ್ಲಿ ದೊಡ್ಡದಾದ ಗುಂಡಿ ಬಿದಿದ್ದು ಟ್ರಾಫಿಕ್ ತುಂಬಾ ಸ್ಲೋ ಇರುತ್ತದೆ ಸರ್,road_conditions,Low,Ashok Nagar,Non-corridor
+FKID006948,ಈಜಿಪುರ ಮುಖ್ಯರಸ್ತೆಯಲ್ಲಿ ದೊಡ್ಡದಾದ ಗುಂಡಿ ಬಿದಿದ್ದು ಟ್ರಾಫಿಕ್ ತುಂಬಾ ಸ್ಲೋ ಇರುತ್ತದೆ ಸರ್,pot_holes,Low,Ashok Nagar,Non-corridor
 FKID006950,Starting problem,others,High,Jalahalli,ORR North 2
 FKID006951,Bmtc bus breakdown at [PERSON].,vehicle_breakdown,High,Whitefield,Varthur Road
 FKID006953,ಇದು ಮಡಿವಾಳ ಸಂಸಾರ ಠಾಣಾ ವ್ಯಾಪ್ತಿಗೆ ಬರುತ್ತದೆ ಬಿಎಂಟಿಸಿಯು ವೀಲ್ ಜಾಯಿಂಟ್ ರಾಡ್ ಕಟ್ ಆಗಿದ್ದು ರೆಡಿ ಮಾಡಲು ಮೆಕಾನಿಕ್ ಬಂದಿದ್ದು 30 ನಿಮಿಷ ಆಗುತ್ತದೆ ಎಂದು ತಿಳಿಸಿರುತ್ತಾರೆ. ಆದ್ದರಿಂದ ಸದ್ಯಕ್ಕೆ ಸಂಚಾರಕ್ಕೆ ಯಾವುದೇ ಅಡೆಚಣವಿಲ್ಲದೆ ಒಂದು ಸೈಡಲ್ಲಿ ಟ್ರಾಫಿಕ್ ನಾರ್ಮಲ್ [PERSON] ಆಗುತ್ತಿದ್ದು ಈ ಸ್ಥಳವು ಸಿಲ್ಕ್ ಬೋರ್ಡ್ ಫೈವ್ ಓವರ್ towards [LOCATION] city incoming please note sir,vehicle_breakdown,High,Mico Layout,ORR East 1
@@ -5922,7 +5922,7 @@ FKID007221,BMTC bus puncher &Whell jam,vehicle_breakdown,High,Jnanabharathi,Myso
 FKID007222,[LOCATION] circle [LOCATION] traffic slow moving,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID007223,ಬೆಂಗಳೂರು ಕೇಪೆ ಸರ್ಕಲ್ ರಸ್ತೆ ಮಧ್ಯದಲ್ಲಿ ಬಿಎಂಟಿಸಿ ಅಪ್ಲೋಡ್ ಆಗಿರುತ್ತದೆ ಒಂದೇ ವೆಹಿಕಲ್ ಮೂವ್ಮೆಂಟ್ [PERSON],vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID007224,BTM 29 th main jn to BTM 16 th main between,vehicle_breakdown,Low,Mico Layout,Non-corridor
-FKID007225,Sanitary work tender person not close properly sir,road_conditions,Low,K.S. Layout,Non-corridor
+FKID007225,Sanitary work tender person not close properly sir,pot_holes,Low,K.S. Layout,Non-corridor
 FKID007226,Starting problem,vehicle_breakdown,High,City Market,Mysore Road
 FKID007227,Traffic normal one side moving sir,vehicle_breakdown,Low,Wilson Garden,Non-corridor
 FKID007228,Bmtc bus ofroad sir due to starting problem near people tree hospital [LOCATION] traffic no problem sir,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
@@ -5967,7 +5967,7 @@ FKID007272,Bmtc buss breakdown at CV Raman road near stock 15 jn  depot no :41 k
 FKID007273,Break down sir,vehicle_breakdown,Low,Mahadevapura,Non-corridor
 FKID007274,Bus stopped near [LOCATION] diary exite gate,vehicle_breakdown,Low,Mico Layout,Non-corridor
 FKID007275,Traffic slow,vehicle_breakdown,High,Cubbon Park,CBD 2
-FKID007278,ರಸ್ತೆ ಗುಂಡಿ,road_conditions,Low,Halasuru Gate,Non-corridor
+FKID007278,ರಸ್ತೆ ಗುಂಡಿ,pot_holes,Low,Halasuru Gate,Non-corridor
 FKID007279,There is a pathahole on the road,pot_holes,High,Shivajinagar,CBD 2
 FKID007280,One side traffic movement sir,vehicle_breakdown,Low,Malleshwaram,Non-corridor
 FKID007281,Chokkasandra on flyover ambulance off-road towards city traffic one side movement,vehicle_breakdown,High,Chikkabanavara,Tumkur Road
@@ -5997,7 +5997,7 @@ FKID007319,Starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID007320,Starting problem sir,vehicle_breakdown,Low,Basavanagudi,Non-corridor
 FKID007321,[PERSON] sir,vehicle_breakdown,High,Banaswadi,Old Madras Road
 FKID007322,100ft road towards j cross sir,vehicle_breakdown,High,Peenya,Tumkur Road
-FKID007324,Not close,road_conditions,Low,K.S. Layout,Non-corridor
+FKID007324,Not close,pot_holes,Low,K.S. Layout,Non-corridor
 FKID007325,ಡೀಸೆಲ್ ಖಾಲಿ ಯಾಗಿದೆ ಸರ್,vehicle_breakdown,Low,K.R. Pura,Non-corridor
 FKID007327,Bus off road agide sir near [LOCATION] sir,vehicle_breakdown,Low,Chamarajpet,Non-corridor
 FKID007328,[VEHICLE] Sleeper coach private bus is fall in footpath and  bus is offload in main road in front of [LOCATION] hospital near [PERSON] circle,others,Low,Sheshadripuram,Non-corridor
@@ -6016,11 +6016,11 @@ FKID007344,Sm Circle on flyover car self accident only vehicle off-road towards 
 FKID007345,"Vehicle breakdown, starting problem, incoming side at the entrance of signal, traffic moment slow sir",vehicle_breakdown,High,J.P. Nagar,ORR West 1
 FKID007346,Bmtc bus is off road due to break fail in [PERSON] to [PERSON],vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID007347,This vehicle off road in [LOCATION] Sir [PERSON] no problem Sir,others,High,Byatarayanapura,West of Chord Road
-FKID007349,Uttarahalli main road near nano hospital pwd work progress sir that why traffic slow movement sir,road_conditions,Low,K.S. Layout,Non-corridor
+FKID007349,Uttarahalli main road near nano hospital pwd work progress sir that why traffic slow movement sir,pot_holes,Low,K.S. Layout,Non-corridor
 FKID007350,Traffic movement normal,vehicle_breakdown,High,Jeevanbheemanagar,IRR(Thanisandra road)
 FKID007351,Tree falling at [LOCATION] towards yadiyur meternity hospital jn in one side road blocked sir,tree_fall,Low,Banashankari,Non-corridor
 FKID007353,Vehicle puncher,vehicle_breakdown,High,Banaswadi,ORR North 1
-FKID007354,ಹೆಣ್ಣೂರು [LOCATION] ಪಾಸ್ ಡ್ರ್ಯಾನೇಜ ಕಂಬಿ ಓಪನ್ ಆಗಿದೆ ಸರ್ ಹಾಗಾಗಿ ವಾಹನ ಸಂಚಾರ ನಿಧಾನಗತಿಯಲ್ಲಿರುತ್ತದೆ ಸರ್,road_conditions,High,Hennuru,Airport New South Road
+FKID007354,ಹೆಣ್ಣೂರು [LOCATION] ಪಾಸ್ ಡ್ರ್ಯಾನೇಜ ಕಂಬಿ ಓಪನ್ ಆಗಿದೆ ಸರ್ ಹಾಗಾಗಿ ವಾಹನ ಸಂಚಾರ ನಿಧಾನಗತಿಯಲ್ಲಿರುತ್ತದೆ ಸರ್,pot_holes,High,Hennuru,Airport New South Road
 FKID007355,Starting problem,vehicle_breakdown,Low,Magadi Road,Non-corridor
 FKID007356,Off road,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID007358,Present traffic no problem. Traffic one side moving,vehicle_breakdown,High,Byatarayanapura,Mysore Road
@@ -6070,7 +6070,7 @@ FKID007412,Kode to lulu mall one cren of load near okalipuram bus stop sir traff
 FKID007413,Kode to [PERSON] near [LOCATION] bus stop creen of load sir 30 minits go sir,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID007414,Rm road towards hasmat junction traffic moment normal moving sir,vehicle_breakdown,High,Halasur,Old Madras Road
 FKID007415,"White Topping Work from [LOCATION] to [LOCATION], [LOCATION].",construction,High,K.G. Halli,Hennur Main Road
-FKID007416,Test Demo,protest,High,Cubbon Park,CBD 2
+FKID007416,Test Demo,vip_movement,High,Cubbon Park,CBD 2
 FKID007417,b not 2 to highgrounds starting [PERSON] sir . traffic normal mument sir,vehicle_breakdown,High,High ground,Bellary Road 1
 FKID007418,Wheel jaam,vehicle_breakdown,Low,Halasuru Gate,Non-corridor
 FKID007420,Traffic moving slow,vehicle_breakdown,High,Banashankari,ORR West 1
@@ -6083,7 +6083,7 @@ FKID007427,Gear box problem,vehicle_breakdown,High,Magadi Road,Magadi Road
 FKID007428,"BO2 towards Old High Ground, near 7th Minister Quarters, BBMP.
 Vehicle has been offloaded. Mechanic has arrived and is repairing the vehicle. It will take about 1 hour, sir.",vehicle_breakdown,High,High ground,Bellary Road 1
 FKID007429,Due to starting problem Sir,vehicle_breakdown,High,Jalahalli,ORR North 2
-FKID007430,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],debris,High,Banashankari,ORR West 1
+FKID007430,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ [LOCATION],tree_fall,High,Banashankari,ORR West 1
 FKID007431,Sir A [LOCATION] bus offroad dueto air leakage at sante circle sir.,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID007432,Starting problem,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
 FKID007433,JC nagar PS junction towards CQAL cross jayamahal road bmtc bus break down traffic normal movement sir,vehicle_breakdown,Low,R.T. Nagar,Non-corridor
@@ -6111,7 +6111,7 @@ FKID007457,"HGV Breakdown at Near Raitar Sante under pass towords Kogilu, due to
 FKID007458,ಬ್ರೇಕ್ ಸಮಸ್ಯೆ ಯಾಗಿದೆ ಸರ್,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID007459,Outgoing traffic movement one side movment hogtide,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID007461,[PERSON] nearTowards [PERSON] near this vehicle air problem so offroad side [PERSON] one side slow [PERSON] sir,vehicle_breakdown,Low,Electronic City,Non-corridor
-FKID007462,Due road digging vehicle flowing slow moment,road_conditions,Low,K.S. Layout,Non-corridor
+FKID007462,Due road digging vehicle flowing slow moment,pot_holes,Low,K.S. Layout,Non-corridor
 FKID007463,Infrontof of Mahindra service center lgv off road due to bearing got broken have left side no problem to traffic from hsbc to [LOCATION] junction sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID007464,ರೋಡ್ ಮಧ್ಯ ಭಾಗದಿಂದ ಸೈಡಿಗೆ ಹಾಕಿಸಿ ಏನು [PERSON] ಇಲ್ಲ,others,High,Ashok Nagar,Hosur Road
 FKID007465,In [LOCATION] bus stop bmtc bus off road due to gear box problem have left side no problem to traffic from hsbc to [LOCATION] junction sir,vehicle_breakdown,High,J.P. Nagar,Bannerghata Road
@@ -6162,7 +6162,7 @@ FKID007518,Asr jn to [PERSON] 4th main road ನಲ್ಲಿ HGV [VEHICLE]  ಎ�
 FKID007519,Dhobhighat  towards NPS,vehicle_breakdown,High,Rajajinagar,West of Chord Road
 FKID007520,Due tyre puncture,vehicle_breakdown,High,Pulikeshinagar(F.Town),Airport New South Road
 FKID007521,Starting problem,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
-FKID007523,[LOCATION] [PERSON] Sir,road_conditions,Low,Mahadevapura,Non-corridor
+FKID007523,[LOCATION] [PERSON] Sir,pot_holes,Low,Mahadevapura,Non-corridor
 FKID007524,Pot hole becoming traffic congestion,pot_holes,High,J.P. Nagar,Bannerghata Road
 FKID007525,BWSSB work is in progress near [LOCATION] satkar hotel,construction,High,K.G. Halli,ORR North 1
 FKID007527,Joint problems,vehicle_breakdown,Low,Sheshadripuram,Non-corridor
@@ -6180,7 +6180,7 @@ FKID007543,Hgv vehicle off road agide sir incoming side traffic slow moving ide 
 FKID007544,hgv off road at railwy under pass near yalahanka circle due to batry problem sir. Traffic normrle moment sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
 FKID007545,"Accident near by [PERSON], govindrajnagar.vijayanagar.Eeco star car hit by [PERSON] no casualty .no drinken drive.",accident,Low,Vijayanagara,Non-corridor
 FKID007548,ನಮಸ್ತೆ ಸರ್ ನಾಗವಾರ ಜಂಕ್ಷನ್ ಟುವರ್ಡ್ ವೀರಣ್ಣ ಪಾಳ್ಯ ಸರ್ವಿಸ್ ರಸ್ತೆಯಲ್ಲಿ ಬಿ ಡಬ್ಲ್ಯೂ ಎಸ್ ಎಸ್ ಬಿ ಪೈಪ್ ವರ್ಕ್ ನಡೆಯುತ್ತಿದ್ದು ಟ್ರಾಫಿಕ್ ಲೋ ಮೂವ್ಮೆಂಟ್ ಇರುತ್ತದೆ ಸರ್,others,High,Hennuru,Hennur Main Road
-FKID007550,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ ಎತ್ತಿರುವುದಿಲ್ಲ,debris,High,Banashankari,ORR West 1
+FKID007550,ಕಸ ರಸ್ತೆಯಲ್ಲಿ ಇದೆ ತುಂಬಾ ದಿನಗಳಿಂದ ಎತ್ತಿರುವುದಿಲ್ಲ,tree_fall,High,Banashankari,ORR West 1
 FKID007551,[PERSON] upload near [PERSON] sir no problem for traffic movement sir,vehicle_breakdown,High,Mico Layout,Bannerghata Road
 FKID007552,Jalahalli metro station on flyover car off-road towards city traffic one side movement,vehicle_breakdown,High,Peenya,Tumkur Road
 FKID007553,"ಆಯಿಲ್ ಓಸ್ ಕ್ಲಿಕೇಜ್ ಪ್ರಾಬ್ಲಮ್ ಇಂದ ಶೇಷಾದ್ರಿ ರೋಡ್, ಎಸ್ ಜೆ ಪಿ ಕಾಲೇಜು ಮುಂಭಾಗದಲ್ಲಿ ಅಪ್ಲೋಡ್ ಆಗಿರುತ್ತದೆ ಸರ್, ಬಸ್ ಚಾಲಕರು ಮೆಕಾನಿಕ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಿದ್ದು ಮೆಕ್ಯಾನಿಕ್ ರವರು ಬಂದ ತಕ್ಷಣ ರಿಮೋವ್ವಾಗುತ್ತದೆ ಸರ್  🙏",others,Low,Halasuru Gate,Non-corridor
@@ -6283,7 +6283,7 @@ FKID007672,"Good evening sir, [PERSON] ಶಾಂತಲಾ ಜಂಕ್ಷನ್ 
 FKID007673,Nayandahalli junction incoming side [LOCATION] vehicle starting problem sir traffic no problem,vehicle_breakdown,High,Byatarayanapura,ORR West 1
 FKID007674,ಸಿಗ್ನಲ್ ನಾಟ್ ವರ್ಕಿಂಗ್,others,High,Halasuru Gate,Mysore Road
 FKID007675,[LOCATION] bus off road due to sensor problem,vehicle_breakdown,High,Cubbon Park,Old Madras Road
-FKID007676,ಸರ್ ನಮಸ್ಕಾರ್ ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ BDA ಕಡೆಗೆ BWSSB ಕುಡಿಯುವ ನೀರು ರಸ್ತೆ ಮದ್ಯೆ leakage ಇರುವ ಕಾರಣ ಸಂಚಾರವು ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ ನಿಧಾನವಾಗಿ ಸಾಗುತ್ತಿದೆ ಸರ್ 🙏🙏,road_conditions,High,Adugodi,IRR(Thanisandra road)
+FKID007676,ಸರ್ ನಮಸ್ಕಾರ್ ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ BDA ಕಡೆಗೆ BWSSB ಕುಡಿಯುವ ನೀರು ರಸ್ತೆ ಮದ್ಯೆ leakage ಇರುವ ಕಾರಣ ಸಂಚಾರವು ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ ನಿಧಾನವಾಗಿ ಸಾಗುತ್ತಿದೆ ಸರ್ 🙏🙏,pot_holes,High,Adugodi,IRR(Thanisandra road)
 FKID007677,[PERSON] towards old [LOCATION] TV near hgv vehicles break down left side parking traffic normal,vehicle_breakdown,Low,High ground,Non-corridor
 FKID007678,Car off raod due to starting problem,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID007679,pumcher,vehicle_breakdown,High,Magadi Road,Mysore Road
@@ -6307,10 +6307,10 @@ FKID007700,Cl crs to water tank,vehicle_breakdown,Low,R.T. Nagar,Non-corridor
 FKID007701,"ನಮಸ್ತೆ ಸರ್, ಮಾನ್ಯತಾ ಲೈವ್ ಓವರ್ ಟುವಾರ್ಡ್ಸ್ ಹೆಬ್ಬಾಳ ಫ್ಲೈ ಓವರ್ ಮೇಲೆ ಎರಡು ಪ್ಯಾಸೆಂಜರ್ ಆಟೋ ಮತ್ತು ಒಂದು ಟಾಟಾ ಎಸಿ ಮತ್ತು ಒಂದು ಈಚರ್ ಲಾರಿ ನಾಲ್ಕು ವಾಹನಗಳ ಮಧ್ಯೆ ಅಪಘಾತವಾಗಿದ್ದು ಚೈನ್ ಆಕ್ಸಿಡೆಂಟ್ಆಗಿರುತ್ತದೆ ಸರ್ ಎಲ್ಲಾ ವಾಹನಗಳನ್ನು ಮಧ್ಯ ರಸ್ತೆಯಿಂದ ಶಿಫ್ಟ್ ಮಾಡಿ ಸೈಡಲ್ಲಿ ಹಾಕಿರುತ್ತೇವೆ ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ಆಗುತ್ತಿದೆ ಸರ್ ಎಲ್ಲಾ ವಾಹನಗಳನ್ನು ಠಾಣೆಗೆ ಕಳುಹಿಸಿ ಕೊಡುತ್ತೇನೆ ಸರ್",accident,High,K.G. Halli,ORR North 1
 FKID007702,"ನಮಸ್ತೆ ಸರ್, ಮಾನ್ಯತಾ ಲೈವ್ ಓವರ್ ಟು ಹೆಬ್ಬಾಳ ಟ್ರೈನ್ ಆಕ್ಸಿಡೆಂಟ್ ಆಗಿದ್ದು ಎರಡು ಪ್ಯಾಸೆಂಜರ್ ಆಟೋಗಳು ಒಂದು ಟಾಟಾ ಎಸಿ ಮತ್ತು ಒಂದು ಟೀಚರ್ ಲಾರಿ ನಡುವೆ ಚೈನಾ ಆಕ್ಸಿಡೆಂಟ್ ಆಗಿದ್ದು ಎಲ್ಲಾ ಗಾಡಿಗಳನ್ನು ತೆಗೆಸಿರುತ್ತೇನೆ ಟ್ರಾಫಿಕ್ ಮೂವ್ಮೆಂಟ್ ಆಗುತ್ತಿದೆ ಹೆಬ್ಬಾಳ ಸರ್",accident,High,K.G. Halli,ORR North 1
 FKID007703,ನಮಸ್ತೆ ಸರ್ ಮಾನ್ಯತಾ ಫ್ಲೈ ಓವರ್ ಟುವರ್ಡ್ ಹೆಬ್ಬಾಳ ಫ್ಲೈ ಓವರ್ ಮೇಲೆ ಎರಡು ಪ್ಯಾಸೆಂಜರ್ ಆಟೋಗಳು ಮತ್ತು ಒಂದು ಟಾಟಾ ಎಸಿ ಮತ್ತು ಒಂದು ಟೀಚರ್ ಲಾರಿ ಸರಣಿ ಅಪಘಾತವಾಗಿದ್ದು ಗಳನ್ನು ಈಗಾಗಲೇ ಠಾಣೆಗೆ ಕಳುಹಿಸಿದ್ದು ಟ್ರಾಫಿಕ್ ಮೂಮೆಂಟ್ ಆಗುತ್ತಿದೆ ಸರ್,accident,High,Hennuru,ORR North 1
-FKID007706,In corner places [LOCATION] junction pulakeshinagara traff ps,road_conditions,Low,Pulikeshinagar(F.Town),Non-corridor
+FKID007706,In corner places [LOCATION] junction pulakeshinagara traff ps,pot_holes,Low,Pulikeshinagar(F.Town),Non-corridor
 FKID007707,Cmti jn outgoing ನಲ್ಲಿ [PERSON] ವೆಹಿಕಲ್ ಸೆಂಟರ್ ರಾಡ್ ಕಟ್ ಆಗಿದೆ ಸರ್,vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID007709,"Sir ನಮಸ್ಕಾರ, ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಲಿ ಫ್ಲೈ ಓವರ್ ಕಾಮಗಾರಿ ಪ್ರಗತಿಯಲ್ಲಿದ್ದು, ಅಯ್ಯಪ್ಪ ಜಂಕ್ಷನ್ ಇಂದ BDA ಜಂಕ್ಷನ್ ಗೆ ಚಲಿಸುವ ಸಂಚಾರವು ನಿಧಾಗತಿಯಲ್ಲಿರುತ್ತದೆ ಸರ್ 🙏",construction,High,Adugodi,IRR(Thanisandra road)
-FKID007710,"Oil leakage on Rrmr road only( ,right )one side traffic is moving..e",road_conditions,High,Halasuru Gate,Mysore Road
+FKID007710,"Oil leakage on Rrmr road only( ,right )one side traffic is moving..e",pot_holes,High,Halasuru Gate,Mysore Road
 FKID007711,Accident at yalanka coffee day sir,accident,High,Yelahanka,Bellary Road 2
 FKID007712,Gear box problem sir [PERSON] sunkadakatte out going side sir,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID007713,New car  puncture at coffee day sir,vehicle_breakdown,High,Yelahanka,Bellary Road 2
@@ -6333,7 +6333,7 @@ FKID007731,BWSSB sanitary work going on so only two wheelers are moving,construc
 FKID007732,"Vehicle puncture off road, traffic slow moment sir",vehicle_breakdown,High,Ashok Nagar,Mysore Road
 FKID007734,ಸರ್ ನಮಸ್ತೆElcranic city fly over near [LOCATION] station towards cit tyre blast vehicle not moving sir ready for 30 min please note sir,vehicle_breakdown,High,HSR Layout,Hosur Road
 FKID007735,Bus Breakdown,vehicle_breakdown,High,Banaswadi,Old Madras Road
-FKID007736,Fly over joint miss maching,road_conditions,High,Kodigehalli,Bellary Road 1
+FKID007736,Fly over joint miss maching,pot_holes,High,Kodigehalli,Bellary Road 1
 FKID007737,BMTC Bus off Road sir starting problem to traffic slow sir,others,High,Kamakshipalya,Magadi Road
 FKID007738,Milk van off road,vehicle_breakdown,Low,Adugodi,Non-corridor
 FKID007739,ಅರ್ಧ ಘಂಟೆ ಯಲ್ಲಿ ರೆಡಿ ಮಾಡ್ತಾರೆ ಅಂತಾ ಮಾಹಿತಿ ಇರುತ್ತದೆ ಸರ್,vehicle_breakdown,Low,Adugodi,Non-corridor
@@ -6558,9 +6558,9 @@ FKID007982,Dasarahalli on Flyover incoming said HGV vehicle as puncher. Traffic 
 FKID007983,"Vehicel off road due to clutch plate problem, traffic normal",vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID007984,"ಸರ್ ಶ್ರೀನಿವಾಗಿಲು ಜಂಕ್ಷನ್ ಬಳಿ ಸದರಿ ಗೂಡ್ಸ್ ವಾಹನ ಪೈಪ್ ಜಾಮಾಗಿದೆ ಎಂದು ಸ್ಟಾಟ್ ಆಗುತ್ತಿರುವುದಿಲ್ಲ. ಗಾಡಿ ರಸ್ತೆ ಸೈಡಲ್ಲಿದ್ದು, ಸಂಚಾರಕ್ಕೆ ಯಾವುದೆ ಸಮಸ್ಯೆ ಇರುವುದಿಲ್ಲ, ಸದ್ಯದಲ್ಲಿ ಮ್ಯಾಕಾನಿಕ್ ಬರುತಿದ್ದು, ರಿಪೇರಿ ಮಾಡಿಸಿಕೊಂಡು ಹೋಗುವುದಾಗಿ ವಾಹನ ಚಾಲಕ ತಿಳಿಸಿರುತ್ತಾನೆ ಸರ್.",vehicle_breakdown,High,Ashok Nagar,IRR(Thanisandra road)
 FKID007986,Traffic movement swalpa slow ide sir,vehicle_breakdown,High,Byatarayanapura,Mysore Road
-FKID007987,ಬಿಬಿಎಂಪಿ ಗೇ ಮಾಹಿತಿ ಯನ್ನು ತಿಳಿಸಿರುತ್ತೇವೆ ಸರ್,road_conditions,High,Jeevanbheemanagar,Old Madras Road
-FKID007988,ಬಿಬಿಎಂಪಿ ಅವರಿಗೆ ತಿಳಿಸಿರುವ ಸರ್,road_conditions,High,Jeevanbheemanagar,Old Madras Road
-FKID007989,ಬಿಬಿಎಂಪಿ ಅವರಿಗೆ ತಿಳಿಸಿರುತ್ತೇವೆ ಸರ್,road_conditions,High,Jeevanbheemanagar,Old Madras Road
+FKID007987,ಬಿಬಿಎಂಪಿ ಗೇ ಮಾಹಿತಿ ಯನ್ನು ತಿಳಿಸಿರುತ್ತೇವೆ ಸರ್,pot_holes,High,Jeevanbheemanagar,Old Madras Road
+FKID007988,ಬಿಬಿಎಂಪಿ ಅವರಿಗೆ ತಿಳಿಸಿರುವ ಸರ್,pot_holes,High,Jeevanbheemanagar,Old Madras Road
+FKID007989,ಬಿಬಿಎಂಪಿ ಅವರಿಗೆ ತಿಳಿಸಿರುತ್ತೇವೆ ಸರ್,pot_holes,High,Jeevanbheemanagar,Old Madras Road
 FKID007990,H cross on flyover cab off-road towards city traffic one side movement,vehicle_breakdown,High,Peenya,Tumkur Road
 FKID007991,Public function,public_event,Low,Sheshadripuram,Non-corridor
 FKID007992,Starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 2
@@ -6573,7 +6573,7 @@ FKID007998,Vehicle starting problem. Mechanic on the way traffic no problem sir 
 FKID007999,Starting problem.,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID008001,Starting problem sir,others,High,Shivajinagar,Old Madras Road
 FKID008002,Private bus offroaded on silkboard flyover towords mps due deseal supply problem  traffic movement slow ide sir,vehicle_breakdown,High,Mico Layout,ORR East 1
-FKID008003,Bad road condition,road_conditions,High,Kamakshipalya,Magadi Road
+FKID008003,Bad road condition,pot_holes,High,Kamakshipalya,Magadi Road
 FKID008004,"Good morning sir near [PERSON] man whole cover broken, slow traffic towards  Meyohall junction. No required of road closing sir...🙏",others,High,Ashok Nagar,Old Madras Road
 FKID008005,ಸಣ್ಣ ಮರವನ್ನು ಮರ ಬೀಳುವ ಸಂಭವನತೆದ್ದು ಆದಕಾರಣ ತಾತ್ಕಾಲಿಕವಾಗಿ ಏಟ್ ಮೇನ್ ರೋಡ್ ಕ್ಲೋಸ್ ಮಾಡಲಾಗಿದೆ ಸರ್,tree_fall,Low,High ground,Non-corridor
 FKID008006,ಕಾರು ಫ್ರಂಟ್ ವೀಲ್ ಜಾಯಿಂಟ್ ವಿಲ್ ಕಟ್ ಆಗಿದ್ದು ರಸ್ತೆ ಬಲಭಾಗಕ್ಕೆ ಇರುತ್ತದೆ  ಸ್ವಲ್ಪ ಮಟ್ಟದ ಸ್ಲೋ ಮೊಮೆಂಟ್ ಇರುತ್ತದೆ,vehicle_breakdown,Low,Ashok Nagar,Non-corridor
@@ -6591,16 +6591,16 @@ FKID008017,Wheel bolt problem sir,vehicle_breakdown,High,Yeshwanthpura,Tumkur Ro
 FKID008018,ಸಿಲ್ಕ್ ಬೋರ್ಡ್ ಪ್ಲೇಯರ್ ಮೇಲೆ ಔಟ್ ಗೋಯಿಂಗ್ ಸೈಡ್ ಈ ವಾಹನವು ಬ್ರೇಕ್ ಡೌನ್ ಆಗಿ ರುತ್ತದೆ 20 ನಿಮಿಷದಲ್ಲಿ ಕ್ಲಿಯರ್ ಆಗುತ್ತೆ ಸರ್,vehicle_breakdown,High,Madiwala,ORR East 1
 FKID008019,ಸರ್ ಗುಡ್ ಮಾರ್ನಿಂಗ್ ಸರ್ ದೇವರ ಬಿಸನಹಳ್ಳಿ ಡೌನ್ ರಾಂಪ್ ಟುವರ್ಡ್ಸ್ ಮಾರತಹಳ್ಳಿ ಬ್ರಿಡ್ಜ್ ಈ ಕಾಂಕ್ರೀಟ್ ಮಿಕ್ಸರ್ ವೆಹಿಕಲ್ ಆಗಿರುತ್ತೆ ಸರ ಟೈಯರ್ ಬಸ್ಟ್ ಆಗಿರುತ್ತೆ ಸರ್,vehicle_breakdown,High,HAL Old Airport,ORR East 1
 FKID008020,bmtc bus is breakdown sir,vehicle_breakdown,Low,Upparpet,Non-corridor
-FKID008021,ಸರ್ ನಮಸ್ಕಾರ್ ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ BDA ಕಡೆಗೆ BWSSB ಕುಡಿಯುವ ನೀರು ರಸ್ತೆ ಮದ್ಯೆ  ಸೋರಿಕೆಯನ್ನು ತಡೆಯುವ ಕಾಮಗಾರಿ ಪ್ರಗತಿಯಲ್ಲಿರುವ  ಕಾರಣ ಸಂಚಾರವು ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಕಡೆಯಿಂದ BDA ಜಂಕ್ಷನ್ ಕಡೆಗೆ ಹಾಗೂ [PERSON] ಯಿಂದ BDA ಕಡೆಗೆ ಎಡ ತಿರುವು ಪಡೆಯುವ ಸಂಚಾರವು [LOCATION] ಸಾಗುತ್ತಿದೆ sir 🙏ವ,road_conditions,High,Adugodi,IRR(Thanisandra road)
+FKID008021,ಸರ್ ನಮಸ್ಕಾರ್ ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಇಂದ BDA ಕಡೆಗೆ BWSSB ಕುಡಿಯುವ ನೀರು ರಸ್ತೆ ಮದ್ಯೆ  ಸೋರಿಕೆಯನ್ನು ತಡೆಯುವ ಕಾಮಗಾರಿ ಪ್ರಗತಿಯಲ್ಲಿರುವ  ಕಾರಣ ಸಂಚಾರವು ವಾಟರ್ ಟ್ಯಾಂಕ್ ಜಂಕ್ಷನ್ ಕಡೆಯಿಂದ BDA ಜಂಕ್ಷನ್ ಕಡೆಗೆ ಹಾಗೂ [PERSON] ಯಿಂದ BDA ಕಡೆಗೆ ಎಡ ತಿರುವು ಪಡೆಯುವ ಸಂಚಾರವು [LOCATION] ಸಾಗುತ್ತಿದೆ sir 🙏ವ,pot_holes,High,Adugodi,IRR(Thanisandra road)
 FKID008022,[LOCATION] SIR,vehicle_breakdown,Low,Jayanagara,Non-corridor
 FKID008023,Still ಬಾಪೂಜಿ ನಗರ ಜಂಕ್ಷನ್ incoming side Traffice no problem sir ಸ್ಟ್ರಾಟಿಂಗ್ ಪ್ರಾಬ್ಲಮ್ಆಗಿ ಆದಷ್ಟ್ ಬೇಗ ತಗಿಸಲಾಗುವುದು astram app ನಲ್ಲಿ upaload ಆಗಿದೆ ಸರ್ 🙏,vehicle_breakdown,High,Byatarayanapura,Mysore Road
 FKID008024,Shrigandakavalu junction incoming side hgv off road towards summanahalli,vehicle_breakdown,High,Kamakshipalya,Magadi Road
 FKID008025,gear problem,vehicle_breakdown,High,Chamarajpet,Mysore Road
 FKID008026,Vehicle offroad at swagath ಜಂಕ್ಷನ್ traffic movement normal,vehicle_breakdown,High,Jayanagara,Bannerghata Road
 FKID008028,Nuapatunga road,vehicle_breakdown,Low,Halasuru Gate,Non-corridor
-FKID008029,Slippery road due to oil leakage from 18th cross to [LOCATION],road_conditions,Low,Malleshwaram,Non-corridor
-FKID008030,Slippery road due to oil leakage from 18th to [LOCATION],road_conditions,Low,Malleshwaram,Non-corridor
-FKID008031,Slippery road due to oil leakage from 18th crs to [LOCATION],road_conditions,Low,Malleshwaram,Non-corridor
+FKID008029,Slippery road due to oil leakage from 18th cross to [LOCATION],pot_holes,Low,Malleshwaram,Non-corridor
+FKID008030,Slippery road due to oil leakage from 18th to [LOCATION],pot_holes,Low,Malleshwaram,Non-corridor
+FKID008031,Slippery road due to oil leakage from 18th crs to [LOCATION],pot_holes,Low,Malleshwaram,Non-corridor
 FKID008033,Back wheel axel cut sir,vehicle_breakdown,Low,Adugodi,Non-corridor
 FKID008034,E vehicle diesel [PERSON] sir [PERSON] no 2 incoming side sir,others,High,Byatarayanapura,Mysore Road
 FKID008035,[PERSON] setc bus offroaded on ec flyover towords electronic city near [LOCATION] ide sir,vehicle_breakdown,High,HSR Layout,Hosur Road
@@ -6618,7 +6618,7 @@ FKID008051,Exil joint cut,vehicle_breakdown,Low,Cubbon Park,Non-corridor
 FKID008052,Due to starting problem,vehicle_breakdown,High,Kodigehalli,Bellary Road 1
 FKID008053,[LOCATION] downramp to wards city water logging sir,water_logging,High,Yelahanka,Bellary Road 2
 FKID008054,[PERSON] at [PERSON].,public_event,High,K.S. Layout,ORR West 1
-FKID008055,Towards city near [LOCATION] underpass. Because of [LOCATION] work vehicle moment is slow.,road_conditions,High,Yelahanka,Bellary Road 2
+FKID008055,Towards city near [LOCATION] underpass. Because of [LOCATION] work vehicle moment is slow.,pot_holes,High,Yelahanka,Bellary Road 2
 FKID008056,Signals of agide,others,Low,Chamarajpet,Non-corridor
 FKID008057,Bmtc offroaded in marigowda road tavarekere signal towards dairy,vehicle_breakdown,High,Mico Layout,Hosur Road
 FKID008058,Cab chain accident near [LOCATION] traffic normal moving sir towerds kalyannager,accident,High,Banaswadi,ORR North 1
@@ -6629,7 +6629,7 @@ FKID008065,Vehicles break down,vehicle_breakdown,High,Byatarayanapura,Mysore Roa
 FKID008066,ಲಾರಿ ಗೇರ್ ಬಾಕ್ಸ್ ಪೆಲುವರಾಗಿರುತ್ತದೆ ಸರ್.,others,High,Shivajinagar,CBD 1
 FKID008067,Pot Holes near Water Tank ಜಂಕ್ಷನ್ sir 🙏,pot_holes,High,Adugodi,IRR(Thanisandra road)
 FKID008068,Good morning sir [PERSON] towards KR Puram borewell lorry off road onsite traffic movement is there sir I will remove the vehicle 15 minutes thank you,vehicle_breakdown,High,Hennuru,Hennur Main Road
-FKID008069,Spill of small jelly stones from HGVs transporting construction materials at night,road_conditions,High,Kamakshipalya,Magadi Road
+FKID008069,Spill of small jelly stones from HGVs transporting construction materials at night,pot_holes,High,Kamakshipalya,Magadi Road
 FKID008070,ಬ್ರೇಕ್ ಡೌನ್,vehicle_breakdown,Low,Cubbon Park,Non-corridor
 FKID008071,City incoming side slow moving traffic,vehicle_breakdown,High,Byatarayanapura,West of Chord Road
 FKID008072,College bus break down traffic normal movement sir [PERSON] towards jayamahal [PERSON] gate sir,vehicle_breakdown,Low,R.T. Nagar,Non-corridor
@@ -6639,7 +6639,7 @@ FKID008076,ದೇವರ [PERSON] ಡಿಜಲ ಖಾಲಿ ಆಗಿ ನಿಂ�
 FKID008077,Vehicle break down veerasandra to bommasandra,vehicle_breakdown,Low,Electronic City,Non-corridor
 FKID008078,Tanker vehicle offroad sir [PERSON] palya towards [LOCATION],vehicle_breakdown,High,Yeshwanthpura,Tumkur Road
 FKID008079,NHIA road work @  yelahanka bypass on flyover towards airport sir,construction,High,Yelahanka,Bellary Road 2
-FKID008080,LGV ವಾಹನ ಬಲಗಡೆ ಟೈರ್ ಬಾಲಸ್ಟ್ ಆಗಿದ್ದು ಇನ್ನು [PERSON] ದಲ್ಲಿ ಟೈರ್ ಬದಲಾವಣೆ ಮಾಡಿಕೊಂಡು ಹೋಗುತ್ತೇವೆ ಎಂದು ಹೇಳಿರುತ್ತಾರೆ ಸರ್,protest,High,Halasuru Gate,Mysore Road
+FKID008080,LGV ವಾಹನ ಬಲಗಡೆ ಟೈರ್ ಬಾಲಸ್ಟ್ ಆಗಿದ್ದು ಇನ್ನು [PERSON] ದಲ್ಲಿ ಟೈರ್ ಬದಲಾವಣೆ ಮಾಡಿಕೊಂಡು ಹೋಗುತ್ತೇವೆ ಎಂದು ಹೇಳಿರುತ್ತಾರೆ ಸರ್,vip_movement,High,Halasuru Gate,Mysore Road
 FKID008081,Starting problem,vehicle_breakdown,High,Chikkabanavara,Tumkur Road
 FKID008082,ಗೇರ್ ಪ್ರಾಬ್ಲಮ್ ಸರ್,vehicle_breakdown,Low,Halasur,Non-corridor
 FKID008083,White tapping work Raitar sante towards surabj lagout jakkur road,construction,High,Yelahanka,Bellary Road 2

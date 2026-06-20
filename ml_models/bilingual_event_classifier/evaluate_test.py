@@ -1,5 +1,3 @@
-
-
 import sys
 
 import joblib
@@ -38,7 +36,14 @@ REPORTS = ROOT / "reports"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
+# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
+# 81% confidence) showed it wasn't separating short domain-specific phrases
+# well. mpnet is the same sentence-transformers library/API, just a larger
+# backbone with stronger semantic separation -- no code changes needed
+# beyond this string, only a slower first download (~1GB vs ~120MB) and
+# slightly slower encode time.
+EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
 def embed_test(texts: list[str]) -> np.ndarray:
@@ -99,6 +104,31 @@ def plot_confusion(cm, class_names, title, save_path):
     print(f"  Saved confusion matrix -> {save_path }")
 
 
+def build_augmented_text(df):
+    """
+    FIX 4 (context augmentation): prepend police_station to description
+    before embedding.
+
+    WHY: short inputs like "CM Arrival" or "Debris" carry almost no signal
+    on their own -- the live test showed "CM Arrival" misclassified as
+    vehicle_breakdown at 81% confidence. Adding the police_station name
+    (e.g. "Cubbon Park: CM Arrival") gives the embedding model genuine
+    extra context to work with, since certain stations correlate strongly
+    with certain event types in this data (VIP movement events cluster
+    near government-area stations, water_logging near low-lying areas).
+
+    Falls back to description alone if police_station is missing, so this
+    never crashes on incomplete rows.
+    """
+    if "police_station" in df.columns:
+        station = df["police_station"].fillna("").astype(str).str.strip()
+        desc = df["description"].fillna("").astype(str).str.strip()
+        combined = station.where(station == "", station + ": " + desc)
+        combined = combined.where(station != "", desc)
+        return combined.tolist()
+    return df["description"].tolist()
+
+
 def main():
 
     print(f"[evaluate] Reading test CSV: {TEST_CSV }")
@@ -121,7 +151,7 @@ def main():
 
     y_priority = priority_le.transform(test_df["priority"].tolist())
 
-    X_test = embed_test(test_df["description"].tolist())
+    X_test = embed_test(build_augmented_text(test_df))  # FIX 4: station-prefixed text
 
     cause_clf = joblib.load(MODELS_DIR / "cause_classifier.joblib")
 

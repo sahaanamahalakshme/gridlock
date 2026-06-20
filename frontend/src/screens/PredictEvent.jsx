@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { mockPredictEvent } from '../mockData';
 import { colors, typography, cards, buttons } from '../styles/globals';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
 export default function PredictEvent({ initialData }) {
   // Form state
@@ -13,9 +14,7 @@ export default function PredictEvent({ initialData }) {
   // Handle pre-fill from Hotspot Map Drawer
   useEffect(() => {
     if (initialData) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (initialData.corridor) setCorridor(initialData.corridor);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (initialData.policeStation) setPoliceStation(initialData.policeStation);
     }
   }, [initialData]);
@@ -27,7 +26,7 @@ export default function PredictEvent({ initialData }) {
   // Scenarios State
   const [savedScenarios, setSavedScenarios] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setUiState('loading');
     setResult(null);
@@ -40,10 +39,43 @@ export default function PredictEvent({ initialData }) {
       description
     };
 
-    mockPredictEvent(formData).then((data) => {
-      setResult({ ...data, _formData: formData });
+    try {
+      const res = await fetch(`${API_BASE}/events/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          description: formData.description || `Event of type ${formData.event_cause}`,
+          corridor: formData.corridor,
+          police_station: formData.police_station,
+          requires_road_closure: formData.requires_road_closure,
+          latitude: 12.9716, // Default for prediction UI
+          longitude: 77.5946,
+          event_type: 'planned'
+        })
+      });
+      const data = await res.json();
+      
+      const resEst = data.resolution_estimate || {};
+      const bestMatch = (data.text_similar_reports && data.text_similar_reports.length > 0) 
+        ? data.text_similar_reports[0] 
+        : (data.precedent && data.precedent.matches && data.precedent.matches.length > 0)
+          ? data.precedent.matches[0]
+          : null;
+
+      setResult({
+        matched_event_id: bestMatch ? `EVT-${bestMatch.id}` : 'N/A',
+        matched_description: bestMatch ? bestMatch.description : 'No similar historical event found',
+        predicted_minutes: resEst.predicted_minutes || 0,
+        confidence_band: resEst.confidence_band || 'N/A',
+        manpower_tier: resEst.manpower_tier || 'N/A',
+        explanation: resEst.explanation || 'No explanation available',
+        _formData: formData
+      });
       setUiState('result');
-    });
+    } catch (err) {
+      console.error(err);
+      setUiState('default');
+    }
   };
 
   const handleSaveScenario = () => {
@@ -60,16 +92,17 @@ export default function PredictEvent({ initialData }) {
   ];
 
   const corridors = [
-    'CBD 1', 'CBD 2', 'ORR East 1', 'ORR East 2', 'ORR West 1',
-    'ORR West 2', 'Mysore Road', 'Old Madras Road', 'Hosur Road',
-    'Tumkur Road', 'Bellary Road', 'Bannerghatta Road', 'Sarjapura Road',
-    'Non-corridor'
+    'Airport New South Road', 'Bannerghata Road', 'Bellary Road 1', 'Bellary Road 2', 
+    'CBD 1', 'CBD 2', 'Hennur Main Road', 'Hosur Road', 'IRR(Thanisandra road)', 
+    'Magadi Road', 'Mysore Road', 'ORR East 1', 'ORR East 2', 'ORR North 1', 
+    'ORR North 2', 'ORR West 1', 'Old Airport Road', 'Old Madras Road', 'Tumkur Road', 
+    'Varthur Road', 'West of Chord Road'
   ];
 
   const causes = [
     'public_event', 'procession', 'vip_movement', 'construction',
-    'protest', 'vehicle_breakdown', 'accident', 'water_logging',
-    'tree_fall', 'road_conditions', 'congestion'
+    'vehicle_breakdown', 'accident', 'water_logging',
+    'tree_fall', 'pot_holes', 'congestion'
   ];
 
   return (

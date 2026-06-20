@@ -1,4 +1,3 @@
-
 import sys
 
 import joblib
@@ -16,6 +15,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 
 from sklearn.metrics import classification_report, accuracy_score
+from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
+from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
 
 from sentence_transformers import SentenceTransformer
 
@@ -30,7 +31,14 @@ MODELS_DIR = ROOT / "models"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
+# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
+# 81% confidence) showed it wasn't separating short domain-specific phrases
+# well. mpnet is the same sentence-transformers library/API, just a larger
+# backbone with stronger semantic separation -- no code changes needed
+# beyond this string, only a slower first download (~1GB vs ~120MB) and
+# slightly slower encode time.
+EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
 LR_C = 4.0
@@ -54,6 +62,33 @@ def embed(
         convert_to_numpy=True,
         normalize_embeddings=True,
     )
+
+
+def oversample(X, y, label):
+    """
+    FIX 3: Oversample minority classes BEFORE fitting the classifier.
+
+    WHY THIS IS NEEDED ON TOP OF class_weight="balanced":
+    class_weight reweights the LOSS function, but it cannot create new
+    information -- a class with 30 samples is still only 30 distinct
+    points in embedding space, no matter how heavily its errors are
+    penalized. The confusion matrix showed several classes (vip_movement,
+    debris, protest) at 0.00 recall even WITH balanced weighting, which
+    means the decision boundary genuinely never carves out space for them.
+
+    RandomOverSampler duplicates minority-class embedding vectors until
+    every class matches the largest class's count. This directly forces
+    the classifier to pay attention to minority classes while fitting,
+    not just during loss-weighted scoring.
+    """
+    before_counts = pd.Series(y).value_counts().to_dict()
+    ros = RandomOverSampler(random_state=RANDOM_SEED)
+    X_resampled, y_resampled = ros.fit_resample(X, y)
+    after_counts = pd.Series(y_resampled).value_counts().to_dict()
+    print(f"\n[train] Oversampling '{label}': {len(y):,} -> {len(y_resampled):,} rows")
+    print(f"  Before (min/max class count): {min(before_counts.values())} / {max(before_counts.values())}")
+    print(f"  After  (min/max class count): {min(after_counts.values())} / {max(after_counts.values())}")
+    return X_resampled, y_resampled
 
 
 def train_classifier(X: np.ndarray, y: np.ndarray, label: str) -> LogisticRegression:
@@ -82,6 +117,31 @@ def train_classifier(X: np.ndarray, y: np.ndarray, label: str) -> LogisticRegres
     return clf
 
 
+def build_augmented_text(df):
+    """
+    FIX 4 (context augmentation): prepend police_station to description
+    before embedding.
+
+    WHY: short inputs like "CM Arrival" or "Debris" carry almost no signal
+    on their own -- the live test showed "CM Arrival" misclassified as
+    vehicle_breakdown at 81% confidence. Adding the police_station name
+    (e.g. "Cubbon Park: CM Arrival") gives the embedding model genuine
+    extra context to work with, since certain stations correlate strongly
+    with certain event types in this data (VIP movement events cluster
+    near government-area stations, water_logging near low-lying areas).
+
+    Falls back to description alone if police_station is missing, so this
+    never crashes on incomplete rows.
+    """
+    if "police_station" in df.columns:
+        station = df["police_station"].fillna("").astype(str).str.strip()
+        desc = df["description"].fillna("").astype(str).str.strip()
+        combined = station.where(station == "", station + ": " + desc)
+        combined = combined.where(station != "", desc)
+        return combined.tolist()
+    return df["description"].tolist()
+
+
 def main():
 
     print(f"[train] Reading: {TRAIN_CSV }")
@@ -96,7 +156,7 @@ def main():
 
     print(f"[train] Loaded {len (df ):,} training rows")
 
-    texts = df["description"].tolist()
+    texts = build_augmented_text(df)  # FIX 4: station-prefixed text
 
     cause_labels = df["event_cause"].tolist()
 
@@ -142,9 +202,11 @@ def main():
 
     print(f"\n[train] priority classes: {priority_le .classes_ }")
 
-    cause_clf = train_classifier(X_train, y_cause, "event_cause")
+    X_train_cause_os, y_cause_os = oversample(X_train, y_cause, "event_cause")
+    cause_clf = train_classifier(X_train_cause_os, y_cause_os, "event_cause")
 
-    priority_clf = train_classifier(X_train, y_priority, "priority")
+    X_train_prio_os, y_priority_os = oversample(X_train, y_priority, "priority")
+    priority_clf = train_classifier(X_train_prio_os, y_priority_os, "priority")
 
     joblib.dump(cause_clf, MODELS_DIR / "cause_classifier.joblib")
 

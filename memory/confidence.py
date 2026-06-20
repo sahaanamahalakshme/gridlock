@@ -1,6 +1,6 @@
 from sqlalchemy import func
 from sqlalchemy.orm import Session
-from models import Event
+from memory.models import Event
 
 LOW_PRECEDENT_THRESHOLD = 5  # NEW
 

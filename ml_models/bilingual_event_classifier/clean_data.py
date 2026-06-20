@@ -28,7 +28,13 @@ def _find_raw_csv() -> Path:
 RAW_CSV = _find_raw_csv()
 
 
-MIN_CLASS_SIZE = 10
+# FIX 1b: raised from 10 -> 25. WHY: with class_weight="balanced", a class
+# with only 10-15 samples gets upweighted heavily in the loss, but there isn't
+# enough linguistic variety in 10 samples for the embedding classifier to
+# generalize -- it just memorizes exact phrasings. Raising the floor means
+# every surviving class has enough samples to show real vocabulary variation
+# across train/val/test splits.
+MIN_CLASS_SIZE = 25
 
 JUNK_CHAR_LEN = 3
 
@@ -39,6 +45,25 @@ CAUSE_NORMALIZE = {
     "fog_/_low_visibility": "fog_low_visibility",
     "VIP Movement": "vip_movement",
     "Vip Movement": "vip_movement",
+
+    # ── FIX 1: merge near-duplicate / extremely thin classes ──────────────────
+    # WHY: confusion-matrix evidence showed debris (3 test samples), protest
+    # (2 test samples) and road_conditions (frequently confused with
+    # pot_holes/construction, weak recall) had too few examples to ever be
+    # learnable, and were dragging macro-F1 down without adding real signal.
+    # Folding them into the closest conceptual neighbor gives each merged
+    # class enough support to actually be learned.
+    "debris":          "tree_fall",        # road obstruction, same downstream handling
+    "protest":         "vip_movement",     # both are crowd/security-driven road closures
+    "road_conditions": "pot_holes",        # heavy semantic overlap in your data already
+}
+
+# IMPORTANT: this second pass runs AFTER normalize_cause() lowercases/underscores
+# the raw value, so it catches merges regardless of how the raw CSV spelled them.
+POST_NORMALIZE_MERGE = {
+    "debris":          "tree_fall",
+    "protest":         "vip_movement",
+    "road_conditions": "pot_holes",
 }
 
 
@@ -142,6 +167,13 @@ def main():
         )
 
     df["event_cause"] = df["event_cause"].apply(normalize_cause)
+
+    # ── FIX 1 (cont.): apply the thin-class merge AFTER normalization ─────────
+    before_merge_classes = df["event_cause"].nunique()
+    df["event_cause"] = df["event_cause"].replace(POST_NORMALIZE_MERGE)
+    after_merge_classes = df["event_cause"].nunique()
+    print(f"[clean_data] Merged thin classes: {before_merge_classes} -> {after_merge_classes} unique causes")
+    print(f"[clean_data] Merge map applied: {POST_NORMALIZE_MERGE}")
 
     cause_counts = df["event_cause"].value_counts()
 

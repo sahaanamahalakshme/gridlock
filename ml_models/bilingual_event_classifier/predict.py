@@ -15,7 +15,14 @@ ROOT = Path(__file__).resolve().parent
 MODELS_DIR = ROOT / "models"
 
 
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
+# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
+# 81% confidence) showed it wasn't separating short domain-specific phrases
+# well. mpnet is the same sentence-transformers library/API, just a larger
+# backbone with stronger semantic separation -- no code changes needed
+# beyond this string, only a slower first download (~1GB vs ~120MB) and
+# slightly slower encode time.
+EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -70,7 +77,16 @@ def _load_models() -> dict:
     return _models
 
 
-def classify(description: str) -> dict:
+def classify(description: str, police_station: str = "") -> dict:
+    """
+    FIX 4: now accepts an optional police_station to match the
+    station-prefixed text the model was TRAINED on (see build_augmented_text
+    in train_model.py). If Person B's /classify endpoint has the station
+    available (e.g. from the officer's logged-in precinct, or a station
+    picker on the form), pass it here for best accuracy. Falls back
+    gracefully to description-only if not provided -- the model still
+    works, just with less context than during training.
+    """
 
     if not description or not description.strip():
 
@@ -85,8 +101,11 @@ def classify(description: str) -> dict:
 
     m = _load_models()
 
+    station = (police_station or "").strip()
+    text_for_model = f"{station}: {description.strip()}" if station else description.strip()
+
     embedding = m["encoder"].encode(
-        [description.strip()],
+        [text_for_model],
         convert_to_numpy=True,
         normalize_embeddings=True,
     )

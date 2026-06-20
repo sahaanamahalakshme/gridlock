@@ -1,4 +1,3 @@
-
 import sys
 
 import joblib
@@ -24,6 +23,7 @@ from sklearn.metrics import (
 )
 
 from sentence_transformers import SentenceTransformer
+from imblearn.over_sampling import RandomOverSampler  # FIX 3: oversampling
 
 
 ROOT = Path(__file__).resolve().parent
@@ -38,7 +38,14 @@ REPORTS = ROOT / "reports"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+# FIX 4: swapped from MiniLM -> mpnet. WHY: MiniLM is a smaller, faster but
+# weaker multilingual model. Evidence ("CM Arrival" -> vehicle_breakdown at
+# 81% confidence) showed it wasn't separating short domain-specific phrases
+# well. mpnet is the same sentence-transformers library/API, just a larger
+# backbone with stronger semantic separation -- no code changes needed
+# beyond this string, only a slower first download (~1GB vs ~120MB) and
+# slightly slower encode time.
+EMBEDDING_MODEL = "paraphrase-multilingual-mpnet-base-v2"
 
 RANDOM_SEED = 42
 
@@ -86,6 +93,17 @@ def load_train_embeddings() -> np.ndarray:
         sys.exit(1)
 
     return np.load(path)
+
+
+def oversample(X, y, label):
+    """FIX 3: same oversampling logic as train_model.py -- applied before
+    EVERY model in the sweep, so the comparison between C values / SVC stays
+    apples-to-apples with the imbalance-corrected training data, not the raw
+    imbalanced data the original sweep used."""
+    ros = RandomOverSampler(random_state=RANDOM_SEED)
+    X_resampled, y_resampled = ros.fit_resample(X, y)
+    print(f"[validate] Oversampled '{label}' for tuning: {len(y):,} -> {len(y_resampled):,} rows")
+    return X_resampled, y_resampled
 
 
 def sweep_lr(X_train, y_train, X_val, y_val, label: str) -> tuple:
@@ -143,6 +161,31 @@ def try_svc(X_train, y_train, X_val, y_val, label: str):
     return score, svc
 
 
+def build_augmented_text(df):
+    """
+    FIX 4 (context augmentation): prepend police_station to description
+    before embedding.
+
+    WHY: short inputs like "CM Arrival" or "Debris" carry almost no signal
+    on their own -- the live test showed "CM Arrival" misclassified as
+    vehicle_breakdown at 81% confidence. Adding the police_station name
+    (e.g. "Cubbon Park: CM Arrival") gives the embedding model genuine
+    extra context to work with, since certain stations correlate strongly
+    with certain event types in this data (VIP movement events cluster
+    near government-area stations, water_logging near low-lying areas).
+
+    Falls back to description alone if police_station is missing, so this
+    never crashes on incomplete rows.
+    """
+    if "police_station" in df.columns:
+        station = df["police_station"].fillna("").astype(str).str.strip()
+        desc = df["description"].fillna("").astype(str).str.strip()
+        combined = station.where(station == "", station + ": " + desc)
+        combined = combined.where(station != "", desc)
+        return combined.tolist()
+    return df["description"].tolist()
+
+
 def main():
 
     print(f"[validate] Reading val CSV: {VAL_CSV }")
@@ -167,7 +210,7 @@ def main():
 
     X_train = load_train_embeddings()
 
-    X_val = embed_val(val_df["description"].tolist())
+    X_val = embed_val(build_augmented_text(val_df))  # FIX 4: station-prefixed text
 
     train_df = pd.read_csv(ROOT / "data" / "splits" / "train.csv")
 
@@ -191,12 +234,14 @@ def main():
 
     print(f"\n[validate] Default model (C=4.0) val macro-F1: {default_score :.4f}")
 
+    X_train_cause_os, y_cause_train_os = oversample(X_train, y_cause_train, "event_cause")
+
     best_c_cause, best_lr_score_cause, best_lr_cause = sweep_lr(
-        X_train, y_cause_train, X_val, y_cause_val, "event_cause"
+        X_train_cause_os, y_cause_train_os, X_val, y_cause_val, "event_cause"
     )
 
     svc_score_cause, svc_cause = try_svc(
-        X_train, y_cause_train, X_val, y_cause_val, "event_cause"
+        X_train_cause_os, y_cause_train_os, X_val, y_cause_val, "event_cause"
     )
 
     if svc_score_cause > best_lr_score_cause:
@@ -254,12 +299,14 @@ def main():
 
     print(f"\n[validate] Default model (C=4.0) val macro-F1: {default_prio_score :.4f}")
 
+    X_train_prio_os, y_priority_train_os = oversample(X_train, y_priority_train, "priority")
+
     best_c_prio, best_lr_score_prio, best_lr_prio = sweep_lr(
-        X_train, y_priority_train, X_val, y_priority_val, "priority"
+        X_train_prio_os, y_priority_train_os, X_val, y_priority_val, "priority"
     )
 
     svc_score_prio, svc_prio = try_svc(
-        X_train, y_priority_train, X_val, y_priority_val, "priority"
+        X_train_prio_os, y_priority_train_os, X_val, y_priority_val, "priority"
     )
 
     if svc_score_prio > best_lr_score_prio:

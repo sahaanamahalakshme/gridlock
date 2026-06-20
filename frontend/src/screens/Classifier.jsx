@@ -1,25 +1,36 @@
 import { useState } from 'react';
-import { mockClassify } from '../mockData';
 import { colors, typography, cards, buttons } from '../styles/globals';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
 export default function Classifier() {
   const [text, setText] = useState('');
+  const [policeStation, setPoliceStation] = useState('');
   const [uiState, setUiState] = useState('default'); // 'default' | 'loading' | 'result'
   const [result, setResult] = useState(null);
 
   const characterCount = text.length;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!text.trim()) return;
 
     setUiState('loading');
     setResult(null);
 
-    mockClassify(text).then((data) => {
+    try {
+      const res = await fetch(`${API_BASE}/classify`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ description: text, police_station: policeStation })
+      });
+      const data = await res.json();
       setResult(data);
       setUiState('result');
-    });
+    } catch (err) {
+      console.error(err);
+      setUiState('default');
+    }
   };
 
   const loadExample = (exampleText) => {
@@ -36,6 +47,13 @@ export default function Classifier() {
     codeMixed: "Silk Board junction hatra vehicle breakdown agide, please clear it immediately."
   };
 
+  const stations = [
+    '', 'Cubbon Park', 'High Grounds', 'Ulsoor', 'Shivajinagar',
+    'Commercial Street', 'Koramangala', 'HSR Layout', 'Indiranagar',
+    'Madivala', 'Silk Board', 'Whitefield', 'Bellandur', 'Hebbal',
+    'Jayanagar', 'JP Nagar'
+  ];
+
   const causeColor = result ? (colors.causes[result.event_cause] || colors.causes.others) : colors.textSecondary;
 
   return (
@@ -50,27 +68,41 @@ export default function Classifier() {
       {/* Input Card */}
       <div style={cards.base}>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <label style={typography.label}>Raw Field Report</label>
           
-          <textarea
-            rows={5}
-            maxLength={500}
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="ಮೆಜೆಸ್ಟಿಕ್ ಬಳಿ ವಾಹನ ಕೆಟ್ಟು ನಿಂತಿದೆ..."
-            style={{
-              padding: '12px',
-              borderRadius: '6px',
-              border: `1px solid ${colors.border}`,
-              fontSize: '13px',
-              fontFamily: typography.fontFamily,
-              color: colors.textPrimary,
-              backgroundColor: 'var(--color-bg)',
-              outline: 'none',
-              resize: 'vertical',
-              lineHeight: '1.5'
-            }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label style={typography.label}>Police Station (Optional)</label>
+            <select 
+              value={policeStation} 
+              onChange={(e) => setPoliceStation(e.target.value)} 
+              style={{ padding: '8px 12px', borderRadius: '6px', border: `1px solid ${colors.border}`, fontSize: '13px', fontFamily: typography.fontFamily, color: colors.textPrimary, backgroundColor: 'var(--color-bg)', outline: 'none' }}
+            >
+              <option value="" disabled>Select a station...</option>
+              {stations.filter(s => s).map((s) => <option key={s} value={s}>{s}</option>)}
+            </select>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label style={typography.label}>Raw Field Report</label>
+            <textarea
+              rows={5}
+              maxLength={500}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="ಮೆಜೆಸ್ಟಿಕ್ ಬಳಿ ವಾಹನ ಕೆಟ್ಟು ನಿಂತಿದೆ..."
+              style={{
+                padding: '12px',
+                borderRadius: '6px',
+                border: `1px solid ${colors.border}`,
+                fontSize: '13px',
+                fontFamily: typography.fontFamily,
+                color: colors.textPrimary,
+                backgroundColor: 'var(--color-bg)',
+                outline: 'none',
+                resize: 'vertical',
+                lineHeight: '1.5'
+              }}
+            />
+          </div>
 
           {/* Footer details under textarea */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px' }}>
@@ -139,7 +171,7 @@ export default function Classifier() {
 
       {/* Result Card */}
       {uiState === 'result' && result && (() => {
-        const confPct = result.confidence * 100;
+        const confPct = result.cause_confidence * 100;
         let confColor = '#DC2626'; // red
         if (confPct >= 80) confColor = colors.success; // green
         else if (confPct >= 60) confColor = colors.warning; // amber
@@ -165,7 +197,7 @@ export default function Classifier() {
 
                 {/* Right confidence score text */}
                 <div style={{ ...typography.subtitle, fontSize: '11px', whiteSpace: 'nowrap' }}>
-                  confidence: {result.confidence}
+                  confidence: {result.cause_confidence?.toFixed(3)}
                 </div>
               </div>
 
@@ -180,7 +212,7 @@ export default function Classifier() {
                 </div>
                 {/* Explainability Anchor */}
                 <div style={{ fontSize: '11px', color: colors.textTertiary, fontFamily: typography.fontFamily, marginTop: '2px' }}>
-                  Based on paraphrase-multilingual-MiniLM-L12-v2 embeddings · 6,813 training descriptions
+                  Based on paraphrase-multilingual-mpnet-base-v2 embeddings · 6,683 training descriptions
                 </div>
               </div>
 
