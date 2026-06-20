@@ -24,6 +24,8 @@ from serialization import clean_numpy
 
 from ml_models.bilingual_event_classifier.predict import classify
 
+from memory.confidence import enrich_with_confidence
+
 from ml_models.resolution_predictor.src.predict import (
     load_artifacts as load_resolution,
     predict as predict_resolution,
@@ -135,6 +137,13 @@ def report_event(body: ReportEventRequest, session: Session = Depends(get_sessio
         corridor=body.corridor or "Non-corridor",
         description=body.description,
         k=3,
+    )
+
+    raw_text_matches = enrich_with_confidence(
+        session,
+        body.police_station,
+        event_cause,
+        raw_text_matches,
     )
 
     text_matches = clean_numpy(raw_text_matches)

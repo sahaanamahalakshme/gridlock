@@ -93,9 +93,9 @@ To run full integration tests:
 ```bash
 python test_integration.py
 ```
-# SENTRY - Resolution Intelligence Dashboard
+# DRISHTI - Resolution Intelligence Dashboard
 
-This is the SENTRY Resolution Intelligence frontend application — an internal operational dashboard for Bengaluru traffic police, intended to interact with three ML models:
+This is the DRISHTI Resolution Intelligence frontend application — an internal operational dashboard for Bengaluru traffic police, intended to interact with three ML models:
 - Bilingual Event Classifier
 - Impact Forecaster
 - Resolution Predictor
@@ -124,3 +124,40 @@ To transition from the UI mock state to the production application, edit **`src/
 - Swap out `HOTSPOT_JUNCTIONS` and `CAUSE_TOTALS` to fetch live historical data instead of static arrays.
 
 *Note: This architecture intentionally decouples the UI layout logic from data retrieval to maintain parallel development streams.*
+
+# Two enhancements: confidence flag + civic routing
+
+```
+gridlock/
+├── memory/
+│   ├── confidence.py              ← UPDATE (add low_precedent + merge helper)
+│   ├── seed_historical_FIXED.py   ← NEW (fixes a crash in your current seed script)
+│   └── test_confidence_flag.py    ← NEW (verifies the 248/509 number)
+└── ml_models/
+    └── bilingual_event_classifier/
+        ├── routing_map.py              ← NEW
+        └── test_routing_classifier.py  ← NEW (verifies the 1,645 number)
+```
+
+## 1. Confidence flag (memory/)
+
+**What changed:** `confidence.py` now returns a `low_precedent` boolean
+(`count < 5`) alongside the existing 4-tier system, plus a new
+`enrich_with_confidence()` helper that stamps that same confidence block
+onto any list of match dicts — specifically so it can tag the Impact
+Forecaster's semantic matches, which is the one place the original idea
+wanted it that wasn't already covered.
+
+## Run order
+
+python reset_db.py
+python seed_historical.py
+python patch_seed_planned.py
+python test_confidence_flag.py        # should print 248/509, 48.7%
+
+# 2. verify routing independently of the DB (works on the raw CSV directly)
+cd ../ml_models/bilingual_event_classifier
+python testing_route_classifier.py     # should print civic count = 1645
+
+```
+

@@ -8,6 +8,7 @@ from pathlib import Path
 
 from sentence_transformers import SentenceTransformer
 
+from .routing_map import route_event
 
 ROOT = Path(__file__).resolve().parent
 
@@ -116,13 +117,16 @@ def classify(description: str) -> dict:
 
     prio_conf = float(prio_probs[prio_idx])
 
-    return {
+    result = {
         "event_cause": cause_label,
         "cause_confidence": round(cause_conf, 4),
         "severity": severity,
         "severity_confidence": round(prio_conf, 4),
         "top3_causes": top3,
     }
+    result["routing"] = route_event(result["event_cause"])
+
+    return result
 
 
 if __name__ == "__main__":
