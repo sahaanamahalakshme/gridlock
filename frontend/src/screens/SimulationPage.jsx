@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { colors, typography, cards, buttons } from "../styles/globals";
 
+import { analyzeRallyRoute } from "../utils/rallyRouteAnalysis";
+import { drawRallyAnalysis, clearRallyLayers } from "../utils/rallyMapDraw";
+
 const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const EVENT_TYPES = [
@@ -526,6 +529,7 @@ export default function SimulationPage() {
   const [corridors, setCorridors] = useState([]);
   const [rallyBearing, setRallyBearing] = useState(0);
   const [directionalResult, setDirectionalResult] = useState(null);
+  const [rallyResult, setRallyResult] = useState(null);
 
   const step = result
     ? 3
@@ -1099,6 +1103,45 @@ export default function SimulationPage() {
     setDirectionalResult(null);
 
     try {
+      if (mode === "rally") {
+  if (!startPoint) {
+    setError("Pin the rally starting point on the map first.");
+    setLoading(false);
+    return;
+  }
+ 
+  setLoading(true);
+  setError(null);
+  setRallyResult(null);
+ 
+  try {
+    // Clear previous rally drawings
+    const map = mapRef.current;
+    if (map) clearRallyLayers(map, markersRef);
+ 
+    // Analyze the route — this calls OSRM + Overpass, takes 3-8 seconds
+    const analysis = await analyzeRallyRoute(
+      startPoint.lat,
+      startPoint.lng,
+      rallyBearing,
+      900   // 900m rally distance — adjust if needed
+    );
+ 
+    setRallyResult(analysis);
+ 
+    // Draw everything on the map
+    if (map && map.isStyleLoaded()) {
+      drawRallyAnalysis(map, markersRef, analysis);
+    }
+ 
+  } catch (e) {
+    setError("Route analysis failed: " + (e.message || "unknown error"));
+  } finally {
+    setLoading(false);
+  }
+  return;
+}
+
       if (mode === "unplanned") {
         const res = await fetch(`${API_BASE}/diversion/directional`, {
           method: "POST",
@@ -1147,15 +1190,21 @@ export default function SimulationPage() {
   };
 
   const handleReset = () => {
-    clearMapState();
-    setStartPoint(null);
-    setEndPoint(null);
-    setResult(null);
-    setDirectionalResult(null);
-    setError(null);
-    setClickStep(0);
-    setDescription("");
-  };
+  const map = mapRef.current;
+  if (map) {
+    clearRallyLayers(map, markersRef);
+  } else {
+    clearMapState(); 
+  }
+  setStartPoint(null);
+  setEndPoint(null);
+  setResult(null);
+  setDirectionalResult(null);
+  setRallyResult(null);     
+  setError(null);
+  setClickStep(0);
+  setDescription("");
+};
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -1267,7 +1316,13 @@ export default function SimulationPage() {
                 >
                   Legend
                 </span>
-                {(directionalResult
+                {(mode === "rally"
+                  ? [
+                      { color: "#DC2626", emoji: "━", label: "Rally path (blocked)" },
+                      { color: "#F97316", emoji: "- -", label: "Affected crossing road" },
+                      { color: "#059669", emoji: "✓", label: "Diversion instruction" },
+                    ]
+                  : directionalResult
                   ? [
                       {
                         color: "#F97316",
@@ -1386,6 +1441,112 @@ export default function SimulationPage() {
           {directionalResult && (
             <DirectionalResultPanel result={directionalResult} />
           )}
+
+          {rallyResult && mode === "rally" && (
+  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+ 
+    {/* Summary banner */}
+    <div style={{
+      padding: "12px 14px", borderRadius: "6px",
+      backgroundColor: "#FEF2F2", border: "1px solid #DC262630",
+      fontSize: "13px", lineHeight: "1.6", color: "#DC2626", fontWeight: 500,
+    }}>
+      🚨 {rallyResult.summary}
+    </div>
+ 
+    {/* Rally road */}
+    {rallyResult.rallyRoadName && (
+      <div style={cardStyle}>
+        <div style={labelStyle}>Rally moving along</div>
+        <div style={{ fontSize: "15px", fontWeight: 600, color: "#DC2626", marginTop: "4px" }}>
+          {rallyResult.rallyRoadName}
+        </div>
+        <div style={{ fontSize: "11px", color: "var(--color-text-tertiary)", marginTop: "2px" }}>
+          {["North","NE","East","SE","South","SW","West","NW"][Math.round(rallyBearing/45)%8]} direction · road blocked for rally
+        </div>
+      </div>
+    )}
+ 
+    {/* Per-road diversion cards */}
+    {rallyResult.crossingRoads?.length > 0 ? (
+      <div style={cardStyle}>
+        <div style={labelStyle}>
+          {rallyResult.crossingRoads.length} main road(s) affected — individual diversions
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "8px" }}>
+          {rallyResult.crossingRoads.map((road, i) => (
+            <div key={road.name} style={{
+              padding: "10px 12px", borderRadius: "6px",
+              border: "1px solid #F9731630",
+              backgroundColor: "#FFF7ED",
+            }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span>🚧</span>
+                  <span style={{ fontSize: "13px", fontWeight: 700, color: "#F97316" }}>
+                    {road.name}
+                  </span>
+                </div>
+                <span style={{
+                  fontSize: "10px", fontWeight: 600, padding: "2px 6px",
+                  borderRadius: "4px", backgroundColor: "#F97316",
+                  color: "white", textTransform: "uppercase",
+                }}>
+                  {road.highway?.replace("_link", "") || "road"}
+                </span>
+              </div>
+ 
+              <div style={{
+                marginTop: "8px", padding: "6px 10px", borderRadius: "4px",
+                backgroundColor: "#F0FDF4", border: "1px solid #05966930",
+                display: "flex", alignItems: "center", gap: "6px",
+              }}>
+                <span style={{ color: "#059669", fontSize: "12px" }}>✓ Diversion:</span>
+                <span style={{ fontSize: "13px", fontWeight: 600, color: "#059669" }}>
+                  {road.diversionDirection}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <div style={{
+        padding: "12px 14px", borderRadius: "6px", fontSize: "13px",
+        backgroundColor: "var(--color-gray-bg)", border: "1px solid var(--color-border)",
+        color: "var(--color-text-secondary)",
+      }}>
+        No major road intersections found along this rally route.
+        The path may run along a road with no significant cross-traffic.
+      </div>
+    )}
+ 
+    {/* Legend specific to rally mode */}
+    <div style={{
+      padding: "10px 12px", borderRadius: "6px", fontSize: "11px",
+      backgroundColor: "var(--color-gray-bg)", border: "1px solid var(--color-border)",
+      display: "flex", flexDirection: "column", gap: "4px",
+    }}>
+      <div style={{ fontSize: "10px", fontWeight: 700, textTransform: "uppercase",
+        letterSpacing: "0.06em", color: "var(--color-text-tertiary)", marginBottom: "4px" }}>
+        Map guide
+      </div>
+      {[
+        { color: "#DC2626", line: "━━━", label: "Rally path (blocked)" },
+        { color: "#F97316", line: "- -", label: "Affected crossing road" },
+        { color: "#059669", text: "✓", label: "Diversion instruction" },
+        { text: "🚧", label: "Barricade point" },
+      ].map(({ color, line, text, label }) => (
+        <div key={label} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <span style={{ color, fontSize: "13px", fontWeight: 800, width: "20px", textAlign: "center" }}>
+            {text || line}
+          </span>
+          <span style={{ color: "var(--color-text-secondary)", fontSize: "11px" }}>{label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
 
           {result && !directionalResult && (
             <div
@@ -1587,21 +1748,20 @@ export default function SimulationPage() {
                 gap: "8px",
               }}
             >
-              {["unplanned", "planned"].map((m) => (
+              {["unplanned", "planned", "rally"].map((m) => (
                 <button
                   key={m}
-                  onClick={() => {
-                    setMode(m);
-                    handleReset();
-                  }}
+                  onClick={() => { setMode(m); handleReset(); }}
                   style={{
                     ...buttons[mode === m ? "primary" : "secondary"],
                     padding: "8px",
-                    fontSize: "13px",
+                    fontSize: "12px",
                     textAlign: "center",
                   }}
                 >
-                  {m === "unplanned" ? "⚡ Unplanned" : "📅 Planned"}
+                  {m === "unplanned" ? "⚡ Unplanned"
+                    : m === "planned" ? "📅 Planned"
+                    : "🚨 Rally (real roads)"}
                 </button>
               ))}
             </div>
@@ -1733,7 +1893,7 @@ export default function SimulationPage() {
             </div>
           </div>
 
-          {mode === "unplanned" && (
+          {(mode === "unplanned" || mode === "rally") && (
             <div style={cards.base}>
               <div style={{ ...typography.label, marginBottom: "10px" }}>
                 Rally / event direction
