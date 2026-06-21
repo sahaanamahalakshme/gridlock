@@ -4,7 +4,11 @@ import { colors, typography, cards, buttons } from "../styles/globals";
 import { analyzeRallyRoute } from "../utils/rallyRouteAnalysis";
 import { drawRallyAnalysis, clearRallyLayers } from "../utils/rallyMapDraw";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+// In dev, Vite proxies /api/* → Render backend (avoids CORS).
+// In production builds the env variable is used directly.
+const API_BASE = import.meta.env.DEV
+  ? "/api"
+  : (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000");
 
 const EVENT_TYPES = [
   { value: "procession", label: "Procession" },
@@ -1143,25 +1147,19 @@ export default function SimulationPage() {
 }
 
       if (mode === "unplanned") {
-        const res = await fetch(`${API_BASE}/diversion/directional`, {
+        const res = await fetch(`${API_BASE}/diversion/unplanned`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             incident_lat: startPoint.lat,
             incident_lng: startPoint.lng,
-            rally_bearing: rallyBearing,
             description: description,
           }),
         });
         if (!res.ok) throw new Error(`Server error ${res.status}`);
         const data = await res.json();
-        setDirectionalResult(data);
-        await drawDirectionalResult(
-          data,
-          rallyBearing,
-          startPoint.lat,
-          startPoint.lng,
-        );
+        setResult(data);
+        drawResult(data, false);
         return;
       }
 
