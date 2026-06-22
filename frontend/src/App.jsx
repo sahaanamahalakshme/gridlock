@@ -6,6 +6,7 @@ import PredictEvent from "./screens/PredictEvent";
 import Classifier from "./screens/Classifier";
 import ResolutionOutput from "./screens/ResolutionOutput";
 import SimulationPage from "./screens/SimulationPage";
+import LandingPage from "./screens/LandingPage";
 
 const SunIcon = () => (
   <svg
@@ -139,7 +140,7 @@ const NAV_ITEMS = [
 ];
 
 export default function App() {
-  const [activeView, setActiveView] = useState("hotspot");
+  const [activeView, setActiveView] = useState("landing");
   const [hoveredNav, setHoveredNav] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [predictFill, setPredictFill] = useState(null);
@@ -229,6 +230,8 @@ export default function App() {
 
   const renderContent = () => {
     switch (activeView) {
+      case "landing":
+        return <LandingPage setActiveView={setActiveView} />;
       case "hotspot":
         return (
           <HotspotMap
@@ -356,98 +359,100 @@ export default function App() {
       </div>
 
       <div style={{ display: "flex", marginTop: "48px", flexGrow: 1 }}>
-        <div
-          style={{
-            width: "200px",
-            backgroundColor: "var(--color-card-bg)",
-            borderRight: `1px solid ${colors.border}`,
-            position: "fixed",
-            top: "48px",
-            bottom: 0,
-            left: 0,
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "16px",
-            zIndex: 90,
-            transition: "background-color 150ms ease",
-          }}
-        >
-          <nav style={{ flexGrow: 1 }}>
-            {NAV_ITEMS.map((item) => {
-              const isActive = activeView === item.id;
-              const isHovered = hoveredNav === item.id;
-
-              const bg = isActive
-                ? "var(--color-active-bg)"
-                : isHovered
-                  ? "var(--color-hover-bg)"
-                  : "transparent";
-              const fg = isActive ? colors.accent : colors.textPrimary;
-              const borderLeft = isActive
-                ? `2px solid ${colors.accent}`
-                : "2px solid transparent";
-              const matchesSearch =
-                searchQuery.trim() &&
-                item.label.toLowerCase().includes(searchQuery.toLowerCase());
-
-              return (
-                <div
-                  key={item.id}
-                  onClick={() => setActiveView(item.id)}
-                  onMouseEnter={() => setHoveredNav(item.id)}
-                  onMouseLeave={() => setHoveredNav(null)}
-                  style={{
-                    height: "36px",
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "0 16px",
-                    gap: "12px",
-                    fontSize: "13px",
-                    cursor: "pointer",
-                    backgroundColor: bg,
-                    color: fg,
-                    borderLeft: borderLeft,
-                    transition: "all 150ms ease",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      opacity: isActive ? 1 : 0.7,
-                    }}
-                  >
-                    {item.icon}
-                  </div>
-                  <span style={{ flexGrow: 1 }}>{item.label}</span>
-                  {matchesSearch && (
-                    <span
-                      style={{
-                        width: "6px",
-                        height: "6px",
-                        borderRadius: "50%",
-                        backgroundColor: colors.accent,
-                      }}
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </nav>
+        {activeView !== "landing" && (
           <div
             style={{
-              padding: "16px",
-              fontSize: "11px",
-              color: colors.textTertiary,
+              width: "200px",
+              backgroundColor: "var(--color-card-bg)",
+              borderRight: `1px solid ${colors.border}`,
+              position: "fixed",
+              top: "48px",
+              bottom: 0,
+              left: 0,
+              display: "flex",
+              flexDirection: "column",
+              paddingTop: "16px",
+              zIndex: 90,
+              transition: "background-color 150ms ease",
             }}
           >
-            v0.1 · Prototype
-          </div>
-        </div>
+            <nav style={{ flexGrow: 1 }}>
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeView === item.id;
+                const isHovered = hoveredNav === item.id;
 
-        <div style={{ marginLeft: "200px", width: "100%" }}>
+                const bg = isActive
+                  ? "var(--color-active-bg)"
+                  : isHovered
+                    ? "var(--color-hover-bg)"
+                    : "transparent";
+                const fg = isActive ? colors.accent : colors.textPrimary;
+                const borderLeft = isActive
+                  ? `2px solid ${colors.accent}`
+                  : "2px solid transparent";
+                const matchesSearch =
+                  searchQuery.trim() &&
+                  item.label.toLowerCase().includes(searchQuery.toLowerCase());
+
+                return (
+                  <div
+                    key={item.id}
+                    onClick={() => setActiveView(item.id)}
+                    onMouseEnter={() => setHoveredNav(item.id)}
+                    onMouseLeave={() => setHoveredNav(null)}
+                    style={{
+                      height: "36px",
+                      display: "flex",
+                      alignItems: "center",
+                      padding: "0 16px",
+                      gap: "12px",
+                      fontSize: "13px",
+                      cursor: "pointer",
+                      backgroundColor: bg,
+                      color: fg,
+                      borderLeft: borderLeft,
+                      transition: "all 150ms ease",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        opacity: isActive ? 1 : 0.7,
+                      }}
+                    >
+                      {item.icon}
+                    </div>
+                    <span style={{ flexGrow: 1 }}>{item.label}</span>
+                    {matchesSearch && (
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          backgroundColor: colors.accent,
+                        }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </nav>
+            <div
+              style={{
+                padding: "16px",
+                fontSize: "11px",
+                color: colors.textTertiary,
+              }}
+            >
+              v0.1 · Prototype
+            </div>
+          </div>
+        )}
+
+        <div style={{ marginLeft: activeView === "landing" ? "0" : "200px", width: "100%" }}>
           <div
-            style={{ padding: "24px", maxWidth: "1100px", margin: "0 auto" }}
+            style={{ padding: "24px", maxWidth: activeView === "landing" ? "1200px" : "1100px", margin: "0 auto" }}
           >
             {renderContent()}
           </div>
