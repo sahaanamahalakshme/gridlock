@@ -200,7 +200,7 @@ export default function LandingPage({ setActiveView }) {
 
       <div className="flex items-center gap-2 mb-6">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Built for Bengaluru. Powered by AI. Backed by Data.</span>
+        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Built for Bengaluru. Backed by Data.</span>
       </div>
 
       {/* Dashboard Widgets Row */}
@@ -291,11 +291,11 @@ export default function LandingPage({ setActiveView }) {
       {/* Navigation Cards */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[
-          { id: "hotspot", title: "Hotspot Map", desc: "Explore incidents, hotspots and traffic density.", icon: "MapPinIcon", colorClass: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" },
+          { id: "hotspot", title: "Hotspot Map", desc: "Explore incidents, hotspots and traffic density.", icon: "TargetIcon", colorClass: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" },
           { id: "predict", title: "Predict Event", desc: "Predict clearance time, severity, and impact.", icon: "ZapIcon", colorClass: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400" },
           { id: "classifier", title: "Classifier", desc: "Classify causes from multilingual reports.", icon: "MessageSquareIcon", colorClass: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400" },
           { id: "resolution", title: "Resolution Output", desc: "View AI-powered insights and predictions.", icon: "ClockIcon", colorClass: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400" },
-          { id: "simulation", title: "Simulate", desc: "Simulate scenarios and evaluate impact.", icon: "ActivityIcon", colorClass: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400" }
+          { id: "simulation", title: "Simulate", desc: "Simulate scenarios and evaluate impact.", icon: "MapPinIcon", colorClass: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400" }
         ].map((card) => (
           <div 
             key={card.id}
@@ -303,8 +303,23 @@ export default function LandingPage({ setActiveView }) {
             className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 cursor-pointer hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md transition-all h-full flex flex-col relative overflow-hidden"
           >
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${card.colorClass} group-hover:scale-110 transition-transform`}>
-              {/* Simple generic icon based on the mapped type */}
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {card.icon === "TargetIcon" && (
+                  <><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></>
+                )}
+                {card.icon === "ZapIcon" && (
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                )}
+                {card.icon === "MessageSquareIcon" && (
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                )}
+                {card.icon === "ClockIcon" && (
+                  <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></>
+                )}
+                {card.icon === "MapPinIcon" && (
+                  <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></>
+                )}
+              </svg>
             </div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">{card.title}</h4>
             <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">{card.desc}</p>
