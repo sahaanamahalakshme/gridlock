@@ -340,21 +340,28 @@ export default function Classifier() {
                   </div>
                 </div>
 
-                <pre
+                <div
                   style={{
                     backgroundColor: "var(--color-bg)",
                     border: `1px solid ${colors.border}`,
                     borderRadius: "6px",
-                    padding: "12px",
-                    fontFamily: "monospace",
-                    fontSize: "12px",
+                    padding: "16px",
+                    fontSize: "14px",
                     color: colors.textPrimary,
-                    overflowX: "auto",
                     margin: 0,
+                    lineHeight: "1.6",
                   }}
                 >
-                  {JSON.stringify(result, null, 2)}
-                </pre>
+                  <p style={{ margin: 0 }}>
+                    This report was classified similar to <strong>{result.event_cause?.replace("_", " ")}</strong> ({(result.cause_confidence * 100).toFixed(1)}% confidence).
+                    {result.severity && (
+                      <> The severity is estimated to be <strong>{result.severity}</strong> ({(result.severity_confidence * 100).toFixed(1)}% confidence).</>
+                    )}
+                    {result.routing && (
+                      <> Based on these factors, the issue will be routed to the <strong>{result.routing.routing_agency?.replace("_", " ")}</strong> department{result.routing.is_ambiguous ? " (requires manual review due to ambiguity)" : ""}.</>
+                    )}
+                  </p>
+                </div>
               </div>
             </div>
           );

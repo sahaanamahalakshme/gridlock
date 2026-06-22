@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
+import { jsPDF } from "jspdf";
 import { colors, typography, cards } from "../styles/globals";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 export default function ResolutionOutput({ predictionData }) {
-  const [showRawOutput, setShowRawOutput] = useState(false);
+  const [hasDownloaded, setHasDownloaded] = useState(false);
   const [data, setData] = useState(null);
 
   const [activeStage, setActiveStage] = useState(0);
@@ -412,37 +413,49 @@ export default function ResolutionOutput({ predictionData }) {
               paddingTop: "16px",
             }}
           >
-            <div
-              style={{
-                ...typography.body,
-                fontSize: "13px",
-                cursor: "pointer",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "4px",
-              }}
-              onClick={() => setShowRawOutput(!showRawOutput)}
-            >
-              Raw model output {showRawOutput ? "↑" : "↓"}
-            </div>
-            {showRawOutput && (
-              <pre
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <div
                 style={{
-                  marginTop: "12px",
-                  backgroundColor: "var(--color-bg)",
-                  border: `1px solid ${colors.border}`,
-                  borderRadius: "6px",
-                  padding: "12px",
-                  fontFamily: "monospace",
-                  fontSize: "12px",
+                  ...typography.body,
+                  fontSize: "13px",
+                  display: "inline-flex",
+                  alignItems: "center",
                   color: colors.textPrimary,
-                  overflowX: "auto",
-                  margin: 0,
                 }}
               >
-                {JSON.stringify(data.raw_json, null, 2)}
-              </pre>
-            )}
+                Raw model output
+              </div>
+              <div
+                style={{
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  color: colors.textSecondary,
+                  transition: "color 150ms ease"
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = colors.primary || "#2563EB")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = colors.textSecondary)}
+                onClick={() => {
+                  setHasDownloaded(true);
+                  const content = `This event is classified as ${data.raw_json?.classification?.event_cause?.replace("_", " ") || "unknown"} (severity: ${data.raw_json?.classification?.severity || "unknown"}). It is predicted to take ${data.predicted_minutes} minutes to clear, requiring a ${data.manpower_tier} manpower deployment. The issue will be routed to the ${data.raw_json?.classification?.routing?.routing_agency?.replace("_", " ") || "unknown"} department. Historical data shows ${data.total_matches} similar events, and current traffic conditions are ${data.temporal?.is_spike ? "experiencing a spike" : "normal"}.`;
+                  
+                  const doc = new jsPDF();
+                  doc.setFontSize(18);
+                  doc.text("Resolution Output Report", 20, 30);
+                  doc.setFontSize(12);
+                  const splitText = doc.splitTextToSize(content, 170);
+                  doc.text(splitText, 20, 50);
+                  doc.save("Resolution_Output_Report.pdf");
+                }}
+                title="Download as PDF"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
