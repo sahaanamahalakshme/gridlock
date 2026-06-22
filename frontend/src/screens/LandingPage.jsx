@@ -9,6 +9,60 @@ export default function LandingPage({ setActiveView }) {
     setMounted(true);
   }, []);
 
+  const mapContainer = React.useRef(null);
+  const mapRef = React.useRef(null);
+
+  useEffect(() => {
+    if (!mapContainer.current || mapRef.current || !window.maplibregl) return;
+
+    const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
+    fetch(`${API_BASE}/events/hotspot`)
+      .then((res) => res.json())
+      .then((data) => {
+        const map = new window.maplibregl.Map({
+          container: mapContainer.current,
+          style: {
+            version: 8,
+            sources: {
+              osm: {
+                type: "raster",
+                tiles: ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+                tileSize: 256,
+              },
+            },
+            layers: [{ id: "osm", type: "raster", source: "osm", minzoom: 0, maxzoom: 19 }],
+          },
+          center: [77.59, 12.97],
+          zoom: 10,
+          interactive: false,
+        });
+
+        map.on("load", () => {
+          data.junctions.forEach((j) => {
+            if (j.count > 10) {
+              const el = document.createElement("div");
+              el.style.width = "10px";
+              el.style.height = "10px";
+              el.style.borderRadius = "50%";
+              el.style.backgroundColor = colors.causes[j.dominant_cause] || colors.causes.others;
+              el.style.boxShadow = "0 0 10px " + el.style.backgroundColor;
+              new window.maplibregl.Marker({ element: el }).setLngLat([j.lng, j.lat]).addTo(map);
+            }
+          });
+        });
+        mapRef.current = map;
+      })
+      .catch(console.error);
+
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+    };
+  }, []);
+
   // Mock recent events for the Live Events widget
   const liveEvents = [
     { cause: "Vehicle Breakdown", location: "Mekhri Circle", time: "2 mins ago", impact: "High Impact", impactColor: colors.danger, iconColor: colors.causes.vehicle_breakdown },
@@ -26,14 +80,14 @@ export default function LandingPage({ setActiveView }) {
         <div className="w-full lg:w-1/2 flex flex-col items-start gap-6">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            AI-POWERED · REAL-TIME · PREDICTIVE
+            DYNAMIC · REAL-TIME · PREDICTIVE
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight" style={{ color: "var(--color-text-primary)" }}>
             See Traffic <br/>
             <span className="text-blue-600">Before</span> <span style={{ color: "var(--color-text-primary)" }}>It Happens.</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
-            DRISHTI transforms unstructured traffic reports into actionable intelligence—predicting disruptions, uncovering patterns, and empowering Bengaluru to move from reacting to <span className="text-blue-600 font-medium">preventing</span>.
+            DRISHTI transforms unstructured traffic reports into actionable intelligence predicting disruptions, uncovering patterns, and empowering Bengaluru to move from reacting to <span className="text-blue-600 font-medium">preventing</span>.
           </p>
           <div className="flex items-center gap-4 mt-2">
             <button 
@@ -188,7 +242,7 @@ export default function LandingPage({ setActiveView }) {
             })}
           </div>
           <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 text-center">
-            <button className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors flex items-center justify-center gap-1 w-full">
+            <button onClick={() => setActiveView("hotspot")} className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors flex items-center justify-center gap-1 w-full">
               View All Causes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
@@ -200,17 +254,9 @@ export default function LandingPage({ setActiveView }) {
             <h3 className="font-semibold text-gray-900 dark:text-white">Hotspot Map</h3>
             <span className="text-xs font-medium text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">View Full Map</span>
           </div>
-          <div className="flex-grow bg-gray-100 dark:bg-gray-900 rounded-lg relative overflow-hidden flex items-center justify-center group">
-             {/* Simple Map Preview Graphic */}
-             <div className="absolute inset-0 bg-blue-50/50 dark:bg-blue-900/10" style={{ backgroundImage: "radial-gradient(#ccc 1px, transparent 1px)", backgroundSize: "10px 10px" }}></div>
-             <div className="w-16 h-16 bg-red-500 rounded-full opacity-20 absolute top-1/4 left-1/4 group-hover:scale-150 transition-transform duration-500"></div>
-             <div className="w-2 h-2 bg-red-500 rounded-full absolute top-1/4 left-1/4 shadow-lg shadow-red-500"></div>
-             
-             <div className="w-24 h-24 bg-red-500 rounded-full opacity-10 absolute bottom-1/4 right-1/4 group-hover:scale-150 transition-transform duration-500 delay-75"></div>
-             <div className="w-3 h-3 bg-red-500 rounded-full absolute bottom-1/4 right-1/4 shadow-lg shadow-red-500"></div>
-
-             <div className="w-12 h-12 bg-orange-500 rounded-full opacity-20 absolute top-1/2 left-2/3 group-hover:scale-150 transition-transform duration-500 delay-150"></div>
-             <div className="w-2 h-2 bg-orange-500 rounded-full absolute top-1/2 left-2/3 shadow-lg shadow-orange-500"></div>
+          <div className="flex-grow bg-gray-100 dark:bg-gray-900 rounded-lg relative overflow-hidden flex items-center justify-center group pointer-events-none">
+             <div ref={mapContainer} style={{ width: "100%", height: "100%" }}></div>
+             <div className="absolute inset-0 bg-white/10 dark:bg-black/10"></div>
           </div>
         </div>
 
@@ -218,11 +264,11 @@ export default function LandingPage({ setActiveView }) {
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm flex flex-col">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-semibold text-gray-900 dark:text-white">Live Events</h3>
-            <span className="text-xs font-medium text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">View All</span>
+            <span onClick={() => setActiveView("hotspot")} className="text-xs font-medium text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-900/50">View All</span>
           </div>
           <div className="flex flex-col gap-0 overflow-y-auto pr-2" style={{ maxHeight: "250px" }}>
             {liveEvents.map((event, i) => (
-              <div key={i} className="flex items-start gap-3 py-3 border-b border-gray-100 dark:border-gray-700 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-750 p-2 rounded transition-colors cursor-pointer">
+              <div key={i} className="group flex items-start gap-3 py-3 border-b border-gray-100 dark:border-gray-700 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded transition-colors cursor-pointer" onClick={() => setActiveView("hotspot")}>
                 <div className="mt-1 w-8 h-8 rounded-full flex items-center justify-center bg-opacity-10" style={{ backgroundColor: `${event.iconColor}20`, color: event.iconColor }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                 </div>
@@ -245,18 +291,18 @@ export default function LandingPage({ setActiveView }) {
       {/* Navigation Cards */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[
-          { id: "hotspot", title: "Hotspot Map", desc: "Explore incidents, hotspots and traffic density.", icon: "MapPinIcon", color: "blue" },
-          { id: "predict", title: "Predict Event", desc: "Predict clearance time, severity, and impact.", icon: "ZapIcon", color: "green" },
-          { id: "classifier", title: "Classifier", desc: "Classify causes from multilingual reports.", icon: "MessageSquareIcon", color: "purple" },
-          { id: "resolution", title: "Resolution Output", desc: "View AI-powered insights and predictions.", icon: "ClockIcon", color: "orange" },
-          { id: "simulation", title: "Simulate", desc: "Simulate scenarios and evaluate impact.", icon: "ActivityIcon", color: "teal" }
+          { id: "hotspot", title: "Hotspot Map", desc: "Explore incidents, hotspots and traffic density.", icon: "MapPinIcon", colorClass: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" },
+          { id: "predict", title: "Predict Event", desc: "Predict clearance time, severity, and impact.", icon: "ZapIcon", colorClass: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400" },
+          { id: "classifier", title: "Classifier", desc: "Classify causes from multilingual reports.", icon: "MessageSquareIcon", colorClass: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400" },
+          { id: "resolution", title: "Resolution Output", desc: "View AI-powered insights and predictions.", icon: "ClockIcon", colorClass: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400" },
+          { id: "simulation", title: "Simulate", desc: "Simulate scenarios and evaluate impact.", icon: "ActivityIcon", colorClass: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400" }
         ].map((card) => (
           <div 
             key={card.id}
             onClick={() => setActiveView(card.id)}
             className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 cursor-pointer hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md transition-all h-full flex flex-col relative overflow-hidden"
           >
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-${card.color}-100 dark:bg-${card.color}-900/30 text-${card.color}-600 dark:text-${card.color}-400 group-hover:scale-110 transition-transform`}>
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${card.colorClass} group-hover:scale-110 transition-transform`}>
               {/* Simple generic icon based on the mapped type */}
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
             </div>

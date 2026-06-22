@@ -140,7 +140,9 @@ const NAV_ITEMS = [
 ];
 
 export default function App() {
-  const [activeView, setActiveView] = useState("landing");
+  const [activeView, setActiveView] = useState(() => {
+    return window.location.hash.replace("#", "") || "landing";
+  });
   const [hoveredNav, setHoveredNav] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [predictFill, setPredictFill] = useState(null);
@@ -166,6 +168,29 @@ export default function App() {
       document.body.classList.remove("dark");
     }
   }, [isDarkMode]);
+
+  // Sync activeView with URL hash for browser back/forward navigation
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash !== activeView && !(hash === "" && activeView === "landing")) {
+      window.history.pushState(null, "", activeView === "landing" ? window.location.pathname : `#${activeView}`);
+    }
+  }, [activeView]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash.replace("#", "");
+      setActiveView(hash || "landing");
+    };
+    window.addEventListener("popstate", handlePopState);
+    // Also handle hashchange just in case it's manually changed in the URL bar
+    window.addEventListener("hashchange", handlePopState);
+    
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("hashchange", handlePopState);
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -297,7 +322,7 @@ export default function App() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "13px", fontWeight: "600" }}>DRISHTI</span>
+          <span style={{ fontSize: "13px", fontWeight: "600", cursor: "pointer" }} onClick={() => setActiveView("landing")} title="Back to Home">DRISHTI</span>
           <span style={{ color: colors.border }}>|</span>
           <span style={{ fontSize: "13px", color: colors.textSecondary }}>
             Resolution Intelligence
